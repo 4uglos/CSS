@@ -1,0 +1,2197 @@
+@charset "UTF-8";
+/* 
+  Important warning: 
+    - We create the new style only to default theme. When is light theme, the style don't have a update created by us;
+
+    - This file is created using a build command from a project developed with scss and other technologies, then some NOTE may can stay in a wrong position;
+
+    - On all the stylesheet we needed to use !important property to overwrite default styles on other stylesheet file, because in the VBet website tree, 
+    the custom.css file is called as the first stylesheet file of the website, what mean that this file is called before all other style file;
+
+    - Along of the stylesheet, we needed to add some links calling images in the betco bucket to add new icons define by the designer, as on navigation bar and game carrossel title;
+*/
+/* 
+  Here we import the font style as is requested for designer 
+*/
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&family=Roboto:wght@200;300;400;500;600;700&display=swap");
+
+body:not(:has(#root.theme-white)) .cookieAcceptanceMessage {
+  width: 395px;
+  right: unset;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 25px;
+  border-radius: 40px;
+  background: rgba(28, 21, 38, 0.7);
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(12.5px);
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+body:not(:has(#root.theme-white)) .cookieAcceptanceMessage::before {
+  content: "";
+  display: inline-block;
+  width: 52px;
+  height: 52px;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg width='52' height='52' viewBox='0 0 52 52' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='25.9268' cy='25.9268' r='25.9268' fill='white'/%3E%3Cpath opacity='0.2' d='M41.75 26C41.75 29.1151 40.8263 32.1602 39.0957 34.7502C37.365 37.3403 34.9052 39.359 32.0273 40.5511C29.1493 41.7432 25.9825 42.0551 22.9273 41.4474C19.8721 40.8396 17.0658 39.3396 14.8631 37.1369C12.6604 34.9343 11.1604 32.1279 10.5526 29.0727C9.94492 26.0175 10.2568 22.8507 11.4489 19.9727C12.641 17.0948 14.6597 14.635 17.2498 12.9044C19.8399 11.1737 22.885 10.25 26 10.25C26 12.3386 26.8297 14.3416 28.3065 15.8185C29.7834 17.2953 31.7864 18.125 33.875 18.125C33.875 20.2136 34.7047 22.2166 36.1815 23.6935C37.6584 25.1703 39.6614 26 41.75 26Z' fill='%23D80D83'/%3E%3Cpath d='M31.9866 31.8259C32.2613 32.1015 32.4481 32.4523 32.5235 32.834C32.5989 33.2157 32.5596 33.6112 32.4104 33.9705C32.2611 34.3299 32.0088 34.637 31.6852 34.853C31.3616 35.069 30.9812 35.1843 30.5921 35.1843C30.203 35.1843 29.8227 35.069 29.499 34.853C29.1754 34.637 28.9231 34.3299 28.7739 33.9705C28.6247 33.6112 28.5853 33.2157 28.6607 32.834C28.7361 32.4523 28.9229 32.1015 29.1976 31.8259C29.3805 31.6423 29.5978 31.4967 29.8371 31.3973C30.0764 31.298 30.333 31.2468 30.5921 31.2468C30.8512 31.2468 31.1078 31.298 31.3471 31.3973C31.5864 31.4967 31.8037 31.6423 31.9866 31.8259ZM18.6976 30.5134C18.4229 30.789 18.2361 31.1398 18.1607 31.5215C18.0853 31.9032 18.1247 32.2987 18.2739 32.658C18.4231 33.0174 18.6754 33.3245 18.999 33.5405C19.3227 33.7565 19.703 33.8718 20.0921 33.8718C20.4812 33.8718 20.8616 33.7565 21.1852 33.5405C21.5088 33.3245 21.7611 33.0174 21.9103 32.658C22.0596 32.2987 22.0989 31.9032 22.0235 31.5215C21.9481 31.1398 21.7613 30.789 21.4866 30.5134C21.3038 30.3303 21.0867 30.1851 20.8477 30.086C20.6087 29.9869 20.3525 29.936 20.0938 29.936C19.835 29.936 19.5788 29.9869 19.3398 30.086C19.1008 30.1851 18.8837 30.3303 18.7009 30.5134H18.6976ZM20.1741 24.1149C20.4488 23.8393 20.6356 23.4885 20.711 23.1068C20.7864 22.7251 20.7471 22.3296 20.5978 21.9702C20.4486 21.6109 20.1963 21.3038 19.8727 21.0878C19.5491 20.8718 19.1687 20.7565 18.7796 20.7565C18.3905 20.7565 18.0102 20.8718 17.6865 21.0878C17.3629 21.3038 17.1106 21.6109 16.9614 21.9702C16.8122 22.3296 16.7728 22.7251 16.8482 23.1068C16.9236 23.4885 17.1104 23.8393 17.3851 24.1149C17.5682 24.2982 17.7857 24.4436 18.0251 24.5427C18.2646 24.6418 18.5212 24.6926 18.7803 24.6923C19.0394 24.692 19.2959 24.6406 19.5351 24.5409C19.7743 24.4413 19.9915 24.2954 20.1741 24.1116V24.1149ZM28.0491 23.9509C27.7735 23.6762 27.4227 23.4894 27.041 23.414C26.6593 23.3386 26.2638 23.3779 25.9045 23.5272C25.5451 23.6764 25.238 23.9287 25.022 24.2523C24.806 24.5759 24.6907 24.9563 24.6907 25.3454C24.6907 25.7345 24.806 26.1148 25.022 26.4385C25.238 26.7621 25.5451 27.0144 25.9045 27.1636C26.2638 27.3128 26.6593 27.3522 27.041 27.2768C27.4227 27.2014 27.7735 27.0146 28.0491 26.7399C28.2327 26.557 28.3783 26.3397 28.4777 26.1004C28.577 25.8611 28.6282 25.6045 28.6282 25.3454C28.6282 25.0863 28.577 24.8297 28.4777 24.5904C28.3783 24.3511 28.2327 24.1338 28.0491 23.9509ZM43.0625 26C43.0625 29.3746 42.0618 32.6735 40.187 35.4794C38.3121 38.2853 35.6473 40.4723 32.5295 41.7637C29.4118 43.0551 25.9811 43.393 22.6713 42.7346C19.3615 42.0763 16.3212 40.4512 13.935 38.065C11.5488 35.6788 9.92372 32.6385 9.26536 29.3287C8.607 26.0189 8.94489 22.5882 10.2363 19.4705C11.5277 16.3527 13.7147 13.6879 16.5206 11.813C19.3265 9.9382 22.6254 8.9375 26 8.9375C26.3481 8.9375 26.6819 9.07578 26.9281 9.32192C27.1742 9.56806 27.3125 9.9019 27.3125 10.25C27.3125 11.9905 28.0039 13.6597 29.2346 14.8904C30.4653 16.1211 32.1345 16.8125 33.875 16.8125C34.2231 16.8125 34.5569 16.9508 34.8031 17.1969C35.0492 17.4431 35.1875 17.7769 35.1875 18.125C35.1875 19.8655 35.8789 21.5347 37.1096 22.7654C38.3403 23.9961 40.0095 24.6875 41.75 24.6875C42.0981 24.6875 42.4319 24.8258 42.6781 25.0719C42.9242 25.3181 43.0625 25.6519 43.0625 26ZM40.3866 27.2124C38.4209 26.9141 36.6046 25.9876 35.2091 24.5714C33.8136 23.1552 32.9139 21.3254 32.6445 19.3555C30.6746 19.0861 28.8448 18.1864 27.4286 16.7909C26.0124 15.3954 25.0859 13.5791 24.7876 11.6134C22.0452 11.8445 19.4259 12.8547 17.2385 14.5249C15.0511 16.1951 13.3866 18.4557 12.4412 21.0404C11.4958 23.625 11.3089 26.4261 11.9024 29.1135C12.4959 31.8009 13.8452 34.2626 15.7913 36.2087C17.7374 38.1548 20.1991 39.5041 22.8865 40.0976C25.5739 40.6911 28.375 40.5042 30.9596 39.5588C33.5443 38.6134 35.8049 36.9489 37.4751 34.7615C39.1453 32.5741 40.1555 29.9549 40.3866 27.2124Z' fill='%23D80D83'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-right: 16px;
+  flex-shrink: 0;
+}
+
+body:not(:has(#root.theme-white)) .cookieAcceptanceMessage .cookie-message {
+  font-weight: 400;
+  max-width: 279px;
+  color: #ffffff;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  gap: 3px;
+  word-break: break-word;
+}
+
+body:not(:has(#root.theme-white)) .cookieAcceptanceMessage .cookie-privacyPolicy {
+  color: #ffffff;
+  text-decoration: underline;
+  margin-inline-start: 0px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+body:not(:has(#root.theme-white)) .cookieAcceptanceMessage .cookie-message-button {
+  width: 100%;
+  background-color: #d80d83;
+  border-radius: 24px;
+  font-size: 16px;
+  text-transform: capitalize;
+  height: 40px;
+  line-height: 40px;
+  color: #fff;
+  font-weight: 600;
+}
+
+* {
+  font-family: "Mont", "Montserrat", sans-serif !important;
+}
+
+/* 
+  Here we overwrite the default colors on all website 
+*/
+body:not(:has(#root.theme-white)) {
+  --b: 15, 15, 15;
+  --header: 19, 14, 26;
+  --menu: 15, 15, 15;
+  --hero: 216, 13, 131;
+  --padding-page-aside: 16px;
+}
+
+/* 
+  Below we add the style for new header, adding update in colors, sizes, align e space 
+*/
+body:not(:has(#root.theme-white)) {
+  /* Buttons header - Signin | register | deposit  */
+  /* Amount part */
+  /* Profile part */
+  /* Deposit button on top */
+  /* menu header */
+}
+
+body:not(:has(#root.theme-white)) .layout-header-holder-bc {
+  all: unset;
+  background: rgba(var(--header), 1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 45;
+}
+
+body:not(:has(#root.theme-white)) .header-bc {
+  all: unset;
+}
+
+body:not(:has(#root.theme-white)) .has-header-info:has(.informative-widget) .header-bc {
+  position: relative;
+  top: 112px;
+  background: #0f0f0f;
+}
+
+body:not(:has(#root.theme-white)) .hdr-main-content-bc {
+  all: unset;
+  background: #0f0f0f;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #d80d83;
+  gap: 7px;
+  padding: 0.75rem 0.5rem;
+}
+
+body:not(:has(#root.theme-white)) .logo-container {
+  all: unset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body:not(:has(#root.theme-white)) .logo {
+  all: unset;
+  cursor: pointer;
+  display: flex;
+}
+
+body:not(:has(#root.theme-white)) .hdr-logo-bc {
+  all: unset;
+  width: 120px;
+}
+
+body:not(:has(#root.theme-white)) .btn.register,
+body:not(:has(#root.theme-white)) .btn.sign-in {
+  text-transform: unset;
+  height: unset;
+  width: unset;
+  padding: 0 16px;
+  height: 24px;
+  border-radius: 999px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  line-height: 24px;
+  text-transform: uppercase !important;
+}
+
+body:not(:has(#root.theme-white)) .btn.sign-in {
+  color: #fad2d6;
+  background: #130e1a;
+  border: 1px solid #fad2d6;
+  text-decoration: unset;
+  transition: color var(--default-transition-duration);
+}
+
+body:not(:has(#root.theme-white)) .btn.register {
+  margin-inline-start: unset;
+  max-width: unset;
+  color: rgba(var(--hero-sc), 1);
+  background: rgba(var(--hero), 1);
+  transition: background var(--default-transition-duration);
+}
+
+body:not(:has(#root.theme-white)) .hdr-user-bc {
+  all: unset;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  gap: 5px;
+}
+
+body:not(:has(#root.theme-white)) .hdr-user-bc:has(.btn.sign-in, .btn.register) {
+  flex-direction: row-reverse !important;
+}
+
+body:not(:has(#root.theme-white)) .hdr-user-info-content-bc {
+  background: #141c36 !important;
+  border-radius: 999px 0 0 999px !important;
+  padding: 8px 8px 8px 4px !important;
+  margin-right: 99px !important;
+}
+
+body:not(:has(#root.theme-white)) .hdr-user-info-content-bc .balanceAmount {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+  color: #fad2d6;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+body:not(:has(#root.theme-white)) .hdr-user-avatar-icon-bc.bc-i-user {
+  color: #f24dad;
+  display: block;
+  font-size: 26px;
+  height: 28px;
+  width: 28px;
+}
+
+body:not(:has(#root.theme-white)) .user-verified {
+  text-shadow: unset !important;
+}
+
+body:not(:has(#root.theme-white)) .user-not-verified {
+  text-shadow: 0 0 12px rgba(112, 230, 101, 0), 0 0 20px rgba(112, 230, 101, 0) !important;
+}
+
+body:not(:has(#root.theme-white)) .hdr-additional-info {
+  border: none !important;
+  border-bottom: 1px solid #d80d83 !important;
+}
+
+body:not(:has(#root.theme-white)) .hdr-additional-info:not(:has(.loyaltyBonusHeader, .world-cup)) {
+  height: 0 !important;
+  border: 0 !important;
+}
+
+body:not(:has(#root.theme-white)) .has-header-info:not(.world-cup, .has-wallet).header-bc-hide .hdr-additional-info {
+  transform: unset !important;
+}
+
+body:not(:has(#root.theme-white)) .hdr-user-close {
+  flex-grow: 1 !important;
+}
+
+body:not(:has(#root.theme-white)) .hdr-additional-info .hdr-user-bc .bc-i-wallet {
+  all: unset;
+  width: 92px;
+  border-radius: 0px 999px 999px 0px !important;
+  background: linear-gradient(180deg, #4aff36 0%, #d3ffaf 148%) !important;
+  font-family: "Mont", "Montserrat", sans-serif !important;
+  box-shadow: 0px 2px 8px 0px rgba(119, 255, 94, 0.48), 0px 0px 4px 0px rgba(119, 255, 94, 0.48);
+  position: absolute;
+  top: -44.4px;
+  right: 90px;
+  height: 30px;
+  cursor: pointer;
+}
+
+body:not(:has(#root.theme-white)) .header-bc:has(.hdr-user-close) .hdr-additional-info .hdr-user-bc .bc-i-wallet {
+  display: none !important;
+}
+
+body:not(:has(#root.theme-white)) .hdr-additional-info .hdr-user-bc .bc-i-wallet::before {
+  display: none !important;
+}
+
+body:not(:has(#root.theme-white)) .hdr-additional-info .hdr-user-bc .bc-i-wallet::after {
+  content: "DEPOSITAR";
+  color: #1c284a;
+  text-align: center;
+  display: block;
+  height: 30px;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 30px;
+}
+
+body:not(:has(#root.theme-white)) .hdr-toggle-button-bc {
+  all: unset;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: #2d2735;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative !important;
+}
+
+body:not(:has(#root.theme-white)) .hdr-toggle-button-bc:before {
+  transition: transform var(--default-transition-duration);
+  font-family: "Font Awesome 5 Free";
+  content: "\f141" !important;
+  font-size: 16px;
+  font-weight: 900;
+  color: #d80d83;
+  transform: rotate(90deg);
+}
+
+body:not(:has(#root.theme-white)) .hdr-toggle-button-bc:after {
+  top: -6px !important;
+  right: -4px !important;
+}
+
+body:not(:has(#root.theme-white)) .count-odd-animation {
+  position: absolute;
+}
+
+body:not(:has(#root.theme-white)) .tab-nav-item-bc {
+  position: relative;
+}
+
+body:not(:has(#root.theme-white)) .count-odd-animation.count-blink-odd:after {
+  animation: var(--default-transition-duration) count-blink-odd ease-in-out;
+}
+
+body:not(:has(#root.theme-white)) .count-odd-animation:after {
+  content: attr(data-badge) !important;
+  position: absolute !important;
+  border-radius: 50% !important;
+  background: rgb(37, 251, 37) !important;
+  box-shadow: 0px 0px 2.5px 1px rgba(37, 251, 37, 0.5) !important;
+  width: unset !important;
+  min-width: 10px;
+  height: 12px;
+  padding: 0 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #080b12;
+  font-family: Montserrat;
+  font-size: 8px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+html[lang=en] body:not(:has(#root.theme-white)) .hdr-additional-info .hdr-user-bc .bc-i-wallet::after {
+  content: "DEPOSIT" !important;
+}
+
+html[lang=es] body:not(:has(#root.theme-white)) .hdr-additional-info .hdr-user-bc .bc-i-wallet::after {
+  content: "DEPÓSITO" !important;
+}
+
+body:not(:has(#root.theme-white)) .hdr-user-info-content-bc {
+  margin-right: 49px !important;
+}
+
+@media (max-width: 400px) and (min-width: 375px) {
+  body:not(:has(#root.theme-white)) .hdr-user-info-content-bc {
+    margin-right: 84px !important;
+  }
+}
+
+@media (min-width: 401px) {
+  body:not(:has(#root.theme-white)) .hdr-user-info-content-bc {
+    margin-right: 88px !important;
+  }
+}
+
+body:not(:has(#root.theme-white)) .hdr-additional-info .hdr-user-bc .bc-i-wallet {
+  width: 84px !important;
+  left: 239px;
+  height: 34px;
+  top: -47px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 454px) and (min-width: 425px) {
+  body:not(:has(#root.theme-white)) .hdr-additional-info .hdr-user-bc .bc-i-wallet {
+    left: 266px !important;
+  }
+}
+
+@media (max-width: 545px) and (min-width: 455px) {
+  body:not(:has(#root.theme-white)) .hdr-additional-info .hdr-user-bc .bc-i-wallet {
+    left: 296px !important;
+  }
+}
+
+body:not(:has(#root.theme-white)) .hdr-user-info-content-bc .balanceAmount {
+  padding-right: 0 !important;
+  width: 80px;
+}
+
+@media (max-width: 375px) {
+  body:not(:has(#root.theme-white)) .hdr-user-info-content-bc .balanceAmount {
+    width: 70px;
+  }
+}
+
+body:not(:has(#root.theme-white)) .hdr-user-info-content-bc {
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+}
+
+/*
+  Above is the final of the new header style 
+*/
+/* 
+  Below we add the style for new navigation bar, adding update in colors, sizes, align e space;
+  There are some new icons on menu and the icons have been called from betcon bucket;
+*/
+body:not(:has(#root.theme-white)) {
+  /* Turbo Games */
+  /* Cassino */
+  /* Live Cassino */
+  /* Live Live */
+  /* E-Sports */
+  /* Sports */
+  /* UEFA */
+  /* Game View */
+  /* Promo */
+  /* Tournaments */
+  /* Virtual Sports */
+}
+
+body:not(:has(#root.theme-white)) .header-bc.header-bc-hide .hdr-navigation-scrollable-bc-holder {
+  transform: none;
+}
+
+body:not(:has(#root.theme-white)) .hdr-navigation-scrollable-bc {
+  height: unset;
+}
+
+body:not(:has(#root.theme-white)) .hdr-navigation-scrollable-content {
+  gap: 8px;
+  padding: 8px 16px;
+}
+
+body:not(:has(#root.theme-white)) .hdr-navigation-link-bc {
+  all: unset;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  padding: 6px 12px;
+  background: rgba(46, 39, 55, 0.4);
+  border-radius: 4px;
+  gap: 6px;
+  color: #dadada;
+  position: relative !important;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+body:not(:has(#root.theme-white)) .hdr-navigation-link-bc:before,
+body:not(:has(#root.theme-white)) .hdr-navigation-link-bc.active:before,
+body:not(:has(#root.theme-white)) .header-bc .hdr-navigation-scrollable-bc:not(:only-child):nth-child(1) .hdr-navigation-link-bc:before,
+body:not(:has(#root.theme-white)) .header-bc .hdr-navigation-scrollable-bc:not(:only-child):nth-child(2) .hdr-navigation-link-bc:before,
+body:not(:has(#root.theme-white)) .header-bc .hdr-navigation-scrollable-bc:not(:only-child):nth-child(1) .hdr-navigation-link-bc.active:before {
+  all: unset;
+}
+
+body:not(:has(#root.theme-white)) .hdr-navigation-link-bc.active {
+  z-index: 33;
+  position: unset;
+  box-shadow: unset;
+  background: rgba(var(--hero), 0.9);
+}
+
+body:not(:has(#root.theme-white)) .hdr-navigation-link-bc:after {
+  top: -5px;
+  right: -5px;
+}
+
+body:not(:has(#root.theme-white)) [dir=ltr] .hdr-navigation-scrollable-bc.scroll-start:after {
+  background: linear-gradient(90deg, rgba(8, 13, 28, 0) 0%, rgba(8, 13, 28, 0.72) 74.73%) !important;
+}
+
+body:not(:has(#root.theme-white)) .hdr-navigation-link-bc .nav-menu-icon {
+  display: none;
+}
+
+body:not(:has(#root.theme-white)) .hdr-navigation-link-bc .nav-menu-icon.bc-i-wonderwheel {
+  display: block;
+}
+
+body:not(:has(#root.theme-white)) .header-bc .hdr-navigation-scrollable-bc:not(:only-child):nth-child(1) .hdr-navigation-link-bc.active:before,
+body:not(:has(#root.theme-white)) .header-bc .hdr-navigation-scrollable-bc:not(:only-child):nth-child(1) .hdr-navigation-link-bc:before,
+body:not(:has(#root.theme-white)) .header-bc .hdr-navigation-scrollable-bc .hdr-navigation-link-bc::before {
+  content: "";
+  height: 16px;
+  width: 16px;
+  font-weight: 900;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: none;
+}
+
+body:not(:has(#root.theme-white)) .header-bc .hdr-navigation-scrollable-bc:not(:only-child):nth-child(1) .hdr-navigation-link-bc.active[href*="/games"]:before,
+body:not(:has(#root.theme-white)) .header-bc .hdr-navigation-scrollable-bc:not(:only-child):nth-child(1) .hdr-navigation-link-bc[href*="/games"]:before,
+body:not(:has(#root.theme-white)) .header-bc .hdr-navigation-scrollable-bc .hdr-navigation-link-bc[href*="/games"]::before {
+  display: block;
+  /* rocket-launch icon */
+  background-image: url("https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_f24823470610c31f5cef7ac7814c5b46.svg");
+}
+
+body:not(:has(#root.theme-white)) .header-bc .hdr-navigation-scrollable-bc:not(:only-child):nth-child(1) .hdr-navigation-link-bc.active[href*="/casino/slots"]:before,
+body:not(:has(#root.theme-white)) .header-bc .hdr-navigation-scrollable-bc:not(:only-child):nth-child(1) .hdr-navigation-link-bc[href*="/casino/slots"]:before,
+body:not(:has(#root.theme-white)) .header-bc .hdr-navigation-scrollable-bc .hdr-navigation-link-bc[href*="/casino/slots"]::before {
+  display: block;
+  /* poker-chip icon */
+  background-image: url("https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_c3f6c9e78d867ce30db8803ac58f0647.svg");
+}
+
+body:not(:has(#root.theme-white)) .header-bc .hdr-navigation-scrollable-bc:not(:only-child):nth-child(1) .hdr-navigation-link-bc.active[href*="/live-casino"]:before,
+body:not(:has(#root.theme-white)) .header-bc .hdr-navigation-scrollable-bc:not(:only-child):nth-child(1) .hdr-navigation-link-bc[href*="/live-casino"]:before,
+body:not(:has(#root.theme-white)) .header-bc .hdr-navigation-scrollable-bc .hdr-navigation-link-bc[href*="/live-casino"]::before {
+  display: block;
+  /* video-camera icon */
+  background-image: url("https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_170cb105f00b0e3aa2db1315cb0a650d.svg");
+}
+
+body:not(:has(#root.theme-white)) .header-bc .hdr-navigation-scrollable-bc:not(:only-child):nth-child(1) .hdr-navigation-link-bc.active[href*="/sports/live"]:before,
+body:not(:has(#root.theme-white)) .header-bc .hdr-navigation-scrollable-bc:not(:only-child):nth-child(1) .hdr-navigation-link-bc[href*="/sports/live"]:before,
+body:not(:has(#root.theme-white)) .header-bc .hdr-navigation-scrollable-bc .hdr-navigation-link-bc[href*="/sports/live"]::before {
+  display: block;
+  /* broadcast icon */
+  background-image: url("https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_191086bea326010f203c66e19109de4f.svg");
+}
+
+body:not(:has(#root.theme-white)) .header-bc .hdr-navigation-scrollable-bc:not(:only-child):nth-child(1) .hdr-navigation-link-bc.active[href*="/esports"]:before,
+body:not(:has(#root.theme-white)) .header-bc .hdr-navigation-scrollable-bc:not(:only-child):nth-child(1) .hdr-navigation-link-bc[href*="/esports"]:before,
+body:not(:has(#root.theme-white)) .header-bc .hdr-navigation-scrollable-bc .hdr-navigation-link-bc[href*="/esports"]::before {
+  display: block;
+  /* game-controller icon */
+  background-image: url("https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_6ac75a2ccbe88dee70604b8040a3f00a.svg");
+}
+
+body:not(:has(#root.theme-white)) .header-bc .hdr-navigation-scrollable-bc:not(:only-child):nth-child(1) .hdr-navigation-link-bc.active[href*="/sports/pre-match"]:before,
+body:not(:has(#root.theme-white)) .header-bc .hdr-navigation-scrollable-bc:not(:only-child):nth-child(1) .hdr-navigation-link-bc[href*="/sports/pre-match"]:before,
+body:not(:has(#root.theme-white)) .header-bc .hdr-navigation-scrollable-bc .hdr-navigation-link-bc[href*="/sports/pre-match"]::before {
+  display: block;
+  /* soccer-ball icon */
+  background-image: url("https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_3238efa9caedbcb739823f65588dda85.svg");
+}
+
+body:not(:has(#root.theme-white)) .header-bc .hdr-navigation-scrollable-bc:not(:only-child):nth-child(1) .hdr-navigation-link-bc.active[href*="/competition"]:before,
+body:not(:has(#root.theme-white)) .header-bc .hdr-navigation-scrollable-bc:not(:only-child):nth-child(1) .hdr-navigation-link-bc[href*="/competition"]:before,
+body:not(:has(#root.theme-white)) .header-bc .hdr-navigation-scrollable-bc .hdr-navigation-link-bc[href*="/competition"]::before {
+  display: block;
+  /* star-circle icon */
+  background-image: url("https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_6008c60bee6074650a3795ce78968edf.svg");
+}
+
+body:not(:has(#root.theme-white)) .header-bc .hdr-navigation-scrollable-bc:not(:only-child):nth-child(1) .hdr-navigation-link-bc.active[href*="/casino/game-view"]:before,
+body:not(:has(#root.theme-white)) .header-bc .hdr-navigation-scrollable-bc:not(:only-child):nth-child(1) .hdr-navigation-link-bc[href*="/casino/game-view"]:before,
+body:not(:has(#root.theme-white)) .header-bc .hdr-navigation-scrollable-bc .hdr-navigation-link-bc[href*="/casino/game-view"]::before {
+  display: block;
+  /* users-three icon */
+  background-image: url("https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_ba3194bc25cdd4be6fe74fb29ff6467a.svg");
+}
+
+body:not(:has(#root.theme-white)) .header-bc .hdr-navigation-scrollable-bc:not(:only-child):nth-child(1) .hdr-navigation-link-bc.active[href*="/promotions"]:before,
+body:not(:has(#root.theme-white)) .header-bc .hdr-navigation-scrollable-bc:not(:only-child):nth-child(1) .hdr-navigation-link-bc[href*="/promotions"]:before,
+body:not(:has(#root.theme-white)) .header-bc .hdr-navigation-scrollable-bc .hdr-navigation-link-bc[href*="/promotions"]::before,
+body:not(:has(#root.theme-white)) .header-bc .hdr-navigation-scrollable-bc:not(:only-child):nth-child(1) .hdr-navigation-link-bc.active[href*="/bonus"]:before,
+body:not(:has(#root.theme-white)) .header-bc .hdr-navigation-scrollable-bc:not(:only-child):nth-child(1) .hdr-navigation-link-bc[href*="/bonus"]:before,
+body:not(:has(#root.theme-white)) .header-bc .hdr-navigation-scrollable-bc .hdr-navigation-link-bc[href*="/bonus"]::before {
+  display: block;
+  /* bonus icon */
+  background-image: url("https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_315bc1e8a309a11bcdabd675cf2fa947.svg");
+}
+
+body:not(:has(#root.theme-white)) .header-bc .hdr-navigation-scrollable-bc:not(:only-child):nth-child(1) .hdr-navigation-link-bc.active[href*="/tournaments"]:before,
+body:not(:has(#root.theme-white)) .header-bc .hdr-navigation-scrollable-bc:not(:only-child):nth-child(1) .hdr-navigation-link-bc[href*="/tournaments"]:before,
+body:not(:has(#root.theme-white)) .header-bc .hdr-navigation-scrollable-bc .hdr-navigation-link-bc[href*="/tournaments"]::before {
+  display: block;
+  /* trophy icon */
+  background-image: url("https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_c0316270e3960d3b121c27bd8e2415cd.svg");
+}
+
+body:not(:has(#root.theme-white)) .header-bc .hdr-navigation-scrollable-bc:not(:only-child):nth-child(1) .hdr-navigation-link-bc.active[href*="/virtual-sports"]:before,
+body:not(:has(#root.theme-white)) .header-bc .hdr-navigation-scrollable-bc:not(:only-child):nth-child(1) .hdr-navigation-link-bc[href*="/virtual-sports"]:before,
+body:not(:has(#root.theme-white)) .header-bc .hdr-navigation-scrollable-bc .hdr-navigation-link-bc[href*="/virtual-sports"]::before {
+  display: block;
+  /* desktop-tower icon */
+  background-image: url("https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_9e1df016256cd15122be9c2e71caf35f.svg");
+}
+
+/* 
+  Above is the final of the new navigation bar style 
+*/
+/* 
+  Below we add default style to the content of the all website 
+*/
+body:not(:has(#root.theme-white)) .layout-content-holder-bc {
+  padding-top: 95px;
+}
+
+body:not(:has(#root.theme-white)) .has-header-info:has(.loyaltyBonusHeader) .layout-content-holder-bc {
+  padding-top: 140px;
+}
+
+body:not(:has(#root.theme-white)) .has-header-info:has(.informative-widget) .layout-content-holder-bc {
+  padding-top: 280px !important;
+}
+
+body:not(:has(#root.theme-white)) .slider-bc .carousel-count {
+  inset-inline-end: 20px;
+}
+
+body:not(:has(#root.theme-white)) .popup-holder-bc {
+  background: rgba(0, 0, 0, 0.8) !important;
+}
+
+/* 
+  Above is the end of the default style content overwritten 
+*/
+/* 
+  Below we add default style to the footer links and social medias 
+*/
+body:not(:has(#root.theme-white)) {
+  /* FOOTER LINKS */
+  /* SOCIAL MEDIAS */
+}
+
+body:not(:has(#root.theme-white)) .expandableContent {
+  padding-top: 0px;
+}
+
+body:not(:has(#root.theme-white)) div.container>h1>span {
+  font-size: 18px !important;
+}
+
+body:not(:has(#root.theme-white)) .footerContainerWrapper:not(:first-child),
+body:not(:has(#root.theme-white)) .copyRightBlock,
+body:not(:has(#root.theme-white)) .footerWrapper {
+  box-shadow: unset;
+}
+
+body:not(:has(#root.theme-white)) .footerContainerWrapper:not(:first-child),
+body:not(:has(#root.theme-white)) .copyRightBlock {
+  border-top: 1px solid rgba(var(--b-sc), 0.1);
+}
+
+body:not(:has(#root.theme-white)) .footerWrapper::before {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 100%;
+  background: rgba(var(--hero), 1);
+  box-shadow: 0px 0px 4px 0px rgba(175, 113, 255, 0.63);
+}
+
+body:not(:has(#root.theme-white)) .footerLinksSection {
+  padding: 10px 0 20px 0;
+  margin: 0;
+}
+
+body:not(:has(#root.theme-white)) .footerLinksSection .footerLinkCols .footerLinkCol,
+body:not(:has(#root.theme-white)) .footerLinksSection .footerLinkCols .footerLinkCol .footerLinkColTitle,
+body:not(:has(#root.theme-white)) .footerLinksSection .footerLinkCols .footerLinkCol .footerLinkColLinks,
+body:not(:has(#root.theme-white)) .footerLinksSection .footerLinkCols .footerLinkCol .footerLinkColLinks .footerLinkColEl {
+  all: unset;
+}
+
+body:not(:has(#root.theme-white)) .footerLinksSection .footerLinkCols .footerLinkCol {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  gap: 10px;
+}
+
+body:not(:has(#root.theme-white)) .footerLinksSection .footerLinkCols .footerLinkCol .footerLinkColTitle {
+  color: #d80d83;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+body:not(:has(#root.theme-white)) .footerLinksSection .footerLinkCols .footerLinkCol .footerLinkColLinks {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  gap: 10px;
+}
+
+body:not(:has(#root.theme-white)) .footerLinksSection .footerLinkCols .footerLinkCol .footerLinkColLinks .footerLinkColEl {
+  line-height: 10.6px;
+}
+
+body:not(:has(#root.theme-white)) .footerLinksSection .footerLinkCols .footerLinkCol .footerLinkColLinks .footerLinkColEl a {
+  color: #dadada;
+  font-family: Montserrat;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+body:not(:has(#root.theme-white)) .footerLinksSection .footerLinkCols {
+  all: unset;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  width: 100%;
+}
+
+body:not(:has(#root.theme-white)) .footerLinksSection .footerLinkCols .footerLinkCol:nth-child(1) {
+  grid-row: 2;
+  grid-column: 3;
+}
+
+body:not(:has(#root.theme-white)) .footerLinksSection .footerLinkCols .footerLinkCol:nth-child(2) {
+  grid-row: 2;
+  grid-column: 1;
+}
+
+body:not(:has(#root.theme-white)) .footerLinksSection .footerLinkCols .footerLinkCol:nth-child(3) {
+  grid-row: 1;
+  grid-column: 2;
+}
+
+body:not(:has(#root.theme-white)) .footerLinksSection .footerLinkCols .footerLinkCol:nth-child(4) {
+  grid-row: 1;
+  grid-column: 1;
+}
+
+body:not(:has(#root.theme-white)) .footerLinksSection .footerLinkCols .footerLinkCol:nth-child(5) {
+  grid-row: 1;
+  grid-column: 3;
+}
+
+body:not(:has(#root.theme-white)) .footerLinksSection .footerLinkCols .footerLinkCol:nth-child(6) {
+  grid-row: 2;
+  grid-column: 2;
+}
+
+body:not(:has(#root.theme-white)) .footerSocialLinks li {
+  border: 1px solid #d80d83;
+  border-radius: 999px;
+  background: #290f2a;
+}
+
+body:not(:has(#root.theme-white)) .footerSocialLinks a {
+  color: #d80d83;
+  font-size: 14px;
+}
+
+body:not(:has(#root.theme-white)) p.footerCopyrights {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+body:not(:has(#root.theme-white)) p.footerCopyrights::before {
+  content: "©";
+}
+
+/* 
+  Above is the end of the footer style 
+*/
+html[lang*=en] body:not(:has(#root.theme-white)) .informative-widget-link .btn:not(:disabled)>span::after {
+  content: "verify your identity" !important;
+}
+
+html[lang*=en] body:not(:has(#root.theme-white)) .informative-widget-container {
+  grid-template-columns: 177px 160px;
+}
+
+html[lang*=en] body:not(:has(#root.theme-white)) .informative-widget {
+  padding: 0 16px !important;
+}
+
+html[lang*=en] body:not(:has(#root.theme-white)) .informative-widget-link .btn.a-color:disabled {
+  width: 159px;
+}
+
+html[lang*=en] body:not(:has(#root.theme-white)) .informative-widget-container .btn {
+  width: 159px;
+}
+
+html[lang*=en] body:not(:has(#root.theme-white)) .informative-widget-link .btn:disabled>span::after {
+  content: "Available soon..." !important;
+}
+
+html[lang*=es] body:not(:has(#root.theme-white)) .informative-widget-link .btn>span::after {
+  content: "verificar su identidad" !important;
+}
+
+html[lang*=en] body:not(:has(#root.theme-white)) .informative-widget-container>span::after {
+  content: "To access full gameplay, please complete the identity verification process." !important;
+}
+
+html[lang*=es] body:not(:has(#root.theme-white)) .informative-widget-container>span::after {
+  content: "Para acceder a todos los juegos, completa el proceso de verificación de identidad." !important;
+}
+
+html[lang*=en] body:not(:has(#root.theme-white)) .entrance-form-bc.registration .sg-n-text-row-1-bc::after {
+  visibility: visible !important;
+  content: "Just arrived here?" !important;
+}
+
+html[lang*=es] body:not(:has(#root.theme-white)) .entrance-form-bc.registration .sg-n-text-row-1-bc::after {
+  visibility: visible !important;
+  content: "¿Acabas de llegar aquí?" !important;
+}
+
+body:not(:has(#root.theme-white)) .checkOrClear-container.check-btn,
+body:not(:has(#root.theme-white)) .entrance-popup-bc {
+  background: rgb(22, 15, 32);
+}
+
+body:not(:has(#root.theme-white)) .informative-widget-link .btn>span {
+  overflow: hidden !important;
+  white-space: nowrap !important;
+  text-overflow: ellipsis !important;
+  visibility: hidden !important;
+  position: relative !important;
+}
+
+body:not(:has(#root.theme-white)) .informative-widget {
+  padding: 0 16px !important;
+}
+
+body:not(:has(#root.theme-white)) .informative-widget-container {
+  padding: 20px 0 !important;
+  display: grid !important;
+  gap: 0 !important;
+  justify-content: space-between;
+  grid-template-columns: 155px 180px;
+}
+
+body:not(:has(#root.theme-white)) .informative-widget-link .btn:not(:disabled)>span::after {
+  content: "verificar sua identidade";
+  visibility: visible !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 5px !important;
+}
+
+body:not(:has(#root.theme-white)) .informative-widget-link .btn:disabled>span::after {
+  content: "Em breve disponível...";
+  visibility: visible !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 5px !important;
+}
+
+body:not(:has(#root.theme-white)) .informative-widget-link .btn.s-small {
+  border-radius: 999px !important;
+}
+
+body:not(:has(#root.theme-white)) .informative-widget-link .btn.a-color {
+  color: #1C284A !important;
+  font-size: 10px !important;
+  background: linear-gradient(180deg, #4aff36 0%, #d3ffaf 148%) !important;
+  box-shadow: 0 2px 8px 0 rgba(119, 255, 94, 0.4784313725);
+  width: 181px;
+}
+
+body:not(:has(#root.theme-white)) .informative-widget-link .btn.a-color:disabled {
+  background: #636363 !important;
+  color: white !important;
+  box-shadow: unset;
+  width: 173px;
+}
+
+body:not(:has(#root.theme-white)) .informative-widget {
+  background: #34016b !important;
+  margin-top: 0 !important;
+}
+
+body:not(:has(#root.theme-white)) .informative-widget-link {
+  background: #34016b !important;
+  border-top: none !important;
+}
+
+body:not(:has(#root.theme-white)) .informative-widget-container>span {
+  position: relative !important;
+  visibility: hidden !important;
+}
+
+body:not(:has(#root.theme-white)) .informative-widget-container>span::after {
+  content: "Para ter acesso a toda jogabilidade, por favor complete o processo de verificação de identidade.";
+  visibility: visible !important;
+  position: absolute !important;
+  text-align: left !important;
+  top: 0 !important;
+  left: 0% !important;
+  color: #ffffff !important;
+  font-size: 12px !important;
+}
+
+body:not(:has(#root.theme-white)) .hm-row-bc:first-child:has(.informative-widget-link) {
+  margin-top: 0px !important;
+}
+
+body:not(:has(#root.theme-white)) .entrance-popup-bc.register .e-p-section-item-bc {
+  border: 1px solid #fad2d6 !important;
+  border-radius: 999px !important;
+  padding: 0px 16px !important;
+}
+
+body:not(:has(#root.theme-white)) .entrance-popup-bc .e-p-section-title-bc {
+  text-decoration: none !important;
+  padding: 4px 0 !important;
+  text-transform: uppercase !important;
+}
+
+body:not(:has(#root.theme-white)) .entrance-form-bc.registration .sg-n-text-row-1-bc::after {
+  visibility: visible;
+  content: "Acabou de chegar por aqui?" !important;
+  color: #ffffff !important;
+  font-weight: 400 !important;
+  font-size: 12px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  position: absolute !important;
+}
+
+body:not(:has(#root.theme-white)) .entrance-form-bc .form-control-message-bc {
+  color: #ff4747 !important;
+  background: transparent !important;
+  margin-left: 16px !important;
+}
+
+body:not(:has(#root.theme-white)) .entrance-form-bc .form-control-bc.invalid .form-control-message-bc::before {
+  content: "x" !important;
+  position: absolute !important;
+  visibility: visible !important;
+  font-size: 11px !important;
+  color: #000 !important;
+  font-weight: 400 !important;
+  display: inline-flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  width: 12px !important;
+  height: 11px !important;
+  border-radius: 50% !important;
+  border: 1px solid #ff4747 !important;
+  background: #ff4747 !important;
+  margin-right: 5px !important;
+  padding-bottom: 1px !important;
+  left: 2px !important;
+}
+
+body:not(:has(#root.theme-white)) .entrance-form-bc.popup.registration {
+  padding-top: 20px !important;
+}
+
+body:not(:has(#root.theme-white)) .entrance-form-bc input.form-control-input-bc {
+  background: transparent !important;
+  border: 1px solid #393341 !important;
+  border-radius: 8px !important;
+}
+
+body:not(:has(#root.theme-white)) .entrance-form-bc input.form-control-input-bc:focus {
+  background: #261938 !important;
+  border: 1px solid #7a28d2 !important;
+}
+
+body:not(:has(#root.theme-white)) .reg-form-footer-bc .entrance-form-actions-holder-bc .btn.a-color {
+  background: #d80d83 !important;
+  border-radius: 999px !important;
+}
+
+body:not(:has(#root.theme-white)) .country-code label.form-control-label-bc.form-control-select-bc.inputs {
+  background: transparent !important;
+  border: 1px solid #393341 !important;
+  border-radius: 8px !important;
+}
+
+body:not(:has(#root.theme-white)) .entrance-form-bc .form-control-bc.invalid .form-control-input-bc,
+body:not(:has(#root.theme-white)) .form-control-bc.invalid .form-control-textarea-bc {
+  border: 1px solid #ff4747 !important;
+}
+
+body:not(:has(#root.theme-white)) .entrance-form-bc .sg-n-text-row-2-bc {
+  text-align: center !important;
+  font-size: 20px !important;
+  text-align: center !important;
+  font-weight: 800 !important;
+}
+
+body:not(:has(#root.theme-white)) .entrance-form-bc .reg-form-footer-bc .btn.a-outline {
+  border-radius: 999px !important;
+}
+
+body:not(:has(#root.theme-white)) .entrance-form-bc .reg-form-content .sg-n-text-row-1-bc {
+  visibility: hidden !important;
+  position: relative !important;
+}
+
+body:not(:has(#root.theme-white)) .entrance-form-bc .reg-form-content .form-control-bc.filled:not(.invalid):not(.focused):not([class*=select]):not(:has(.form-control-select-bc)) {
+  position: relative !important;
+  border: 1px solid #a0f5b0 !important;
+  background: transparent !important;
+  border-radius: 8px !important;
+}
+
+body:not(:has(#root.theme-white)) .form-sign-bc .sg-n-text-row-1-bc {
+  text-align: center !important;
+  text-align: center !important;
+  font-size: 12px !important;
+  color: #ffffff !important;
+  font-weight: 400 !important;
+}
+
+body:not(:has(#root.theme-white)) .form-sign-bc .sg-n-text-row-2-bc {
+  text-align: center !important;
+  text-align: center !important;
+  font-size: 18px !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  padding: 0px 10px !important;
+}
+
+body:not(:has(#root.theme-white)) .form-sign-bc .sg-n-text-row-2-bc::after {
+  content: "!" !important;
+  text-align: center !important;
+  text-align: center !important;
+  font-size: 20px !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+}
+
+body:not(:has(#root.theme-white)) .entrance-form-bc input.form-control-input-bc {
+  background: transparent !important;
+  border: 1px solid #393341 !important;
+  border-radius: 8px !important;
+}
+
+body:not(:has(#root.theme-white)) .entrance-popup-bc .btn.register,
+body:not(:has(#root.theme-white)) .btn.btn-color {
+  background: #d80d83 !important;
+  border-radius: 999px !important;
+  padding: 7px !important;
+}
+
+body:not(:has(#root.theme-white)) .entrance-form-action-item-bc .btn.a-color[type=submit] {
+  background: #d80d83 !important;
+  border-radius: 999px !important;
+}
+
+body:not(:has(#root.theme-white)) .entrance-form-bc.popup.login .form-sign-bc,
+body:not(:has(#root.theme-white)) .entrance-form-bc.popup.reg-via-wallet .form-sign-bc {
+  padding: 24px 8px !important;
+}
+
+body:not(:has(#root.theme-white)) .entrance-form-bc .sg-n-forgot-password {
+  text-transform: math-auto !important;
+}
+
+html[lang*=en] body:not(:has(#root.theme-white)) .popup-holder-bc.windowed.info:has(.popup-middleware-bc):has(#base_popup_id.popup-inner-bc):has(.status-popup-content-w-bc):has(.casino-popup-title):has(.casino-popup-content):has(.casino-popup-button-block):has(.btn.a-color):has(.btn.a-outline):has(.casino-popup-under-buttons-content) .casino-popup-content::before {
+  content: "By continuing, you confirm that you are 18 years of age or older to access the site." !important;
+}
+
+html[lang*=en] body:not(:has(#root.theme-white)) .popup-holder-bc.windowed.info:has(.popup-middleware-bc):has(#base_popup_id.popup-inner-bc):has(.status-popup-content-w-bc):has(.casino-popup-title):has(.casino-popup-content):has(.casino-popup-button-block):has(.btn.a-color):has(.btn.a-outline):has(.casino-popup-under-buttons-content) .casino-popup-title::before {
+  content: "WELCOME TO VBET" !important;
+}
+
+html[lang*=en] body:not(:has(#root.theme-white)) .popup-holder-bc.windowed.info:has(.popup-middleware-bc):has(#base_popup_id.popup-inner-bc):has(.status-popup-content-w-bc):has(.casino-popup-title):has(.casino-popup-content):has(.casino-popup-button-block):has(.btn.a-color):has(.btn.a-outline):has(.casino-popup-under-buttons-content) .casino-popup-under-buttons-content::before {
+  content: "Warning: Access is only permitted to individuals aged 18 or over. Please play responsibly. If you need support, please consult the available help services." !important;
+}
+
+html[lang*=es] body:not(:has(#root.theme-white)) .popup-holder-bc.windowed.info:has(.popup-middleware-bc):has(#base_popup_id.popup-inner-bc):has(.status-popup-content-w-bc):has(.casino-popup-title):has(.casino-popup-content):has(.casino-popup-button-block):has(.btn.a-color):has(.btn.a-outline):has(.casino-popup-under-buttons-content) .casino-popup-content::before {
+  content: "Al continuar, confirmas que tienes 18 años o más para acceder al sitio." !important;
+}
+
+html[lang*=es] body:not(:has(#root.theme-white)) .popup-holder-bc.windowed.info:has(.popup-middleware-bc):has(#base_popup_id.popup-inner-bc):has(.status-popup-content-w-bc):has(.casino-popup-title):has(.casino-popup-content):has(.casino-popup-button-block):has(.btn.a-color):has(.btn.a-outline):has(.casino-popup-under-buttons-content) .casino-popup-title::before {
+  content: "BIENVENIDO A VBET" !important;
+}
+
+html[lang*=es] body:not(:has(#root.theme-white)) .popup-holder-bc.windowed.info:has(.popup-middleware-bc):has(#base_popup_id.popup-inner-bc):has(.status-popup-content-w-bc):has(.casino-popup-title):has(.casino-popup-content):has(.casino-popup-button-block):has(.btn.a-color):has(.btn.a-outline):has(.casino-popup-under-buttons-content) .casino-popup-under-buttons-content::before {
+  content: "Aviso: Sólo se permite el acceso a personas mayores de 18 años. Por favor, juegue responsablemente. Si necesita soporte, consulte los servicios de ayuda disponibles." !important;
+}
+
+body:not(:has(#root.theme-white)) .popup-holder-bc.windowed.info:has(.popup-middleware-bc):has(#base_popup_id.popup-inner-bc):has(.status-popup-content-w-bc):has(.casino-popup-title):has(.casino-popup-content):has(.casino-popup-button-block):has(.btn.a-color):has(.btn.a-outline):has(.casino-popup-under-buttons-content) .popup-inner-bc {
+  background: #22182e;
+  border: 1px solid #a71f67;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+body:not(:has(#root.theme-white)) .popup-holder-bc.windowed.info:has(.popup-middleware-bc):has(#base_popup_id.popup-inner-bc):has(.status-popup-content-w-bc):has(.casino-popup-title):has(.casino-popup-content):has(.casino-popup-button-block):has(.btn.a-color):has(.btn.a-outline):has(.casino-popup-under-buttons-content) .status-popup-content-w-bc {
+  background: transparent;
+}
+
+body:not(:has(#root.theme-white)) .popup-holder-bc.windowed.info:has(.popup-middleware-bc):has(#base_popup_id.popup-inner-bc):has(.status-popup-content-w-bc):has(.casino-popup-title):has(.casino-popup-content):has(.casino-popup-button-block):has(.btn.a-color):has(.btn.a-outline):has(.casino-popup-under-buttons-content) .casino-popup-title {
+  text-align: center;
+  font-family: Roboto !important;
+  font-weight: 700;
+  color: transparent;
+  font-size: 0;
+}
+
+body:not(:has(#root.theme-white)) .popup-holder-bc.windowed.info:has(.popup-middleware-bc):has(#base_popup_id.popup-inner-bc):has(.status-popup-content-w-bc):has(.casino-popup-title):has(.casino-popup-content):has(.casino-popup-button-block):has(.btn.a-color):has(.btn.a-outline):has(.casino-popup-under-buttons-content) .casino-popup-title::before {
+  content: "BEM VINDO À VBET";
+  color: #fff;
+  font-size: 24px;
+}
+
+body:not(:has(#root.theme-white)) .popup-holder-bc.windowed.info:has(.popup-middleware-bc):has(#base_popup_id.popup-inner-bc):has(.status-popup-content-w-bc):has(.casino-popup-title):has(.casino-popup-content):has(.casino-popup-button-block):has(.btn.a-color):has(.btn.a-outline):has(.casino-popup-under-buttons-content) .casino-popup-content {
+  display: flex;
+  flex-direction: column;
+  color: transparent;
+  font-size: 0;
+  margin: 10px 0 20px 0;
+}
+
+body:not(:has(#root.theme-white)) .popup-holder-bc.windowed.info:has(.popup-middleware-bc):has(#base_popup_id.popup-inner-bc):has(.status-popup-content-w-bc):has(.casino-popup-title):has(.casino-popup-content):has(.casino-popup-button-block):has(.btn.a-color):has(.btn.a-outline):has(.casino-popup-under-buttons-content) .casino-popup-content::before {
+  content: "Ao continuar, você confirma que tem 18 anos ou mais para acessar o site.";
+  color: #fff;
+  text-align: center;
+  font-family: Roboto !important;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+body:not(:has(#root.theme-white)) .popup-holder-bc.windowed.info:has(.popup-middleware-bc):has(#base_popup_id.popup-inner-bc):has(.status-popup-content-w-bc):has(.casino-popup-title):has(.casino-popup-content):has(.casino-popup-button-block):has(.btn.a-color):has(.btn.a-outline):has(.casino-popup-under-buttons-content) .casino-popup-button-block .btn {
+  border-radius: 999px;
+  font-weight: 600;
+  border: none;
+  font-family: Roboto !important;
+}
+
+body:not(:has(#root.theme-white)) .popup-holder-bc.windowed.info:has(.popup-middleware-bc):has(#base_popup_id.popup-inner-bc):has(.status-popup-content-w-bc):has(.casino-popup-title):has(.casino-popup-content):has(.casino-popup-button-block):has(.btn.a-color):has(.btn.a-outline):has(.casino-popup-under-buttons-content) .casino-popup-button-block .a-color {
+  background: #d80d83 !important;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+body:not(:has(#root.theme-white)) .popup-holder-bc.windowed.info:has(.popup-middleware-bc):has(#base_popup_id.popup-inner-bc):has(.status-popup-content-w-bc):has(.casino-popup-title):has(.casino-popup-content):has(.casino-popup-button-block):has(.btn.a-color):has(.btn.a-outline):has(.casino-popup-under-buttons-content) .casino-popup-button-block .a-outline {
+  color: #fad2d6;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400 !important;
+}
+
+body:not(:has(#root.theme-white)) .popup-holder-bc.windowed.info:has(.popup-middleware-bc):has(#base_popup_id.popup-inner-bc):has(.status-popup-content-w-bc):has(.casino-popup-title):has(.casino-popup-content):has(.casino-popup-button-block):has(.btn.a-color):has(.btn.a-outline):has(.casino-popup-under-buttons-content) .casino-popup-under-buttons-content {
+  text-align: center;
+  font-family: Roboto !important;
+  font-style: normal;
+  font-weight: 400;
+  color: transparent;
+  font-size: 0;
+}
+
+body:not(:has(#root.theme-white)) .popup-holder-bc.windowed.info:has(.popup-middleware-bc):has(#base_popup_id.popup-inner-bc):has(.status-popup-content-w-bc):has(.casino-popup-title):has(.casino-popup-content):has(.casino-popup-button-block):has(.btn.a-color):has(.btn.a-outline):has(.casino-popup-under-buttons-content) .casino-popup-under-buttons-content::before {
+  display: block;
+  content: "Aviso: O acesso é permitido apenas a indivíduos com 18 anos ou mais. Por favor, jogue com responsabilidade. Se precisar de suporte, consulte os serviços de ajuda disponíveis.";
+  color: #fff;
+  font-size: 14px;
+  padding: 10px 0px 20px 0px;
+}
+
+html[lang*=en] body:not(:has(#root.theme-white)) .popup-holder-bc.windowed.info:has(.popup-middleware-bc):has(#base_popup_id.popup-inner-bc):has(#close_popup_button_id.e-p-close-icon-bc.bc-i-close-remove):has(.status-popup-content-w-bc):has(.casino-popup-content):has(.casino-popup-button-block):has(.btn) .status-popup-content-w-bc .casino-popup-content::after {
+  content: "Enable access to your location" !important;
+}
+
+html[lang*=en] body:not(:has(#root.theme-white)) .popup-holder-bc.windowed.info:has(.popup-middleware-bc):has(#base_popup_id.popup-inner-bc):has(#close_popup_button_id.e-p-close-icon-bc.bc-i-close-remove):has(.status-popup-content-w-bc):has(.casino-popup-content):has(.casino-popup-button-block):has(.btn) .status-popup-content-w-bc .casino-popup-button-block::before {
+  content: "To join and have fun at VBet, we need to confirm that you are accessing from Brazil." !important;
+}
+
+html[lang*=en] body:not(:has(#root.theme-white)) .popup-holder-bc.windowed.info:has(.popup-middleware-bc):has(#base_popup_id.popup-inner-bc):has(#close_popup_button_id.e-p-close-icon-bc.bc-i-close-remove):has(.status-popup-content-w-bc):has(.casino-popup-content):has(.casino-popup-button-block):has(.btn) .status-popup-content-w-bc .casino-popup-button-block::after {
+  content: "Allow location access in your browser pop-up and then refresh the page." !important;
+}
+
+html[lang*=es] body:not(:has(#root.theme-white)) .popup-holder-bc.windowed.info:has(.popup-middleware-bc):has(#base_popup_id.popup-inner-bc):has(#close_popup_button_id.e-p-close-icon-bc.bc-i-close-remove):has(.status-popup-content-w-bc):has(.casino-popup-content):has(.casino-popup-button-block):has(.btn) .status-popup-content-w-bc .casino-popup-content::after {
+  content: "Activa el acceso a tu ubicación" !important;
+}
+
+html[lang*=es] body:not(:has(#root.theme-white)) .popup-holder-bc.windowed.info:has(.popup-middleware-bc):has(#base_popup_id.popup-inner-bc):has(#close_popup_button_id.e-p-close-icon-bc.bc-i-close-remove):has(.status-popup-content-w-bc):has(.casino-popup-content):has(.casino-popup-button-block):has(.btn) .status-popup-content-w-bc .casino-popup-button-block::before {
+  content: "Para ingresar y divertirse en VBet, debemos confirmar que accede desde Brasil." !important;
+}
+
+html[lang*=es] body:not(:has(#root.theme-white)) .popup-holder-bc.windowed.info:has(.popup-middleware-bc):has(#base_popup_id.popup-inner-bc):has(#close_popup_button_id.e-p-close-icon-bc.bc-i-close-remove):has(.status-popup-content-w-bc):has(.casino-popup-content):has(.casino-popup-button-block):has(.btn) .status-popup-content-w-bc .casino-popup-button-block::after {
+  content: "Permita el acceso a la ubicación en la ventana emergente de su navegador y luego actualice la página." !important;
+}
+
+body:not(:has(#root.theme-white)) .popup-holder-bc.windowed.info:has(.popup-middleware-bc):has(#base_popup_id.popup-inner-bc):has(#close_popup_button_id.e-p-close-icon-bc.bc-i-close-remove):has(.status-popup-content-w-bc):has(.casino-popup-content):has(.casino-popup-button-block):has(.btn) .status-popup-content-w-bc {
+  background: #22182e;
+  padding: 24px 20px !important;
+}
+
+body:not(:has(#root.theme-white)) .popup-holder-bc.windowed.info:has(.popup-middleware-bc):has(#base_popup_id.popup-inner-bc):has(#close_popup_button_id.e-p-close-icon-bc.bc-i-close-remove):has(.status-popup-content-w-bc):has(.casino-popup-content):has(.casino-popup-button-block):has(.btn) .status-popup-content-w-bc .casino-popup-content {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.5rem;
+}
+
+body:not(:has(#root.theme-white)) .popup-holder-bc.windowed.info:has(.popup-middleware-bc):has(#base_popup_id.popup-inner-bc):has(#close_popup_button_id.e-p-close-icon-bc.bc-i-close-remove):has(.status-popup-content-w-bc):has(.casino-popup-content):has(.casino-popup-button-block):has(.btn) .status-popup-content-w-bc .casino-popup-content::before {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1rem;
+  background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M40 7.5C33.5721 7.5 27.2886 9.40609 21.944 12.9772C16.5994 16.5484 12.4338 21.6242 9.97393 27.5628C7.51408 33.5014 6.87047 40.0361 8.12449 46.3404C9.37851 52.6448 12.4738 58.4358 17.019 62.981C21.5643 67.5262 27.3552 70.6215 33.6596 71.8755C39.964 73.1295 46.4986 72.4859 52.4372 70.0261C58.3758 67.5662 63.4516 63.4006 67.0228 58.056C70.5939 52.7114 72.5 46.4279 72.5 40C72.4909 31.3833 69.0639 23.122 62.9709 17.0291C56.878 10.9361 48.6168 7.5091 40 7.5ZM31.7594 52.5H48.2406C46.5625 58.2313 43.75 63.3969 40 67.4656C36.25 63.3969 33.4375 58.2313 31.7594 52.5ZM30.625 47.5C29.7959 42.5344 29.7959 37.4656 30.625 32.5H49.375C50.2042 37.4656 50.2042 42.5344 49.375 47.5H30.625ZM12.5 40C12.4978 37.4639 12.8481 34.9397 13.5406 32.5H25.5594C24.8136 37.4722 24.8136 42.5278 25.5594 47.5H13.5406C12.8481 45.0603 12.4978 42.5361 12.5 40ZM48.2406 27.5H31.7594C33.4375 21.7688 36.25 16.6031 40 12.5344C43.75 16.6031 46.5625 21.7688 48.2406 27.5ZM54.4406 32.5H66.4594C67.8469 37.4037 67.8469 42.5963 66.4594 47.5H54.4406C55.1865 42.5278 55.1865 37.4722 54.4406 32.5ZM64.4906 27.5H53.4188C52.1429 22.4797 50.0003 17.7208 47.0875 13.4375C50.8089 14.4376 54.2798 16.2054 57.2771 18.6273C60.2743 21.0492 62.7315 24.0715 64.4906 27.5ZM32.9125 13.4375C29.9997 17.7208 27.8571 22.4797 26.5813 27.5H15.5094C17.2685 24.0715 19.7257 21.0492 22.723 18.6273C25.7202 16.2054 29.1911 14.4376 32.9125 13.4375ZM15.5094 52.5H26.5813C27.8571 57.5203 29.9997 62.2792 32.9125 66.5625C29.1911 65.5624 25.7202 63.7946 22.723 61.3727C19.7257 58.9508 17.2685 55.9285 15.5094 52.5ZM47.0875 66.5625C50.0003 62.2792 52.1429 57.5203 53.4188 52.5H64.4906C62.7315 55.9285 60.2743 58.9508 57.2771 61.3727C54.2798 63.7946 50.8089 65.5624 47.0875 66.5625Z' fill='%23D80D83'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+body:not(:has(#root.theme-white)) .popup-holder-bc.windowed.info:has(.popup-middleware-bc):has(#base_popup_id.popup-inner-bc):has(#close_popup_button_id.e-p-close-icon-bc.bc-i-close-remove):has(.status-popup-content-w-bc):has(.casino-popup-content):has(.casino-popup-button-block):has(.btn) .status-popup-content-w-bc .casino-popup-content::after {
+  content: "Ative o acesso a sua localização";
+  margin-bottom: 8px;
+  color: #fff;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+body:not(:has(#root.theme-white)) .popup-holder-bc.windowed.info:has(.popup-middleware-bc):has(#base_popup_id.popup-inner-bc):has(#close_popup_button_id.e-p-close-icon-bc.bc-i-close-remove):has(.status-popup-content-w-bc):has(.casino-popup-content):has(.casino-popup-button-block):has(.btn) .status-popup-content-w-bc .casino-popup-content p {
+  display: none !important;
+  flex-direction: column;
+  color: #c8c0d4 !important;
+}
+
+body:not(:has(#root.theme-white)) .popup-holder-bc.windowed.info:has(.popup-middleware-bc):has(#base_popup_id.popup-inner-bc):has(#close_popup_button_id.e-p-close-icon-bc.bc-i-close-remove):has(.status-popup-content-w-bc):has(.casino-popup-content):has(.casino-popup-button-block):has(.btn) .status-popup-content-w-bc .casino-popup-button-block {
+  display: grid;
+  grid-template-areas: "before" "after" "button";
+  text-align: center;
+}
+
+body:not(:has(#root.theme-white)) .popup-holder-bc.windowed.info:has(.popup-middleware-bc):has(#base_popup_id.popup-inner-bc):has(#close_popup_button_id.e-p-close-icon-bc.bc-i-close-remove):has(.status-popup-content-w-bc):has(.casino-popup-content):has(.casino-popup-button-block):has(.btn) .status-popup-content-w-bc .casino-popup-button-block::before {
+  grid-area: before;
+  content: "Pra entrar e se divertir na VBet, precisamos confirmar que você está acessando do Brasil.";
+  margin-bottom: 1.5rem;
+  color: #c8c0d4;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+body:not(:has(#root.theme-white)) .popup-holder-bc.windowed.info:has(.popup-middleware-bc):has(#base_popup_id.popup-inner-bc):has(#close_popup_button_id.e-p-close-icon-bc.bc-i-close-remove):has(.status-popup-content-w-bc):has(.casino-popup-content):has(.casino-popup-button-block):has(.btn) .status-popup-content-w-bc .casino-popup-button-block::after {
+  grid-area: after;
+  content: "Permita o acesso à localização no pop-up do seu navegador e depois atualize a página.";
+  margin-bottom: 2rem;
+  color: #c8c0d4;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+body:not(:has(#root.theme-white)) .popup-holder-bc.windowed.info:has(.popup-middleware-bc):has(#base_popup_id.popup-inner-bc):has(#close_popup_button_id.e-p-close-icon-bc.bc-i-close-remove):has(.status-popup-content-w-bc):has(.casino-popup-content):has(.casino-popup-button-block):has(.btn) .status-popup-content-w-bc .casino-popup-button-block button {
+  background: #d80d83 !important;
+  border: 0;
+  border-radius: 8px;
+}
+
+html[lang*=en] body:not(:has(#root.theme-white)) .popup-holder-bc.windowed.warning:has(.popup-middleware-bc):has(#base_popup_id.popup-inner-bc):has(#close_popup_button_id.e-p-close-icon-bc.bc-i-close-remove):has(.status-popup-content-w-bc):has(.casino-popup-icon-wrapper):has(svg):has(.casino-popup-content):has(.casino-popup-button-block):has(.btn) .status-popup-content-w-bc .casino-popup-icon-wrapper::after {
+  content: "Location not available" !important;
+}
+
+html[lang*=en] body:not(:has(#root.theme-white)) .popup-holder-bc.windowed.warning:has(.popup-middleware-bc):has(#base_popup_id.popup-inner-bc):has(#close_popup_button_id.e-p-close-icon-bc.bc-i-close-remove):has(.status-popup-content-w-bc):has(.casino-popup-icon-wrapper):has(svg):has(.casino-popup-content):has(.casino-popup-button-block):has(.btn) .status-popup-content-w-bc .casino-popup-button-block::before {
+  content: "We need to know where you are playing from. To do this: you must be in Brazil, your location must be enabled, VPN or proxy must be disabled." !important;
+}
+
+html[lang*=en] body:not(:has(#root.theme-white)) .popup-holder-bc.windowed.warning:has(.popup-middleware-bc):has(#base_popup_id.popup-inner-bc):has(#close_popup_button_id.e-p-close-icon-bc.bc-i-close-remove):has(.status-popup-content-w-bc):has(.casino-popup-icon-wrapper):has(svg):has(.casino-popup-content):has(.casino-popup-button-block):has(.btn) .status-popup-content-w-bc .casino-popup-button-block::after {
+  content: "Once done, refresh the page and try again." !important;
+}
+
+html[lang*=es] body:not(:has(#root.theme-white)) .popup-holder-bc.windowed.warning:has(.popup-middleware-bc):has(#base_popup_id.popup-inner-bc):has(#close_popup_button_id.e-p-close-icon-bc.bc-i-close-remove):has(.status-popup-content-w-bc):has(.casino-popup-icon-wrapper):has(svg):has(.casino-popup-content):has(.casino-popup-button-block):has(.btn) .status-popup-content-w-bc .casino-popup-icon-wrapper::after {
+  content: "Ubicación no identificada" !important;
+}
+
+html[lang*=es] body:not(:has(#root.theme-white)) .popup-holder-bc.windowed.warning:has(.popup-middleware-bc):has(#base_popup_id.popup-inner-bc):has(#close_popup_button_id.e-p-close-icon-bc.bc-i-close-remove):has(.status-popup-content-w-bc):has(.casino-popup-icon-wrapper):has(svg):has(.casino-popup-content):has(.casino-popup-button-block):has(.btn) .status-popup-content-w-bc .casino-popup-button-block::before {
+  content: "Necesitamos saber desde dónde estás jugando. Para hacer esto: debes estar en Brasil, tu ubicación debe estar activada, VPN o proxy debe estar desactivado." !important;
+}
+
+html[lang*=es] body:not(:has(#root.theme-white)) .popup-holder-bc.windowed.warning:has(.popup-middleware-bc):has(#base_popup_id.popup-inner-bc):has(#close_popup_button_id.e-p-close-icon-bc.bc-i-close-remove):has(.status-popup-content-w-bc):has(.casino-popup-icon-wrapper):has(svg):has(.casino-popup-content):has(.casino-popup-button-block):has(.btn) .status-popup-content-w-bc .casino-popup-button-block::after {
+  content: "Una vez hecho esto, actualice la página y vuelva a intentarlo." !important;
+}
+
+body:not(:has(#root.theme-white)) .popup-holder-bc.windowed.warning:has(.popup-middleware-bc):has(#base_popup_id.popup-inner-bc):has(#close_popup_button_id.e-p-close-icon-bc.bc-i-close-remove):has(.status-popup-content-w-bc):has(.casino-popup-icon-wrapper):has(svg):has(.casino-popup-content):has(.casino-popup-button-block):has(.btn) .status-popup-content-w-bc {
+  background: #22182e;
+  padding: 24px 20px !important;
+}
+
+body:not(:has(#root.theme-white)) .popup-holder-bc.windowed.warning:has(.popup-middleware-bc):has(#base_popup_id.popup-inner-bc):has(#close_popup_button_id.e-p-close-icon-bc.bc-i-close-remove):has(.status-popup-content-w-bc):has(.casino-popup-icon-wrapper):has(svg):has(.casino-popup-content):has(.casino-popup-button-block):has(.btn) .status-popup-content-w-bc .casino-popup-icon-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+body:not(:has(#root.theme-white)) .popup-holder-bc.windowed.warning:has(.popup-middleware-bc):has(#base_popup_id.popup-inner-bc):has(#close_popup_button_id.e-p-close-icon-bc.bc-i-close-remove):has(.status-popup-content-w-bc):has(.casino-popup-icon-wrapper):has(svg):has(.casino-popup-content):has(.casino-popup-button-block):has(.btn) .status-popup-content-w-bc .casino-popup-icon-wrapper::before {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 80px;
+  background-image: url("data:image/svg+xml,%3Csvg width='81' height='80' viewBox='0 0 81 80' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M74.4999 58.7781L47.1718 11.3187C46.4889 10.156 45.514 9.1919 44.3437 8.52203C43.1734 7.85216 41.8484 7.49976 40.4999 7.49976C39.1515 7.49976 37.8265 7.85216 36.6562 8.52203C35.4859 9.1919 34.511 10.156 33.8281 11.3187L6.49993 58.7781C5.84286 59.9027 5.49658 61.1818 5.49658 62.4843C5.49658 63.7868 5.84286 65.066 6.49993 66.1906C7.17409 67.3603 8.14734 68.3297 9.31981 68.9991C10.4923 69.6686 11.8218 70.014 13.1718 70H67.8281C69.1771 70.0129 70.5052 69.6669 71.6765 68.9975C72.8478 68.3282 73.82 67.3594 74.4937 66.1906C75.1517 65.0665 75.4991 63.7877 75.5002 62.4852C75.5013 61.1827 75.1561 59.9033 74.4999 58.7781ZM37.9999 32.5C37.9999 31.8369 38.2633 31.201 38.7322 30.7322C39.201 30.2634 39.8369 30 40.4999 30C41.163 30 41.7989 30.2634 42.2677 30.7322C42.7365 31.201 42.9999 31.8369 42.9999 32.5V45C42.9999 45.663 42.7365 46.2989 42.2677 46.7677C41.7989 47.2366 41.163 47.5 40.4999 47.5C39.8369 47.5 39.201 47.2366 38.7322 46.7677C38.2633 46.2989 37.9999 45.663 37.9999 45V32.5ZM40.4999 60C39.7583 60 39.0332 59.78 38.4165 59.368C37.7999 58.9559 37.3192 58.3702 37.0354 57.685C36.7516 56.9998 36.6773 56.2458 36.822 55.5184C36.9667 54.7909 37.3238 54.1228 37.8483 53.5983C38.3727 53.0739 39.0409 52.7167 39.7683 52.572C40.4958 52.4273 41.2498 52.5016 41.935 52.7854C42.6202 53.0692 43.2059 53.5499 43.6179 54.1666C44.03 54.7833 44.2499 55.5083 44.2499 56.25C44.2499 57.2445 43.8548 58.1983 43.1516 58.9016C42.4483 59.6049 41.4945 60 40.4999 60Z' fill='%23F9AB10'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+body:not(:has(#root.theme-white)) .popup-holder-bc.windowed.warning:has(.popup-middleware-bc):has(#base_popup_id.popup-inner-bc):has(#close_popup_button_id.e-p-close-icon-bc.bc-i-close-remove):has(.status-popup-content-w-bc):has(.casino-popup-icon-wrapper):has(svg):has(.casino-popup-content):has(.casino-popup-button-block):has(.btn) .status-popup-content-w-bc .casino-popup-icon-wrapper svg {
+  display: none;
+}
+
+body:not(:has(#root.theme-white)) .popup-holder-bc.windowed.warning:has(.popup-middleware-bc):has(#base_popup_id.popup-inner-bc):has(#close_popup_button_id.e-p-close-icon-bc.bc-i-close-remove):has(.status-popup-content-w-bc):has(.casino-popup-icon-wrapper):has(svg):has(.casino-popup-content):has(.casino-popup-button-block):has(.btn) .status-popup-content-w-bc .casino-popup-icon-wrapper::after {
+  content: "Localização não identificada";
+  color: #fff;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+body:not(:has(#root.theme-white)) .popup-holder-bc.windowed.warning:has(.popup-middleware-bc):has(#base_popup_id.popup-inner-bc):has(#close_popup_button_id.e-p-close-icon-bc.bc-i-close-remove):has(.status-popup-content-w-bc):has(.casino-popup-icon-wrapper):has(svg):has(.casino-popup-content):has(.casino-popup-button-block):has(.btn) .status-popup-content-w-bc .casino-popup-content {
+  display: none;
+}
+
+body:not(:has(#root.theme-white)) .popup-holder-bc.windowed.warning:has(.popup-middleware-bc):has(#base_popup_id.popup-inner-bc):has(#close_popup_button_id.e-p-close-icon-bc.bc-i-close-remove):has(.status-popup-content-w-bc):has(.casino-popup-icon-wrapper):has(svg):has(.casino-popup-content):has(.casino-popup-button-block):has(.btn) .status-popup-content-w-bc .casino-popup-content p {
+  display: flex;
+  flex-direction: column;
+  color: #c8c0d4 !important;
+}
+
+body:not(:has(#root.theme-white)) .popup-holder-bc.windowed.warning:has(.popup-middleware-bc):has(#base_popup_id.popup-inner-bc):has(#close_popup_button_id.e-p-close-icon-bc.bc-i-close-remove):has(.status-popup-content-w-bc):has(.casino-popup-icon-wrapper):has(svg):has(.casino-popup-content):has(.casino-popup-button-block):has(.btn) .status-popup-content-w-bc .casino-popup-button-block {
+  display: grid;
+  grid-template-areas: "before" "after" "button";
+  text-align: center;
+}
+
+body:not(:has(#root.theme-white)) .popup-holder-bc.windowed.warning:has(.popup-middleware-bc):has(#base_popup_id.popup-inner-bc):has(#close_popup_button_id.e-p-close-icon-bc.bc-i-close-remove):has(.status-popup-content-w-bc):has(.casino-popup-icon-wrapper):has(svg):has(.casino-popup-content):has(.casino-popup-button-block):has(.btn) .status-popup-content-w-bc .casino-popup-button-block::before {
+  grid-area: before;
+  content: "Precisamos saber de onde você está jogando. Para isso: você deve estar no Brasil, sua localização precisa estar ativada, VPN ou proxy precisam estar desativados.";
+  margin-bottom: 8px;
+  color: #c8c0d4;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+body:not(:has(#root.theme-white)) .popup-holder-bc.windowed.warning:has(.popup-middleware-bc):has(#base_popup_id.popup-inner-bc):has(#close_popup_button_id.e-p-close-icon-bc.bc-i-close-remove):has(.status-popup-content-w-bc):has(.casino-popup-icon-wrapper):has(svg):has(.casino-popup-content):has(.casino-popup-button-block):has(.btn) .status-popup-content-w-bc .casino-popup-button-block::after {
+  grid-area: after;
+  content: "Feito isso, atualize a página e tente novamente.";
+  margin-bottom: 2rem;
+  color: #c8c0d4;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+body:not(:has(#root.theme-white)) .popup-holder-bc.windowed.warning:has(.popup-middleware-bc):has(#base_popup_id.popup-inner-bc):has(#close_popup_button_id.e-p-close-icon-bc.bc-i-close-remove):has(.status-popup-content-w-bc):has(.casino-popup-icon-wrapper):has(svg):has(.casino-popup-content):has(.casino-popup-button-block):has(.btn) .status-popup-content-w-bc .casino-popup-button-block button {
+  background: #d80d83 !important;
+  border: 0;
+  border-radius: 8px;
+  grid-area: button;
+  display: block;
+}
+
+/* 
+  Below we add default style to the profile links and social medias 
+*/
+.message-info-bc strong span {
+  color: white !important;
+}
+
+.user-profile-nav-list .user-profile-nav-item .count-odd-animation {
+  margin-bottom: 12px;
+  margin-left: 110px;
+}
+
+/* 
+  Above is the final of the new profile style 
+*/
+body:not(:has(#root.theme-white)) .is-home-page .hm-row-bc:has(.storiesWidgetWrapper) {
+  grid-row: 1;
+  margin-bottom: 0 !important;
+}
+
+body:not(:has(#root.theme-white)) .is-home-page .storiesWidgetWrapper {
+  padding: unset !important;
+  margin-bottom: -10px !important;
+  margin-top: 2px !important;
+}
+
+body:not(:has(#root.theme-white)) .is-home-page .storiesWidgetWrapper:has(.storiesWidgetList:not(:empty)) {
+  display: block !important;
+}
+
+body:not(:has(#root.theme-white)) .is-home-page .storiesWidgetWrapper .horizontalSliderRow {
+  padding: 4px 16px !important;
+}
+
+body:not(:has(#root.theme-white)) .is-home-page .storiesWidgetListItem::after,
+body:not(:has(#root.theme-white)) .is-home-page .storiesWidgetListItem .horizontal-sl-icon-bc {
+  width: 56px !important;
+  height: 56px !important;
+}
+
+body:not(:has(#root.theme-white)) .is-home-page .storiesWidgetListItem::before,
+body:not(:has(#root.theme-white)) .is-home-page .storiesWidgetListItem::after,
+body:not(:has(#root.theme-white)) .is-home-page .storiesWidgetListItem .horizontal-sl-title-bc::before {
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  right: unset !important;
+}
+
+body:not(:has(#root.theme-white)) .is-home-page .singleStoryImgWrapper .storyGroupInfo img {
+  border: 1px solid rgba(249, 181, 221, 0.368627451) !important;
+}
+
+body:not(:has(#root.theme-white)) .is-home-page .storiesWidgetListItem::before {
+  width: 60px !important;
+  height: 60px !important;
+}
+
+body:not(:has(#root.theme-white)) .is-home-page .storiesWidgetListItem::after {
+  z-index: 9 !important;
+}
+
+body:not(:has(#root.theme-white)) .is-home-page .storiesWidgetListItem img {
+  visibility: hidden !important;
+}
+
+body:not(:has(#root.theme-white)) .is-home-page .storiesWidgetListItem .visited:before {
+  background: #283761 !important;
+}
+
+body:not(:has(#root.theme-white)) .is-home-page .storiesWidgetListItem:not(.visited):before {
+  background-image: linear-gradient(225deg, rgba(249, 181, 221, 0.368627451) 0%, rgba(249, 181, 221, 0.368627451) 51%, rgba(249, 181, 221, 0.368627451) 100%) !important;
+  box-shadow: 0px 0px 3.5px 4px rgba(216, 13, 131, 0.08);
+}
+
+body:not(:has(#root.theme-white)) .is-home-page .storiesWidgetListItem .horizontal-sl-title-bc {
+  all: unset !important;
+  overflow: hidden !important;
+  white-space: nowrap !important;
+  text-overflow: ellipsis !important;
+  max-width: 60px !important;
+  margin-top: 5px !important;
+  color: #dadada !important;
+  text-align: center !important;
+  font-family: Mont, sans-serif !important;
+  font-size: 8px !important;
+  font-style: normal !important;
+  font-weight: 700 !important;
+  line-height: normal !important;
+}
+
+body:not(:has(#root.theme-white)) .is-home-page .storiesWidgetListItem .horizontal-sl-title-bc::before {
+  content: "";
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  overflow: hidden;
+  background-size: contain;
+  background-repeat: no-repeat;
+  pointer-events: none;
+}
+
+body:not(:has(#root.theme-white)) .is-home-page .storiesWidgetListItem:nth-child(1) .horizontal-sl-title-bc::before {
+  background-image: url("https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_f95af8382e649a1d3623d49f7adf9932.png");
+}
+
+body:not(:has(#root.theme-white)) .is-home-page .storiesWidgetListItem:nth-child(2) .horizontal-sl-title-bc::before {
+  background-image: url("https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_e1d5d2522d1085b17ca6a1732c1dd35b.png");
+}
+
+body:not(:has(#root.theme-white)) .is-home-page .storiesWidgetListItem:nth-child(3) .horizontal-sl-title-bc::before {
+  background-image: url("https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_53019995cf1aa38ae703f313cb751172.png");
+}
+
+body:not(:has(#root.theme-white)) .is-home-page .storiesWidgetListItem:nth-child(4) .horizontal-sl-title-bc::before {
+  background-image: url("https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_c66648407891823ba0f85e51b63be599.png");
+}
+
+body:not(:has(#root.theme-white)) .is-home-page .storiesWidgetListItem:nth-child(6) .horizontal-sl-title-bc::before {
+  background-image: url("https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_b86acb25838a9e2aa5346098002c4112.png");
+}
+
+body:not(:has(#root.theme-white)) .is-home-page .storiesWidgetListItem:nth-child(5) .horizontal-sl-title-bc::before {
+  background-image: url("https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_ff8b10b5f6989dba717d9621a5d31fd8.png");
+}
+
+/* 
+  Below we add all the rewrite style that will apear only on the home page, that means it is not global 
+*/
+body:not(:has(#root.theme-white)) .is-home-page .layout-content-holder-bc {
+  display: grid;
+}
+
+body:not(:has(#root.theme-white)) .is-home-page .layout-content-holder-bc .hm-row-bc {
+  gap: 0;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+body:not(:has(#root.theme-white)) .is-home-page .page-view-more,
+body:not(:has(#root.theme-white)) .is-home-page .hm-row-bc:has(.ftr-g-content-bc .carousel-viewport)::before {
+  all: unset;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0px 16px 8px 16px;
+  border-radius: 8px 8px 0px 0px;
+  background: linear-gradient(90deg, rgba(196, 110, 172, 0.17) 0%, #0f0f0f 100%);
+  padding: 8px;
+  gap: 10px;
+  box-sizing: border-box;
+}
+
+body:not(:has(#root.theme-white)) .is-home-page .view-title-more {
+  all: unset;
+  text-transform: unset;
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 14.4px;
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 6px;
+}
+
+body:not(:has(#root.theme-white)) .is-home-page .view-title-more::after {
+  content: "";
+  position: absolute;
+  left: 22px;
+  color: #fff;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  display: none;
+}
+
+body:not(:has(#root.theme-white)) .is-home-page .view-title-more::before {
+  content: "";
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+}
+
+body:not(:has(#root.theme-white)) .is-home-page .view-see-more {
+  all: unset;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #c9c9c9;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+}
+
+body:not(:has(#root.theme-white)) .is-home-page .view-see-more[href*="/pb/"],
+body:not(:has(#root.theme-white)) .is-home-page .view-see-more[href*="/en/"],
+body:not(:has(#root.theme-white)) .is-home-page .view-see-more[href*="/es/"] {
+  color: transparent;
+}
+
+body:not(:has(#root.theme-white)) .is-home-page .view-see-more[href*="/pb/"]::after {
+  content: "Ver Mais";
+  color: #c9c9c9;
+}
+
+body:not(:has(#root.theme-white)) .is-home-page .view-see-more[href*="/en/"]::after {
+  content: "See More";
+  color: #c9c9c9;
+}
+
+body:not(:has(#root.theme-white)) .is-home-page .view-see-more[href*="/es/"]::after {
+  content: "Ver Más";
+  color: #c9c9c9;
+}
+
+body:not(:has(#root.theme-white)) .is-home-page .view-see-more i {
+  display: none;
+}
+
+body:not(:has(#root.theme-white)) .is-home-page .layout-content-holder-bc .hm-row-bc:nth-child(1) {
+  margin-bottom: 10px;
+}
+
+body:not(:has(#root.theme-white)) .is-home-page .layout-content-holder-bc .hm-row-bc.has-slider .sdr-image-bc {
+  object-fit: unset !important;
+}
+
+html[lang*=pb] body:not(:has(#root.theme-white)) .is-home-page .hm-row-bc:has(.ftr-g-content-bc .carousel-viewport)::after {
+  content: "Jogos em Destaque" !important;
+}
+
+html[lang*=en] body:not(:has(#root.theme-white)) .is-home-page .hm-row-bc:has(.ftr-g-content-bc .carousel-viewport)::after {
+  content: "Featured Games" !important;
+}
+
+html[lang*=es] body:not(:has(#root.theme-white)) .is-home-page .hm-row-bc:has(.ftr-g-content-bc .carousel-viewport)::after {
+  content: "Juegos Destacados" !important;
+}
+
+body:not(:has(#root.theme-white)) .is-home-page .hm-row-bc:has(.ftr-g-content-bc .carousel-viewport) {
+  position: relative;
+  padding-top: 40px;
+}
+
+body:not(:has(#root.theme-white)) .is-home-page .hm-row-bc:has(.ftr-g-content-bc .carousel-viewport)::before {
+  content: "";
+  height: 32px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+body:not(:has(#root.theme-white)) .is-home-page .hm-row-bc:has(.ftr-g-content-bc .carousel-viewport)::after {
+  content: "Jogos em Destaque";
+  position: absolute;
+  top: 0;
+  height: 32px;
+  margin-left: 16px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 14.4px;
+  padding-left: 30px;
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: 8px;
+  background-image: url("https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_9783f49b782fa45eef7fb976a8566ac0.svg");
+}
+
+body:not(:has(#root.theme-white)) .is-home-page .hm-row-bc:has(.ftr-g-content-bc .carousel-viewport) .ftr-game-item-bc {
+  margin: 0 16px;
+}
+
+body:not(:has(#root.theme-white)) .is-home-page .hm-row-bc:has(.ftr-g-content-bc .carousel-viewport) .ftr-g-i-b-opp-t-holder-bc {
+  margin-top: 10px;
+}
+
+body:not(:has(#root.theme-white)) .is-home-page .hm-row-bc:has(.ftr-g-content-bc .carousel-viewport) .ftr-g-i-body-bc {
+  padding-bottom: 7px;
+}
+
+body:not(:has(#root.theme-white)) .is-home-page .hm-row-bc:has(.ftr-g-content-bc .carousel-viewport) .carousel {
+  position: unset;
+}
+
+body:not(:has(#root.theme-white)) .is-home-page .hm-row-bc:has(.ftr-g-content-bc .carousel-viewport) .carousel-count {
+  all: unset !important;
+  position: absolute !important;
+  top: 8px !important;
+  right: 24px !important;
+  color: #c9c9c9 !important;
+  font-size: 12px !important;
+  font-weight: 400 !important;
+  line-height: 144% !important;
+}
+
+body:not(:has(#root.theme-white)) .is-home-page .layout-content-holder-bc .hm-row-bc:has(a[href*="/casino/slots"]) .view-title-more::before {
+  /* Casino */
+  background-image: url("https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_122c040b95e7a3387d453714b4724770.svg");
+}
+
+body:not(:has(#root.theme-white)) .is-home-page .layout-content-holder-bc .hm-row-bc:has(a[href*="/live-casino/home"]) .view-title-more::before {
+  /* Live Casino */
+  background-image: url("https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_60cd4faa1505c12097f93eea330aed44.svg");
+}
+
+body:not(:has(#root.theme-white)) .is-home-page .layout-content-holder-bc .hm-row-bc:has(a[href*="/games"]) .view-title-more::before {
+  /* Games */
+  background-image: url("https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_5caeea032b0db1311ec0e52cedce1456.svg");
+}
+
+body:not(:has(#root.theme-white)) .is-home-page .games-horiz {
+  all: unset;
+}
+
+body:not(:has(#root.theme-white)) .is-home-page .casino-game-item-amount .games-horiz-scroll {
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+}
+
+body:not(:has(#root.theme-white)) .is-home-page .games-horiz-scroll {
+  will-change: scroll-position;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: unset;
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 12.5px;
+  padding: 0px 16px;
+}
+
+body:not(:has(#root.theme-white)) .is-home-page .casino-game-item {
+  border-radius: 10.909px;
+}
+
+/* 
+  Above is the end of the home page style rewritten 
+*/
+/*
+ Below is all the custom already added on the custom.css file that is already on the Vbet website 
+*/
+.woot-widget-bubble {
+  display: none !important;
+}
+
+.layout-bc:not(.is-home-page, .casino-slots)~.woot--bubble-holder {
+  display: none !important;
+}
+
+.footerSliderGroup>.footerSlider:nth-child(2) img {
+  pointer-events: none;
+}
+
+.ftr-payments-row-img-bc:nth-child(7),
+.ftr-payments-row-img-bc:nth-child(10),
+.ftr-payments-row-img-bc:nth-child(15),
+.ftr-payments-row-img-bc:nth-child(18),
+.ftr-payments-row-img-bc:nth-child(19),
+.ftr-payments-row-img-bc:nth-child(20),
+.ftr-payments-row-img-bc:nth-child(21),
+.ftr-payments-row-img-bc:nth-child(22),
+.ftr-payments-row-img-bc:nth-child(23),
+.ftr-payments-row-img-bc:nth-child(24),
+.ftr-payments-row-img-bc:nth-child(25),
+.ftr-payments-row-img-bc:nth-child(26),
+.ftr-payments-row-img-bc:nth-child(28),
+.ftr-payments-row-img-bc:nth-child(29),
+.ftr-payments-row-img-bc:nth-child(30),
+.ftr-payments-row-img-bc:nth-child(31),
+.ftr-payments-row-img-bc:nth-child(32),
+.ftr-payments-row-img-bc:nth-child(33),
+.ftr-payments-row-img-bc:nth-child(34),
+.ftr-payments-row-img-bc:nth-child(35),
+.ftr-payments-row-img-bc:nth-child(39),
+.ftr-payments-row-img-bc:nth-child(40),
+.ftr-payments-row-img-bc:nth-child(44),
+.ftr-payments-row-img-bc:nth-child(46),
+.ftr-payments-row-img-bc:nth-child(49),
+.ftr-payments-row-img-bc:nth-child(50),
+.ftr-payments-row-img-bc:nth-child(61),
+.ftr-payments-row-img-bc:nth-child(65),
+.ftr-payments-row-img-bc:nth-child(69),
+.ftr-payments-row-img-bc:nth-child(70),
+.ftr-payments-row-img-bc:nth-child(71),
+.ftr-payments-row-img-bc:nth-child(72) {
+  display: none;
+}
+
+.horizontal-sl-icon-bc.bc-i-default-icon.bc-i-promotion-horizontal-sl-list {
+  width: 24px;
+  height: 24px;
+  background-image: url(https://cmsbetconstruct.com/storage/medias/vbet-crypto-asia-18751871/media_18751871_64cd20b074eace8a1b8e094fea5ae25a.svg);
+  background-size: contain;
+  opacity: 0.7;
+}
+
+.promotion-horizontal-sl-list:hover .horizontal-sl-icon-bc.bc-i-default-icon.bc-i-promotion-horizontal-sl-list {
+  opacity: 1;
+}
+
+.horizontal-sl-icon-bc.bc-i-default-icon.bc-i-promotion-horizontal-sl-list:before {
+  content: "" !important;
+}
+
+.bc-i-egt:before {
+  content: " " !important;
+  width: 100%;
+  height: 100%;
+  background-image: url(https://static.springbuilder.site/fs/userFiles-v2/vbetampromo/media/amusnetlogo-1683184740491.svg?1683184742893);
+  background-size: 65px;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.45;
+}
+
+.bc-i-egt.active:before {
+  opacity: 1;
+}
+
+[title=FTN].sp-button-bc .bc-i-crypto:before {
+  content: "" !important;
+  background-image: url(https://cmsbetconstruct.com/storage/medias/vbetcrypto-tr-18752937/media_18752937_f86960e3b0001006e58a08b7c1577e10.png);
+  width: 20px;
+  height: 20px;
+  display: block;
+  background-size: contain;
+  transform: translateY(4px);
+  transition: all 0.5s;
+}
+
+[title=FTN].sp-button-bc:hover .bc-i-crypto:before {
+  background-image: url(https://cmsbetconstruct.com/storage/medias/vbetcrypto-tr-18752937/media_18752937_98312a2368c5c0e759bcb1577b88625c.png);
+}
+
+.live-casino-block .casino-category-chooser-container .horizontal-sl-item-bc.turkishTables,
+.live-casino-block .casino-category-chooser-container .horizontal-sl-item-bc.asianGames,
+.live-casino-block .casino-category-chooser-container .horizontal-sl-item-bc.indianTables {
+  display: none !important;
+}
+
+.ftr-g-content-bc .carousel-count {
+  display: none !important;
+}
+
+.btn.btn-wallet-left span {
+  display: none;
+}
+
+[title=EUR].btn.btn-wallet-left:after {
+  content: "EUR";
+}
+
+[title=USD].btn.btn-wallet-left:after {
+  content: "USD";
+}
+
+[title=BRL].btn.btn-wallet-left:after {
+  content: "R$";
+}
+
+[title=PEN].btn.btn-wallet-left:after {
+  content: "PEN";
+}
+
+[title=CLP].btn.btn-wallet-left:after {
+  content: "CLP";
+}
+
+.slider-market-coefficient-container .countdown-banner-content {
+  top: 56% !important;
+  transform: translate(-50%, -50%);
+  bottom: initial !important;
+}
+
+.slider-market-coefficient-container .market-bc,
+.slider-market-coefficient-container .market-bc:not(.active) {
+  background: none !important;
+  box-shadow: initial !important;
+  border-bottom: 1px solid #ffffff !important;
+  border-radius: initial !important;
+  width: 29px !important;
+  height: 17px !important;
+}
+
+.slider-market-coefficient-container .market-bc .market-odd-bc,
+.slider-market-coefficient-container .market-bc:not(.active).market-odd-bc {
+  color: #ffffff !important;
+  font-size: 18px !important;
+  line-height: 1.2 !important;
+  font-weight: 700 !important;
+}
+
+.slider-market-coefficient-container .market-bc.active {
+  border-bottom: 1px solid #d80d83 !important;
+}
+
+.slider-market-coefficient-container .market-bc.active .market-odd-bc {
+  color: #d80d83 !important;
+}
+
+.slider-market-coefficient-container .market-icon-bc {
+  display: none !important;
+}
+
+.layout-content-holder-bc .jackpot-banner .casinoJackpotWrapper-bc::before {
+  background-image: initial !important;
+}
+
+.layout-content-holder-bc .jackpot-banner .casinoJackpotWrapper-bc {
+  background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_c2ff9b3a470f36fce3707d7ea241575f.png) !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  background-size: cover !important;
+}
+
+.is-home-page .countdown-banner-content {
+  left: 50% !important;
+  top: 65% !important;
+  transform: translate(-50%, -50%);
+  background: transparent !important;
+  border: initial !important;
+  backdrop-filter: initial !important;
+  -webkit-backdrop-filter: initial !important;
+  box-shadow: initial !important;
+}
+
+.is-home-page .countdown-banner-content .countdown-banner-date {
+  font-size: 6vw !important;
+  line-height: 5vw !important;
+  font-weight: 700 !important;
+}
+
+.is-home-page .countdown-banner-content .countdown-banner-names {
+  font-size: 12px !important;
+}
+
+.is-home-page .countdown-banner-counter+.countdown-banner-counter:before {
+  top: 2px !important;
+  left: -4px !important;
+}
+
+@media screen and (max-width: 730px) {
+  .is-home-page .countdown-banner-content {
+    top: 60% !important;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .is-home-page .countdown-banner-content {
+    top: 57% !important;
+  }
+}
+
+.casino-game-item.badge-vpn:after {
+  content: "" !important;
+  width: 54px;
+  display: block;
+  background-image: url(https://cmsbetconstruct.com/storage/medias/vbet/media_4_0b27f275a5a02b3963e6274afe2a3737.svg) !important;
+  background-size: contain !important;
+  top: 5px !important;
+  right: 5px !important;
+  background-repeat: no-repeat !important;
+  transform: initial !important;
+  background-color: initial !important;
+  box-shadow: initial !important;
+}
+
+/* PROMO BUTTON */
+.promo-btn {
+  display: inline-block;
+  position: relative;
+  text-decoration: none !important;
+  color: white !important;
+  background: linear-gradient(45deg, #a71f67, #c61e77, #a71f67);
+  padding: 10px 30px;
+  text-transform: uppercase;
+  border-radius: 6px;
+  font-size: 16px;
+  border: none;
+  margin-block: 10px;
+}
+
+/* LOYALTY ICONS */
+.loyalty-program-level-card-img {
+  margin-top: 0 !important;
+}
+
+.loyalty-level-img {
+  border-top: none !important;
+}
+
+/* POPUP */
+.casino-popup-button-block button {
+  background: none !important;
+  border: 1px solid white;
+}
+
+.popup-btn {
+  margin: 10px auto 0 auto;
+  background: rgba(var(--oc-1), 1) !important;
+  font-weight: 500 !important;
+}
+
+.popup-btn:hover {
+  background: rgba(var(--oc-1-hover), 1) !important;
+}
+
+.bc-i-community {
+  background: #a71f67 !important;
+}
+
+.hdr-crypto-btn {
+  border: none !important;
+}
+
+/* CONGRATS POPUP */
+.is-mobile:has(.logo[href="/pb/"]) .congrats-block:before {
+  background: url("https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_b501fde5445841a8ddfb49f940c724fc.png") !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+}
+
+.is-mobile:has(.logo[href="/en/"]) .congrats-block:before {
+  background: url("https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_cb854d31cafbd19a334f7343c4dae6be.png") !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+}
+
+.is-mobile:has(.logo[href="/es/"]) .congrats-block:before {
+  background: url("https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_01c8f3582d98542cfb0b5c8c789d36ae.png") !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+}
+
+.congrats-block-title,
+.congrats-block-desc,
+.congrats-block img {
+  display: none;
+}
+
+.congrats-reg-step-buttons a:nth-child(1) {
+  background: rgba(var(--oc-1), 1) !important;
+  border: none;
+}
+
+.horizontalCategoryItemWrp:has([title="CAÇA-NÍQUEIS PARA BÔNUS"]) .horizontalCategoryItem,
+.horizontalCategoryItemWrp:has([title="SLOTS FOR BONUSES"]) .horizontalCategoryItem,
+.horizontalCategoryItemWrp:has([title="TRAGAMONEDAS DE BONOS"]) .horizontalCategoryItem {
+  background: linear-gradient(45deg, #d80d83, #8d0e57);
+  background-size: 30% 100%;
+  animation: backgr-lines 20s linear infinite;
+  background-position: 0% 76%;
+}
+
+.horizontalCategoryItemWrp:has([title="CAÇA-NÍQUEIS PARA BÔNUS"]) .horizontalCategoryItem *,
+.horizontalCategoryItemWrp:has([title="SLOTS FOR BONUSES"]) .horizontalCategoryItem *,
+.horizontalCategoryItemWrp:has([title="TRAGAMONEDAS DE BONOS"]) .horizontalCategoryItem * {
+  color: white;
+}
+
+.horizontalCategoryItemWrp:has([title="CAÇA-NÍQUEIS PARA BÔNUS"]) .horizontalCategoryItem i,
+.horizontalCategoryItemWrp:has([title="SLOTS FOR BONUSES"]) .horizontalCategoryItem i,
+.horizontalCategoryItemWrp:has([title="TRAGAMONEDAS DE BONOS"]) .horizontalCategoryItem i {
+  animation: pressDown 2s infinite;
+}
+
+@keyframes pressDown {
+
+  30%,
+  40%,
+  100% {
+    transform: translateY(0);
+  }
+
+  35% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes backgr-lines {
+  0% {
+    background-position: 0% 76%;
+  }
+
+  50% {
+    background-position: 100% 25%;
+  }
+
+  100% {
+    background-position: 0% 76%;
+  }
+}
+
+.storiesWidgetWrapper {
+  display: none !important;
+}
+
+[class*=is-mobile] .tournamentSectionDataButtonWrp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.bc-i-jogosbsop:before {
+  content: url("https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_fe7afd84615008f76d53d12267ff686a.svg") !important;
+}
+
+.promotion-details-popup {
+  background: #0f0f0f;
+}
+
+.promotion-details-popup .promo-btn {
+  display: flex;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+  border-radius: 8px;
+  background: #d80d83;
+}
+
+.promotion-details-popup .promotion-telegram-button {
+  display: inline-flex;
+  height: 50px;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #FFF;
+  text-align: center;
+  font-family: Montserrat !important;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  /* 125% */
+  letter-spacing: 0.16px;
+  border-radius: 12px;
+  border: 1px solid #462437;
+  background: #161616;
+}
+
+.promotion-details-popup .promotion-telegram-button:before {
+  font-family: BetConstruct-Icons !important;
+}
+
+.promotion-details-popup .spoiler {
+  border-radius: 8px;
+  background: #191919;
+  padding: 1rem;
+  backdrop-filter: blur(20px);
+}
+
+.promotion-details-popup .spoiler>input[type=checkbox]:checked~.spoiler-content {
+  margin-top: 1rem;
+}
+
+.promotion-details-popup .spoiler .spoiler-toggle {
+  display: block;
+}
+
+.promotion-details-popup .spoiler .spoiler-title {
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%;
+  /* 22.4px */
+  min-height: 0;
+  padding: 0;
+}
+
+.promotion-details-popup .spoiler .spoiler-title::before {
+  right: 0;
+  left: auto;
+}
+
+.promotion-details-popup .spoiler .spoiler-content {
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+  /* 22.4px */
+}
+
+.promotion-details-popup .back-nav-bc {
+  border-bottom: 1px solid #d80d83;
+  padding: 2rem 0.5rem;
+}
+
+.promotion-details-popup .back-nav-bc .back-nav-title-bc-h1 {
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+/*# sourceMappingURL=custom.css.map */
+
+.popup-holder-bc.windowed.deposit .casino-popup-button-block button:first-child {
+  display: none !important;
+}
