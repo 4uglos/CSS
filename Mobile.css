@@ -114,17 +114,13 @@ body:not(:has(#root.theme-white)) .layout-header-holder-bc {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 45;
-}
-
-body:not(:has(#root.theme-white)) .header-bc {
-  all: unset;
+  z-index: 100;
 }
 
 body:not(:has(#root.theme-white)) .has-header-info:has(.informative-widget) .header-bc {
   position: relative;
-  top: 112px;
   background: #0f0f0f;
+  z-index: 9999;
 }
 
 body:not(:has(#root.theme-white)) .hdr-main-content-bc {
@@ -415,7 +411,9 @@ body:not(:has(#root.theme-white)) {
   /* E-Sports */
   /* Sports */
   /* UEFA */
-  /* Game View */
+  /* Game View Bingo */
+  /* Game View Aviator */
+  /* Game View Avi */
   /* Promo */
   /* Tournaments */
   /* Virtual Sports */
@@ -614,7 +612,7 @@ body:not(:has(#root.theme-white)) .header-bc .hdr-navigation-scrollable-bc .hdr-
   Below we add default style to the content of the all website 
 */
 body:not(:has(#root.theme-white)) .layout-content-holder-bc {
-  padding-top: 125px;
+  padding-top: 137px;
 }
 
 body:not(:has(#root.theme-white)) .has-header-info:has(.loyaltyBonusHeader) .layout-content-holder-bc {
@@ -950,10 +948,10 @@ body:not(:has(#root.theme-white)) .entrance-form-bc.registration .sg-n-text-row-
 body:not(:has(#root.theme-white)) .entrance-form-bc .form-control-message-bc {
   color: #ff4747 !important;
   background: transparent !important;
-  margin-left: 16px !important;
 }
 
-body:not(:has(#root.theme-white)) .entrance-form-bc .form-control-bc.invalid .form-control-message-bc::before {
+body:not(:has(#root.theme-white)) .entrance-form-bc .form-control-bc.invalid .form-control-message-bc::before,
+body:not(:has(#root.theme-white)) .form-control-message-bc::before {
   content: "x" !important;
   position: absolute !important;
   visibility: visible !important;
@@ -979,7 +977,6 @@ body:not(:has(#root.theme-white)) .entrance-form-bc.popup.registration {
 
 body:not(:has(#root.theme-white)) .entrance-form-bc input.form-control-input-bc {
   background: transparent !important;
-  border: 1px solid #393341 !important;
   border-radius: 8px !important;
 }
 
@@ -995,7 +992,6 @@ body:not(:has(#root.theme-white)) .reg-form-footer-bc .entrance-form-actions-hol
 
 body:not(:has(#root.theme-white)) .country-code label.form-control-label-bc.form-control-select-bc.inputs {
   background: transparent !important;
-  border: 1px solid #393341 !important;
   border-radius: 8px !important;
 }
 
@@ -1018,13 +1014,6 @@ body:not(:has(#root.theme-white)) .entrance-form-bc .reg-form-footer-bc .btn.a-o
 body:not(:has(#root.theme-white)) .entrance-form-bc .reg-form-content .sg-n-text-row-1-bc {
   visibility: hidden !important;
   position: relative !important;
-}
-
-body:not(:has(#root.theme-white)) .entrance-form-bc .reg-form-content .form-control-bc.filled:not(.invalid):not(.focused):not([class*=select]):not(:has(.form-control-select-bc)) {
-  position: relative !important;
-  border: 1px solid #a0f5b0 !important;
-  background: transparent !important;
-  border-radius: 8px !important;
 }
 
 body:not(:has(#root.theme-white)) .form-sign-bc .sg-n-text-row-1-bc {
@@ -1051,12 +1040,6 @@ body:not(:has(#root.theme-white)) .form-sign-bc .sg-n-text-row-2-bc::after {
   font-size: 20px !important;
   color: #ffffff !important;
   font-weight: 700 !important;
-}
-
-body:not(:has(#root.theme-white)) .entrance-form-bc input.form-control-input-bc {
-  background: transparent !important;
-  border: 1px solid #393341 !important;
-  border-radius: 8px !important;
 }
 
 body:not(:has(#root.theme-white)) .entrance-popup-bc .btn.register,
@@ -1408,6 +1391,586 @@ body:not(:has(#root.theme-white)) .popup-holder-bc.success .e-p-close-icon-bc.bc
 
 body:not(:has(#root.theme-white)) .popup-holder-bc.success .e-p-close-icon-bc.bc-i-close-remove:before {
   content: unset;
+}
+
+body:not(:has(#root.theme-white)) .entrance-popup-bc.register {
+  background: #160F20;
+}
+
+body:not(:has(#root.theme-white)) .entrance-popup-bc.register .e-p-close-icon-bc {
+  top: 15px;
+}
+
+body:not(:has(#root.theme-white)) .entrance-popup-bc.register .reg-step-title-v-bc {
+  display: none;
+}
+
+body:not(:has(#root.theme-white)) .entrance-popup-bc.register .e-p-section-title-bc {
+  color: #FAD2D6;
+}
+
+body:not(:has(#root.theme-white)) .entrance-popup-bc.register .e-p-header-bc {
+  position: relative;
+  padding-inline-start: 0;
+  padding: 0 16px;
+}
+
+body:not(:has(#root.theme-white)) .entrance-popup-bc.register .e-p-header-bc:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #D80D83;
+  box-shadow: 0 0 4px 0 rgba(175, 113, 255, 0.63);
+}
+
+body:not(:has(#root.theme-white)) .entrance-popup-bc.register .e-p-header-bc .registration {
+  padding-top: 0;
+}
+
+body:not(:has(#root.theme-white)) .entrance-popup-bc.register .e-p-header-bc .e-p-sections-bc {
+  margin-inline-start: 0;
+  margin-right: 24px;
+}
+
+body:not(:has(#root.theme-white)) .entrance-popup-bc.register .e-p-body-bc .btn.a-outline {
+  border: 1px solid #FAD2D6;
+  background: transparent;
+  color: #FAD2D6;
+}
+
+body:not(:has(#root.theme-white)) .entrance-popup-bc.register .e-p-body-bc .step-2 .entrance-form-content-section-bc {
+  margin-bottom: 0;
+}
+
+body:not(:has(#root.theme-white)) .entrance-popup-bc.register .e-p-body-bc .form-control-icon-bc.bc-i-eye-hidden,
+body:not(:has(#root.theme-white)) .entrance-popup-bc.register .e-p-body-bc .form-control-icon-bc.bc-i-eye {
+  top: 47px;
+}
+
+body:not(:has(#root.theme-white)) .entrance-popup-bc.register .e-p-body-bc .checkbox-control-icon-bc {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+body:not(:has(#root.theme-white)) .entrance-popup-bc.register .e-p-body-bc .reg-form-content {
+  padding-top: 24px;
+  margin-right: 3px;
+  margin-top: 4px;
+}
+
+body:not(:has(#root.theme-white)) .entrance-popup-bc.register .e-p-body-bc .reg-form-content::-webkit-scrollbar {
+  width: 5px;
+  height: 8px;
+  background-color: #9279B7;
+  padding-right: 10px;
+  border-radius: 8px;
+}
+
+body:not(:has(#root.theme-white)) .entrance-popup-bc.register .e-p-body-bc .reg-form-content::-webkit-scrollbar-thumb {
+  background: #392753;
+  border-radius: 8px;
+}
+
+body:not(:has(#root.theme-white)) .entrance-popup-bc.register .e-p-body-bc .reg-form-fields {
+  margin-top: 0;
+}
+
+body:not(:has(#root.theme-white)) .entrance-popup-bc.register .e-p-body-bc .sg-n-text-row-1-bc {
+  color: #FFF;
+  font-family: Montserrat !important;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 8px;
+}
+
+body:not(:has(#root.theme-white)) .entrance-popup-bc.register .e-p-body-bc .sg-n-text-row-2-bc {
+  color: #FFF;
+  font-family: Inter !important;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+body:not(:has(#root.theme-white)) .entrance-popup-bc.register .e-p-body-bc .form-control-message-bc {
+  font-family: Inter !important;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0;
+  align-items: center;
+  position: relative;
+  padding-left: 23px;
+  margin-left: 0;
+}
+
+body:not(:has(#root.theme-white)) .entrance-popup-bc.register .e-p-body-bc .entrance-form-bc .form-control-label-bc {
+  flex-direction: column;
+}
+
+body:not(:has(#root.theme-white)) .entrance-popup-bc.register .e-p-body-bc .entrance-form-bc .form-control-bc.valid {
+  border: 0;
+}
+
+body:not(:has(#root.theme-white)) .entrance-popup-bc.register .e-p-body-bc .entrance-form-bc .form-control-bc.valid .form-control-input-bc {
+  border-color: #a0f5b0;
+}
+
+body:not(:has(#root.theme-white)) .entrance-popup-bc.register .e-p-body-bc .entrance-form-bc input.form-control-input-bc {
+  display: flex;
+  height: 44px;
+  padding: 12px;
+  align-items: center;
+  gap: 12px;
+  align-self: stretch;
+  border-radius: 8px;
+  background: transparent;
+  border: 1px solid #393341;
+  order: 2;
+}
+
+body:not(:has(#root.theme-white)) .entrance-popup-bc.register .e-p-body-bc .entrance-form-bc input.form-control-input-bc:focus {
+  background: #261938;
+  border-color: #7A28D2;
+}
+
+body:not(:has(#root.theme-white)) .entrance-popup-bc.register .e-p-body-bc .entrance-form-bc .form-control-title-bc {
+  all: unset;
+  width: 100%;
+  position: relative;
+  order: 1;
+  color: #F0F0F0;
+  font-family: Inter !important;
+  font-size: 12px !important;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0;
+  margin-bottom: 8px;
+}
+
+body:not(:has(#root.theme-white)) .entrance-popup-bc.register .e-p-body-bc .entrance-form-bc .form-control-title-bc:after {
+  content: " *";
+  color: #A0F5B0;
+  font-family: Inter !important;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0px;
+}
+
+body:not(:has(#root.theme-white)) .entrance-popup-bc.register .e-p-body-bc .entrance-form-bc .notSelectedField,
+body:not(:has(#root.theme-white)) .entrance-popup-bc.register .e-p-body-bc .entrance-form-bc .form-control-input-bc[readonly] {
+  background: #453F4D !important;
+}
+
+body:not(:has(#root.theme-white)) .entrance-popup-bc.register .e-p-body-bc .entrance-form-bc .checkOrClear-container.check-btn {
+  right: 15px;
+  top: 48px;
+  background: #d80d83;
+}
+
+body:not(:has(#root.theme-white)) .entrance-popup-bc.register .e-p-body-bc .entrance-form-bc .checkOrClear-container.check-btn .bc-loader.small .bc-loader-contain {
+  width: 18px;
+  height: 18px;
+}
+
+body:not(:has(#root.theme-white)) .entrance-popup-bc.register .e-p-body-bc .entrance-form-bc .checkOrClear-container.clear-btn {
+  top: 47px;
+  background: #d80d83;
+}
+
+body:not(:has(#root.theme-white)) .entrance-popup-bc.register .e-p-body-bc .entrance-form-bc .checkOrClear-container.clear-btn .checkOrClear-btn {
+  justify-content: center;
+  align-items: center;
+}
+
+body:not(:has(#root.theme-white)) .entrance-popup-bc.register .e-p-body-bc .entrance-form-bc .checkOrClear-container.clear-btn .bc-i-checked {
+  color: #fff !important;
+}
+
+body:not(:has(#root.theme-white)) .entrance-popup-bc.register .e-p-body-bc .entrance-form-bc .checkOrClear-container.clear-btn .null {
+  margin-inline-start: 0;
+}
+
+body:not(:has(#root.theme-white)) .entrance-popup-bc.register .e-p-body-bc .entrance-form-bc .bc-loader.small.CPFLoader .bc-loader-contain {
+  top: 12px;
+}
+
+body:not(:has(#root.theme-white)) .entrance-popup-bc.register .e-p-body-bc .entrance-form-bc .inputs {
+  height: auto;
+}
+
+body:not(:has(#root.theme-white)) .entrance-popup-bc.register .e-p-body-bc .entrance-form-bc .entrance-f-item-bc+.entrance-f-item-bc {
+  margin-top: 16px;
+  padding: 0 16px;
+}
+
+body:not(:has(#root.theme-white)) .entrance-popup-bc.register .e-p-body-bc .entrance-form-bc .dropdownIcon-bc {
+  top: 47px;
+}
+
+body:not(:has(#root.theme-white)) .entrance-popup-bc.register .e-p-body-bc .entrance-form-bc .form-control-select-bc {
+  order: 2;
+  border-radius: 8px;
+  border: 1px solid #393341;
+  padding-inline-end: 0;
+  background: transparent;
+  padding: 0 0 0 12px;
+  height: 44px;
+  align-items: center;
+  display: flex;
+}
+
+body:not(:has(#root.theme-white)) .entrance-popup-bc.register .e-p-body-bc .entrance-form-bc .multi-select-bc .form-control-icon-bc {
+  top: 49px;
+}
+
+body:not(:has(#root.theme-white)) .entrance-popup-bc.register .e-p-body-bc .entrance-form-bc .multi-select-bc .focused .form-control-select-bc {
+  border-radius: 8px;
+  border: 1px solid #5484D1;
+  background: #261938;
+}
+
+body:not(:has(#root.theme-white)) .entrance-popup-bc.register .e-p-body-bc .entrance-form-bc .multi-select-bc .focused .multi-select-label-bc {
+  top: 69px;
+  border-radius: 8px;
+  border: 1px solid #5484D1;
+  background: #160027;
+  margin-top: 0;
+  padding: 0;
+  box-shadow: none;
+}
+
+body:not(:has(#root.theme-white)) .entrance-popup-bc.register .e-p-body-bc .entrance-form-bc .multi-select-bc .valid .form-control-select-bc {
+  border-color: #A0F5B0;
+  background: transparent;
+}
+
+body:not(:has(#root.theme-white)) .entrance-popup-bc.register .e-p-body-bc .entrance-form-bc .multi-select-bc .checkbox-control-content-bc {
+  all: unset;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  color: #FFF;
+  text-overflow: ellipsis;
+  font-family: Inter !important;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 16px;
+  letter-spacing: 0;
+  height: 44px;
+  padding-left: 12px;
+  border-bottom: 0.5px solid #410175;
+  cursor: pointer;
+}
+
+body:not(:has(#root.theme-white)) .entrance-popup-bc.register .e-p-body-bc .entrance-form-bc .multi-select-bc .checkbox-control-content-bc:last-child {
+  border-bottom: 0;
+}
+
+body:not(:has(#root.theme-white)) .entrance-popup-bc.register .e-p-body-bc .entrance-form-bc .multi-select-bc .checkbox-control-content-bc .checkbox-control-text-bc {
+  all: unset;
+}
+
+body:not(:has(#root.theme-white)) .entrance-popup-bc.register .e-p-body-bc .entrance-form-bc .react-datepicker-popper {
+  transform: translate(-16px, -360px) !important;
+}
+
+body:not(:has(#root.theme-white)) .entrance-popup-bc.register .e-p-body-bc .entrance-form-bc .react-datepicker-popper .react-datepicker {
+  border-color: #5484D1;
+}
+
+body:not(:has(#root.theme-white)) .entrance-popup-bc.register .e-p-body-bc .entrance-form-bc .react-datepicker-popper .react-datepicker__header--custom {
+  background: #261938;
+  border-color: #D80D83;
+}
+
+body:not(:has(#root.theme-white)) .entrance-popup-bc.register .e-p-body-bc .entrance-form-bc .react-datepicker-popper .form-control-select-bc {
+  height: auto;
+  min-width: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  flex-direction: row;
+  gap: 8px;
+}
+
+body:not(:has(#root.theme-white)) .entrance-popup-bc.register .e-p-body-bc .entrance-form-bc .react-datepicker-popper .react-datepicker__triangle:after {
+  border-top-color: #5484d1;
+}
+
+body:not(:has(#root.theme-white)) .entrance-popup-bc.register .e-p-body-bc .entrance-form-bc .react-datepicker-popper .form-control-icon-bc {
+  all: unset;
+}
+
+body:not(:has(#root.theme-white)) .entrance-popup-bc.register .e-p-body-bc .entrance-form-bc .select-flag {
+  display: flex;
+  margin-top: 38px;
+}
+
+body:not(:has(#root.theme-white)) .entrance-popup-bc.register .e-p-body-bc .entrance-form-bc .select-flag .form-control-select-bc {
+  flex-direction: row;
+  border-color: #A0F5B0;
+}
+
+body:not(:has(#root.theme-white)) .entrance-popup-bc.register .e-p-body-bc .entrance-form-bc .select-flag .form-control-input-stroke-bc {
+  display: none;
+}
+
+body:not(:has(#root.theme-white)) .entrance-popup-bc.register .e-p-body-bc .entrance-form-bc .select-flag .form-control-title-bc {
+  all: unset;
+  position: absolute;
+  left: -13px;
+  top: -25px;
+}
+
+body:not(:has(#root.theme-white)) .entrance-popup-bc.register .e-p-body-bc .entrance-form-bc .select-flag .ftr-lang-bar-flag-bc {
+  width: 32px;
+  height: 24px;
+}
+
+body:not(:has(#root.theme-white)) .entrance-popup-bc.register .e-p-body-bc .entrance-form-bc .select-flag span.ellipsis {
+  color: #FFF;
+  font-family: Inter !important;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0;
+  margin-inline-start: 12px;
+}
+
+body:not(:has(#root.theme-white)) .entrance-popup-bc.register .e-p-body-bc .entrance-form-bc .form-controls-group-bc.telephone .notSelectedField {
+  border-color: #A0F5B0;
+}
+
+body:not(:has(#root.theme-white)) .entrance-popup-bc.register .e-p-body-bc .entrance-form-bc .form-controls-group-bc.telephone .form-control-message-bc {
+  margin-left: 123px !important;
+}
+
+body:not(:has(#root.theme-white)) .entrance-popup-bc.register .e-p-body-bc .entrance-form-bc .form-controls-group-bc.telephone .country-code {
+  flex-shrink: 0;
+  min-width: 120px;
+  display: flex;
+  flex-direction: column-reverse;
+  margin-top: 0;
+}
+
+body:not(:has(#root.theme-white)) .entrance-popup-bc.register .e-p-body-bc .entrance-form-bc .form-controls-group-bc.telephone .country-code .form-control-select-bc {
+  display: flex;
+  flex-direction: row;
+}
+
+body:not(:has(#root.theme-white)) .entrance-popup-bc.register .e-p-body-bc .entrance-form-bc .form-controls-group-bc.telephone .country-code .form-control-title-bc {
+  position: absolute;
+  left: 0;
+  top: -26px;
+  font-size: 0 !important;
+}
+
+body:not(:has(#root.theme-white)) .entrance-popup-bc.register .e-p-body-bc .entrance-form-bc .form-controls-group-bc.telephone .country-code .form-control-title-bc:before {
+  content: "DDD";
+  font-family: Inter !important;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0px;
+}
+
+body:not(:has(#root.theme-white)) .entrance-popup-bc.register .e-p-body-bc .form-controls-field-bc.country-code {
+  margin-top: 37px;
+}
+
+body:not(:has(#root.theme-white)) .entrance-popup-bc.register .e-p-body-bc .form-controls-field-bc.country-code .form-control-label-bc {
+  flex-direction: row;
+}
+
+body:not(:has(#root.theme-white)) .entrance-popup-bc.register .e-p-body-bc .form-controls-field-bc.country-code .form-control-title-bc.ellipsis {
+  left: 0;
+  position: absolute;
+  top: -24px;
+}
+
+body:not(:has(#root.theme-white)) .entrance-popup-bc.register .e-p-body-bc .form-control-icon-bc.bc-i-small-arrow-down {
+  top: 47px;
+}
+
+body:not(:has(#root.theme-white)) .entrance-popup-bc.register .e-p-body-bc .checkbox-control-text-bc.checkbox-control-text-content {
+  color: #C1C1C1;
+  font-family: Inter !important;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0px;
+}
+
+body:not(:has(#root.theme-white)) .entrance-popup-bc.register .e-p-body-bc .checkbox-control-text-bc.checkbox-control-text-content a {
+  color: #A0F5B0;
+  font-family: Inter !important;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0px;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: auto;
+  text-underline-offset: auto;
+  text-underline-position: from-font;
+}
+
+body:not(:has(#root.theme-white)) .entrance-popup-bc.register .e-p-body-bc .entrance-f-item-bc.entrance-f-recaptcha-bc {
+  border: 0;
+  margin-top: 16px;
+  padding: 0 16px;
+}
+
+body:not(:has(#root.theme-white)) .entrance-popup-bc.register .e-p-body-bc .entrance-f-item-bc.entrance-f-recaptcha-bc .u-i-p-control-item-holder-bc {
+  padding: 0;
+  margin-bottom: 0;
+}
+
+body:not(:has(#root.theme-white)) .entrance-popup-bc.register .reg-form-footer-bc {
+  padding-top: 32px;
+  background: transparent;
+}
+
+body:not(:has(#root.theme-white)) .entrance-popup-bc.register .reg-form-footer-bc .entrance-form-actions-holder-bc.reg-ext-1 {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+}
+
+body:not(:has(#root.theme-white)) .entrance-popup-bc.register .reg-form-footer-bc .steps-indicator {
+  display: grid;
+  justify-content: space-between;
+  padding: 0;
+  width: 100%;
+  height: 48px;
+  align-items: flex-end;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+body:not(:has(#root.theme-white)) .entrance-popup-bc.register .reg-form-footer-bc .steps-indicator .step-indicator {
+  all: unset;
+  color: #6B7280;
+  font-family: Inter !important;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0;
+}
+
+body:not(:has(#root.theme-white)) .entrance-popup-bc.register .reg-form-footer-bc .steps-indicator .step-indicator:first-child:after {
+  content: "1. Dados ";
+}
+
+body:not(:has(#root.theme-white)) .entrance-popup-bc.register .reg-form-footer-bc .steps-indicator .step-indicator:first-child:before {
+  display: inline-flex;
+  content: "";
+  width: 100%;
+  height: 4px;
+  border-radius: 20px;
+  background: #453F4D;
+}
+
+body:not(:has(#root.theme-white)) .entrance-popup-bc.register .reg-form-footer-bc .steps-indicator .step-indicator:nth-child(2):after {
+  content: "2. Endereço ";
+}
+
+body:not(:has(#root.theme-white)) .entrance-popup-bc.register .reg-form-footer-bc .steps-indicator .step-indicator:nth-child(2):before {
+  display: inline-flex;
+  content: "";
+  width: 100%;
+  height: 4px;
+  border-radius: 20px;
+  background: #453F4D;
+}
+
+body:not(:has(#root.theme-white)) .entrance-popup-bc.register .reg-form-footer-bc .steps-indicator .step-indicator:last-child:after {
+  content: "3. Login";
+}
+
+body:not(:has(#root.theme-white)) .entrance-popup-bc.register .reg-form-footer-bc .steps-indicator .step-indicator:last-child:before {
+  display: inline-flex;
+  content: "";
+  width: 100%;
+  height: 4px;
+  border-radius: 20px;
+  background: #453F4D;
+}
+
+body:not(:has(#root.theme-white)) .entrance-popup-bc.register .reg-form-footer-bc .steps-indicator .step-indicator.step-indicator-active {
+  color: #ffffff;
+}
+
+body:not(:has(#root.theme-white)) .entrance-popup-bc.register .reg-form-footer-bc .steps-indicator .step-indicator.step-indicator-active:before {
+  background: #A0F5B0;
+}
+
+body:not(:has(#root.theme-white)) .entrance-popup-bc.register .reg-form-footer-bc .steps-indicator .step-indicator:has(~ .step-indicator-active) {
+  color: #ffffff;
+}
+
+body:not(:has(#root.theme-white)) .entrance-popup-bc.register .reg-form-footer-bc .steps-indicator .step-indicator:has(~ .step-indicator-active):before {
+  background: #A0F5B0;
+}
+
+body:not(:has(#root.theme-white)) .entrance-popup-bc.register .reg-form-footer-bc .live-chat-adviser-bc {
+  padding: 24px 0;
+}
+
+body:not(:has(#root.theme-white)) .entrance-popup-bc.register .reg-form-footer-bc .live-chat-adviser-bc .ellipsis {
+  color: #848486;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Roboto !important;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: auto;
+  text-underline-offset: auto;
+  text-underline-position: from-font;
+}
+
+body:not(:has(#root.theme-white)) .entrance-popup-bc.register .reg-form-footer-bc .live-chat-adviser-bc .bc-i-live-chat {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACoSURBVHgB1ZLRCcJADIbTcNJXN9ARHEE3cIS6gU++hEKkBMEl1AnUSewI7iEk5qAPKgVPKkq/hzsu3Bdyxw/Qe7K4iGwKM9t9JGa2IKJ9iAdVHfu2LkviFLmqhM0gOoDQkdBWFNlOVG/zxxri4ES0ql/vdp7g/w1a/6B5aw0JfHcCZh6GkB8BbPpOjEF6aoCII8T84qE6e6BmkAg28tWjXLh8cHkJv+QOYoYy+akt/pUAAAAASUVORK5CYII=");
+  background-repeat: no-repeat;
+  width: 18px;
+  height: 18px;
+  background-position: center;
+  margin-inline-end: 8px;
+}
+
+body:not(:has(#root.theme-white)) .entrance-popup-bc.register .reg-form-footer-bc .live-chat-adviser-bc .bc-i-live-chat:before {
+  content: none;
 }
 
 body:not(:has(#root.theme-white)) .is-home-page .hm-row-bc:has(.storiesWidgetWrapper) {
