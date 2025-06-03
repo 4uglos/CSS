@@ -953,7 +953,6 @@ body:not(:has(#root.theme-white)) .entrance-form-bc .form-control-message-bc {
 body:not(:has(#root.theme-white)) .entrance-form-bc .form-control-bc.invalid .form-control-message-bc::before,
 body:not(:has(#root.theme-white)) .form-control-message-bc::before {
   content: "x" !important;
-  position: absolute !important;
   visibility: visible !important;
   font-size: 11px !important;
   color: #000 !important;
@@ -968,7 +967,6 @@ body:not(:has(#root.theme-white)) .form-control-message-bc::before {
   background: #ff4747 !important;
   margin-right: 5px !important;
   padding-bottom: 1px !important;
-  left: 2px !important;
 }
 
 body:not(:has(#root.theme-white)) .entrance-form-bc.popup.registration {
@@ -1514,7 +1512,6 @@ body:not(:has(#root.theme-white)) .entrance-popup-bc.register .e-p-body-bc .form
   letter-spacing: 0;
   align-items: center;
   position: relative;
-  padding-left: 23px;
   margin-left: 0;
 }
 
@@ -1888,33 +1885,27 @@ body:not(:has(#root.theme-white)) .entrance-popup-bc.register .reg-form-footer-b
   content: "1. Dados ";
 }
 
-body:not(:has(#root.theme-white)) .entrance-popup-bc.register .reg-form-footer-bc .steps-indicator .step-indicator:first-child:before {
-  display: inline-flex;
-  content: "";
-  width: 100%;
-  height: 4px;
-  border-radius: 20px;
-  background: #453F4D;
-}
-
 body:not(:has(#root.theme-white)) .entrance-popup-bc.register .reg-form-footer-bc .steps-indicator .step-indicator:nth-child(2):after {
   content: "2. Endereço ";
-}
-
-body:not(:has(#root.theme-white)) .entrance-popup-bc.register .reg-form-footer-bc .steps-indicator .step-indicator:nth-child(2):before {
-  display: inline-flex;
-  content: "";
-  width: 100%;
-  height: 4px;
-  border-radius: 20px;
-  background: #453F4D;
 }
 
 body:not(:has(#root.theme-white)) .entrance-popup-bc.register .reg-form-footer-bc .steps-indicator .step-indicator:last-child:after {
   content: "3. Login";
 }
 
-body:not(:has(#root.theme-white)) .entrance-popup-bc.register .reg-form-footer-bc .steps-indicator .step-indicator:last-child:before {
+html[lang*=en] body:not(:has(#root.theme-white)) .entrance-popup-bc.register .reg-form-footer-bc .steps-indicator .step-indicator:first-child:after {
+  content: "1. Personal Info";
+}
+
+html[lang*=en] body:not(:has(#root.theme-white)) .entrance-popup-bc.register .reg-form-footer-bc .steps-indicator .step-indicator:nth-child(2):after {
+  content: "2. Address";
+}
+
+html[lang*=en] body:not(:has(#root.theme-white)) .entrance-popup-bc.register .reg-form-footer-bc .steps-indicator .step-indicator:last-child:after {
+  content: "3. Account";
+}
+
+body:not(:has(#root.theme-white)) .entrance-popup-bc.register .reg-form-footer-bc .steps-indicator .step-indicator:before {
   display: inline-flex;
   content: "";
   width: 100%;
