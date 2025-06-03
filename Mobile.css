@@ -1973,6 +1973,10 @@ body:not(:has(#root.theme-white)) .entrance-popup-bc.register .reg-form-footer-b
   content: none;
 }
 
+[class*=is-mobile] .storiesWidgetWrapper:not(.portraitView) .storiesWidgetListItem:not(.storiesItemSkeleton):before {
+  display: none !important;
+}
+
 body:not(:has(#root.theme-white)) .is-home-page .hm-row-bc:has(.storiesWidgetWrapper) {
   grid-row: 1;
   margin-bottom: 0 !important;
@@ -1988,57 +1992,12 @@ body:not(:has(#root.theme-white)) .is-home-page .storiesWidgetWrapper:has(.stori
   display: block !important;
 }
 
+
 body:not(:has(#root.theme-white)) .is-home-page .storiesWidgetWrapper .horizontalSliderRow {
   padding: 4px 16px !important;
 }
 
-body:not(:has(#root.theme-white)) .is-home-page .storiesWidgetListItem::after,
-body:not(:has(#root.theme-white)) .is-home-page .storiesWidgetListItem .horizontal-sl-icon-bc {
-  width: 56px !important;
-  height: 56px !important;
-}
-
-body:not(:has(#root.theme-white)) .is-home-page .storiesWidgetListItem::before,
-body:not(:has(#root.theme-white)) .is-home-page .storiesWidgetListItem::after,
-body:not(:has(#root.theme-white)) .is-home-page .storiesWidgetListItem .horizontal-sl-title-bc::before {
-  left: 50% !important;
-  transform: translateX(-50%) !important;
-  right: unset !important;
-}
-
-body:not(:has(#root.theme-white)) .is-home-page .singleStoryImgWrapper .storyGroupInfo img {
-  border: 1px solid rgba(249, 181, 221, 0.368627451) !important;
-}
-
-body:not(:has(#root.theme-white)) .is-home-page .storiesWidgetListItem::before {
-  width: 60px !important;
-  height: 60px !important;
-}
-
-body:not(:has(#root.theme-white)) .is-home-page .storiesWidgetListItem::after {
-  z-index: 9 !important;
-}
-
-body:not(:has(#root.theme-white)) .is-home-page .storiesWidgetListItem img {
-  visibility: hidden !important;
-}
-
-body:not(:has(#root.theme-white)) .is-home-page .storiesWidgetListItem .visited:before {
-  background: #283761 !important;
-}
-
-body:not(:has(#root.theme-white)) .is-home-page .storiesWidgetListItem:not(.visited):before {
-  background-image: linear-gradient(225deg, rgba(249, 181, 221, 0.368627451) 0%, rgba(249, 181, 221, 0.368627451) 51%, rgba(249, 181, 221, 0.368627451) 100%) !important;
-  box-shadow: 0px 0px 3.5px 4px rgba(216, 13, 131, 0.08);
-}
-
 body:not(:has(#root.theme-white)) .is-home-page .storiesWidgetListItem .horizontal-sl-title-bc {
-  all: unset !important;
-  overflow: hidden !important;
-  white-space: nowrap !important;
-  text-overflow: ellipsis !important;
-  max-width: 60px !important;
-  margin-top: 5px !important;
   color: #dadada !important;
   text-align: center !important;
   font-family: Mont, sans-serif !important;
@@ -2046,44 +2005,6 @@ body:not(:has(#root.theme-white)) .is-home-page .storiesWidgetListItem .horizont
   font-style: normal !important;
   font-weight: 700 !important;
   line-height: normal !important;
-}
-
-body:not(:has(#root.theme-white)) .is-home-page .storiesWidgetListItem .horizontal-sl-title-bc::before {
-  content: "";
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  position: absolute;
-  top: 0;
-  z-index: 10;
-  overflow: hidden;
-  background-size: contain;
-  background-repeat: no-repeat;
-  pointer-events: none;
-}
-
-body:not(:has(#root.theme-white)) .is-home-page .storiesWidgetListItem:nth-child(1) .horizontal-sl-title-bc::before {
-  background-image: url("https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_f95af8382e649a1d3623d49f7adf9932.png");
-}
-
-body:not(:has(#root.theme-white)) .is-home-page .storiesWidgetListItem:nth-child(2) .horizontal-sl-title-bc::before {
-  background-image: url("https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_e1d5d2522d1085b17ca6a1732c1dd35b.png");
-}
-
-body:not(:has(#root.theme-white)) .is-home-page .storiesWidgetListItem:nth-child(3) .horizontal-sl-title-bc::before {
-  background-image: url("https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_53019995cf1aa38ae703f313cb751172.png");
-}
-
-body:not(:has(#root.theme-white)) .is-home-page .storiesWidgetListItem:nth-child(4) .horizontal-sl-title-bc::before {
-  background-image: url("https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_c66648407891823ba0f85e51b63be599.png");
-}
-
-body:not(:has(#root.theme-white)) .is-home-page .storiesWidgetListItem:nth-child(6) .horizontal-sl-title-bc::before {
-  background-image: url("https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_b86acb25838a9e2aa5346098002c4112.png");
-}
-
-body:not(:has(#root.theme-white)) .is-home-page .storiesWidgetListItem:nth-child(5) .horizontal-sl-title-bc::before {
-  background-image: url("https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_ff8b10b5f6989dba717d9621a5d31fd8.png");
 }
 
 /* 
