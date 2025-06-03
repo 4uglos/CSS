@@ -238,7 +238,6 @@ body:not(:has(#root.theme-white)) .cookieAcceptanceMessage .cookie-message-butto
 .popup-holder-bc.windowed .casino-popup-content,
 .popup-holder-bc.windowed p {
   color: #d1d1d1;
-  text-align: center;
   font-family: "Noto Sans" !important;
   font-size: 14px;
   font-style: normal;
