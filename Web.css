@@ -305,7 +305,7 @@ body:not(:has(#root.theme-white)) .layout-header-holder-bc {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 45;
+  z-index: 120;
   background: rgba(var(--b), 1);
 }
 
@@ -787,6 +787,8 @@ body:not(:has(#root.theme-white)) .nav-content-bc .nav-menu-container.header-nav
 
 body:not(:has(#root.theme-white)) .nav-content-bc .nav-menu-container .nav-menu-sub {
   background: rgba(var(--header), 1);
+  max-height: calc(100vh - 200px);
+  overflow-y: auto;
 }
 
 body:not(:has(#root.theme-white)) .nav-content-bc .nav-menu-container .nav-menu>li+li {
