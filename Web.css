@@ -1024,7 +1024,6 @@ body:not(:has(#root.theme-white)) .entrance-form-bc .form-control-message-bc {
 body:not(:has(#root.theme-white)) .entrance-form-bc .form-control-bc.invalid .form-control-message-bc::before,
 body:not(:has(#root.theme-white)) .form-control-message-bc::before {
   content: "x" !important;
-  position: absolute !important;
   visibility: visible !important;
   font-size: 11px !important;
   color: #000 !important;
@@ -1039,7 +1038,6 @@ body:not(:has(#root.theme-white)) .form-control-message-bc::before {
   background: #ff4747 !important;
   margin-right: 5px !important;
   padding-bottom: 1px !important;
-  left: 2px !important;
 }
 
 body:not(:has(#root.theme-white)) .reg-form-footer-bc .entrance-form-actions-holder-bc .btn.a-color {
@@ -1370,7 +1368,6 @@ body:not(:has(#root.theme-white)) .entrance-popup-bc.register .e-p-body-bc .form
   letter-spacing: 0;
   align-items: center;
   position: relative;
-  padding-left: 23px;
   margin-left: 0;
 }
 
