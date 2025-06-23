@@ -242,7 +242,7 @@ body:not(:has(#root.theme-white)) .cookieAcceptanceMessage .cookie-message-butto
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
-  line-height: 20px;
+  line-height: 16px;
   letter-spacing: 0;
 }
 
@@ -3752,6 +3752,15 @@ body:not(:has(#root.theme-white)) .popup-holder-bc.windowed.info .casino-popup-b
 
 .CPFLoader {
   top: 12px !important;
+}
+
+.reg-phone-err-message .entrance-f-error-message-bc {
+  background: transparent !important;
+  padding: 0px !important;
+}
+
+[class*=is-web] .casinoGameTabsWrp {
+  width: 50% !important;
 }
 
 /*# sourceMappingURL=custom.css.map */

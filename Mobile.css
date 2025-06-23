@@ -3577,4 +3577,10 @@ body:not(:has(#root.theme-white)) .payment-info-bc #screenArea .btn.a-color:disa
   color: #B2B2B2;
 }
 
+.reg-phone-err-message .entrance-f-error-message-bc {
+  background: transparent !important;
+  margin-inline-start: 0px !important;
+  margin-inline-end: 0px !important;
+}
+
 /*# sourceMappingURL=custom.css.map */
