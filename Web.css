@@ -242,7 +242,6 @@ body:not(:has(#root.theme-white)) .cookieAcceptanceMessage .cookie-message-butto
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
-  line-height: 16px;
   letter-spacing: 0;
 }
 
