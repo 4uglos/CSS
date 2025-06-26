@@ -2142,10 +2142,6 @@ body:not(:has(#root.theme-white)) .is-home-page .hm-row-bc:has(.ftr-g-content-bc
   background-image: url("https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_ff8b10b5f6989dba717d9621a5d31fd8.png");
 }
 
-#base_popup_id {
-  background: #232323;
-}
-
 #base_popup_id .promo-btn {
   padding: 20px;
   justify-content: center;

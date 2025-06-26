@@ -1242,11 +1242,6 @@ body:not(:has(#root.theme-white)) .popup-holder-bc form {
 
 body:not(:has(#root.theme-white)) .popup-holder-bc .status-popup-content-w-bc {
   border-radius: 8px;
-  background: #232323;
-}
-
-body:not(:has(#root.theme-white)) .popup-holder-bc .popup-inner-bc {
-  background: #232323 !important;
 }
 
 body:not(:has(#root.theme-white)) .popup-holder-bc .casino-popup-title {
