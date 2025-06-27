@@ -790,6 +790,20 @@ body:not(:has(#root.theme-white)) .nav-content-bc .nav-menu-container .nav-menu-
   overflow-y: auto;
 }
 
+body:not(:has(#root.theme-white)) .nav-content-bc .nav-menu-container .nav-menu-item .nav-menu-sub {
+  overflow-y: visible;
+}
+
+body:not(:has(#root.theme-white)) .nav-content-bc .nav-menu-container .nav-menu-item .nav-menu-sub .badge-new:after {
+  top: 2px !important;
+  right: 2px !important;
+}
+
+body:not(:has(#root.theme-white)) .nav-content-bc .nav-menu-container .nav-menu-item .nav-menu-sub .nav-menu-sub {
+  overflow-y: auto;
+  overflow-x: clip;
+}
+
 body:not(:has(#root.theme-white)) .nav-content-bc .nav-menu-container .nav-menu>li+li {
   margin-inline-start: 0px;
 }
@@ -3364,6 +3378,39 @@ body:not(:has(#root.theme-white)) .popup-holder-bc.windowed.info .btn {
 body:not(:has(#root.theme-white)) .popup-holder-bc.windowed.info .casino-popup-button-block {
   padding-top: unset !important;
   background-image: unset !important;
+}
+
+html[lang*=en] body:not(:has(#root.theme-white)) .prematch .express-of-the-day .competition-wrapper-bc .competition-description::after {
+  content: "Bonus on net profit when betting on the Multiple of the Day. The bonus is already applied — just place your bet to enjoy!" !important;
+}
+
+body:not(:has(#root.theme-white)) .prematch .express-of-the-day .competition-wrapper-bc .competition-header-bc {
+  cursor: default;
+}
+
+body:not(:has(#root.theme-white)) .prematch .express-of-the-day .competition-wrapper-bc .competition-description {
+  cursor: pointer;
+}
+
+body:not(:has(#root.theme-white)) .prematch .express-of-the-day .competition-wrapper-bc .competition-description::after {
+  content: "Bônus sobre o lucro líquido ao apostar na Múltipla do Dia. A bonificação já está aplicada — basta apostar para aproveitar!";
+  position: absolute;
+  border-radius: 8px;
+  font-weight: 600;
+  top: 33px;
+  right: 10px;
+  background: #1b1b1b;
+  width: 100%;
+  max-width: 240px;
+  padding: 10px;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.3s linear;
+}
+
+body:not(:has(#root.theme-white)) .prematch .express-of-the-day .competition-wrapper-bc .competition-description:hover::after {
+  visibility: visible;
+  opacity: 0.94;
 }
 
 /*
