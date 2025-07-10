@@ -3805,4 +3805,10 @@ body:not(:has(#root.theme-white)) .prematch .express-of-the-day .competition-wra
   width: 50% !important;
 }
 
+/* Call Panel*/
+.callPanelIcon {
+  background-color: transparent !important;
+  background-image: none !important
+}
+
 /*# sourceMappingURL=custom.css.map */

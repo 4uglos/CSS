@@ -258,7 +258,6 @@ body:not(:has(#root.theme-white)) .hdr-additional-info {
 }
 
 body:not(:has(#root.theme-white)) .hdr-additional-info:not(:has(.loyaltyBonusHeader, .world-cup)) {
-  height: 0 !important;
   border: 0 !important;
 }
 
@@ -612,11 +611,11 @@ body:not(:has(#root.theme-white)) .header-bc .hdr-navigation-scrollable-bc .hdr-
   Below we add default style to the content of the all website 
 */
 body:not(:has(#root.theme-white)) .layout-content-holder-bc {
-  padding-top: 137px;
+  padding-top: 180px;
 }
 
 body:not(:has(#root.theme-white)) .has-header-info:has(.loyaltyBonusHeader) .layout-content-holder-bc {
-  padding-top: 166px;
+  padding-top: 180px;
 }
 
 body:not(:has(#root.theme-white)) .has-header-info:has(.informative-widget) .layout-content-holder-bc {
@@ -3576,6 +3575,71 @@ body:not(:has(#root.theme-white)) .payment-info-bc #screenArea .btn.a-color:disa
   background: transparent !important;
   margin-inline-start: 0px !important;
   margin-inline-end: 0px !important;
+}
+
+/* Call Panel*/
+
+.callPanel {
+  position: static !important;
+}
+
+.callPanelBtn {
+  margin-inline-start: 0 !important;
+}
+
+.callPanelMenu {
+  display: flex !important;
+  gap: 12px !important;
+  top: 2px !important;
+  right: 0;
+  left: 60px !important;
+  background: #00000F !important;
+  padding: 0 10px 0 0 !important;
+  max-width: fit-content !important;
+  overflow-x: scroll !important;
+}
+
+.hdr-user-info-texts-bc:has(.balanceAmount) .callPanelMenu {
+  right: 60px !important;
+}
+
+.callPanelText {
+  display: none;
+}
+
+.callPanelMenuItem {
+  height: auto !important;
+  margin-top: 0 !important;
+  padding: 4px !important;
+  background: rgba(46, 39, 55, 0.4) !important;
+  border: 1px solid rgba(var(--hero), .3);
+  overflow: visible !important;
+}
+
+.callPanelIcon {
+  background-color: transparent !important;
+  background-image: none !important
+}
+
+.callPanelIcon::before {
+  font-size: 14px !important;
+  border: none !important;
+}
+
+.hdr-additional-info {
+  height: 46px !important;
+}
+
+.callPanelMenuItem:hover:before {
+  background: transparent !important;
+}
+
+.hdr-additional-info {
+  padding: 0 20px !important;
+}
+
+.header-bc:has(.bc-i-wallet) .hdr-additional-info {
+  flex-direction: row-reverse !important;
 }
 
 /*# sourceMappingURL=custom.css.map */
