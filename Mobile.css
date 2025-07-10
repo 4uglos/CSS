@@ -99,13 +99,6 @@ body:not(:has(#root.theme-white)) {
 /*
   Below we add the style for new header, adding update in colors, sizes, align e space
 */
-body:not(:has(#root.theme-white)) {
-  /* Buttons header - Signin | register | deposit  */
-  /* Amount part */
-  /* Profile part */
-  /* Deposit button on top */
-  /* menu header */
-}
 
 body:not(:has(#root.theme-white)) .layout-header-holder-bc {
   all: unset;
@@ -402,21 +395,6 @@ body:not(:has(#root.theme-white)) .hdr-user-info-content-bc {
   Below we add the style for new navigation bar, adding update in colors, sizes, align e space;
   There are some new icons on menu and the icons have been called from betcon bucket;
 */
-body:not(:has(#root.theme-white)) {
-  /* Turbo Games */
-  /* Cassino */
-  /* Live Cassino */
-  /* Live Live */
-  /* E-Sports */
-  /* Sports */
-  /* UEFA */
-  /* Game View Bingo */
-  /* Game View Aviator */
-  /* Game View Avi */
-  /* Promo */
-  /* Tournaments */
-  /* Virtual Sports */
-}
 
 body:not(:has(#root.theme-white)) .header-bc.header-bc-hide .hdr-navigation-scrollable-bc-holder {
   transform: none;
@@ -636,10 +614,6 @@ body:not(:has(#root.theme-white)) .popup-holder-bc {
 /* 
   Below we add default style to the footer links and social medias 
 */
-body:not(:has(#root.theme-white)) {
-  /* FOOTER LINKS */
-  /* SOCIAL MEDIAS */
-}
 
 body:not(:has(#root.theme-white)) .expandableContent {
   padding-top: 0px;
@@ -3614,6 +3588,10 @@ body:not(:has(#root.theme-white)) .payment-info-bc #screenArea .btn.a-color:disa
   background: rgba(46, 39, 55, 0.4) !important;
   border: 1px solid rgba(var(--hero), .3);
   overflow: visible !important;
+}
+
+.callPanelMenu::-webkit-scrollbar {
+  display: none;
 }
 
 .callPanelIcon {

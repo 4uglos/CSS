@@ -687,98 +687,6 @@ body:not(:has(#root.theme-white)) .nav-content-bc .nav-menu-container .nav-menu>
   display: none;
 }
 
-body:not(:has(#root.theme-white)) .nav-content-bc .nav-menu-container .nav-menu>li a.nav-menu-item:first-child:not(.nav-menu-sub .nav-menu-item)[href*="/casino/slots"] i {
-  display: none;
-}
-
-body:not(:has(#root.theme-white)) .nav-content-bc .nav-menu-container .nav-menu>li a.nav-menu-item:first-child:not(.nav-menu-sub .nav-menu-item)[href*="/casino/slots"]::before {
-  display: block;
-  /* poker-chip icon */
-  background-image: url("https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_c3f6c9e78d867ce30db8803ac58f0647.svg");
-}
-
-body:not(:has(#root.theme-white)) .nav-content-bc .nav-menu-container .nav-menu>li a.nav-menu-item:first-child:not(.nav-menu-sub .nav-menu-item)[href*="/live-casino"] i {
-  display: none;
-}
-
-body:not(:has(#root.theme-white)) .nav-content-bc .nav-menu-container .nav-menu>li a.nav-menu-item:first-child:not(.nav-menu-sub .nav-menu-item)[href*="/live-casino"]::before {
-  display: block;
-  /* video-camera icon */
-  background-image: url("https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_170cb105f00b0e3aa2db1315cb0a650d.svg");
-}
-
-body:not(:has(#root.theme-white)) .nav-content-bc .nav-menu-container .nav-menu>li a.nav-menu-item:first-child:not(.nav-menu-sub .nav-menu-item)[href*="/tournaments"] i {
-  display: none;
-}
-
-body:not(:has(#root.theme-white)) .nav-content-bc .nav-menu-container .nav-menu>li a.nav-menu-item:first-child:not(.nav-menu-sub .nav-menu-item)[href*="/tournaments"]::before {
-  display: block;
-  /* trophy icon */
-  background-image: url("https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_c0316270e3960d3b121c27bd8e2415cd.svg");
-}
-
-body:not(:has(#root.theme-white)) .nav-content-bc .nav-menu-container .nav-menu>li a.nav-menu-item:first-child:not(.nav-menu-sub .nav-menu-item)[href*="/bingo-lobby"] i {
-  display: none;
-}
-
-body:not(:has(#root.theme-white)) .nav-content-bc .nav-menu-container .nav-menu>li a.nav-menu-item:first-child:not(.nav-menu-sub .nav-menu-item)[href*="/bingo-lobby"]::before {
-  display: block;
-  /* users-three icon */
-  background-image: url("https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_ba3194bc25cdd4be6fe74fb29ff6467a.svg");
-}
-
-body:not(:has(#root.theme-white)) .nav-content-bc .nav-menu-container .nav-menu>li a.nav-menu-item:first-child:not(.nav-menu-sub .nav-menu-item)[href*="/sports/live"] i {
-  display: none;
-}
-
-body:not(:has(#root.theme-white)) .nav-content-bc .nav-menu-container .nav-menu>li a.nav-menu-item:first-child:not(.nav-menu-sub .nav-menu-item)[href*="/sports/live"]::before {
-  display: block;
-  /* broadcast icon */
-  background-image: url("https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_191086bea326010f203c66e19109de4f.svg");
-}
-
-body:not(:has(#root.theme-white)) .nav-content-bc .nav-menu-container .nav-menu>li a.nav-menu-item:first-child:not(.nav-menu-sub .nav-menu-item)[href*="/sports/pre-match"] i {
-  display: none;
-}
-
-body:not(:has(#root.theme-white)) .nav-content-bc .nav-menu-container .nav-menu>li a.nav-menu-item:first-child:not(.nav-menu-sub .nav-menu-item)[href*="/sports/pre-match"]::before {
-  display: block;
-  /* soccer-ball icon */
-  background-image: url("https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_3238efa9caedbcb739823f65588dda85.svg");
-}
-
-body:not(:has(#root.theme-white)) .nav-content-bc .nav-menu-container .nav-menu>li a.nav-menu-item:first-child:not(.nav-menu-sub .nav-menu-item)[href*="/esports"] i {
-  display: none;
-}
-
-body:not(:has(#root.theme-white)) .nav-content-bc .nav-menu-container .nav-menu>li a.nav-menu-item:first-child:not(.nav-menu-sub .nav-menu-item)[href*="/esports"]::before {
-  display: block;
-  /* game-controller icon */
-  background-image: url("https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_6ac75a2ccbe88dee70604b8040a3f00a.svg");
-}
-
-body:not(:has(#root.theme-white)) .nav-content-bc .nav-menu-container .nav-menu>li a.nav-menu-item:first-child:not(.nav-menu-sub .nav-menu-item)[href*="/games"] i {
-  display: none;
-}
-
-body:not(:has(#root.theme-white)) .nav-content-bc .nav-menu-container .nav-menu>li a.nav-menu-item:first-child:not(.nav-menu-sub .nav-menu-item)[href*="/games"]::before {
-  display: block;
-  /* rocket-launch icon */
-  background-image: url("https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_f24823470610c31f5cef7ac7814c5b46.svg");
-}
-
-body:not(:has(#root.theme-white)) .nav-content-bc .nav-menu-container .nav-menu>li a.nav-menu-item:first-child:not(.nav-menu-sub .nav-menu-item)[href*="/bonus"] i,
-body:not(:has(#root.theme-white)) .nav-content-bc .nav-menu-container .nav-menu>li a.nav-menu-item:first-child:not(.nav-menu-sub .nav-menu-item)[href*="/promotions"] i {
-  display: none;
-}
-
-body:not(:has(#root.theme-white)) .nav-content-bc .nav-menu-container .nav-menu>li a.nav-menu-item:first-child:not(.nav-menu-sub .nav-menu-item)[href*="/bonus"]::before,
-body:not(:has(#root.theme-white)) .nav-content-bc .nav-menu-container .nav-menu>li a.nav-menu-item:first-child:not(.nav-menu-sub .nav-menu-item)[href*="/promotions"]::before {
-  display: block;
-  /* bonus icon */
-  background-image: url("https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_315bc1e8a309a11bcdabd675cf2fa947.svg");
-}
-
 body:not(:has(#root.theme-white)) .nav-content-bc .nav-menu-container.header-navigation:nth-child(2) {
   background: unset;
   margin-top: 8px;
@@ -828,10 +736,6 @@ body:not(:has(#root.theme-white)) .popup-holder-bc {
 /* 
   Below we add default style to the footer links and social medias 
 */
-body:not(:has(#root.theme-white)) {
-  /* FOOTER LINKS */
-  /* SOCIAL MEDIAS */
-}
 
 body:not(:has(#root.theme-white)) .layout-footer-holder-bc {
   padding: 0 24px;
