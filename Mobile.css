@@ -3566,7 +3566,7 @@ body:not(:has(#root.theme-white)) .payment-info-bc #screenArea .btn.a-color:disa
   gap: 12px !important;
   top: 2px !important;
   right: 0;
-  left: 60px !important;
+  left: 150px !important;
   background: #00000F !important;
   padding: 0 10px 0 0 !important;
   max-width: fit-content !important;
@@ -3586,7 +3586,7 @@ body:not(:has(#root.theme-white)) .payment-info-bc #screenArea .btn.a-color:disa
   margin-top: 0 !important;
   padding: 4px !important;
   background: rgba(46, 39, 55, 0.4) !important;
-  border: 1px solid rgba(var(--hero), .3);
+  border: 1px solid rgba(var(--hero), 0.3);
   overflow: visible !important;
 }
 
@@ -3596,7 +3596,7 @@ body:not(:has(#root.theme-white)) .payment-info-bc #screenArea .btn.a-color:disa
 
 .callPanelIcon {
   background-color: transparent !important;
-  background-image: none !important
+  background-image: none !important;
 }
 
 .callPanelIcon::before {
@@ -3618,6 +3618,41 @@ body:not(:has(#root.theme-white)) .payment-info-bc #screenArea .btn.a-color:disa
 
 .header-bc:has(.bc-i-wallet) .hdr-additional-info {
   flex-direction: row-reverse !important;
+}
+
+html[lang*=pb] button.btn.a-color.callPanelBtn.bc-i-call:before {
+  content: "Redes Sociais";
+  display: inline-flex;
+}
+
+html[lang*=en] button.btn.a-color.callPanelBtn.bc-i-call:before {
+  content: "Social Networks";
+}
+
+button.btn.a-color.callPanelBtn.bc-i-call {
+  width: 120px;
+  background: #1b1920;
+  font-family: Mont, sans-serif !important;
+  font-size: 12px;
+  text-transform: capitalize;
+  font-weight: 700;
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 3px;
+  height: 28px;
+}
+
+button.btn.a-color.callPanelBtn.bc-i-call:after {
+  content: "";
+  background-image: url("https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_ba3194bc25cdd4be6fe74fb29ff6467a.svg");
+  width: 16px;
+  height: 16px;
+}
+
+.callPanel.opened {
+  button.btn.a-color.callPanelBtn.bc-i-call {
+    border-top: 2px solid rgba(var(--hero), 1);
+  }
 }
 
 /*# sourceMappingURL=custom.css.map */

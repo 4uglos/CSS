@@ -3712,7 +3712,53 @@ body:not(:has(#root.theme-white)) .prematch .express-of-the-day .competition-wra
 /* Call Panel*/
 .callPanelIcon {
   background-color: transparent !important;
-  background-image: none !important
+  background-image: none !important;
+}
+
+html[lang*=pb] button.btn.a-color.callPanelBtn.bc-i-call:after {
+  content: "Redes Sociais";
+}
+
+html[lang*=en] button.btn.a-color.callPanelBtn.bc-i-call:after {
+  content: "Social Networks";
+}
+
+button.btn.a-color.callPanelBtn.bc-i-call:before {
+  content: "";
+  background-image: url("https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_ba3194bc25cdd4be6fe74fb29ff6467a.svg");
+  width: 16px;
+  height: 16px;
+}
+
+.callPanelMenuItem {
+  border-radius: var(--border-radius) !important;
+  color: #dadada !important;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 0.12px;
+  border-radius: 4px;
+  background: #1e1826 !important;
+}
+
+button.btn.a-color.callPanelBtn.bc-i-call {
+  display: flex;
+  gap: 7px;
+  padding: 0 7px;
+  background-color: #1b191f;
+  color: #dadada;
+  font-family: "Mont", "Montserrat" !important;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.callPanel.opened {
+  button.btn.a-color.callPanelBtn.bc-i-call {
+    border-top: 2px solid var(--main-color);
+  }
 }
 
 /*# sourceMappingURL=custom.css.map */
