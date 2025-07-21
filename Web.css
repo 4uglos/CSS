@@ -3761,4 +3761,13 @@ button.btn.a-color.callPanelBtn.bc-i-call {
   }
 }
 
+/* Hide language*/
+.form-control-bc.select.compact-mode {
+  display: none;
+}
+
+.selectHolder.languageDropdown {
+  display: none;
+}
+
 /*# sourceMappingURL=custom.css.map */

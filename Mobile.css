@@ -3655,4 +3655,9 @@ button.btn.a-color.callPanelBtn.bc-i-call:after {
   }
 }
 
+/* Hide language*/
+.selectHolder.languageDropdown {
+  display: none;
+}
+
 /*# sourceMappingURL=custom.css.map */
