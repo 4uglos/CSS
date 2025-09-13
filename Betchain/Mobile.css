@@ -200,6 +200,11 @@
   width: 35%
 }
 
+.Stories-storyGroupStyles>.title {
+  font-size: 1.1rem !important;
+  box-shadow: inset 0 -2rem 4rem .2rem rgba(var(--dark-rgb), 1) !important;
+}
+
 .HomePage-parentStyles .SingleGame-teamImageStyles {
   width: 25px;
   height: 25px;
@@ -260,4 +265,25 @@
   &>div:nth-of-type(8) {
     order: 6;
   }
+}
+
+/* HIDE AUTO EXCLUSION */
+[data-testid='closeAccount'] {
+  display: none !important;
+}
+
+.Header-headerAndNavigation a[href*="/pb/sport/Tennis/Brazil/18294056"] svg {
+  color: yellow;
+}
+
+.Header-headerAndNavigation a[href*="/pb/sport/Soccer/Brazil/1792"] svg {
+  color: #0cda0c;
+}
+
+.Badge-topType {
+  background: var(--accent) !important;
+}
+
+.TopEvents-singleEventStyles {
+  background-color: var(--bgColor) !important;
 }
