@@ -1,0 +1,290 @@
+.registrationFormContent .Input-inputBlockStyles.filled:not(.invalid),
+.registrationFormContent .Select-selectInnerStyles.filled {
+  --inputBorderColor: var(--success);
+}
+
+.SliderStyles-listStyles .imageBlock {
+  aspect-ratio: 7 / 3.2 !important;
+}
+
+.HomePage-mainProductStyles {
+  gap: 12px !important;
+  display: grid !important;
+  padding: 0px 1.6rem !important;
+  overflow: scroll;
+  grid-template-columns: repeat(2, calc(100% - 32px));
+}
+
+.HomePage-mainProductStyles .singleItem {
+
+  .infoBlock,
+  .infoBg,
+  .arrow {
+    display: none !important;
+  }
+
+  .imageBlock {
+    width: 100% !important;
+    opacity: 1;
+  }
+
+  .imageBlock .background {
+    opacity: 1 !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .HomePage-mainProductStyles .singleItem {
+    height: 156px !important;
+  }
+}
+
+.Integration-contentStyles table td {
+  width: auto !important;
+}
+
+/* PROMO BUTTON */
+.Integration-contentStyles .promo-btn {
+  text-decoration: none !important;
+  background: var(--secondary);
+  padding: 10px 30px;
+  text-transform: uppercase;
+  border-radius: var(--borderRadiusSmall);
+  font-weight: bold;
+}
+
+.Integration-contentStyles .promo-btn:hover {
+  background: rgba(var(--secondary-rgb), 0.8);
+}
+
+.Footer-footerLongTextStyles {
+  white-space: break-spaces;
+}
+
+/* HIGHLIGHT BONUS LEVEL POINTS */
+.levelBonuses .content .line.previous:not(:has(~ .line.previous)) {
+  background-color: rgba(var(--main-rgb), 0.05);
+}
+
+/* FORMULA 1 */
+.hero-web,
+.podio-web {
+  display: none;
+}
+
+.hero a {
+  width: 100%;
+}
+
+.notice,
+.disclaimer {
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+  padding: 20px;
+  text-align: center;
+}
+
+.notice {
+  background: linear-gradient(180deg, var(--accent), rgba(255, 102, 196, 0.03));
+}
+
+.notice__icon img,
+.disclaimer__icon img {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.section-title {
+  padding: 12px 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 800;
+  text-align: center;
+  margin: 0 0 20px;
+  background-color: var(--accent);
+  border-radius: 6px;
+}
+
+.hero,
+.podio,
+.notice,
+.como {
+  margin-bottom: 20px;
+}
+
+.como {
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+}
+
+.steps__list {
+  counter-reset: step;
+  display: grid;
+  gap: 12px;
+  padding: 0;
+  margin: 0;
+  padding-bottom: 10px;
+}
+
+.steps__list>li {
+  list-style: none;
+  padding: 14px 14px 14px 56px;
+  position: relative;
+}
+
+.steps__list>li::before {
+  counter-increment: step;
+  content: counter(step);
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 28px;
+  height: 28px;
+  display: grid;
+  place-items: center;
+  border-radius: 6px;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 900;
+}
+
+.Header-headerAndNavigation a[href*="/help/790831"] {
+  border: 1px solid var(--accent) !important;
+}
+
+.Header-headerAndNavigation a[href*="/help/790831"] svg {
+  animation: f1 2s infinite;
+}
+
+@keyframes f1 {
+
+  0%,
+  100% {
+    transform: rotate(15deg);
+  }
+
+  20% {
+    transform: rotate(35deg);
+  }
+
+  40% {
+    transform: rotate(-55deg);
+  }
+
+  50% {
+    transform: rotate(30deg);
+  }
+
+  60% {
+    transform: rotate(-15deg);
+  }
+}
+
+.HomePage-parentStyles {
+  gap: 16px;
+}
+
+/* Set first in home page*/
+.HomePage-parentStyles .Stories-storyGroupStyles {
+  height: 12rem;
+}
+
+.Stories-storyGroupStyles:has(img[alt="Promoções"]) {
+  border: 1px solid var(--accent);
+  width: 35%
+}
+
+.Stories-storyGroupStyles>.title {
+  font-size: 1.1rem !important;
+  box-shadow: inset 0 -2rem 4rem .2rem rgba(var(--dark-rgb), 1) !important;
+}
+
+.HomePage-parentStyles .SingleGame-teamImageStyles {
+  width: 25px;
+  height: 25px;
+  padding: 4px;
+}
+
+.HomePage-parentStyles .Event-parentStyles {
+  min-height: inherit;
+  height: 30px;
+}
+
+.HomePage-parentStyles .TopEvents-eventListStyles {
+  min-height: auto;
+}
+
+.HomePage-parentStyles .Scrollable-columnStyles.withScroll:not(.customContent) {
+  width: 81%;
+}
+
+.HomePage-parentStyles .Title-parentStyles {
+  margin: 0 0 8px 0;
+}
+
+.HomePage-parentStyles .Scrollable-viewType1:not(.initialBlockWidth).Scrollable-viewType1:not(.customContent) {
+  max-width: 15rem;
+}
+
+/* HIDE AUTO EXCLUSION */
+[data-testid='closeAccount'] {
+  display: none !important;
+}
+
+.Header-headerAndNavigation a[href*="/pb/sport/Soccer/Europe/566"] svg {
+  display: none;
+}
+
+.Header-headerAndNavigation a[href*="/pb/sport/Soccer/Europe/566"]:before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  display: block;
+  background: url('https://img.uefa.com/imgml/uefacom/elements/logos/competitions/dark/ucl.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.Badge-topType {
+  background: var(--accent) !important;
+}
+
+.TopEvents-singleEventStyles {
+  background-color: var(--bgColor) !important;
+}
+
+/* TOURNAMENTS */
+.Tournaments-singleTournamentStyles:has(.tournamentImageParent img[alt="Grande Prêmio VBET"]) .Tournaments-prizeListStyles .item:nth-child(1) span:nth-child(4),
+.Tournaments-singleTournamentStyles:has(.tournamentImageParent img[alt="Grande Prêmio VBET"]) .Tournaments-prizeListStyles .item:nth-child(2) span:nth-child(4) {
+  visibility: hidden;
+  position: relative;
+}
+
+.Tournaments-singleTournamentStyles:has(.tournamentImageParent img[alt="Grande Prêmio VBET"]) .Tournaments-prizeListStyles .item:nth-child(1) span:nth-child(4)::after {
+  content: '2 ingressos para o GP';
+  visibility: visible;
+  position: absolute;
+  left: 0;
+}
+
+.Tournaments-singleTournamentStyles:has(.tournamentImageParent img[alt="Grande Prêmio VBET"]) .Tournaments-prizeListStyles .item:nth-child(2) span:nth-child(4)::after {
+  content: 'convite para o BSOP';
+  visibility: visible;
+  position: absolute;
+  left: 0;
+}
+
+.Tournaments-prizeListStyles .item {
+  white-space: normal !important;
+}
+
+/* HIDE REGISTRATION PROMO CODE */
+.registrationFormContent .Input-inputParentStyles:has(#promoCode) {
+  display: none;
+}
+
+/* HIDE VIP CLUB */
+[data-testid='navigation']:has(.sportsbook-i-vipClub) {
+  display: none !important;
+}
