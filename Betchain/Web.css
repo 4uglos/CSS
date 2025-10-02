@@ -268,29 +268,14 @@
   display: none;
 }
 
-/* CANDY PARTY*/
+/* NEW GAMES */
 .HomePage-parentStyles .listBlock:nth-child(4) h3:before {
   content: '';
   width: 20px;
   height: 20px;
   display: block;
-  background: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_88deb593b18116d72be010c35eda0a77.svg');
+  background: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_deeeb00621b9258a94fe68067e515464.svg');
   background-size: contain;
   background-repeat: no-repeat;
   animation: lolipop 2s infinite linear;
-}
-
-@keyframes lolipop {
-  0% {
-    transform: rotate(0deg);
-    scale: 1;
-  }
-
-  50% {
-    scale: 1.3;
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
 }
