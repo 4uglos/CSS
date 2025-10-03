@@ -295,3 +295,28 @@
   background-repeat: no-repeat;
   animation: lolipop 2s infinite linear;
 }
+
+/* CASINO TOURNAMENTS ORDERING */
+.Tournaments-tournamentItemsListStyles {
+  display: grid !important;
+}
+
+.Tournaments-tournamentItemsListStyles .Tournaments-singleItemStyles:nth-child(1) {
+  order: 2;
+}
+
+.Tournaments-tournamentItemsListStyles .Tournaments-singleItemStyles:nth-child(2) {
+  order: 5;
+}
+
+.Tournaments-tournamentItemsListStyles .Tournaments-singleItemStyles:nth-child(3) {
+  order: 1;
+}
+
+.Tournaments-tournamentItemsListStyles .Tournaments-singleItemStyles:nth-child(4) {
+  order: 4;
+}
+
+.Tournaments-tournamentItemsListStyles .Tournaments-singleItemStyles:nth-child(5) {
+  order: 3;
+}
