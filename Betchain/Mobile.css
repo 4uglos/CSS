@@ -232,16 +232,22 @@
   display: none !important;
 }
 
-.Header-headerAndNavigation a[href*="/pb/sport/Soccer/Europe/566"] svg {
-  display: none;
-}
-
-.Header-headerAndNavigation a[href*="/pb/sport/Soccer/Europe/566"]:before {
+.Header-headerAndNavigation a[href*="/pb/pre-match/sport/Soccer/Europe/566"]:before {
   content: '';
   width: 20px;
   height: 20px;
   display: block;
   background: url('https://img.uefa.com/imgml/uefacom/elements/logos/competitions/dark/ucl.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.Header-headerAndNavigation a[href*="/pb/pre-match/?subNavigation=search&searchValue=Botafogo"]:before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  display: block;
+  background: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_20c698f1a7e4bd086b9f074850c1fdbe.svg');
   background-size: contain;
   background-repeat: no-repeat;
 }
