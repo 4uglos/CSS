@@ -300,21 +300,21 @@
 
 /* CASINO TOURNAMENTS ORDERING */
 .Tournaments-tournamentItemsListStyles .Tournaments-singleTournamentStyles:nth-child(1) {
-  order: 2;
-}
-
-.Tournaments-tournamentItemsListStyles .Tournaments-singleTournamentStyles:nth-child(2) {
   order: 5;
 }
 
-.Tournaments-tournamentItemsListStyles .Tournaments-singleTournamentStyles:nth-child(3) {
+.Tournaments-tournamentItemsListStyles .Tournaments-singleTournamentStyles:nth-child(2) {
   order: 1;
 }
 
+.Tournaments-tournamentItemsListStyles .Tournaments-singleTournamentStyles:nth-child(3) {
+  order: 2;
+}
+
 .Tournaments-tournamentItemsListStyles .Tournaments-singleTournamentStyles:nth-child(4) {
-  order: 4;
+  order: 3;
 }
 
 .Tournaments-tournamentItemsListStyles .Tournaments-singleTournamentStyles:nth-child(5) {
-  order: 3;
+  order: 4;
 }
