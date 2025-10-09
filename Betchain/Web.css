@@ -274,8 +274,20 @@
   display: none;
 }
 
-/* NEW GAMES */
+/* HALLOWEEN */
 .HomePage-parentStyles .listBlock:nth-child(4) h3:before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  display: block;
+  background: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_e6684abb8608b161332e666195e8460a.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation: lolipop 2s infinite linear;
+}
+
+/* NEW GAMES */
+.HomePage-parentStyles .listBlock:nth-child(7) h3:before {
   content: '';
   width: 20px;
   height: 20px;
