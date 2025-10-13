@@ -318,3 +318,12 @@
 .Tournaments-tournamentItemsListStyles .Tournaments-singleTournamentStyles:nth-child(5) {
   order: 4;
 }
+
+/* HALLOWEEN HEADER BG */
+.Header-headerStyles,
+.Popup-popupChildrenStyles {
+  background: url("https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_88a8a1281026d661e416e5bf992b3c7e.svg");
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-blend-mode: lighten;
+}
