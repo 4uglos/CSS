@@ -360,3 +360,8 @@
   background-color: transparent !important;
   color: var(--warning) !important;
 }
+
+/* FIX BLACK SCREEN ON LOGIN */
+body #turnstile-container {
+  background: transparent !important;
+}
