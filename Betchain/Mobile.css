@@ -367,3 +367,14 @@
 body #turnstile-container {
   background: transparent !important;
 }
+
+/* GOOGLE PLAY ICON */
+.Header-headerAndNavigation a[href*="https://play.google.com/store/apps/details?id=br.softconstruct.beteasy"]:before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  display: block;
+  background: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_461242d9aadd5c01e377e45c8292d770.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
