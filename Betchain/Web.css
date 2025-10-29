@@ -327,3 +327,36 @@
   background-position: top right;
   background-blend-mode: lighten;
 }
+
+/* V-ARENA SCROLL FIX*/
+.AdvancedLoyalty-parentStyles {
+  overflow-y: auto !important;
+}
+
+.AdvancedLoyalty-parentStyles::-webkit-scrollbar {
+  width: 0.6rem;
+  cursor: pointer;
+  height: 100%;
+  display: initial !important;
+}
+
+.AdvancedLoyalty-parentStyles::-webkit-scrollbar-thumb {
+  background: rgba(var(--main-rgb), 35%);
+  border-radius: var(--borderRadiusSmall);
+}
+
+.AdvancedLoyalty-parentStyles::-webkit-scrollbar-track {
+  background: rgba(var(--main-rgb), 20%);
+  border-radius: var(--borderRadiusSmall);
+}
+
+/* ADD NEW BANK ACCOUNT INFO TEXT */
+.BankSection-newCardBlockStyles {
+  color: var(--warning);
+}
+
+/* REGISTRATION ADDITIONAL INFO */
+.ReasonMessage-reasonMessageStyles {
+  background-color: transparent !important;
+  color: var(--warning) !important;
+}

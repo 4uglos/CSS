@@ -351,3 +351,14 @@
   background-position: top right;
   background-blend-mode: lighten;
 }
+
+/* ADD NEW BANK ACCOUNT INFO TEXT */
+.BankSection-newCardBlockStyles {
+  color: var(--warning);
+}
+
+/* REGISTRATION ADDITIONAL INFO */
+.ReasonMessage-reasonMessageStyles {
+  background-color: transparent !important;
+  color: var(--warning) !important;
+}
