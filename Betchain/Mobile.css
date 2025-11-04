@@ -369,3 +369,10 @@ body #turnstile-container {
   background-size: contain;
   background-repeat: no-repeat;
 }
+
+/* FORMULA 1 */
+.SportsList-leftMenuSportsListStyles div:has([data-testid="Formula1"]) {
+  background: #ff1e00a3 url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_30469e989661a10bba423f9ffd5a84ec.svg') no-repeat;
+  background-size: 80%;
+  background-position: 100% 100%
+}
