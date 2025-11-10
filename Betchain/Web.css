@@ -373,3 +373,31 @@ body #turnstile-container {
   background-size: contain;
   background-repeat: no-repeat;
 }
+
+/* TOURNAMENTS PAGE */
+.Tournaments-singleItemStyles .Tournaments-titleInfoStyles {
+  padding-bottom: 1rem !important;
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  gap: 10px;
+  justify-content: flex-start;
+  text-shadow: none !important;
+  background: none !important;
+}
+
+.Tournaments-titleInfoStyles .title {
+  font-size: 1.8rem;
+  margin-left: 20px;
+}
+
+.Tournaments-currencyStyles {
+  font-size: 2.3rem !important;
+  background: rgb(32 27 39 / 60%);
+  padding: .5rem;
+  border-radius: var(--borderRadiusSmall);
+}
+
+.Tournaments-singleItemStyles .tournamentImage img {
+  opacity: 1 !important;
+}
