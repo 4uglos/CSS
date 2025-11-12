@@ -357,26 +357,6 @@ body #turnstile-container {
   background-repeat: no-repeat;
 }
 
-/* FORMULA 1 */
-.SportsList-leftMenuSportsListStyles div:has([data-testid="Formula1"]) {
-  background: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_30469e989661a10bba423f9ffd5a84ec.svg') no-repeat, linear-gradient(to right, #ff1e0069 0%, rgba(var(--primary-rgb), 0) 100%);
-  background-position-x: 100%;
-}
-
-.Header-headerAndNavigation a[href*="/pb/pre-match/sport/Formula1?tab=all"] {
-  background: linear-gradient(to right, #ff1e003d 0%, rgba(var(--primary-rgb), 0) 100%);
-}
-
-.Header-headerAndNavigation a[href*="/pb/pre-match/sport/Formula1?tab=all"]:before {
-  content: '';
-  width: 20px;
-  height: 20px;
-  display: block;
-  background: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_428f527692e1071034401daeb547d25b.svg');
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
 /* TOURNAMENTS PAGE */
 .Tournaments-singleItemStyles .Tournaments-titleInfoStyles {
   padding-bottom: 1rem !important;
