@@ -382,3 +382,12 @@ body #turnstile-container {
 .Tournaments-singleItemStyles .tournamentImage img {
   opacity: 1 !important;
 }
+
+/* FIX ASIDE AND SUBNAVIGATION POSITIONS WHEN HEADER KYC */
+body:has(.Header-kycStatusStyles) .SubNavigation-linearStyles {
+  top: calc(10rem + 40px);
+}
+
+body:has(.Header-kycStatusStyles) #root aside {
+  top: calc(var(--headerHeight) + 0.7rem + 40px);
+}
