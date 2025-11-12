@@ -384,7 +384,7 @@ body #turnstile-container {
 }
 
 /* FIX ASIDE AND SUBNAVIGATION POSITIONS WHEN HEADER KYC */
-body:has(.Header-kycStatusStyles) .SubNavigation-linearStyles {
+body:has(.Header-kycStatusStyles) .SubNavigation-linearStyles:has([data-testid="casino-tab"]) {
   top: calc(10rem + 40px);
 }
 
