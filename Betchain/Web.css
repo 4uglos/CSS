@@ -391,3 +391,12 @@ body:has(.Header-kycStatusStyles) .SubNavigation-linearStyles:has([data-testid="
 body:has(.Header-kycStatusStyles) #root aside {
   top: calc(var(--headerHeight) + 0.7rem + 40px);
 }
+
+/* MAIN BANNER ODDS HOVER */
+@media (hover: hover) {
+
+  .SliderStyles-oddBlockParentStyles .Event-parentStyles:not(.active):not(.active):hover,
+  .SliderStyles-oddBlockParentStyles .eventSkeleton:not(.active):not(.active):hover {
+    background: rgba(var(--light-rgb), 0.35) !important;
+  }
+}
