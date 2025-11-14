@@ -380,3 +380,8 @@ body #turnstile-container {
   border-radius: var(--borderRadiusSmall);
   flex-shrink: 0;
 }
+
+/* FIX USER INFO TOOLTIP POSITION*/
+.rc-tooltip-placement-left {
+  left: 14px !important;
+}
