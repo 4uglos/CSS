@@ -400,3 +400,62 @@ body:has(.Header-kycStatusStyles) #root aside {
     background: rgba(var(--light-rgb), 0.35) !important;
   }
 }
+
+/* ODDS CAROUSEL */
+.SliderStyles-oddBlockParentStyles .Event-parentStyles,
+.SliderStyles-oddBlockParentStyles .eventSkeleton {
+  width: 140px !important;
+  min-height: 56px !important;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+.SliderStyles-oddBlockParentStyles .Event-parentStyles .Event-oddStyles,
+.SliderStyles-oddBlockParentStyles .eventSkeleton .Event-oddStyles {
+  font-size: 24px !important;
+  font-weight: 900;
+  padding: 0;
+}
+
+.Event-parentStyles .oddPart .oldOdd {
+  font-size: 16px !important;
+  font-style: normal;
+  font-weight: 900;
+  padding: 0;
+}
+
+.SliderStyles-oddBlockParentStyles {
+  bottom: 2.8rem !important;
+}
+
+@media (min-width: 1900px) {
+  .SliderStyles-oddBlockParentStyles {
+    bottom: 4rem !important;
+  }
+}
+
+@media (min-width: 2440px) {
+  .SliderStyles-oddBlockParentStyles {
+    bottom: 7rem !important;
+  }
+}
+
+/* BOTOFAGO FANS PAGE */
+iframe[src="https://promo.vodds.com.br/botafogo/"] {
+  height: 2020px !important;
+}
+
+/* AGE VERIFICATION POPUP ICON */
+.AgeVerificationPopup-parentStyles i:before {
+  content: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_fbe1c41dae5b54ed2e59fc6091c634be.svg');
+  margin-left: 20px;
+}
+
+.AgeVerificationPopup-parentStyles .Popup-confirmationParentStyles>i {
+  margin-top: -1.5rem;
+  opacity: 1
+}
+
+.AgeVerificationPopup-parentStyles .buttonsGroup {
+  flex-direction: row !important;
+}

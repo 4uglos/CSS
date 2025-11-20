@@ -10,7 +10,7 @@
 .HomePage-mainProductStyles {
   gap: 12px !important;
   display: grid !important;
-  padding: 0px 1.6rem !important;
+  padding: 0 1.6rem !important;
   overflow: scroll;
   grid-template-columns: repeat(2, calc(100% - 32px));
 }
@@ -241,9 +241,8 @@
   width: 20px;
   height: 20px;
   display: block;
-  background: url('https://img.uefa.com/imgml/uefacom/elements/logos/competitions/dark/ucl.svg');
   background-size: contain;
-  background-repeat: no-repeat;
+  background: url('https://img.uefa.com/imgml/uefacom/elements/logos/competitions/dark/ucl.svg') no-repeat;
 }
 
 .Header-headerAndNavigation a[href*="/pb/pre-match/?subNavigation=search&searchValue=Botafogo"]:before {
@@ -251,9 +250,8 @@
   width: 20px;
   height: 20px;
   display: block;
-  background: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_20c698f1a7e4bd086b9f074850c1fdbe.svg');
-  background-size: contain;
-  background-repeat: no-repeat;
+  background-size: contain !important;
+  background: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_20c698f1a7e4bd086b9f074850c1fdbe.svg') no-repeat;
 }
 
 .Badge-topType {
@@ -289,20 +287,14 @@
   white-space: normal !important;
 }
 
-/* HIDE REGISTRATION PROMO CODE */
-.registrationFormContent .Input-inputParentStyles:has(#promoCode) {
-  display: none;
-}
-
 /* NEW GAMES */
 .HomePage-parentStyles .listBlock:nth-child(6) h3:before {
   content: '';
   width: 20px;
   height: 20px;
   display: block;
-  background: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_deeeb00621b9258a94fe68067e515464.svg');
   background-size: contain;
-  background-repeat: no-repeat;
+  background: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_deeeb00621b9258a94fe68067e515464.svg') no-repeat;
 }
 
 /* CASINO TOURNAMENTS ORDERING */
@@ -352,9 +344,8 @@ body #turnstile-container {
   width: 20px;
   height: 20px;
   display: block;
-  background: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_461242d9aadd5c01e377e45c8292d770.svg');
   background-size: contain;
-  background-repeat: no-repeat;
+  background: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_461242d9aadd5c01e377e45c8292d770.svg') no-repeat;
 }
 
 /* TOURNAMENTS PAGE */
@@ -384,4 +375,42 @@ body #turnstile-container {
 /* FIX USER INFO TOOLTIP POSITION*/
 .rc-tooltip-placement-left {
   left: 14px !important;
+}
+
+/* BOTAFOGO FANS PAGE */
+iframe[src="https://promo.vodds.com.br/botafogo/"] {
+  height: 1529px !important;
+}
+
+/* ODDS CAROUSEL */
+.SliderStyles-oddBlockParentStyles {
+  transform: scale(.9) !important;
+  bottom: 2.5rem !important;
+}
+
+.SliderStyles-oddBlockParentStyles .Event-parentStyles,
+.SliderStyles-oddBlockParentStyles .eventSkeleton {
+  min-height: 4.5rem !important;
+  backdrop-filter: blur(6px);
+}
+
+@media (min-width: 600px) {
+  .SliderStyles-oddBlockParentStyles {
+    transform: scale(1.4) !important;
+  }
+}
+
+/* AGE VERIFICATION POPUP ICON */
+.AgeVerificationPopup-parentStyles i:before {
+  content: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_fbe1c41dae5b54ed2e59fc6091c634be.svg');
+  margin-left: 20px;
+}
+
+.AgeVerificationPopup-parentStyles .Popup-confirmationParentStyles>i {
+  margin-top: -1.5rem;
+  opacity: 1;
+}
+
+.AgeVerificationPopup-parentStyles .buttonsGroup {
+  flex-direction: row !important;
 }
