@@ -220,7 +220,8 @@
   background-repeat: no-repeat;
 }
 
-.Header-headerAndNavigation a[href*="/pb/pre-match/?subNavigation=search&searchValue=Botafogo"]:before {
+.Header-headerAndNavigation a[href*="/pb/pre-match/?subNavigation=search&searchValue=Botafogo"]:before,
+.Header-headerAndNavigation a[href*="/pb/help/820041"]:before {
   content: '';
   width: 20px;
   height: 20px;
@@ -458,4 +459,38 @@ iframe[src="https://promo.vodds.com.br/botafogo/"] {
 
 .AgeVerificationPopup-parentStyles .buttonsGroup {
   flex-direction: row !important;
+}
+
+/* BOTAFOGO POPUP STYLES - BETCHAIN TEAM */
+.PopupByQuery-parentStyles .sportsbook-i-question:before {
+  content: "";
+  width: 70px;
+  height: 70px;
+  display: block;
+  background: url('https://icons.vbet.bet.br/storage/medias/vbetlatam.com/media_692_20c698f1a7e4bd086b9f074850c1fdbe.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  content: '';
+  margin: 0 auto;
+  filter: drop-shadow(0 0 10px var(--primary));
+}
+
+.PopupByQuery-parentStyles .Popup-confirmationParentStyles>i {
+  opacity: 1;
+}
+
+/* LOADER */
+.Loader-circleLoaderStyles:after {
+  content: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/logo_loader_20b1382a3a46fc673dcd7dbf9a9f4364.svg') !important;
+  width: 40px;
+  animation: none !important;
+  border: none !important;
+}
+
+/* LOADER */
+.Loader-circleLoaderStyles:after {
+  content: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/logo_loader_20b1382a3a46fc673dcd7dbf9a9f4364.svg') !important;
+  width: 40px;
+  border: none !important;
+  animation: none !important;
 }
