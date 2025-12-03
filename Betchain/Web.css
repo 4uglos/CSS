@@ -497,6 +497,9 @@ iframe[src="https://promo.vodds.com.br/botafogo/"] {
 
 /* BOTAFOGO FAN POPUP */
 .botafogo-fan_buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   margin-inline: auto;
   width: fit-content;
   line-height: 3rem;
@@ -509,11 +512,14 @@ iframe[src="https://promo.vodds.com.br/botafogo/"] {
 
 .botafogo-fan_button-primary {
   width: 100% !important;
-  margin: 20px 0 10px 0;
+  margin-top: 20px;
 }
 
-.popupContainerStyles:has([title^='Botafogo fan']) .Popup-popupHeaderStyles {
-  display: none;
+.popupContainerStyles:has([title^='Botafogo fan']) .Popup-popupHeaderStyles,
+.popupContainerStyles:has([title^='Botafogo fan']) button[data-testid="submit_button"],
+.user-login,
+.user-logoff {
+  display: none !important;
 }
 
 .popupContainerStyles:has([title^='Botafogo fan']).popupContainerStyles {
@@ -522,6 +528,15 @@ iframe[src="https://promo.vodds.com.br/botafogo/"] {
   background-color: #17111e94 !important;
 }
 
-.popupContainerStyles:has([title^='Botafogo fan']) button[data-testid="submit_button"] {
-  display: none !important
+#root:not(:has(.Avatar-flipContainerStyles)) .user-logoff {
+  display: block !important;
+  margin-top: -10px !important;
+}
+
+#root:has(.Avatar-flipContainerStyles) .user-login {
+  display: block !important;
+}
+
+.popup-logo {
+  filter: drop-shadow(0 0 15px var(--primary));
 }
