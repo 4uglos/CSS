@@ -446,3 +446,34 @@ iframe[src="https://promo.vodds.com.br/botafogo/"] {
   border: none !important;
   animation: none !important;
 }
+
+/* BOTAFOGO FAN POPUP */
+.botafogo-fan_buttons {
+  margin-inline: auto;
+  width: fit-content;
+  line-height: 3rem;
+  font-weight: 600;
+}
+
+.botafogo-fan_buttons .botafogo-fan_button {
+  text-decoration: none !important;
+}
+
+.botafogo-fan_button-primary {
+  width: 100% !important;
+  margin: 20px 0 10px 0;
+}
+
+.popupContainerStyles:has([title^='Botafogo fan']) .Popup-popupHeaderStyles {
+  display: none;
+}
+
+.popupContainerStyles:has([title^='Botafogo fan']).popupContainerStyles {
+  max-width: 40rem !important;
+  backdrop-filter: blur(5px);
+  background-color: #17111e94 !important;
+}
+
+.popupContainerStyles:has([title^='Botafogo fan']) button[data-testid="submit_button"] {
+  display: none !important
+}
