@@ -203,11 +203,37 @@
 }
 
 .Stories-storyGroupStyles {
-  height: 120px !important;
+  height: 100px !important;
 }
 
 .Stories-storyGroupStyles>.title {
-  font-size: 1rem !important
+  font-size: 1rem !important;
+  line-height: 100%;
+}
+
+.Stories-storyGroupStyles {
+  aspect-ratio: 1 / 1 !important;
+  border-radius: 50% !important;
+  border: 2px solid #ffffff29;
+  padding: 3px;
+}
+
+.Stories-storyGroupStyles .overlay img {
+  border-radius: 50%;
+}
+
+.Stories-storyGroupStyles>.title>p {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.Stories-storyGroupStyles.new {
+  border-width: 2px;
+  border-color: var(--primary) !important;
+}
+
+.Stories-storyGroupStyles .badge {
+  display: none !important;
 }
 
 .Header-headerAndNavigation a[href*="/pb/pre-match/sport/Soccer/Europe/566"]:before {
@@ -487,12 +513,8 @@ iframe[src="https://promo.vodds.com.br/botafogo/"] {
   border: none !important;
 }
 
-/* LOADER */
-.Loader-circleLoaderStyles:after {
-  content: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/logo_loader_20b1382a3a46fc673dcd7dbf9a9f4364.svg') !important;
-  width: 40px;
-  border: none !important;
-  animation: none !important;
+.Button-loadingButtonStyles .buttonLoader {
+  height: 3.8rem !important;
 }
 
 /* BOTAFOGO FAN POPUP */
@@ -539,4 +561,27 @@ iframe[src="https://promo.vodds.com.br/botafogo/"] {
 
 .popup-logo {
   filter: drop-shadow(0 0 15px var(--primary));
+}
+
+/* AFTER REGISTRATION POPUP */
+.popupContainerStyles:has(.Popup-successRegistrationStyles) {
+  background: transparent !important;
+}
+
+.popupContainerStyles:has(.Popup-successRegistrationStyles) .Popup-popupHeaderStyles,
+.popupContainerStyles:has(.Popup-successRegistrationStyles) .title,
+.popupContainerStyles:has(.Popup-successRegistrationStyles) .content {
+  display: none;
+}
+
+.Popup-successRegistrationStyles {
+  height: 100% !important;
+  justify-content: flex-end !important;
+}
+
+.Popup-popupChildrenStyles:has(.Popup-successRegistrationStyles) {
+  width: 600px !important;
+  height: 800px;
+  background: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_cbe4ded6eee02429aec59dfecb612d09.png') no-repeat center center / contain;
+  padding: 0px;
 }

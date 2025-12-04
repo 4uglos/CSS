@@ -189,19 +189,40 @@
   gap: 16px;
 }
 
-/* Set first in home page*/
+/* STORIES */
 .HomePage-parentStyles .Stories-storyGroupStyles {
-  height: 12rem;
+  height: 7.5rem;
 }
 
-.Stories-storyGroupStyles:has(img[alt="Promoções"]) {
-  border: 1px solid var(--accent);
-  width: 35%
+.Stories-storyGroupStyles>.title>p {
+  text-align: center;
+  margin-bottom: 5px;
 }
 
 .Stories-storyGroupStyles>.title {
-  font-size: 1.1rem !important;
+  font-size: .9rem !important;
+  line-height: 100%;
   box-shadow: inset 0 -2rem 4rem .2rem rgba(var(--dark-rgb), 1) !important;
+}
+
+.Stories-storyGroupStyles {
+  aspect-ratio: 1 / 1 !important;
+  border-radius: 50% !important;
+  border: 2px solid #ffffff29;
+  padding: 3px;
+}
+
+.Stories-storyGroupStyles .overlay img {
+  border-radius: 50%;
+}
+
+.Stories-storyGroupStyles.new {
+  border-width: 2px;
+  border-color: var(--primary) !important;
+}
+
+.Stories-storyGroupStyles .badge {
+  display: none !important;
 }
 
 .HomePage-parentStyles .SingleGame-teamImageStyles {
@@ -447,6 +468,10 @@ iframe[src="https://promo.vodds.com.br/botafogo/"] {
   animation: none !important;
 }
 
+.Button-loadingButtonStyles .buttonLoader {
+  height: 3.8rem !important;
+}
+
 /* BOTAFOGO FAN POPUP */
 .botafogo-fan_buttons {
   display: flex;
@@ -491,4 +516,54 @@ iframe[src="https://promo.vodds.com.br/botafogo/"] {
 
 .popup-logo {
   filter: drop-shadow(0 0 15px var(--primary));
+}
+
+/* SAFARI ISSUE IFRAME */
+@supports (-webkit-hyphens:none) {
+  .Integration-contentStyles a.botafogo-link-fan {
+    text-decoration: none !important;
+    display: flex !important;
+    cursor: pointer;
+    position: relative;
+    border-radius: var(--borderRadiusSmall);
+    padding: 0.4rem 1.7rem;
+    font-size: 1.3rem;
+    min-width: 3.6rem;
+    min-height: 3.6rem;
+    background-color: #d80d83;
+    width: fit-content;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font);
+    font-weight: 500;
+    font-size: 14px;
+  }
+
+  .Integration-contentStyles iframe.botafogo-iframe-fan {
+    display: none;
+  }
+}
+
+/* AFTER REGISTRATION POPUP */
+.popupContainerStyles:has(.Popup-successRegistrationStyles) {
+  background: transparent !important;
+}
+
+.popupContainerStyles:has(.Popup-successRegistrationStyles) .Popup-popupHeaderStyles,
+.popupContainerStyles:has(.Popup-successRegistrationStyles) .title,
+.popupContainerStyles:has(.Popup-successRegistrationStyles) .content {
+  display: none;
+}
+
+.Popup-successRegistrationStyles {
+  height: 100% !important;
+  justify-content: flex-end !important;
+}
+
+.Popup-popupChildrenStyles:has(.Popup-successRegistrationStyles) {
+  width: 100% !important;
+  height: 800px;
+  background: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_cbe4ded6eee02429aec59dfecb612d09.png') no-repeat center center / contain;
+  padding: 0px;
 }
