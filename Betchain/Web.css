@@ -269,38 +269,6 @@
   background-color: var(--lightSkin) !important;
 }
 
-/* TOURNAMENTS */
-.Tournaments-singleTournamentPageStyles:has(.tournamentImageAndInfoStyles img[alt="Grande Prêmio VBET"]) .Tournaments-prizeListStyles .item:nth-child(1) span:nth-child(4),
-.Tournaments-singleTournamentPageStyles:has(.tournamentImageAndInfoStyles img[alt="Grande Prêmio VBET"]) .Tournaments-prizeListStyles .item:nth-child(2) span:nth-child(4) {
-  visibility: hidden;
-  position: relative;
-  white-space: normal;
-}
-
-.Tournaments-singleTournamentPageStyles:has(.tournamentImageAndInfoStyles img[alt="Grande Prêmio VBET"]) .Tournaments-prizeListStyles .item:nth-child(1),
-.Tournaments-singleTournamentPageStyles:has(.tournamentImageAndInfoStyles img[alt="Grande Prêmio VBET"]) .Tournaments-prizeListStyles .item:nth-child(2) {
-  overflow: visible;
-}
-
-.Tournaments-singleTournamentPageStyles:has(.tournamentImageAndInfoStyles img[alt="Grande Prêmio VBET"]) .Tournaments-prizeListStyles .item:nth-child(1) span:nth-child(4)::after {
-  content: '2 ingressos para o GP';
-  visibility: visible;
-  position: absolute;
-  left: 0;
-}
-
-.Tournaments-singleTournamentPageStyles:has(.tournamentImageAndInfoStyles img[alt="Grande Prêmio VBET"]) .Tournaments-prizeListStyles .item:nth-child(2) span:nth-child(4)::after {
-  content: 'convite para o BSOP';
-  visibility: visible;
-  position: absolute;
-  left: 0;
-}
-
-/* HIDE REGISTRATION PROMO CODE */
-.registrationFormContent .Input-inputParentStyles:has(#promoCode) {
-  display: none;
-}
-
 /* NEW GAMES */
 .HomePage-parentStyles .listBlock:nth-child(6) h3:before {
   content: '';
@@ -380,34 +348,6 @@ body #turnstile-container {
   background: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_461242d9aadd5c01e377e45c8292d770.svg');
   background-size: contain;
   background-repeat: no-repeat;
-}
-
-/* TOURNAMENTS PAGE */
-.Tournaments-singleItemStyles .Tournaments-titleInfoStyles {
-  padding-bottom: 1rem !important;
-  display: flex;
-  flex-direction: row;
-  align-items: baseline;
-  gap: 10px;
-  justify-content: flex-start;
-  text-shadow: none !important;
-  background: none !important;
-}
-
-.Tournaments-titleInfoStyles .title {
-  font-size: 1.8rem;
-  margin-left: 20px;
-}
-
-.Tournaments-currencyStyles {
-  font-size: 2.3rem !important;
-  background: rgb(32 27 39 / 60%);
-  padding: .5rem;
-  border-radius: var(--borderRadiusSmall);
-}
-
-.Tournaments-singleItemStyles .tournamentImage img {
-  opacity: 1 !important;
 }
 
 /* FIX ASIDE AND SUBNAVIGATION POSITIONS WHEN HEADER KYC */

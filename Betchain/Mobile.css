@@ -279,31 +279,6 @@
   background-color: var(--bgColor) !important;
 }
 
-/* TOURNAMENTS */
-.Tournaments-singleTournamentStyles:has(.tournamentImageParent img[alt="Grande Prêmio VBET"]) .Tournaments-prizeListStyles .item:nth-child(1) span:nth-child(4),
-.Tournaments-singleTournamentStyles:has(.tournamentImageParent img[alt="Grande Prêmio VBET"]) .Tournaments-prizeListStyles .item:nth-child(2) span:nth-child(4) {
-  visibility: hidden;
-  position: relative;
-}
-
-.Tournaments-singleTournamentStyles:has(.tournamentImageParent img[alt="Grande Prêmio VBET"]) .Tournaments-prizeListStyles .item:nth-child(1) span:nth-child(4)::after {
-  content: '2 ingressos para o GP';
-  visibility: visible;
-  position: absolute;
-  left: 0;
-}
-
-.Tournaments-singleTournamentStyles:has(.tournamentImageParent img[alt="Grande Prêmio VBET"]) .Tournaments-prizeListStyles .item:nth-child(2) span:nth-child(4)::after {
-  content: 'convite para o BSOP';
-  visibility: visible;
-  position: absolute;
-  left: 0;
-}
-
-.Tournaments-prizeListStyles .item {
-  white-space: normal !important;
-}
-
 /* NEW GAMES */
 .HomePage-parentStyles .listBlock:nth-child(6) h3:before {
   content: '';
@@ -363,30 +338,6 @@ body #turnstile-container {
   display: block;
   background-size: contain;
   background: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_461242d9aadd5c01e377e45c8292d770.svg') no-repeat;
-}
-
-/* TOURNAMENTS PAGE */
-.Tournaments-singleItemStyles .Tournaments-titleInfoStyles {
-  padding-bottom: 1rem !important;
-  display: flex;
-  flex-direction: row;
-  align-items: baseline;
-  gap: 10px;
-  justify-content: flex-start;
-  text-shadow: none !important;
-}
-
-.Tournaments-titleInfoStyles .title {
-  font-size: 1.8rem;
-  margin-left: 20px;
-}
-
-.Tournaments-currencyStyles {
-  font-size: 2.3rem !important;
-  background: rgb(32 27 39 / 60%);
-  padding: .5rem;
-  border-radius: var(--borderRadiusSmall);
-  flex-shrink: 0;
 }
 
 /* FIX USER INFO TOOLTIP POSITION*/
