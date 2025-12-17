@@ -586,6 +586,8 @@ body {
 }
 
 .SliderStyles-listStyles {
+  margin-bottom: 10px;
+
   .imageBlock {
     background: transparent;
   }
@@ -951,6 +953,10 @@ body {
           background: #D80D83;
           box-shadow: 0 0 4px 0 #D80D83, 0 0 8px 0 #D80D83;
         }
+      }
+
+      .Event-parentStyles.insights {
+        border-color: var(--warning);
       }
     }
 
@@ -1390,7 +1396,7 @@ body {
 
   [data-testid="e_sports"] {
     .iconBlock {
-      background-image: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_151560a68558631c467a7d6de7327f47.png');
+      background-image: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_1367948835cc733a225c542984c40e68.png');
     }
   }
 
@@ -1577,4 +1583,30 @@ aside.left:before {
 
 .Promotions-scrolledPromotionsStyles {
   background: none !important;
+}
+
+.TopEvents-singleEventStyles .betInsightsEventWrapper,
+.TopEvents-insightsTooltipStyles .insightsBlock .infoIcon {
+  background: transparent !important;
+}
+
+.sportsbook-i-hint:before {
+  content: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_248eb0f1fe0022a40a2fc8ad94b3ebce.png') !important;
+
+}
+
+.betInsightsEventWrapper {
+  right: 0px !important;
+  top: 40px !important;
+  transform: scale(0.8) !important;
+}
+
+.betInsightsEventWrapper .tooltipInner {
+  border: 1px solid var(--warning);
+  background: #31031C;
+  border-radius: 1rem;
+}
+
+.TopEvents-singleEventStyles .betInsightsEventWrapper:before {
+  display: none !important;
 }
