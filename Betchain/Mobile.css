@@ -1307,7 +1307,10 @@ i.icon.sportsbook-i-tooltipDeposit {
 }
 
 .Navigation-navStyles {
-  display: none !important;
+  display: flex !important;
+  height: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
 }
 
 .SliderStyles-wrapperStyles {
@@ -1368,4 +1371,48 @@ i.icon.sportsbook-i-tooltipDeposit {
 
 .TopEvents-singleEventStyles .betInsightsEventWrapper:before {
   display: none !important;
+}
+
+/* Betsplits */
+.Drawer-drawerContainerStyles {
+  .Betslip-messageStyles.win {
+    --icon: #1c0f02;
+    --type: #e0a205;
+    color: #1c0f02;
+    font-weight: 800;
+    font-family: "DM Sans", sans-serif;
+    font-size: 14px;
+    align-items: center;
+    filter: drop-shadow(0 0px 6px #e0a205);
+    border: 0px;
+  }
+}
+
+
+/* Aviator */
+#root:not(:has(.Stories-storyGroupStyles)),
+#root:has(.itemWrapper.active.withName) {
+  .Navigation-navStyles [href="/pb/open-game/806666"] {
+    display: none;
+  }
+}
+
+#root:has(.Stories-storyGroupStyles) {
+  .Navigation-navStyles [href="/pb/open-game/806666"] {
+    position: fixed;
+    bottom: 190px;
+    right: 0;
+    background-image: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_6c17027ceb2cd5ccec69458390038fb1.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 68px;
+    height: 68px;
+    background-size: cover;
+    font-size: 0;
+    display: flex;
+
+    .Badge-badgeStyles.Badge-topType {
+      display: none;
+    }
+  }
 }
