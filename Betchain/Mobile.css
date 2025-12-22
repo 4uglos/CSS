@@ -931,6 +931,10 @@ body {
         background-image: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_e4a6652caf4de2a3698e2e6bab1ed76b.png');
       }
 
+      .sport-i-icehockey {
+        background-image: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_8e0157205125cf297d506c7182408b44.png');
+      }
+
       span {
         border-radius: 8px;
         background-color: #323232;
@@ -1246,6 +1250,12 @@ body {
 }
 
 /* Woot */
+body:has(.Drawer-drawerWrapperStyles) {
+  .woot--bubble-holder {
+    display: none !important;
+  }
+}
+
 .woot-widget-bubble.woot-elements--right {
   bottom: 130px;
   right: 0px !important;
@@ -1415,4 +1425,97 @@ i.icon.sportsbook-i-tooltipDeposit {
       display: none;
     }
   }
+}
+
+/* User Profile Bonus Animation */
+.AccountList-accountListBlockStyles .bonusesWrapper {
+  b {
+    color: var(--secondary);
+    font-weight: 600;
+    opacity: 1;
+    background: white !important;
+    border-radius: 100%;
+    padding: 1rem;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    line-height: 1rem;
+  }
+
+  i {
+    color: white;
+    animation: gift-bounce 1s infinite;
+  }
+
+  background: linear-gradient(132deg, #000000, var(--secondary));
+  background-size: 400% 400%;
+  animation: BackgroundGradient 5s ease infinite;
+  color: white !important;
+  border-radius: 1rem;
+}
+
+@keyframes gift-bounce {
+
+  0%,
+  100% {
+    top: 0;
+    transform: translateY(0px);
+  }
+
+  50% {
+    top: 100px;
+    transform: translateY(-7px);
+  }
+}
+
+@keyframes BackgroundGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Registration Form Promo Code Toggle*/
+.promo-field {
+  position: relative;
+  overflow: hidden;
+  max-height: 36px;
+  transition: max-height 0.4s ease;
+}
+
+.promo-field::before {
+  content: 'Código de indicação 🔻';
+  display: block;
+  padding: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.promo-field .Input-inputBlockStyles {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.promo-field:hover,
+.promo-field:focus-within,
+.promo-field:has(input:not(:placeholder-shown)) {
+  max-height: 120px;
+}
+
+.promo-field:hover .Input-inputBlockStyles,
+.promo-field:focus-within .Input-inputBlockStyles,
+.promo-field:has(input:not(:placeholder-shown)) .Input-inputBlockStyles {
+  opacity: 1;
+}
+
+.promo-field:hover::before,
+.promo-field:focus-within::before,
+.promo-field:has(input:not(:placeholder-shown))::before {
+  content: 'Código de indicação 🔺';
 }

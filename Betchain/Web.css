@@ -1089,6 +1089,14 @@ body {
         background-image: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_e4a6652caf4de2a3698e2e6bab1ed76b.png');
       }
 
+      .sport-i-icehockey {
+        background-image: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_8e0157205125cf297d506c7182408b44.png');
+      }
+
+      .sport-i-handball {
+        background-image: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_916ea0e17cd12fa8e9e1e1b3cb91c38d.png');
+      }
+
       span {
         border-radius: 8px;
         background-color: #323232;
@@ -1396,7 +1404,7 @@ body {
 
   [data-testid="e_sports"] {
     .iconBlock {
-      background-image: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_1367948835cc733a225c542984c40e68.png');
+      background-image: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_47b9ddbcab92a921977e702fd68cab9f.png');
     }
   }
 
@@ -1672,4 +1680,97 @@ aside.left:before {
     filter: drop-shadow(0 0px 6px #e0a205);
     border: 0px;
   }
+}
+
+/* User Profile Bonus Animation */
+.AccountList-accountListBlockStyles .bonusesWrapper {
+  b {
+    color: var(--secondary);
+    font-weight: 600;
+    opacity: 1;
+    background: white !important;
+    border-radius: 100%;
+    padding: 1rem;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    line-height: 1rem;
+  }
+
+  i {
+    color: white;
+    animation: gift-bounce 1s infinite;
+  }
+
+  background: linear-gradient(132deg, #000000, var(--secondary));
+  background-size: 400% 400%;
+  animation: BackgroundGradient 5s ease infinite;
+  color: white !important;
+  border-radius: 1rem;
+}
+
+@keyframes gift-bounce {
+
+  0%,
+  100% {
+    top: 0;
+    transform: translateY(0px);
+  }
+
+  50% {
+    top: 100px;
+    transform: translateY(-7px);
+  }
+}
+
+@keyframes BackgroundGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Registration Form Promo Code Toggle*/
+.promo-field {
+  position: relative;
+  overflow: hidden;
+  max-height: 36px;
+  transition: max-height 0.4s ease;
+}
+
+.promo-field::before {
+  content: 'Código de indicação 🔻';
+  display: block;
+  padding: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.promo-field .Input-inputBlockStyles {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.promo-field:hover,
+.promo-field:focus-within,
+.promo-field:has(input:not(:placeholder-shown)) {
+  max-height: 120px;
+}
+
+.promo-field:hover .Input-inputBlockStyles,
+.promo-field:focus-within .Input-inputBlockStyles,
+.promo-field:has(input:not(:placeholder-shown)) .Input-inputBlockStyles {
+  opacity: 1;
+}
+
+.promo-field:hover::before,
+.promo-field:focus-within::before,
+.promo-field:has(input:not(:placeholder-shown))::before {
+  content: 'Código de indicação 🔺';
 }
