@@ -310,12 +310,31 @@
   margin-right: -6px;
 }
 
-.HomePage-parentStyles .listBlock:nth-child(6) h3:before {
-  content: '🔥';
+.HomePage-parentStyles .listBlock:nth-child(7) h3,
+.HomePage-parentStyles .listBlock:nth-child(8) h3 {
+  font-size: 0;
 }
 
-.HomePage-parentStyles .listBlock:nth-child(7) h3:before {
-  content: '🎄';
+.HomePage-parentStyles .listBlock:nth-child(7) h3 {
+  &:before {
+    content: '🔥';
+  }
+
+  &:after {
+    font-size: 16px;
+    content: 'Novidades';
+  }
+}
+
+.HomePage-parentStyles .listBlock:nth-child(8) h3 {
+  &:before {
+    content: '🎄';
+  }
+
+  &:after {
+    font-size: 16px;
+    content: 'Slots de Natal';
+  }
 }
 
 /* CASINO TOURNAMENTS ORDERING */
@@ -1773,4 +1792,146 @@ aside.left:before {
 .promo-field:focus-within::before,
 .promo-field:has(input:not(:placeholder-shown))::before {
   content: 'Código de indicação 🔺';
+}
+
+/* Homepage Top Payouts Carousel */
+.HomePage-parentStyles .listBlock:nth-child(3) {
+  counter-reset: game 0;
+
+  .Title-seeAllStyles {
+    display: none;
+  }
+
+  .Scrollable-viewType1:not(.initialBlockWidth).Scrollable-viewType1:not(.customContent) {
+    max-width: 266px;
+    margin-left: 36px;
+  }
+
+  h3.Title-titleStyles {
+    color: #FFF;
+    font-family: "DM Sans", sans-serif;
+    font-size: 20px !important;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px;
+  }
+
+  .Scrollable-columnStyles {
+    counter-increment: game;
+
+    .Scrollable-singleItemStyles {
+      background-color: #1d1d1d;
+      padding: 12px 20px;
+      display: flex;
+      flex-direction: row-reverse;
+      gap: 8px;
+      position: relative;
+      overflow: inherit;
+
+      &:before {
+        content: counter(game);
+        display: flex;
+        width: 32px;
+        height: 32px;
+        padding: 12px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        position: absolute;
+        left: -24px;
+        top: 8px;
+        font-family: "DM Sans", sans-serif;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 18px;
+        letter-spacing: 0.24px;
+        background: linear-gradient(0deg, #FFF71D 22.22%, #FAE3F2 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        border-radius: 4px;
+        z-index: 2;
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        left: -24px;
+        top: 8px;
+        border-radius: 4px;
+        background: rgba(70, 36, 55, 0.64);
+        display: flex;
+        width: 32px;
+        height: 32px;
+        padding: 12px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        z-index: 1;
+      }
+    }
+
+    img {
+      width: 91px !important;
+      height: 106px !important;
+      position: relative;
+    }
+  }
+
+  .Casino-desktopGameInfoStyles {
+    opacity: 1;
+    backdrop-filter: none;
+    background: transparent;
+    left: inherit;
+    right: 0;
+    padding: 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+    justify-content: center;
+
+    .buttons {
+      margin: 0 !important;
+
+      &>button {
+        border-radius: 8px;
+        color: #FFF;
+        font-family: "DM Sans", sans-serif;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 18px;
+        letter-spacing: 0.12px;
+      }
+    }
+
+    p {
+      color: #FAE3F2;
+      font-family: "DM Sans", sans-serif;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 900;
+      line-height: 28px;
+      text-align: left;
+      width: 100%;
+      display: inline-block;
+      overflow: hidden;
+      max-width: 35rem;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+
+  .Button-buttonParentStyles.Button-smallButton.Button-secondaryType {
+    display: none;
+  }
+
+  .CasinoGameView-gameViewWrapperStyles {
+    display: none;
+  }
 }
