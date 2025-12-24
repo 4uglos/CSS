@@ -1428,10 +1428,11 @@ i.icon.sportsbook-i-tooltipDeposit {
   transform: scale(0.8) !important;
 }
 
-.betInsightsEventWrapper .tooltipInner {
+.betInsightsEventWrapper .tooltipInner,
+.insightsInfo i {
   border: 1px solid var(--warning);
-  background: #31031C;
-  border-radius: 1rem;
+  background: #31031C !important;
+  border-radius: 1rem !important;
 }
 
 .TopEvents-singleEventStyles .betInsightsEventWrapper:before {

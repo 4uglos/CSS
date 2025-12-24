@@ -449,7 +449,7 @@ body:has(.Header-kycStatusStyles) .SubNavigation-linearStyles:has([data-testid="
 }
 
 body:has(.Header-kycStatusStyles) #root aside {
-  top: calc(var(--headerHeight) + 0.7rem + 40px);
+  top: calc(var(--headerHeight) - 2rem + 40px) !important;
 }
 
 /* MAIN BANNER ODDS HOVER */
@@ -673,7 +673,7 @@ body {
 }
 
 #root #layout aside.left {
-  top: inherit !important;
+  top: calc(var(--headerHeight) - 2rem);
 }
 
 .Header-headerAndNavigation {
@@ -1666,10 +1666,11 @@ aside.left:before {
   transform: scale(0.8) !important;
 }
 
-.betInsightsEventWrapper .tooltipInner {
+.betInsightsEventWrapper .tooltipInner,
+.insightsInfo i {
   border: 1px solid var(--warning);
-  background: #31031C;
-  border-radius: 1rem;
+  background: #31031C !important;
+  border-radius: 1rem !important;
 }
 
 .TopEvents-singleEventStyles .betInsightsEventWrapper:before {
@@ -1902,9 +1903,33 @@ aside.left:before {
     }
 
     img {
-      width: 91px !important;
-      height: 106px !important;
+      width: 100px !important;
+      height: auto !important;
       position: relative;
+
+      &[alt='Fortune Rabbit'] {
+        content: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_f081f3e32b1c2222c415af95cfa36c2b.png');
+      }
+
+      &[alt='Fortune Tiger'] {
+        content: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_0d7d28114a36964124aed53c790c7caa.png');
+      }
+
+      &[alt='Fortune Ox'] {
+        content: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_bc2a3eceb976496940175798c03186f7.png');
+      }
+
+      &[alt='YO Dragon'] {
+        content: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_c6968784422eafc5a01c30ca91b69175.png');
+      }
+
+      &[alt='Gates of Olympus™'] {
+        content: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_b95298c3b07ae02f16363261a717474c.png');
+      }
+
+      &[alt='Fortune Dragon'] {
+        content: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_788674fe948820d646dd6312c81985b9.png');
+      }
     }
   }
 
