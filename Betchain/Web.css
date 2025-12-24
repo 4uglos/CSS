@@ -310,9 +310,27 @@
   margin-right: -6px;
 }
 
+.HomePage-parentStyles .listBlock:nth-child(3) h3,
 .HomePage-parentStyles .listBlock:nth-child(7) h3,
 .HomePage-parentStyles .listBlock:nth-child(8) h3 {
   font-size: 0;
+}
+
+.HomePage-parentStyles .listBlock:nth-child(3) h3 {
+  &:before {
+    content: '💰';
+  }
+
+  &:after {
+    font-size: 16px;
+    content: 'Top mais premiados de hoje';
+  }
+}
+
+.HomePage-parentStyles .listBlock:nth-child(4) h3 {
+  &:before {
+    content: '❤️‍🔥';
+  }
 }
 
 .HomePage-parentStyles .listBlock:nth-child(7) h3 {
@@ -334,6 +352,24 @@
   &:after {
     font-size: 16px;
     content: 'Slots de Natal';
+  }
+}
+
+.HomePage-parentStyles .listBlock:nth-child(9) h3 {
+  &:before {
+    content: '🚀';
+  }
+}
+
+.HomePage-parentStyles .listBlock:nth-child(10) h3 {
+  &:before {
+    content: '🎰';
+  }
+}
+
+.HomePage-parentStyles .listBlock:nth-child(11) h3 {
+  &:before {
+    content: '♠️';
   }
 }
 
@@ -1807,15 +1843,6 @@ aside.left:before {
     margin-left: 36px;
   }
 
-  h3.Title-titleStyles {
-    color: #FFF;
-    font-family: "DM Sans", sans-serif;
-    font-size: 20px !important;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 28px;
-  }
-
   .Scrollable-columnStyles {
     counter-increment: game;
 
@@ -1934,4 +1961,8 @@ aside.left:before {
   .CasinoGameView-gameViewWrapperStyles {
     display: none;
   }
+}
+
+.LastWinGames-parentStylesView1 {
+  order: 2;
 }
