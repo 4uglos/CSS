@@ -1465,6 +1465,7 @@ i.icon.sportsbook-i-tooltipDeposit {
     aspect-ratio: 1 / 1;
     display: flex;
     line-height: 1rem;
+    align-items: center;
   }
 
   i {
@@ -1544,4 +1545,837 @@ i.icon.sportsbook-i-tooltipDeposit {
 .promo-field:focus-within::before,
 .promo-field:has(input:not(:placeholder-shown))::before {
   content: 'Código de indicação 🔺';
+}
+
+.LastWinGames-parentStylesView1 {
+  order: 2;
+}
+
+/* Casino Page*/
+.Casino-casinoDesktopProviders {
+  background-color: #2A1939 !important;
+  padding: 0 0 !important;
+  border-radius: 12px !important;
+
+  .singleCasinoCategoryItem {
+    padding: 16px 24px !important;
+
+    .itemName {
+      padding: 0 !important;
+    }
+
+    &:not([style*="transform: none"]):not(.active):hover {
+      background-color: #372364 !important;
+      border-radius: 0 !important;
+    }
+  }
+
+  .listParent {
+    padding: 0 0 !important;
+
+    &>div {
+      color: #EBEBEB !important;
+      font-family: "DM Sans", sans-serif;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 20px;
+      letter-spacing: 0.14px;
+    }
+
+    &>div:not(:first-child) {
+      border-top: 0 !important;
+      margin: 0 !important;
+    }
+
+  }
+
+  .title {
+    background: transparent !important;
+  }
+}
+
+.SubNavigation-linearStyles {
+  border-bottom: 1px solid #1D1D1D !important;
+
+  &>.item {
+    color: #EBEBEB !important;
+    font-family: "DM Sans", sans-serif;
+    font-size: 16px !important;
+    font-style: normal;
+    font-weight: 600 !important;
+    line-height: 22px !important;
+    letter-spacing: 0.16px;
+
+    &.active {
+      span {
+        background: linear-gradient(0deg, #D80C83 0%, #FFBCE3 47.5%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      &::before {
+        border-radius: 99px;
+        background: #D80D83;
+        box-shadow: 0 0 3.5px 0 #D80D83;
+        height: 3px;
+      }
+    }
+  }
+}
+
+/* Providers Games and List of Games */
+.providerGames .title,
+.listBlock .Title-titleStyles {
+  color: #FFF;
+  font-family: "DM Sans", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 22px;
+  /* 137.5% */
+  letter-spacing: 0.16px;
+}
+
+
+.Casino-parentStyles {
+
+  .Breadcrumbs-parentStyles {
+    margin-top: 33px;
+
+    .title {
+      color: #FFF;
+      font-family: "DM Sans", sans-serif;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 22px;
+      /* 137.5% */
+      letter-spacing: 0.16px;
+    }
+  }
+
+  .Title-titleStyles {
+    color: #FFF;
+    font-family: "DM Sans", sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px;
+  }
+
+  .Casino-filterListStyles {
+    &>.item {
+      border-radius: 99px;
+      background: #D80D83;
+      display: flex;
+      padding: 4px 12px;
+      align-items: center;
+      gap: 4px;
+      color: #FFF;
+      font-family: "DM Sans", sans-serif;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 18px;
+      /* 150% */
+      letter-spacing: 0.12px;
+    }
+  }
+}
+
+[dir="ltr"] .Casino-providerSearchStyles {
+  .Input-inputWithLeftIconStyles>input {
+    background: #16091E;
+    border-radius: 8px;
+    border: 1px solid #4A3873;
+    padding: 11px !important;
+    background-image: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_6ddf42b8eee9f10dca55eff6b2ba4abf.png');
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    font-family: "DM Sans";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+
+    &::placeholder {
+      color: #B2B2B2;
+      opacity: 1;
+    }
+
+    &~.Input-rightIconStyles {
+      display: none;
+    }
+  }
+
+  .Input-multiSelectSearchParent {
+
+    &~.Tooltip-tooltipInnerStyles {
+      background-color: transparent !important;
+      border-radius: 8px !important;
+      border: 1px solid #4A3873;
+      width: 44px !important;
+      height: 44px;
+      background-image: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_1a8cf8407ad71cbc07d71ae1687eeb33.svg') !important;
+      background-position: center !important;
+      background-repeat: no-repeat !important;
+
+      .icon {
+        display: none;
+      }
+    }
+
+    .open {
+      .Input-inputWithLeftIconStyles>input {
+        border-radius: 8px 8px 0 0;
+        border: 1px solid #4A3873;
+        background: #342063;
+        background-image: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_ffc8e440ce9e65ac235425f97e2db2f8.png');
+        background-repeat: no-repeat;
+        background-position: right 16px center;
+
+      }
+    }
+
+    .suggestListWrapper {
+      top: 44px;
+      border-radius: 0 0 8px 8px;
+
+      .list {
+        background: #29194D;
+        padding: 16px;
+        gap: 8px;
+
+        .item {
+          display: flex;
+          padding: 4px 12px;
+          align-items: center;
+          gap: 8px;
+          border-radius: 99px;
+          background: #3F3F3F;
+          color: #B2B2B2;
+          font-family: "DM Sans", sans-serif;
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 18px;
+          letter-spacing: 0.12px;
+
+          .Badge-badgeStyles {
+            border-radius: 2px;
+            background: #D80D83;
+            display: inline-flex;
+            padding: 0 4px;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            color: #FFF;
+            font-family: "DM Sans", sans-serif;
+            font-size: 10px;
+            font-style: normal;
+            font-weight: 800;
+            line-height: 18px;
+            letter-spacing: 0.1px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.singleCategory {
+  .Title-parentStyles {
+    margin-bottom: 20px;
+
+    .Title-titleStyles {
+      color: #FFF;
+      font-family: "DM Sans", sans-serif;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 22px;
+      /* 137.5% */
+      letter-spacing: 0.16px;
+    }
+
+    .Title-seeAllStyles {
+      color: #D1CCDB;
+      font-family: "DM Sans", sans-serif;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 18px;
+      opacity: 1;
+    }
+  }
+}
+
+/* Tournament Widget */
+.tournamentWidget,
+.Tournaments-singleTournamentPageStyles {
+
+  .Tournaments-singleItemStyles {
+    position: relative;
+    z-index: 1;
+    border-radius: 8px;
+    border: 1px solid var(--neutral-800, #323232);
+    background: var(--neutral-900, #1D1D1D);
+    padding: 8px 8px 12px 8px;
+    overflow: inherit;
+
+    .tournamentImage {
+      position: relative;
+      border-radius: 7.314px;
+      overflow: revert;
+
+      img {
+        min-height: inherit;
+        overflow: hidden;
+        height: 115px;
+      }
+
+      &:before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(180deg, rgba(41, 25, 77, 0.00) 0%, #29194D 64.88%);
+        z-index: 1;
+        border-radius: 7px;
+      }
+    }
+
+    .Tournaments-infoContentStyles {
+      margin-top: 30px;
+
+      .statusAndDate {
+        padding: 0;
+        background: transparent;
+        border-radius: 0;
+        gap: 0;
+
+        .users {
+          padding: 3px 12px;
+          gap: 8px;
+          border-radius: 99px;
+          background: #323232;
+          color: #FFF;
+          font-family: "DM Sans", sans-serif;
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 18px;
+          letter-spacing: 0.12px;
+        }
+
+        .Tournaments-tournamentStatusStyles.ongoing {
+          background: #D80D83;
+          border-radius: 4px;
+          color: #FFF;
+          font-family: "DM Sans", sans-serif;
+          font-size: 10px;
+          font-style: normal;
+          font-weight: 800;
+          line-height: 18px;
+          letter-spacing: 0.1px;
+          padding: 2px 7.273px;
+        }
+
+        .Timer-timerStyles {
+          margin: 12px 0;
+
+          .text {
+            color: #B2B2B2;
+            text-align: center;
+            font-family: "DM Sans", sans-serif;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 18px;
+          }
+
+          .item {
+            color: #FFF;
+            text-align: center;
+            font-family: "DM Sans", sans-serif;
+            font-size: 28px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 38px;
+            padding: 0;
+            width: 48px;
+
+            &+.item:before {
+              content: " ";
+              width: 1px;
+              height: 18px;
+              background-color: #3F3F3F;
+              top: 8px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .Tournaments-singleItemStyles {
+    .Tournaments-titleInfoStyles {
+      background: transparent;
+      text-shadow: none;
+      padding-bottom: 0;
+      flex-direction: column;
+      bottom: -20px;
+      gap: 0;
+      padding: 0;
+
+      .title {
+        color: #FFF;
+        font-family: "DM Sans", sans-serif;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 28px;
+      }
+
+      .Tournaments-currencyStyles {
+        font-family: "DM Sans", sans-serif;
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 38px;
+        background: linear-gradient(0deg, #FFF71D 22.22%, #FAE3F2 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+
+    .tournamentButton {
+      margin: 21px 0 0 0;
+      border-radius: 8px;
+      color: #FFF;
+      font-family: "DM Sans", sans-serif;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 22px;
+      letter-spacing: 0.16px;
+      height: 38px;
+      position: relative;
+    }
+  }
+
+}
+
+/* List of Tournaments */
+.Tournaments-tournamentItemsListStyles,
+.Tournaments-singleTournamentStyles {
+
+  .Tournaments-singleItemStyles {
+    position: relative;
+    z-index: 1;
+    border-radius: 8px;
+    border: 1px solid #323232;
+    background: #1D1D1D;
+    padding: 14.545px 14.545px 21.818px 14.545px;
+    overflow: inherit;
+
+    .Tournaments-titleInfoStyles {
+      background: transparent;
+      text-shadow: none !important;
+      padding-bottom: 0;
+      flex-direction: column;
+      bottom: -17px;
+
+      .title {
+        color: #FFF;
+        font-family: "DM Sans", sans-serif;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 28px;
+      }
+
+      .Tournaments-currencyStyles {
+        font-family: "DM Sans", sans-serif;
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 38px;
+        background: linear-gradient(0deg, #FFF71D 22.22%, #FAE3F2 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        small {
+          font-size: 28px;
+        }
+      }
+    }
+
+    .tournamentButton {
+      margin: 21px 0 0 0;
+      border-radius: 8px;
+      color: #FFF;
+      font-family: "DM Sans", sans-serif;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 22px;
+      letter-spacing: 0.16px;
+      height: 38px;
+      position: relative;
+    }
+
+    .tournamentImage:not(img) {
+      width: auto;
+      position: relative;
+      overflow: revert;
+      height: 115px;
+      min-height: inherit;
+      opacity: 1;
+      min-height: inherit;
+
+      &:before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(180deg, rgba(41, 25, 77, 0.00) 0%, #29194D 64.88%);
+        z-index: 1;
+        border-radius: 6px;
+      }
+    }
+
+    .tournamentImage:is(img) {
+      opacity: 1;
+      border-radius: 6px;
+    }
+
+    .Tournaments-infoContentStyles {
+      gap: 0;
+      width: 100%;
+      display: flex;
+      margin-top: 20px;
+
+      .statusAndDate {
+        padding: 0;
+        background: transparent;
+        border-radius: 0;
+        gap: 0;
+
+        .sportsbook-i-stopwatch,
+        .sportsbook-i-itemRemove {
+          display: none;
+        }
+
+        .users {
+          padding: 4px 12px;
+          gap: 7px;
+          border-radius: 99px;
+          background: #323232;
+          color: #FFF;
+          font-family: "DM Sans", sans-serif;
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 18px;
+          letter-spacing: 0.12px;
+        }
+
+        .Tournaments-tournamentStatusStyles {
+
+          &.finished {
+            color: #FFF;
+            font-family: "DM Sans", sans-serif;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 20px;
+            border: 0;
+            padding: 0;
+            margin-top: 5px;
+          }
+        }
+
+        .Timer-timerStyles {
+          margin: 12px 0;
+
+          .text {
+            color: #B2B2B2;
+            text-align: center;
+            font-family: "DM Sans";
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 18px;
+          }
+
+          .item {
+            color: #FFF;
+            text-align: center;
+            font-family: "DM Sans";
+            font-size: 28px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 38px;
+            width: 61px;
+            gap: 0;
+
+            &+.item:before {
+              content: " ";
+              width: 1px;
+              height: 18px;
+              background-color: #3F3F3F;
+              top: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Tournament Page */
+.Tournaments-singleTournamentStyles {
+  .Tournaments-singleItemStyles {
+    border-radius: 0;
+    border: 0;
+  }
+
+  .Casino-countStyles {
+    color: #B2B2B2;
+    text-align: center;
+    font-family: "DM Sans", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+  }
+
+  .Market-showMoreButtonStyles {
+    display: flex;
+    height: 40px;
+    padding: 8px 12px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    align-self: stretch;
+    border-radius: 8px;
+    border: 1px solid #4A3873;
+    margin: 8px 16px 0 16px;
+    color: #FFF;
+    font-family: "DM Sans", sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 18px;
+    letter-spacing: 0.12px;
+    background: transparent;
+  }
+}
+
+/* Select */
+.leftRightPaddingMobile {
+  .selectWrapper {
+    .Select-selectParentStyles {
+      height: 44px;
+      border-radius: 0;
+
+      .Select-selectInnerStyles .selectValue,
+      .Select-selectInnerStyles .selectLabel {
+        color: var(--neutral-50, #FFF);
+        font-family: var(--tipography-type, "DM Sans");
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px;
+        opacity: 1;
+      }
+    }
+
+    .Select-selectInnerStyles {
+      padding: 12px !important;
+      border: 1px solid #4A3873;
+      background: #4A3873;
+    }
+
+    .Select-selectInnerStyles.opened {
+      background: #4A3873;
+      border-radius: 8px 8px 0 0;
+    }
+
+    .Select-selectDropDown {
+      top: 43px;
+      border-radius: 0 0 8px 8px;
+      background: #29194D;
+
+      .listParent>div {
+        background-color: #29194D;
+        height: 42px;
+        padding: 0 16px;
+        color: #B2B2B2;
+        font-family: "DM Sans", sans-serif;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 18px;
+        letter-spacing: 0.12px;
+      }
+
+      .listParent>div.selected {
+        background-color: #342063;
+        color: #FFF;
+      }
+    }
+  }
+}
+
+/* Last Winners */
+.lastWinBlock.casino {
+  padding: 4px 12px;
+  background: #1D1D1D;
+  border-radius: 24px 0 0 8px;
+
+  h3 {
+    color: #FFF71D;
+    text-align: center;
+    font-family: "DM Sans", sans-serif;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 9px;
+    letter-spacing: 0.1px;
+    background: linear-gradient(180deg, #D80C83 0%, #FF71C4 148%) !important;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25), 0 0 12px 0 rgba(17, 17, 17, 0.10), 0 0 13.6px 0 rgba(17, 17, 17, 0.67) !important;
+    filter: none;
+  }
+
+  .lastWinPeriod {
+    display: flex;
+    padding: 4px 16px;
+    align-items: center;
+    gap: 16px;
+    border-radius: 0 0 8px 8px;
+    background: rgba(63, 63, 63, 0.88);
+    backdrop-filter: blur(2px);
+
+    .item {
+      color: #909090;
+      font-family: "DM Sans";
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 18px;
+      letter-spacing: 0.12px;
+      padding: 0;
+
+      &.active {
+        color: #EBEBEB;
+      }
+    }
+  }
+
+  .lastWinItems {
+    .item {
+      background: transparent;
+      padding: 0;
+      height: auto;
+      margin: 0 16px;
+
+      .imageBlock {
+        width: 80px;
+        height: 93.187px;
+      }
+
+      .amount {
+        font-family: "DM Sans", sans-serif;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 18px;
+        /* 150% */
+        letter-spacing: 0.12px;
+        background: linear-gradient(0deg, #FFF71D 22.22%, #FAE3F2 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .player {
+        color: #D1D1D1;
+        font-family: "DM Sans", sans-serif;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 18px;
+        letter-spacing: 0.1px;
+        opacity: 1;
+      }
+    }
+  }
+
+}
+
+/* Casino Categories */
+.CasinoCategoriesList-scrollStyles {
+  .singleItem {
+    border-radius: 99px;
+    background: #29194D;
+    display: flex;
+    padding: 8px 16px;
+    align-items: center;
+    gap: 4px;
+    color: #D1D1D1;
+    font-family: "DM Sans";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: 0.14px;
+  }
+}
+
+/* Drawer */
+.Drawer-drawerWrapperStyles {
+
+  .Drawer-drawerContainerStyles {
+    background: #29194D;
+  }
+
+  & .Select-selectListStyles {
+    .listParent {
+      padding: 0;
+
+      &>div {
+        padding: 12px 16px;
+        color: #FFF;
+        font-family: "DM Sans", sans-serif;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 18px;
+        /* 150% */
+        letter-spacing: 0.12px;
+
+        &.selected {
+          background: #342063;
+        }
+
+        &:not(:first-child) {
+          margin: 0;
+          border-bottom: none;
+          border-top: 1px solid var(--violet-400, #4A3873);
+        }
+      }
+    }
+  }
+}
+
+.Breadcrumbs-parentStyles {
+  display: none !important;
 }
