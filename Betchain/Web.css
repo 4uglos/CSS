@@ -311,8 +311,7 @@
 }
 
 .HomePage-parentStyles .listBlock:nth-child(3) h3,
-.HomePage-parentStyles .listBlock:nth-child(7) h3,
-.HomePage-parentStyles .listBlock:nth-child(8) h3 {
+.HomePage-parentStyles .listBlock:nth-child(7) h3 {
   font-size: 0;
 }
 
@@ -346,28 +345,17 @@
 
 .HomePage-parentStyles .listBlock:nth-child(8) h3 {
   &:before {
-    content: '🎄';
-  }
-
-  &:after {
-    font-size: 16px;
-    content: 'Slots de Natal';
+    content: '🚀';
   }
 }
 
 .HomePage-parentStyles .listBlock:nth-child(9) h3 {
   &:before {
-    content: '🚀';
-  }
-}
-
-.HomePage-parentStyles .listBlock:nth-child(10) h3 {
-  &:before {
     content: '🎰';
   }
 }
 
-.HomePage-parentStyles .listBlock:nth-child(11) h3 {
+.HomePage-parentStyles .listBlock:nth-child(10) h3 {
   &:before {
     content: '♠️';
   }
