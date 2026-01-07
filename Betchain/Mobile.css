@@ -1353,24 +1353,6 @@ i.icon.sportsbook-i-tooltipDeposit {
   box-shadow: 0 0 20px 0 #ff0094;
 }
 
-.Button-primaryType:not(:has(i)) {
-  &:before {
-    content: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_932a91e07769020731fd789a40813d21.svg');
-    width: 40px;
-    position: absolute;
-    right: -4px;
-    top: -5px;
-  }
-
-  &:after {
-    content: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_b27c65a0de0c251c77e9a829a048a047.svg');
-    width: 50px;
-    position: absolute;
-    left: 0px;
-    bottom: -15px;
-  }
-}
-
 .Navigation-navStyles {
   display: flex !important;
   height: 0 !important;

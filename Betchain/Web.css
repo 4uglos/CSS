@@ -1565,25 +1565,6 @@ body {
   top: 120px !important;
 }
 
-.Button-primaryType:not(:has(i)),
-.tournamentButton {
-  &:before {
-    content: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_932a91e07769020731fd789a40813d21.svg');
-    width: 40px;
-    position: absolute;
-    right: -4px;
-    top: -5px;
-  }
-
-  &:after {
-    content: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_b27c65a0de0c251c77e9a829a048a047.svg');
-    width: 50px;
-    position: absolute;
-    left: 0px;
-    bottom: -15px;
-  }
-}
-
 .Header-headerAndNavigation .desktopParentNavStyles {
   padding: 0 !important;
   min-height: 0 !important;
@@ -1605,23 +1586,6 @@ main>.SubNavigation-linearStyles {
 aside .LeftMenuNavigation-leftMenuDesktopNavigation a:hover,
 .LeftMenuNavigation-leftMenuDesktopNavItem.active {
   background: #372364;
-}
-
-aside.left:before {
-  content: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_82acce6b7ee577f67c5f80c9ccc82cc7.svg');
-  opacity: 0;
-  width: 120px;
-  position: absolute;
-  right: 0;
-  top: -100px;
-  z-index: 99999;
-  pointer-events: none;
-}
-
-#root:has(.sportsbook-i-closeSidebar) aside.left:before {
-  opacity: 1;
-  top: 57px;
-  transition: all .7s cubic-bezier(.17, .67, .43, 1.15);
 }
 
 .Promotions-desktopPromotionListStyles a+.infoBlock {
