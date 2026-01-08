@@ -1140,6 +1140,30 @@ body {
         background-image: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_916ea0e17cd12fa8e9e1e1b3cb91c38d.png');
       }
 
+      .sport-i-cricket {
+        background-image: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_48f5cf3a591f929a0431add3567121c3.png');
+      }
+
+      .sport-i-badminton {
+        background-image: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_b4fee06d073721037e64a1df2a390d72.png');
+      }
+
+      .sport-i-darts {
+        background-image: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_cf475ced48c938245a2f89d4e4726c3a.png');
+      }
+
+      .sport-i-hockey {
+        background-image: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_419adc174b2434f475fb35df8f9fc83c.png');
+      }
+
+      .sport-i-floorball {
+        background-image: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_5efefcfb14e24ed2489483b4f4862b7e.png');
+      }
+
+      .sport-i-snooker {
+        background-image: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_854404e9b92f132aa579d5c8fbff4d2a.png');
+      }
+
       span {
         border-radius: 8px;
         background-color: #323232;
@@ -2638,6 +2662,6 @@ aside .LeftMenuNavigation-leftMenuDesktopNavigation a:hover,
   }
 }
 
-.Breadcrumbs-parentStyles {
-  display: none !important;
+main:has(.ProviderList-providerListStyles) .Breadcrumbs-parentStyles {
+  display: none;
 }
