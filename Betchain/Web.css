@@ -1085,11 +1085,11 @@ body {
         height: 52px;
         position: absolute;
         left: 10px;
-        background-repeat: no-repeat;
-        background-position: center;
+        background-repeat: no-repeat !important;
+        background-position: center !important;
         opacity: 1 !important;
         background-color: transparent !important;
-        background-size: contain;
+        background-size: contain !important;
 
         &:before {
           content: none;
@@ -1097,71 +1097,71 @@ body {
       }
 
       .sport-i-mma {
-        background-image: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_b7730b37d41db7854c4065c376ea569b.png');
+        background-image: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_b7730b37d41db7854c4065c376ea569b.png') !important;
       }
 
       .sport-i-futsal {
-        background-image: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_28b2df0d69a8583be615c106a94ba9bc.png');
+        background-image: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_28b2df0d69a8583be615c106a94ba9bc.png') !important;
       }
 
       .sport-i-soccer {
-        background-image: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_271123385c1c0213a0cf39d052456f6b.png');
+        background-image: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_271123385c1c0213a0cf39d052456f6b.png') !important;
       }
 
       .sport-i-tennis {
-        background-image: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_af3edfb63186d10c2174ab27cf8ccb43.png');
+        background-image: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_af3edfb63186d10c2174ab27cf8ccb43.png') !important;
       }
 
       .sport-i-basketball {
-        background-image: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_ab402243a59ba04614944d4a04d26c8e.png');
+        background-image: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_ab402243a59ba04614944d4a04d26c8e.png') !important;
       }
 
       .sport-i-volleyball {
-        background-image: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_e51b98b0f1f3e7e554a14264d9cadfae.png');
+        background-image: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_e51b98b0f1f3e7e554a14264d9cadfae.png') !important;
       }
 
       .sport-i-tabletennis {
-        background-image: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_34a22277c6681323f197a4a609e0e1b7.png');
+        background-image: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_34a22277c6681323f197a4a609e0e1b7.png') !important;
       }
 
       .sport-i-americanfootball {
-        background-image: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_a02a6506389ab93fa68ece860242f202.png');
+        background-image: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_a02a6506389ab93fa68ece860242f202.png') !important;
       }
 
       .sport-i-boxing {
-        background-image: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_e4a6652caf4de2a3698e2e6bab1ed76b.png');
+        background-image: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_e4a6652caf4de2a3698e2e6bab1ed76b.png') !important;
       }
 
       .sport-i-icehockey {
-        background-image: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_8e0157205125cf297d506c7182408b44.png');
+        background-image: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_8e0157205125cf297d506c7182408b44.png') !important;
       }
 
       .sport-i-handball {
-        background-image: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_916ea0e17cd12fa8e9e1e1b3cb91c38d.png');
+        background-image: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_916ea0e17cd12fa8e9e1e1b3cb91c38d.png') !important;
       }
 
       .sport-i-cricket {
-        background-image: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_48f5cf3a591f929a0431add3567121c3.png');
+        background-image: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_48f5cf3a591f929a0431add3567121c3.png') !important;
       }
 
       .sport-i-badminton {
-        background-image: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_b4fee06d073721037e64a1df2a390d72.png');
+        background-image: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_b4fee06d073721037e64a1df2a390d72.png') !important;
       }
 
       .sport-i-darts {
-        background-image: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_cf475ced48c938245a2f89d4e4726c3a.png');
+        background-image: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_cf475ced48c938245a2f89d4e4726c3a.png') !important;
       }
 
       .sport-i-hockey {
-        background-image: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_419adc174b2434f475fb35df8f9fc83c.png');
+        background-image: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_419adc174b2434f475fb35df8f9fc83c.png') !important;
       }
 
       .sport-i-floorball {
-        background-image: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_5efefcfb14e24ed2489483b4f4862b7e.png');
+        background-image: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_5efefcfb14e24ed2489483b4f4862b7e.png') !important;
       }
 
       .sport-i-snooker {
-        background-image: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_854404e9b92f132aa579d5c8fbff4d2a.png');
+        background-image: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_854404e9b92f132aa579d5c8fbff4d2a.png') !important;
       }
 
       span {
@@ -1826,7 +1826,7 @@ aside .LeftMenuNavigation-leftMenuDesktopNavigation a:hover,
 
     .Scrollable-singleItemStyles {
       background-color: #1d1d1d;
-      padding: 12px 20px;
+      padding: 34px 20px;
       display: flex;
       flex-direction: row-reverse;
       gap: 8px;
@@ -1911,6 +1911,7 @@ aside .LeftMenuNavigation-leftMenuDesktopNavigation a:hover,
   }
 
   .Casino-desktopGameInfoStyles {
+    width: 50%;
     opacity: 1;
     backdrop-filter: none;
     background: transparent;
@@ -2664,4 +2665,8 @@ aside .LeftMenuNavigation-leftMenuDesktopNavigation a:hover,
 
 main:has(.ProviderList-providerListStyles) .Breadcrumbs-parentStyles {
   display: none;
+}
+
+[data-testid="BTGV1"] {
+  order: -1;
 }
