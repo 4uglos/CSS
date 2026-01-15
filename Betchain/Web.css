@@ -208,7 +208,6 @@
   z-index: 9999990;
 }
 
-
 .Stories-storyGroupStyles {
   height: 100px !important;
 }
@@ -310,12 +309,12 @@
   margin-right: -6px;
 }
 
-.HomePage-parentStyles .listBlock:nth-child(3) h3,
+.HomePage-parentStyles .listBlock:nth-child(2) h3,
 .HomePage-parentStyles .listBlock:nth-child(7) h3 {
   font-size: 0;
 }
 
-.HomePage-parentStyles .listBlock:nth-child(3) h3 {
+.HomePage-parentStyles .listBlock:nth-child(2) h3 {
   &:before {
     content: '💰';
   }
@@ -1039,7 +1038,6 @@ body {
     .SubNavigation-hubStyles>.item:not(.active) {
       background-color: #3F3F3F;
     }
-
 
     &::before {
       content: 'Explore seus esportes favoritos';
@@ -1876,6 +1874,7 @@ aside .LeftMenuNavigation-leftMenuDesktopNavigation a:hover,
         align-items: center;
         gap: 8px;
         z-index: 1;
+
       }
     }
 
@@ -1883,6 +1882,11 @@ aside .LeftMenuNavigation-leftMenuDesktopNavigation a:hover,
       width: 100px !important;
       height: auto !important;
       position: relative;
+      margin-left: 8px;
+
+      &[alt='Aviator'] {
+        content: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_f1a1e8e930468351c8278b9a78fcbefa.png');
+      }
 
       &[alt='Fortune Rabbit'] {
         content: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_f081f3e32b1c2222c415af95cfa36c2b.png');
@@ -2665,6 +2669,10 @@ aside .LeftMenuNavigation-leftMenuDesktopNavigation a:hover,
 
 main:has(.ProviderList-providerListStyles) .Breadcrumbs-parentStyles {
   display: none;
+}
+
+.ProviderList-providerListStyles {
+  margin-bottom: 1rem;
 }
 
 [data-testid="BTGV1"] {
