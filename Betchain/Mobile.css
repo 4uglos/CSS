@@ -314,7 +314,7 @@
 }
 
 .HomePage-parentStyles .listBlock:nth-child(3) h3,
-.HomePage-parentStyles .listBlock:nth-child(8) h3 {
+.HomePage-parentStyles .listBlock:nth-child(9) h3 {
   font-size: 0;
 }
 
@@ -329,13 +329,13 @@
   }
 }
 
-.HomePage-parentStyles .listBlock:nth-child(5) h3 {
+.HomePage-parentStyles .listBlock:nth-child(4) h3 {
   &:before {
     content: '❤️‍🔥';
   }
 }
 
-.HomePage-parentStyles .listBlock:nth-child(8) h3 {
+.HomePage-parentStyles .listBlock:nth-child(9) h3 {
   &:before {
     content: '🔥';
   }
@@ -346,19 +346,19 @@
   }
 }
 
-.HomePage-parentStyles .listBlock:nth-child(9) h3 {
+.HomePage-parentStyles .listBlock:nth-child(10) h3 {
   &:before {
     content: '🚀';
   }
 }
 
-.HomePage-parentStyles .listBlock:nth-child(10) h3 {
+.HomePage-parentStyles .listBlock:nth-child(11) h3 {
   &:before {
     content: '🎰';
   }
 }
 
-.HomePage-parentStyles .listBlock:nth-child(11) h3 {
+.HomePage-parentStyles .listBlock:nth-child(12) h3 {
   &:before {
     content: '♠️';
   }
@@ -998,6 +998,10 @@ body {
 
       .sport-i-snooker {
         background-image: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_854404e9b92f132aa579d5c8fbff4d2a.png') !important;
+      }
+
+      .sport-i-waterpolo {
+        background-image: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_6b3ceab9284df1ac90866e2fb6566199.png') !important;
       }
 
       span {

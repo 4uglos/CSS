@@ -325,7 +325,7 @@
   }
 }
 
-.HomePage-parentStyles .listBlock:nth-child(4) h3 {
+.HomePage-parentStyles .listBlock:nth-child(3) h3 {
   &:before {
     content: '❤️‍🔥';
   }
@@ -1162,6 +1162,10 @@ body {
         background-image: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_854404e9b92f132aa579d5c8fbff4d2a.png') !important;
       }
 
+      .sport-i-waterpolo {
+        background-image: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_6b3ceab9284df1ac90866e2fb6566199.png') !important;
+      }
+
       span {
         border-radius: 8px;
         background-color: #323232;
@@ -1804,170 +1808,6 @@ aside .LeftMenuNavigation-leftMenuDesktopNavigation a:hover,
 .promo-field:focus-within::before,
 .promo-field:has(input:not(:placeholder-shown))::before {
   content: 'Código de indicação 🔺';
-}
-
-/* Homepage Top Payouts Carousel */
-.HomePage-parentStyles .listBlock:nth-child(3) {
-  counter-reset: game 0;
-
-  .Title-seeAllStyles {
-    display: none;
-  }
-
-  .Scrollable-viewType1:not(.initialBlockWidth).Scrollable-viewType1:not(.customContent) {
-    max-width: 266px;
-    margin-left: 36px;
-  }
-
-  .Scrollable-columnStyles {
-    counter-increment: game;
-
-    .Scrollable-singleItemStyles {
-      background-color: #1d1d1d;
-      padding: 34px 20px;
-      display: flex;
-      flex-direction: row-reverse;
-      gap: 8px;
-      position: relative;
-      overflow: inherit;
-
-      &:before {
-        content: counter(game);
-        display: flex;
-        width: 32px;
-        height: 32px;
-        padding: 12px;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 8px;
-        position: absolute;
-        left: -24px;
-        top: 8px;
-        font-family: "DM Sans", sans-serif;
-        font-size: 24px;
-        font-style: normal;
-        font-weight: 800;
-        line-height: 18px;
-        letter-spacing: 0.24px;
-        background: linear-gradient(0deg, #FFF71D 22.22%, #FAE3F2 100%);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        border-radius: 4px;
-        z-index: 2;
-      }
-
-      &:after {
-        content: "";
-        position: absolute;
-        left: -24px;
-        top: 8px;
-        border-radius: 4px;
-        background: rgba(70, 36, 55, 0.64);
-        display: flex;
-        width: 32px;
-        height: 32px;
-        padding: 12px;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 8px;
-        z-index: 1;
-
-      }
-    }
-
-    img {
-      width: 100px !important;
-      height: auto !important;
-      position: relative;
-      margin-left: 8px;
-
-      &[alt='Aviator'] {
-        content: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_f1a1e8e930468351c8278b9a78fcbefa.png');
-      }
-
-      &[alt='Fortune Rabbit'] {
-        content: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_f081f3e32b1c2222c415af95cfa36c2b.png');
-      }
-
-      &[alt='Fortune Tiger'] {
-        content: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_0d7d28114a36964124aed53c790c7caa.png');
-      }
-
-      &[alt='Fortune Ox'] {
-        content: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_bc2a3eceb976496940175798c03186f7.png');
-      }
-
-      &[alt='YO Dragon'] {
-        content: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_c6968784422eafc5a01c30ca91b69175.png');
-      }
-
-      &[alt='Gates of Olympus™'] {
-        content: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_b95298c3b07ae02f16363261a717474c.png');
-      }
-
-      &[alt='Fortune Dragon'] {
-        content: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_788674fe948820d646dd6312c81985b9.png');
-      }
-    }
-  }
-
-  .Casino-desktopGameInfoStyles {
-    width: 50%;
-    opacity: 1;
-    backdrop-filter: none;
-    background: transparent;
-    left: inherit;
-    right: 0;
-    padding: 0;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    align-items: flex-start;
-    justify-content: center;
-
-    .buttons {
-      margin: 0 !important;
-
-      &>button {
-        border-radius: 8px;
-        color: #FFF;
-        font-family: "DM Sans", sans-serif;
-        font-size: 12px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 18px;
-        letter-spacing: 0.12px;
-      }
-    }
-
-    p {
-      color: #FAE3F2;
-      font-family: "DM Sans", sans-serif;
-      font-size: 12px;
-      font-style: normal;
-      font-weight: 900;
-      line-height: 28px;
-      text-align: left;
-      width: 100%;
-      display: inline-block;
-      overflow: hidden;
-      max-width: 35rem;
-      white-space: nowrap;
-      text-overflow: ellipsis;
-    }
-  }
-
-  .Button-buttonParentStyles.Button-smallButton.Button-secondaryType {
-    display: none;
-  }
-
-  .CasinoGameView-gameViewWrapperStyles {
-    display: none;
-  }
 }
 
 .LastWinGames-parentStylesView1 {
