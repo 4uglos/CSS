@@ -193,7 +193,7 @@
 }
 
 .HomePage-parentStyles {
-  gap: 1.2rem !important;
+  gap: 2rem !important;
 }
 
 /* STORIES */
@@ -305,63 +305,6 @@
 
 .Tournaments-prizeListStyles .item {
   white-space: normal !important;
-}
-
-/* GAMES TITLE ICONS */
-.HomePage-parentStyles .listBlock h3:before {
-  font-size: 2rem;
-  margin-right: -6px;
-}
-
-.HomePage-parentStyles .listBlock:nth-child(3) h3,
-.HomePage-parentStyles .listBlock:nth-child(9) h3 {
-  font-size: 0;
-}
-
-.HomePage-parentStyles .listBlock:nth-child(3) h3 {
-  &:before {
-    content: '💰';
-  }
-
-  &:after {
-    font-size: 16px;
-    content: 'Top mais premiados de hoje';
-  }
-}
-
-.HomePage-parentStyles .listBlock:nth-child(4) h3 {
-  &:before {
-    content: '❤️‍🔥';
-  }
-}
-
-.HomePage-parentStyles .listBlock:nth-child(9) h3 {
-  &:before {
-    content: '🔥';
-  }
-
-  &:after {
-    font-size: 16px;
-    content: 'Novidades';
-  }
-}
-
-.HomePage-parentStyles .listBlock:nth-child(10) h3 {
-  &:before {
-    content: '🚀';
-  }
-}
-
-.HomePage-parentStyles .listBlock:nth-child(11) h3 {
-  &:before {
-    content: '🎰';
-  }
-}
-
-.HomePage-parentStyles .listBlock:nth-child(12) h3 {
-  &:before {
-    content: '♠️';
-  }
 }
 
 /* CASINO TOURNAMENTS ORDERING */
@@ -2411,4 +2354,16 @@ main:has(.ProviderList-providerListStyles) .Breadcrumbs-parentStyles {
 /* Hide Footer Live Chat */
 .Footer-footerLineStyles.liveChatButton {
   display: none !important;
+}
+
+/* Link see all on into title in Top Payouts */
+.HomePage-parentStyles {
+  .listBlock:has(.Title-seeAllStyles):nth-of-type(3) {
+    .Title-seeAllStyles {
+      position: absolute;
+      width: 90vw;
+      line-height: 2rem;
+      font-size: 0;
+    }
+  }
 }
