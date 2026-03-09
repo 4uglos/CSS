@@ -1917,21 +1917,13 @@ main .Tournaments-tournamentsListParentStyles [class*="Scrollable-columnStyles"]
   width: 80% !important;
 }
 
+/* TOURNAMENTS */
 .Tournaments-singleItemStyles {
   padding: 0 !important;
   border-radius: 20px !important;
   overflow: hidden !important;
   background: linear-gradient(145deg, #1e1b2e, #14111f) !important;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.45) !important;
-  transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease !important;
-  font-family: "Inter", sans-serif !important;
-}
-
-.Tournaments-singleItemStyles:hover {
-  transform: translateY(-6px) !important;
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6) !important;
 }
 
 .tournamentImage {

@@ -1970,363 +1970,184 @@ aside .LeftMenuNavigation-leftMenuDesktopNavigation a:hover {
       }
     }
   }
-
-  .tournamentWidget {
-    .Tournaments-tournamentsListParentStyles [class*="Scrollable-columnStyles"].withScroll {
-      max-width: 220px;
-    }
-
-    .Tournaments-singleItemStyles {
-      background: var(--neutral-900, #1d1d1d);
-      border: 1px solid var(--neutral-800, #323232);
-      border-radius: 8px;
-      overflow: inherit;
-      padding: 8px 8px 12px;
-      position: relative;
-      z-index: 1;
-
-      .tournamentImage {
-        border-radius: 7.314px;
-        overflow: revert;
-        position: relative;
-
-        img {
-          height: 63px;
-          min-height: inherit;
-          overflow: hidden;
-        }
-
-        &:before {
-          background: linear-gradient(180deg, #29194d00, #29194d 64.88%);
-          border-radius: 7px;
-          content: "";
-          height: 100%;
-          inset: 0;
-          position: absolute;
-          width: 100%;
-          z-index: 1;
-        }
-      }
-
-      .statusAndDate {
-        background: #0000;
-        border-radius: 0;
-        gap: 0;
-        padding: 0;
-
-        .users {
-          background: #323232;
-          border-radius: 99px;
-          font-size: 14px;
-          font-weight: 400;
-          gap: 4px;
-          line-height: 20px;
-          padding: 4px 8px;
-        }
-
-        .Tournaments-tournamentStatusStyles.ongoing,
-        .users {
-          color: #fff;
-          font-family:
-            DM Sans,
-            sans-serif;
-          font-style: normal;
-        }
-
-        .Tournaments-tournamentStatusStyles.ongoing {
-          background: #d80d83;
-          border-radius: 0 2px 2px 0;
-          font-size: 10px;
-          font-weight: 800;
-          left: 8px;
-          letter-spacing: 0.1px;
-          line-height: 18px;
-          position: absolute;
-          top: 16px;
-          z-index: 19;
-        }
-
-        .Timer-timerStyles {
-          margin: 12px 0;
-
-          .text {
-            color: #b2b2b2;
-            font-family:
-              DM Sans,
-              sans-serif;
-            font-size: 10px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 18px;
-            text-align: center;
-          }
-
-          .item {
-            color: #fff;
-            font-family:
-              DM Sans,
-              sans-serif;
-            font-size: 14px;
-            font-style: normal;
-            font-weight: 700;
-            padding: 0;
-            text-align: center;
-            width: 53px;
-
-            &+.item:before {
-              background-color: #3f3f3f;
-              content: " ";
-              height: 18px;
-              width: 1px;
-            }
-          }
-        }
-      }
-
-      .Tournaments-titleInfoStyles {
-        background: #0000;
-        bottom: -20px;
-        flex-direction: column;
-        gap: 0;
-        padding: 0;
-        text-shadow: none;
-
-        .title {
-          color: #fff;
-          font-size: 14px;
-          font-weight: 800;
-          letter-spacing: 0.14px;
-          line-height: 18px;
-        }
-
-        .Tournaments-currencyStyles,
-        .title {
-          font-family:
-            DM Sans,
-            sans-serif;
-          font-style: normal;
-        }
-
-        .Tournaments-currencyStyles {
-          background: linear-gradient(0deg, #fff71d 22.22%, #fae3f2);
-          background-clip: text;
-          -webkit-background-clip: text;
-          font-size: 20px;
-          font-weight: 700;
-          line-height: 28px;
-          -webkit-text-fill-color: #0000;
-        }
-      }
-
-      .tournamentButton {
-        border-radius: 8px;
-        color: #fff;
-        font-family:
-          DM Sans,
-          sans-serif;
-        font-size: 12px;
-        font-style: normal;
-        font-weight: 600;
-        height: 26px;
-        letter-spacing: 0.12px;
-        line-height: 18px;
-        margin: 12px 0 0;
-        position: relative;
-      }
-    }
-  }
 }
 
-.Tournaments-singleTournamentPageStyles,
-.Tournaments-tournamentItemsListStyles {
+/* TOURNAMENTS */
+.Tournaments-singleItemStyles {
+  padding: 0 !important;
+  border-radius: 20px !important;
+  overflow: hidden !important;
+  background: linear-gradient(145deg, #1e1b2e, #14111f) !important;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.45) !important;
+}
+
+.tournamentImage {
+  position: relative !important;
+  border-radius: 0px !important;
+}
+
+.tournamentImage img {
+  width: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
+}
+
+.tournamentImage::after {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+}
+
+.Tournaments-titleInfoStyles {
+  align-items: start !important;
+  padding: 0 1rem 0.8rem !important;
+  text-shadow: none !important;
+}
+
+.Tournaments-titleInfoStyles .title {
+  font-size: 16px !important;
+  font-weight: 600 !important;
+}
+
+.Tournaments-currencyStyles {
+  color: #facc15 !important;
+  font-weight: 700 !important;
+}
+
+.Tournaments-currencyStyles small {
+  opacity: 0.8 !important;
+}
+
+.Tournaments-infoContentStyles {
+  padding: 1rem !important;
+  backdrop-filter: blur(12px) !important;
+}
+
+.Tournaments-infoContentStyles .statusAndDate {
+  padding: 0 !important;
+  background: none !important;
+  position: relative;
+}
+
+.statusAndDate {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 14px !important;
+}
+
+.Tournaments-tournamentStatusStyles {
+  align-self: flex-start !important;
+  padding: 4px 12px !important;
+  border-radius: 50px !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  background: rgba(236, 72, 153, 0.15) !important;
+  color: #ec4899 !important;
+}
+
+.users {
+  display: flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  font-size: 13px !important;
+  opacity: 0.75 !important;
+  background: none !important;
+  position: absolute;
+  top: 0px;
+  right: -6px;
+}
+
+.Timer-timerStyles {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 10px !important;
+}
+
+.Timer-timerStyles .item {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border-radius: 12px !important;
+  padding: 10px 0 !important;
+  text-align: center !important;
+  font-weight: 700 !important;
+  font-size: 18px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 4px !important;
+  aspect-ratio: 1/1;
+}
+
+.Timer-timerStyles .text {
+  font-size: 11px !important;
+  font-weight: 400 !important;
+  opacity: 0.6 !important;
+}
+
+.Timer-timerStyles>.item:before {
+  content: " " !important;
+}
+
+.parentButton {
+  padding: 0 1rem 1rem !important;
+}
+
+.tournamentButton {
+  border-radius: 14px !important;
+  background: linear-gradient(90deg, #ec4899, #db2777) !important;
+  transition: 0.2s ease !important;
+  box-shadow: 0 8px 20px rgba(219, 39, 119, 0.35) !important;
+  text-transform: uppercase;
+}
+
+.tournamentButton:hover {
+  transform: translateY(-2px) !important;
+  filter: brightness(1.1) !important;
+}
+
+.tournamentButton .textEllipsis {
+  font-weight: 600 !important;
+  font-size: 14px !important;
+}
+
+.Tournaments-singleTournamentStyles {
   .Tournaments-singleItemStyles {
-    background: #1d1d1d;
-    border: 1px solid #323232;
-    border-radius: 8px;
-    overflow: inherit;
-    padding: 14.545px 14.545px 21.818px;
-    position: relative;
-    z-index: 1;
-
-    .Tournaments-titleInfoStyles {
-      background: #0000;
-      flex-direction: column;
-      padding-bottom: 0;
-      text-shadow: none !important;
-
-      .title {
-        color: #fff;
-        font-family:
-          DM Sans,
-          sans-serif;
-        font-size: 20px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 28px;
-      }
-
-      .Tournaments-currencyStyles {
-        background: linear-gradient(0deg, #fff71d 22.22%, #fae3f2);
-        background-clip: text;
-        -webkit-background-clip: text;
-        font-family:
-          DM Sans,
-          sans-serif;
-        font-size: 28px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 38px;
-        -webkit-text-fill-color: #0000;
-
-        small {
-          font-size: 28px;
-        }
-      }
-    }
-
-    .tournamentButton {
-      border-radius: 8px;
-      color: #fff;
-      font-family:
-        DM Sans,
-        sans-serif;
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 600;
-      height: 38px;
-      letter-spacing: 0.16px;
-      line-height: 22px;
-      margin: 21px 0 0;
-      position: relative;
-    }
-
-    .tournamentImage:not(img) {
-      min-height: inherit;
-      opacity: 1;
-      overflow: revert;
-      position: relative;
-      width: auto;
-
-      &:before {
-        background: linear-gradient(180deg, #29194d00, #29194d 90%);
-        border-radius: 6px;
-        content: "";
-        height: 100%;
-        inset: 0;
-        position: absolute;
-        width: 100%;
-        z-index: 1;
-      }
-    }
-
-    .tournamentImage:is(img) {
-      border-radius: 6px;
-      opacity: 1;
-    }
+    border: 0;
+    border-radius: 0;
+    margin: 1rem;
   }
 
-  .Tournaments-infoContentStyles {
+  .Casino-countStyles {
+    color: #b2b2b2;
+    font-family:
+      DM Sans,
+      sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: center;
+  }
+
+  .Market-showMoreButtonStyles {
+    align-items: center;
+    align-self: stretch;
+    background: #0000;
+    border: 1px solid #4a3873;
+    border-radius: 8px;
+    color: #fff;
     display: flex;
-    gap: 0;
-    margin-top: 20px;
-    width: 100%;
-
-    .statusAndDate {
-      background: #0000;
-      border-radius: 0;
-      gap: 0;
-      margin-top: 30px;
-      padding: 0;
-
-      .sportsbook-i-itemRemove,
-      .sportsbook-i-stopwatch {
-        display: none;
-      }
-
-      .users {
-        background: #323232;
-        border-radius: 99px;
-        color: #fff;
-        font-family:
-          DM Sans,
-          sans-serif;
-        font-size: 12px;
-        font-style: normal;
-        font-weight: 600;
-        gap: 7px;
-        letter-spacing: 0.12px;
-        line-height: 18px;
-        padding: 4px 12px;
-      }
-
-      .Tournaments-tournamentStatusStyles {
-        &.finished {
-          border: 0;
-          font-size: 14px;
-          font-weight: 400;
-          line-height: 20px;
-          margin-top: 5px;
-          padding: 0;
-        }
-
-        &.finished,
-        &.ongoing {
-          color: #fff;
-          font-family:
-            DM Sans,
-            sans-serif;
-          font-style: normal;
-        }
-
-        &.ongoing {
-          align-items: center;
-          background: var(--brand-magenta-500, #d80d83);
-          border-radius: 4px;
-          display: flex;
-          font-size: 12px;
-          font-weight: 800;
-          gap: 14.545px;
-          justify-content: center;
-          letter-spacing: 0.12px;
-          line-height: 22px;
-          padding: 0 7.273px;
-        }
-      }
-
-      .Timer-timerStyles {
-        margin: 12px 0;
-
-        .text {
-          color: #b2b2b2;
-          font-family: DM Sans;
-          font-size: 12px;
-          font-style: normal;
-          font-weight: 400;
-          line-height: 18px;
-          text-align: center;
-        }
-
-        .item {
-          color: #fff;
-          font-family: DM Sans;
-          font-size: 28px;
-          font-style: normal;
-          font-weight: 700;
-          gap: 0;
-          line-height: 38px;
-          text-align: center;
-          width: 61px;
-
-          &+.item:before {
-            background-color: #3f3f3f;
-            content: " ";
-            height: 18px;
-            top: 10px;
-            width: 1px;
-          }
-        }
-      }
-    }
+    font-family:
+      DM Sans,
+      sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    gap: 8px;
+    height: 40px;
+    justify-content: center;
+    letter-spacing: 0.12px;
+    line-height: 18px;
+    margin: 8px 16px 0;
+    padding: 8px 12px;
   }
 }
 
