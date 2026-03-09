@@ -460,7 +460,7 @@ iframe[src="https://promo.vodds.com.br/botafogo/"] {
 @supports (-webkit-hyphens: none) {
   .Integration-contentStyles a.botafogo-link-fan {
     align-items: center;
-    background-color: #d80d83;
+    background-color: var(--primary);
     border-radius: var(--borderRadiusSmall);
     cursor: pointer;
     display: flex !important;
@@ -591,7 +591,7 @@ body {
       border: 0 !important;
 
       .overlay {
-        border-color: #d80d83;
+        border-color: var(--primary);
       }
     }
 
@@ -798,10 +798,10 @@ body {
         min-height: 44px;
 
         &.active {
-          background: #d80d83;
+          background: var(--primary);
           box-shadow:
-            0 0 4px 0 #d80d83,
-            0 0 8px 0 #d80d83;
+            0 0 4px 0 var(--primary),
+            0 0 8px 0 var(--primary);
         }
 
         &:hover:not(.active) {
@@ -1083,8 +1083,8 @@ body {
           background: #29111f;
           border: 0.5px solid var(--linear-brand, #e55fab);
           border-radius: 24px 8px;
-          box-shadow: 0 0 4px 0 #d80d83;
-          color: #d80d83;
+          box-shadow: 0 0 4px 0 var(--primary);
+          color: var(--primary);
         }
       }
     }
@@ -1146,7 +1146,7 @@ body {
     }
 
     .SubNavigation-hubStyles>.item.active {
-      background-color: #d80d83;
+      background-color: var(--primary);
       color: #fff;
     }
 
@@ -1173,11 +1173,11 @@ body {
         height: 100%;
 
         &.active {
-          background: #d80d83;
+          background: var(--primary);
           border-radius: 4px;
           box-shadow:
-            0 0 4px 0 #d80d83,
-            0 0 8px 0 #d80d83;
+            0 0 4px 0 var(--primary),
+            0 0 8px 0 var(--primary);
         }
 
         &:hover:not(.active) {
@@ -1473,9 +1473,9 @@ i.icon.sportsbook-i-tooltipDeposit {
       width: 6px;
 
       &.current {
-        background-color: #d80d83 !important;
+        background-color: var(--primary) !important;
         border-radius: 99px;
-        box-shadow: 0 0 3.5px 0 #d80d83;
+        box-shadow: 0 0 3.5px 0 var(--primary);
         width: 32px;
       }
     }
@@ -1703,16 +1703,12 @@ i.icon.sportsbook-i-tooltipDeposit {
 
     &.active {
       span {
-        background: linear-gradient(0deg, #d80c83, #ffbce3 47.5%);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: #0000;
+        color: var(--primary);
       }
 
       &:before {
-        background: #d80d83;
+        background: var(--primary);
         border-radius: 99px;
-        box-shadow: 0 0 3.5px 0 #d80d83;
         height: 3px;
       }
     }
@@ -1763,7 +1759,7 @@ i.icon.sportsbook-i-tooltipDeposit {
   .Casino-filterListStyles {
     &>.item {
       align-items: center;
-      background: #d80d83;
+      background: var(--primary);
       border-radius: 99px;
       color: #fff;
       display: flex;
@@ -1861,7 +1857,7 @@ i.icon.sportsbook-i-tooltipDeposit {
 
           .Badge-badgeStyles {
             align-items: center;
-            background: #d80d83;
+            background: var(--primary);
             border-radius: 2px;
             color: #fff;
             display: inline-flex;
@@ -2039,10 +2035,13 @@ main .Tournaments-tournamentsListParentStyles [class*="Scrollable-columnStyles"]
 
 .tournamentButton {
   border-radius: 14px !important;
-  background: linear-gradient(90deg, #ec4899, #db2777) !important;
   transition: 0.2s ease !important;
   box-shadow: 0 8px 20px rgba(219, 39, 119, 0.35) !important;
   text-transform: uppercase;
+}
+
+.Tournaments-singleItemStyles .tournamentButton.isJoined {
+  box-shadow: none !important;
 }
 
 .tournamentButton:hover {
@@ -2602,8 +2601,8 @@ main:has(.ProviderList-providerListStyles) .Breadcrumbs-parentStyles {
         background: #29111f;
         border: 0.5px solid var(--linear-brand, #e55fab);
         border-radius: 24px 8px;
-        box-shadow: 0 0 4px 0 #d80d83;
-        color: #d80d83;
+        box-shadow: 0 0 4px 0 var(--primary);
+        color: var(--primary);
       }
     }
   }
@@ -2795,10 +2794,10 @@ main:has(.ProviderList-providerListStyles) .Breadcrumbs-parentStyles {
           min-height: 44px;
 
           &.active {
-            background: #d80d83;
+            background: var(--primary);
             box-shadow:
-              0 0 4px 0 #d80d83,
-              0 0 8px 0 #d80d83;
+              0 0 4px 0 var(--primary),
+              0 0 8px 0 var(--primary);
           }
 
           &:hover:not(.active) {
@@ -3264,7 +3263,7 @@ main:has(.ProviderList-providerListStyles) .Breadcrumbs-parentStyles {
     }
 
     .SubNavigation-hubStyles>.item.active {
-      background-color: #d80d83;
+      background-color: var(--primary);
       color: #fff;
     }
 
@@ -3291,11 +3290,11 @@ main:has(.ProviderList-providerListStyles) .Breadcrumbs-parentStyles {
         height: 100%;
 
         &.active {
-          background: #d80d83;
+          background: var(--primary);
           border-radius: 4px;
           box-shadow:
-            0 0 4px 0 #d80d83,
-            0 0 8px 0 #d80d83;
+            0 0 4px 0 var(--primary),
+            0 0 8px 0 var(--primary);
         }
 
         &:hover:not(.active) {
@@ -4414,7 +4413,7 @@ main:has(.ProviderList-providerListStyles) .Breadcrumbs-parentStyles {
         order: -1;
 
         .teamFlag {
-          background-color: #d80d83;
+          background-color: var(--primary);
         }
       }
 

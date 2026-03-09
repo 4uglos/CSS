@@ -367,9 +367,9 @@ body {
       width: 6px;
 
       &.current {
-        background-color: #d80d83 !important;
+        background-color: var(--primary) !important;
         border-radius: 99px;
-        box-shadow: 0 0 3.5px 0 #d80d83;
+        box-shadow: 0 0 3.5px 0 var(--primary);
         width: 32px;
       }
     }
@@ -511,7 +511,7 @@ body {
 
     &.new {
       .overlay {
-        border-color: #d80d83;
+        border-color: var(--primary);
       }
     }
 
@@ -719,11 +719,11 @@ body {
         }
 
         &.active {
-          background: #d80d83;
+          background: var(--primary);
           border-radius: 4px;
           box-shadow:
-            0 0 4px 0 #d80d83,
-            0 0 8px 0 #d80d83;
+            0 0 4px 0 var(--primary),
+            0 0 8px 0 var(--primary);
         }
       }
 
@@ -1211,10 +1211,10 @@ body {
         }
 
         &.active {
-          background: #d80d83;
+          background: var(--primary);
           box-shadow:
-            0 0 4px 0 #d80d83,
-            0 0 8px 0 #d80d83;
+            0 0 4px 0 var(--primary),
+            0 0 8px 0 var(--primary);
         }
       }
 
@@ -1718,16 +1718,12 @@ aside .LeftMenuNavigation-leftMenuDesktopNavigation a:hover {
 
     &.active {
       span {
-        background: linear-gradient(0deg, #d80c83, #ffbce3 47.5%);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: #0000;
+        color: var(--primary);
       }
 
       &:before {
-        background: #d80d83;
+        background: var(--primary);
         border-radius: 99px;
-        box-shadow: 0 0 3.5px 0 #d80d83;
         height: 3px;
       }
     }
@@ -1764,7 +1760,7 @@ aside .LeftMenuNavigation-leftMenuDesktopNavigation a:hover {
   .Casino-filterListStyles {
     &>.item {
       align-items: center;
-      background: #d80d83;
+      background: var(--primary);
       border-radius: 99px;
       color: #fff;
       display: flex;
@@ -1862,7 +1858,7 @@ aside .LeftMenuNavigation-leftMenuDesktopNavigation a:hover {
 
           .Badge-badgeStyles {
             align-items: center;
-            background: #d80d83;
+            background: var(--primary);
             border-radius: 2px;
             color: #fff;
             display: inline-flex;
@@ -2066,7 +2062,7 @@ aside .LeftMenuNavigation-leftMenuDesktopNavigation a:hover {
 .Timer-timerStyles .item {
   background: rgba(255, 255, 255, 0.05) !important;
   border-radius: 12px !important;
-  padding: 10px 0 !important;
+  padding: 10px !important;
   text-align: center !important;
   font-weight: 700 !important;
   font-size: 18px !important;
@@ -2092,14 +2088,16 @@ aside .LeftMenuNavigation-leftMenuDesktopNavigation a:hover {
 
 .tournamentButton {
   border-radius: 14px !important;
-  background: linear-gradient(90deg, #ec4899, #db2777) !important;
   transition: 0.2s ease !important;
   box-shadow: 0 8px 20px rgba(219, 39, 119, 0.35) !important;
   text-transform: uppercase;
 }
 
+.Tournaments-singleItemStyles .tournamentButton.isJoined {
+  box-shadow: none !important;
+}
+
 .tournamentButton:hover {
-  transform: translateY(-2px) !important;
   filter: brightness(1.1) !important;
 }
 
@@ -2522,8 +2520,8 @@ main:has(.ProviderList-providerListStyles) .Breadcrumbs-parentStyles {
         background: #29111f;
         border: 0.5px solid var(--linear-brand, #e55fab);
         border-radius: 24px 8px;
-        box-shadow: 0 0 4px 0 #d80d83;
-        color: #d80d83;
+        box-shadow: 0 0 4px 0 var(--primary);
+        color: var(--primary);
       }
     }
   }
@@ -2720,10 +2718,10 @@ main:has(.ProviderList-providerListStyles) .Breadcrumbs-parentStyles {
           min-height: 44px;
 
           &.active {
-            background: #d80d83;
+            background: var(--primary);
             box-shadow:
-              0 0 4px 0 #d80d83,
-              0 0 8px 0 #d80d83;
+              0 0 4px 0 var(--primary),
+              0 0 8px 0 var(--primary);
           }
 
           &:hover:not(.active) {
@@ -3212,7 +3210,7 @@ main:has(.ProviderList-providerListStyles) .Breadcrumbs-parentStyles {
     }
 
     .SubNavigation-hubStyles>.item.active {
-      background-color: #d80d83;
+      background-color: var(--primary);
       color: #fff;
     }
 
@@ -3239,11 +3237,11 @@ main:has(.ProviderList-providerListStyles) .Breadcrumbs-parentStyles {
         height: 100%;
 
         &.active {
-          background: #d80d83;
+          background: var(--primary);
           border-radius: 4px;
           box-shadow:
-            0 0 4px 0 #d80d83,
-            0 0 8px 0 #d80d83;
+            0 0 4px 0 var(--primary),
+            0 0 8px 0 var(--primary);
         }
 
         &:hover:not(.active) {
@@ -4386,7 +4384,7 @@ main:has(.ProviderList-providerListStyles) .Breadcrumbs-parentStyles {
         order: -1;
 
         .teamFlag {
-          background-color: #d80d83;
+          background-color: var(--primary);
         }
       }
 
