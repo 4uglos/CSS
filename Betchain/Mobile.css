@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 .registrationFormContent .Input-inputBlockStyles.filled:not(.invalid),
 .registrationFormContent .Select-selectInnerStyles.filled {
@@ -6,20 +6,20 @@
 }
 
 .SliderStyles-listStyles .imageBlock {
-  aspect-ratio: 1.72 / 1 !important;
+  aspect-ratio: 1.72/1 !important;
 }
 
-.SliderStyles-listStyles .imageBlock,
-.SliderStyles-imageStyles {
+.SliderStyles-imageStyles,
+.SliderStyles-listStyles .imageBlock {
   background: none !important;
 }
 
 .HomePage-mainProductStyles {
-  gap: 12px !important;
   display: grid !important;
-  padding: 0 1.6rem !important;
-  overflow: scroll;
+  gap: 12px !important;
   grid-template-columns: repeat(2, calc(100% - 32px));
+  overflow: scroll;
+  padding: 0 1.6rem !important;
 }
 
 .Header-logoStyles>img {
@@ -28,15 +28,15 @@
 
 .HomePage-mainProductStyles .singleItem {
 
-  .infoBlock,
+  .arrow,
   .infoBg,
-  .arrow {
+  .infoBlock {
     display: none !important;
   }
 
   .imageBlock {
-    width: 100% !important;
     opacity: 1;
+    width: 100% !important;
   }
 
   .imageBlock .background {
@@ -54,14 +54,13 @@
   width: auto !important;
 }
 
-/* PROMO BUTTON */
 .Integration-contentStyles .promo-btn {
-  text-decoration: none !important;
   background: var(--secondary);
-  padding: 10px 30px;
-  text-transform: uppercase;
   border-radius: var(--borderRadiusSmall);
-  font-weight: bold;
+  font-weight: 700;
+  padding: 10px 30px;
+  text-decoration: none !important;
+  text-transform: uppercase;
 }
 
 .Integration-contentStyles .promo-btn:hover {
@@ -72,12 +71,10 @@
   white-space: break-spaces;
 }
 
-/* HIGHLIGHT BONUS LEVEL POINTS */
 .levelBonuses .content .line.previous:not(:has(~ .line.previous)) {
   background-color: rgba(var(--main-rgb), 0.05);
 }
 
-/* FORMULA 1 */
 .hero-web,
 .podio-web {
   display: none;
@@ -87,8 +84,8 @@
   width: 100%;
 }
 
-.notice,
-.disclaimer {
+.disclaimer,
+.notice {
   border: 1px solid var(--accent);
   border-radius: 6px;
   padding: 20px;
@@ -96,30 +93,30 @@
 }
 
 .notice {
-  background: linear-gradient(180deg, var(--accent), rgba(255, 102, 196, 0.03));
+  background: linear-gradient(180deg, var(--accent), #ff66c408);
 }
 
-.notice__icon img,
-.disclaimer__icon img {
+.disclaimer__icon img,
+.notice__icon img {
   display: inline-block;
   margin-bottom: 20px;
 }
 
 .section-title {
-  padding: 12px 6px;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  font-weight: 800;
-  text-align: center;
-  margin: 0 0 20px;
   background-color: var(--accent);
   border-radius: 6px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  margin: 0 0 20px;
+  padding: 12px 6px;
+  text-align: center;
+  text-transform: uppercase;
 }
 
+.como,
 .hero,
-.podio,
 .notice,
-.como {
+.podio {
   margin-bottom: 20px;
 }
 
@@ -132,9 +129,8 @@
   counter-reset: step;
   display: grid;
   gap: 12px;
-  padding: 0;
   margin: 0;
-  padding-bottom: 10px;
+  padding: 0 0 10px;
 }
 
 .steps__list>li {
@@ -143,21 +139,21 @@
   position: relative;
 }
 
-.steps__list>li::before {
-  counter-increment: step;
+.steps__list>li:before {
+  background: var(--accent);
+  border-radius: 6px;
+  color: #fff;
   content: counter(step);
-  position: absolute;
+  counter-increment: step;
+  display: grid;
+  font-weight: 900;
+  height: 28px;
   left: 14px;
+  place-items: center;
+  position: absolute;
   top: 50%;
   transform: translateY(-50%);
   width: 28px;
-  height: 28px;
-  display: grid;
-  place-items: center;
-  border-radius: 6px;
-  background: var(--accent);
-  color: #fff;
-  font-weight: 900;
 }
 
 .Header-headerAndNavigation a[href*="/help/790831"] {
@@ -171,7 +167,7 @@
 @keyframes f1 {
 
   0%,
-  100% {
+  to {
     transform: rotate(15deg);
   }
 
@@ -196,26 +192,25 @@
   gap: 2rem !important;
 }
 
-/* STORIES */
 .HomePage-parentStyles .Stories-storyGroupStyles {
   height: 7.5rem;
 }
 
 .Stories-storyGroupStyles>.title>p {
-  text-align: center;
   margin-bottom: 5px;
+  text-align: center;
 }
 
 .Stories-storyGroupStyles>.title {
-  font-size: .8rem !important;
+  box-shadow: inset 0 -2rem 4rem 0.2rem rgba(var(--dark-rgb), 1) !important;
+  font-size: 0.8rem !important;
   line-height: 100%;
-  box-shadow: inset 0 -2rem 4rem .2rem rgba(var(--dark-rgb), 1) !important;
 }
 
 .Stories-storyGroupStyles {
-  aspect-ratio: 1 / 1 !important;
-  border-radius: 50% !important;
+  aspect-ratio: 1/1 !important;
   border: 2px solid #ffffff29;
+  border-radius: 50% !important;
   padding: 3px;
 }
 
@@ -224,14 +219,14 @@
 }
 
 .Stories-storyGroupStyles.new {
-  border-width: 2px;
   border-color: var(--primary) !important;
+  border-width: 2px;
 }
 
 .HomePage-parentStyles .SingleGame-teamImageStyles {
-  width: 25px;
   height: 25px;
   padding: 4px;
+  width: 25px;
 }
 
 .HomePage-parentStyles .TopEvents-eventListStyles {
@@ -243,35 +238,34 @@
 }
 
 .HomePage-parentStyles .Title-parentStyles {
-  margin: 0 0 8px 0;
+  margin: 0 0 8px;
 }
 
 .HomePage-parentStyles .Scrollable-viewType1:not(.initialBlockWidth).Scrollable-viewType1:not(.customContent) {
   max-width: 15rem;
 }
 
-/* HIDE AUTO EXCLUSION */
-[data-testid='closeAccount'] {
+[data-testid="closeAccount"] {
   display: none !important;
 }
 
 .Header-headerAndNavigation a[href*="/pb/pre-match/sport/Soccer/Europe/566"]:before {
-  content: '';
-  width: 20px;
-  height: 20px;
-  display: block;
   background-size: contain;
-  background: url('https://img.uefa.com/imgml/uefacom/elements/logos/competitions/dark/ucl.svg') no-repeat;
+  background: url(https://img.uefa.com/imgml/uefacom/elements/logos/competitions/dark/ucl.svg) no-repeat;
+  content: "";
+  display: block;
+  height: 20px;
+  width: 20px;
 }
 
-.Header-headerAndNavigation a[href*="/pb/pre-match/?subNavigation=search&searchValue=Botafogo"]:before,
-.Header-headerAndNavigation a[href*="/pb/help/820041"]:before {
-  content: '';
-  width: 20px;
-  height: 20px;
-  display: block;
+.Header-headerAndNavigation a[href*="/pb/help/820041"]:before,
+.Header-headerAndNavigation a[href*="/pb/pre-match/?subNavigation=search&searchValue=Botafogo"]:before {
   background-size: contain !important;
-  background: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_20c698f1a7e4bd086b9f074850c1fdbe.svg') no-repeat;
+  background: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_20c698f1a7e4bd086b9f074850c1fdbe.svg) no-repeat;
+  content: "";
+  display: block;
+  height: 20px;
+  width: 20px;
 }
 
 .Badge-topType {
@@ -282,37 +276,35 @@
   background-color: var(--bgColor) !important;
 }
 
-/* TOURNAMENTS */
-.Tournaments-singleTournamentStyles:has(.tournamentImageParent img[alt="Grande Prêmio VBET"]) .Tournaments-prizeListStyles .item:nth-child(1) span:nth-child(4),
+.Tournaments-singleTournamentStyles:has(.tournamentImageParent img[alt="Grande Prêmio VBET"]) .Tournaments-prizeListStyles .item:first-child span:nth-child(4),
 .Tournaments-singleTournamentStyles:has(.tournamentImageParent img[alt="Grande Prêmio VBET"]) .Tournaments-prizeListStyles .item:nth-child(2) span:nth-child(4) {
-  visibility: hidden;
   position: relative;
+  visibility: hidden;
 }
 
-.Tournaments-singleTournamentStyles:has(.tournamentImageParent img[alt="Grande Prêmio VBET"]) .Tournaments-prizeListStyles .item:nth-child(1) span:nth-child(4)::after {
-  content: '2 ingressos para o GP';
-  visibility: visible;
-  position: absolute;
+.Tournaments-singleTournamentStyles:has(.tournamentImageParent img[alt="Grande Prêmio VBET"]) .Tournaments-prizeListStyles .item:first-child span:nth-child(4):after {
+  content: "2 ingressos para o GP";
   left: 0;
+  position: absolute;
+  visibility: visible;
 }
 
-.Tournaments-singleTournamentStyles:has(.tournamentImageParent img[alt="Grande Prêmio VBET"]) .Tournaments-prizeListStyles .item:nth-child(2) span:nth-child(4)::after {
-  content: 'convite para o BSOP';
-  visibility: visible;
-  position: absolute;
+.Tournaments-singleTournamentStyles:has(.tournamentImageParent img[alt="Grande Prêmio VBET"]) .Tournaments-prizeListStyles .item:nth-child(2) span:nth-child(4):after {
+  content: "convite para o BSOP";
   left: 0;
+  position: absolute;
+  visibility: visible;
 }
 
 .Tournaments-prizeListStyles .item {
   white-space: normal !important;
 }
 
-/* CASINO TOURNAMENTS ORDERING */
 .Tournaments-tournamentItemsListStyles {
   display: grid !important;
 }
 
-.Tournaments-tournamentItemsListStyles .Tournaments-singleItemStyles:nth-child(1) {
+.Tournaments-tournamentItemsListStyles .Tournaments-singleItemStyles:first-child {
   order: 5;
 }
 
@@ -332,52 +324,45 @@
   order: 3;
 }
 
-/* ADD NEW BANK ACCOUNT INFO TEXT */
 .BankSection-newCardBlockStyles {
   color: var(--warning);
 }
 
-/* REGISTRATION ADDITIONAL INFO */
 .ReasonMessage-reasonMessageStyles {
-  background-color: transparent !important;
+  background-color: initial !important;
   color: var(--warning) !important;
 }
 
-/* FIX BLACK SCREEN ON LOGIN */
 body #turnstile-container {
-  background: transparent !important;
+  background: #0000 !important;
 }
 
-/* GOOGLE PLAY ICON */
 .Header-headerAndNavigation a[href*="https://play.google.com/store/apps/details?id=br.softconstruct.beteasy"]:before {
-  content: '';
-  width: 20px;
-  height: 20px;
-  display: block;
   background-size: contain;
-  background: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_461242d9aadd5c01e377e45c8292d770.svg') no-repeat;
+  background: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_461242d9aadd5c01e377e45c8292d770.svg) no-repeat;
+  content: "";
+  display: block;
+  height: 20px;
+  width: 20px;
 }
 
-/* FIX USER INFO TOOLTIP POSITION*/
 .rc-tooltip-placement-left {
   left: 14px !important;
 }
 
-/* BOTAFOGO FANS PAGE */
 iframe[src="https://promo.vodds.com.br/botafogo/"] {
   height: 1850px !important;
 }
 
-/* ODDS CAROUSEL */
 .SliderStyles-oddBlockParentStyles {
-  transform: scale(.9) !important;
   bottom: 5.5rem !important;
+  transform: scale(0.9) !important;
 }
 
 .SliderStyles-oddBlockParentStyles .Event-parentStyles,
 .SliderStyles-oddBlockParentStyles .eventSkeleton {
-  min-height: 4.5rem !important;
   backdrop-filter: blur(6px);
+  min-height: 4.5rem !important;
 }
 
 @media (min-width: 600px) {
@@ -386,9 +371,8 @@ iframe[src="https://promo.vodds.com.br/botafogo/"] {
   }
 }
 
-/* AGE VERIFICATION POPUP ICON */
 .AgeVerificationPopup-parentStyles i:before {
-  content: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_fbe1c41dae5b54ed2e59fc6091c634be.svg');
+  content: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_fbe1c41dae5b54ed2e59fc6091c634be.svg);
   margin-left: 20px;
 }
 
@@ -401,45 +385,41 @@ iframe[src="https://promo.vodds.com.br/botafogo/"] {
   flex-direction: row !important;
 }
 
-/* BOTAFOGO POPUP STYLES - BETCHAIN TEAM */
 .PopupByQuery-parentStyles .sportsbook-i-question:before {
-  content: "";
-  width: 70px;
-  height: 70px;
-  display: block;
-  background: url('https://icons.vbet.bet.br/storage/medias/vbetlatam.com/media_692_20c698f1a7e4bd086b9f074850c1fdbe.svg');
-  background-size: contain;
+  background: url(https://icons.vbet.bet.br/storage/medias/vbetlatam.com/media_692_20c698f1a7e4bd086b9f074850c1fdbe.svg);
   background-repeat: no-repeat;
-  content: '';
-  margin: 0 auto;
+  background-size: contain;
+  content: "";
+  display: block;
   filter: drop-shadow(0 0 10px var(--primary));
+  height: 70px;
+  margin: 0 auto;
+  width: 70px;
 }
 
 .PopupByQuery-parentStyles .Popup-confirmationParentStyles>i {
   opacity: 1;
 }
 
-/* LOADER */
 .Loader-circleLoaderStyles:after {
-  content: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/logo_loader_20b1382a3a46fc673dcd7dbf9a9f4364.svg') !important;
-  width: 40px;
-  border: none !important;
   animation: none !important;
+  border: none !important;
+  content: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/logo_loader_20b1382a3a46fc673dcd7dbf9a9f4364.svg) !important;
+  width: 40px;
 }
 
 .Button-loadingButtonStyles .buttonLoader {
   height: 3.8rem !important;
 }
 
-/* BOTAFOGO FAN POPUP */
 .botafogo-fan_buttons {
   display: flex;
   flex-direction: column;
+  font-weight: 600;
   gap: 10px;
+  line-height: 3rem;
   margin-inline: auto;
   width: fit-content;
-  line-height: 3rem;
-  font-weight: 600;
 }
 
 .botafogo-fan_buttons .botafogo-fan_button {
@@ -447,21 +427,21 @@ iframe[src="https://promo.vodds.com.br/botafogo/"] {
 }
 
 .botafogo-fan_button-primary {
-  width: 100% !important;
   margin-top: 20px;
+  width: 100% !important;
 }
 
-.popupContainerStyles:has([title^='Botafogo fan']) .Popup-popupHeaderStyles,
-.popupContainerStyles:has([title^='Botafogo fan']) button[data-testid="submit_button"],
+.popupContainerStyles:has([title^="Botafogo fan"]) .Popup-popupHeaderStyles,
+.popupContainerStyles:has([title^="Botafogo fan"]) button[data-testid="submit_button"],
 .user-login,
 .user-logoff {
   display: none !important;
 }
 
-.popupContainerStyles:has([title^='Botafogo fan']).popupContainerStyles {
-  max-width: 40rem !important;
+.popupContainerStyles:has([title^="Botafogo fan"]).popupContainerStyles {
   backdrop-filter: blur(5px);
   background-color: #17111e94 !important;
+  max-width: 40rem !important;
 }
 
 #root:not(:has(.Avatar-flipContainerStyles)) .user-logoff {
@@ -477,26 +457,25 @@ iframe[src="https://promo.vodds.com.br/botafogo/"] {
   filter: drop-shadow(0 0 15px var(--primary));
 }
 
-/* SAFARI ISSUE IFRAME */
-@supports (-webkit-hyphens:none) {
+@supports (-webkit-hyphens: none) {
   .Integration-contentStyles a.botafogo-link-fan {
-    text-decoration: none !important;
-    display: flex !important;
-    cursor: pointer;
-    position: relative;
-    border-radius: var(--borderRadiusSmall);
-    padding: 0.4rem 1.7rem;
-    font-size: 1.3rem;
-    min-width: 3.6rem;
-    min-height: 3.6rem;
-    background-color: #d80d83;
-    width: fit-content;
-    margin: 0 auto;
     align-items: center;
-    justify-content: center;
+    background-color: #d80d83;
+    border-radius: var(--borderRadiusSmall);
+    cursor: pointer;
+    display: flex !important;
     font-family: var(--font);
-    font-weight: 500;
+    font-size: 1.3rem;
     font-size: 14px;
+    font-weight: 500;
+    justify-content: center;
+    margin: 0 auto;
+    min-height: 3.6rem;
+    min-width: 3.6rem;
+    padding: 0.4rem 1.7rem;
+    position: relative;
+    text-decoration: none !important;
+    width: fit-content;
   }
 
   .Integration-contentStyles iframe.botafogo-iframe-fan {
@@ -504,14 +483,13 @@ iframe[src="https://promo.vodds.com.br/botafogo/"] {
   }
 }
 
-/* AFTER REGISTRATION POPUP */
 .popupContainerStyles:has(.Popup-successRegistrationStyles) {
-  background: transparent !important;
+  background: #0000 !important;
 }
 
 .popupContainerStyles:has(.Popup-successRegistrationStyles) .Popup-popupHeaderStyles,
-.popupContainerStyles:has(.Popup-successRegistrationStyles) .title,
-.popupContainerStyles:has(.Popup-successRegistrationStyles) .content {
+.popupContainerStyles:has(.Popup-successRegistrationStyles) .content,
+.popupContainerStyles:has(.Popup-successRegistrationStyles) .title {
   display: none;
 }
 
@@ -521,24 +499,22 @@ iframe[src="https://promo.vodds.com.br/botafogo/"] {
 }
 
 .Popup-popupChildrenStyles:has(.Popup-successRegistrationStyles) {
-  width: 100% !important;
+  background: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_cbe4ded6eee02429aec59dfecb612d09.png) no-repeat 50% / contain;
   height: 800px;
-  background: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_cbe4ded6eee02429aec59dfecb612d09.png') no-repeat center center / contain;
-  padding: 0px;
+  padding: 0;
+  width: 100% !important;
 }
 
-/* CUSTOM SKIN */
-
 body {
-  background-color: #16091E !important;
+  background-color: #16091e !important;
 }
 
 .Header-headerAndNavigation {
-  background-color: #2A1939 !important;
-  border-bottom: 1px solid rgba(216, 13, 131, 0.16);
+  background-color: #2a1939 !important;
+  border-bottom: 1px solid #d80d8329;
 
   .Navigation-navStyles {
-    border-bottom: 1px solid rgba(216, 13, 131, 0.16);
+    border-bottom: 1px solid #d80d8329;
   }
 
   .Header-headerStyles {
@@ -548,40 +524,43 @@ body {
   .Header-rightSideStyles {
     button {
       border-radius: 8px;
-      color: #FFF;
-      font-family: "DM Sans", sans-serif;
+      color: #fff;
+      font-family:
+        DM Sans,
+        sans-serif;
       font-size: 12px;
       font-style: normal;
       font-weight: 600;
-      line-height: 18px;
       letter-spacing: 0.12px;
-      padding: 0 12px;
+      line-height: 18px;
       min-height: 32px;
+      padding: 0 12px;
     }
 
     .Button-secondaryType {
-      border-color: #4A3873;
+      border-color: #4a3873;
     }
   }
 }
 
 .HomePage-parentStyles {
   .Title-titleStyles {
-    font-family: "DM Sans", sans-serif;
+    font-family:
+      DM Sans,
+      sans-serif;
     font-size: 16px;
     font-style: normal;
     font-weight: 600;
-    line-height: 22px;
     letter-spacing: 0.16px;
-
+    line-height: 22px;
   }
 
   .Stories-storyGroupStyles {
-    height: 81px;
     align-items: center;
+    border: 0 !important;
+    height: 81px;
     overflow: visible;
     padding-top: 6px;
-    border: 0 !important;
 
     &:has(img[alt="Promoções"]) {
       border: unset;
@@ -589,30 +568,30 @@ body {
     }
 
     .overlay {
-      border-radius: 100%;
-      overflow: hidden;
-      width: 56px;
-      height: 56px;
-      background: #290F2A;
-      border: 2px solid #462437;
-      display: flex;
       align-items: center;
+      background: #290f2a;
+      border: 2px solid #462437;
+      border-radius: 100%;
+      display: flex;
+      height: 56px;
       justify-content: center;
       margin: 0 auto;
+      overflow: hidden;
+      width: 56px;
 
       img {
-        width: 46px;
+        border-radius: 100%;
         height: 46px;
         overflow: hidden;
-        border-radius: 100%;
+        width: 46px;
       }
     }
 
     &.new {
-      border: 0px !important;
+      border: 0 !important;
 
       .overlay {
-        border-color: #D80D83;
+        border-color: #d80d83;
       }
     }
 
@@ -622,20 +601,22 @@ body {
       box-shadow: none !important;
 
       p {
+        color: #fff;
         filter: none;
-        margin-top: 2px;
-        color: #FFF;
-        font-family: "DM Sans", sans-serif;
+        font-family:
+          DM Sans,
+          sans-serif;
         font-size: 12px;
         font-style: normal;
         font-weight: 600;
-        line-height: 18px;
         letter-spacing: 0.12px;
-        overflow: hidden;
+        line-height: 18px;
+        margin-top: 2px;
         max-width: 8.1rem;
+        overflow: hidden;
         text-align: center;
-        white-space: nowrap;
         text-overflow: ellipsis;
+        white-space: nowrap;
       }
 
       .badge {
@@ -645,12 +626,12 @@ body {
   }
 
   .TopEvents-singleEventStyles {
+    background-color: #0a0f14 !important;
+    border: 1px solid #0c392f;
     border-radius: 16px 8px 16px 8px;
-    border: 1px solid #462437;
-    background-color: rgba(24, 1, 14, 0.56) !important;
-    padding: 0;
     display: flex;
     justify-content: space-between;
+    padding: 0;
 
     .TopEvents-eventInfoStyles {
       padding: 0;
@@ -661,9 +642,9 @@ body {
     }
 
     .TopEvents-sportNameAndCompetitionStyles {
-      padding: 8px 12px;
-      border-bottom: 1px solid rgba(94, 6, 57, 0.48);
+      border-bottom: 1px solid #0d2516;
       margin-bottom: 16px;
+      padding: 8px 12px;
 
       .sportWithIcon {
         gap: 4px;
@@ -671,8 +652,10 @@ body {
       }
 
       span {
-        color: #EE94C6;
-        font-family: "DM Sans", sans-serif;
+        color: #2fcc8a;
+        font-family:
+          DM Sans,
+          sans-serif;
         font-size: 12px;
         font-style: normal;
         font-weight: 400;
@@ -680,9 +663,10 @@ body {
       }
 
       i.sport-i-soccer {
-        background-image: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_6fdc932c0a0010291544c76c77d64b81.svg');
-        width: 16px;
+        background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_6fdc932c0a0010291544c76c77d64b81.svg);
         height: 16px;
+        width: 16px;
+        filter: hue-rotate(180deg);
 
         &:before {
           content: "";
@@ -693,8 +677,10 @@ body {
         gap: 0;
 
         .competition.textEllipsis {
-          color: #D1D1D1;
-          font-family: "DM Sans", sans-serif;
+          color: #d1d1d1;
+          font-family:
+            DM Sans,
+            sans-serif;
           font-size: 12px;
           font-style: normal;
           font-weight: 400;
@@ -704,7 +690,7 @@ body {
         }
 
         .Favorite-favoriteGlobalStyles {
-          color: #D1D1D1;
+          color: #d1d1d1;
         }
       }
     }
@@ -713,29 +699,31 @@ body {
       padding: 0 16px;
 
       .teamName {
-        color: #FFF;
-        font-family: "DM Sans", sans-serif;
+        color: #fff;
+        font-family:
+          DM Sans,
+          sans-serif;
         font-size: 12px;
         font-style: normal;
         font-weight: 600;
-        line-height: 18px;
         letter-spacing: 0.12px;
+        line-height: 18px;
         max-width: 80px;
       }
 
       .SingleGame-teamImageStyles {
+        background-color: initial;
         border: 0;
-        background-color: transparent;
-        padding: 0;
         height: auto;
+        margin: 0 auto 8px;
+        padding: 0;
         width: 25px;
-        margin: 0 auto 8px auto;
 
         img {
-          padding: 0;
           border-radius: 0;
+          height: auto;
+          padding: 0;
           width: inherit;
-          height: initial;
         }
       }
 
@@ -743,22 +731,26 @@ body {
         margin: 0;
 
         .day {
-          color: #EE94C6;
-          font-family: "DM Sans", sans-serif;
+          color: #ee94c6;
           font-size: 12px;
-          font-style: normal;
           font-weight: 400;
           line-height: 18px;
         }
 
+        .day,
         .time {
-          color: #EBEBEB;
-          font-family: "DM Sans", sans-serif;
-          font-size: 16px;
+          font-family:
+            DM Sans,
+            sans-serif;
           font-style: normal;
+        }
+
+        .time {
+          color: #ebebeb;
+          font-size: 16px;
           font-weight: 600;
-          line-height: 22px;
           letter-spacing: 0.16px;
+          line-height: 22px;
           margin: 0;
         }
       }
@@ -770,48 +762,52 @@ body {
         }
 
         .live {
+          font-size: 9px;
           margin: 0;
           padding: 5px;
-          font-size: 9px;
         }
       }
     }
 
     .TopEvents-eventListStyles {
-      padding: 0 16px;
       margin: 16px 0;
+      padding: 0 16px;
 
       .Event-oddStyles {
-        padding: 0;
-        color: #FFF;
-        text-align: center;
-        font-family: "DM Sans", sans-serif;
+        color: #fff;
+        font-family:
+          DM Sans,
+          sans-serif;
         font-size: 14px;
         font-style: normal;
         font-weight: 600;
-        line-height: 20px;
         letter-spacing: 0.14px;
+        line-height: 20px;
+        padding: 0;
+        text-align: center;
       }
 
       .Event-parentStyles {
-        display: flex;
-        justify-content: center;
         align-items: center;
-        gap: 8px;
+        background-color: #174a3b;
         border-radius: 4px;
-        background-color: #31031C;
+        display: flex;
+        gap: 8px;
         height: auto;
+        justify-content: center;
         min-height: 44px;
 
         &.active {
-          background: #D80D83;
-          box-shadow: 0 0 4px 0 #D80D83, 0 0 8px 0 #D80D83;
+          background: #d80d83;
+          box-shadow:
+            0 0 4px 0 #d80d83,
+            0 0 8px 0 #d80d83;
         }
 
         &:hover:not(.active) {
-          border-radius: 4px;
-          border: 1px solid #8D0955;
           background: #430326;
+          border: 1px solid #8d0955;
+          border-radius: 4px;
         }
       }
 
@@ -823,20 +819,24 @@ body {
     .TopEvents-eventListStyles {
       gap: 8px;
     }
-
   }
 
   .SportWidget-parentStyles {
-    background-color: #260C36;
-    padding: 16px 0 0 0;
+    background-color: #190e2d;
+    padding: 16px 0 0;
 
     .Market-marketFilterStyles:not(.withoutBackground) {
-      background-color: #1D1D1D !important;
+      background-color: #1d1d1d !important;
+      margin: 0;
+      padding: 16px;
     }
 
     .content {
-      padding-top: 16px;
       background-color: #1d1d1d;
+      border-radius: 16px 0 0 0;
+      border-top: 1px solid #323232;
+      overflow: hidden;
+      padding-top: 0;
     }
 
     .Scrollable-parentStyles {
@@ -845,16 +845,20 @@ body {
 
     .SportsList-sportsListStyles {
       padding-inline: 1.2rem;
+
+      .flipBlock {
+        gap: 10px;
+      }
     }
 
     .SportsList-sportListItemStyles {
-      display: flex;
       align-items: center;
+      display: flex;
       justify-content: center;
-      width: auto;
-      min-height: 63px;
       left: 0;
+      min-height: 44px;
       right: 0;
+      width: auto;
 
       &:not(.active):hover {
         opacity: 1 !important;
@@ -862,13 +866,13 @@ body {
 
       .icon {
         all: unset;
-        width: 44px;
-        height: 42px;
-        position: absolute;
-        left: 10px;
+        background-position: 50% !important;
         background-repeat: no-repeat !important;
-        background-position: center !important;
         background-size: contain !important;
+        height: 30px;
+        left: 6px;
+        position: absolute;
+        width: 32px;
 
         &:before {
           content: none;
@@ -876,143 +880,251 @@ body {
       }
 
       .sport-i-mma {
-        background-image: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_b7730b37d41db7854c4065c376ea569b.png') !important;
+        background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_b7730b37d41db7854c4065c376ea569b.png) !important;
       }
 
       .sport-i-futsal {
-        background-image: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_28b2df0d69a8583be615c106a94ba9bc.png') !important;
+        background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_28b2df0d69a8583be615c106a94ba9bc.png) !important;
       }
 
       .sport-i-soccer {
-        background-image: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_271123385c1c0213a0cf39d052456f6b.png') !important;
+        background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_271123385c1c0213a0cf39d052456f6b.png) !important;
       }
 
       .sport-i-tennis {
-        background-image: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_af3edfb63186d10c2174ab27cf8ccb43.png') !important;
+        background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_af3edfb63186d10c2174ab27cf8ccb43.png) !important;
       }
 
       .sport-i-basketball {
-        background-image: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_ab402243a59ba04614944d4a04d26c8e.png') !important;
+        background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_ab402243a59ba04614944d4a04d26c8e.png) !important;
+      }
+
+      .sport-i-skimountaineering {
+        background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_ef10d6ea2c59ccae1db33fa5d7c75395.png) !important;
       }
 
       .sport-i-volleyball {
-        background-image: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_e51b98b0f1f3e7e554a14264d9cadfae.png') !important;
+        background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_e51b98b0f1f3e7e554a14264d9cadfae.png) !important;
       }
 
       .sport-i-tabletennis {
-        background-image: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_34a22277c6681323f197a4a609e0e1b7.png') !important;
+        background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_34a22277c6681323f197a4a609e0e1b7.png) !important;
       }
 
       .sport-i-americanfootball {
-        background-image: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_a02a6506389ab93fa68ece860242f202.png') !important;
+        background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_a02a6506389ab93fa68ece860242f202.png) !important;
       }
 
       .sport-i-boxing {
-        background-image: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_e4a6652caf4de2a3698e2e6bab1ed76b.png') !important;
+        background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_e4a6652caf4de2a3698e2e6bab1ed76b.png) !important;
       }
 
       .sport-i-icehockey {
-        background-image: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_8e0157205125cf297d506c7182408b44.png') !important;
+        background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_8e0157205125cf297d506c7182408b44.png) !important;
       }
 
       .sport-i-handball {
-        background-image: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_916ea0e17cd12fa8e9e1e1b3cb91c38d.png') !important;
+        background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_916ea0e17cd12fa8e9e1e1b3cb91c38d.png) !important;
       }
 
       .sport-i-cricket {
-        background-image: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_48f5cf3a591f929a0431add3567121c3.png') !important;
+        background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_48f5cf3a591f929a0431add3567121c3.png) !important;
       }
 
       .sport-i-badminton {
-        background-image: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_b4fee06d073721037e64a1df2a390d72.png') !important;
+        background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_b4fee06d073721037e64a1df2a390d72.png) !important;
       }
 
       .sport-i-darts {
-        background-image: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_cf475ced48c938245a2f89d4e4726c3a.png') !important;
+        background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_cf475ced48c938245a2f89d4e4726c3a.png) !important;
       }
 
       .sport-i-hockey {
-        background-image: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_419adc174b2434f475fb35df8f9fc83c.png') !important;
+        background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_419adc174b2434f475fb35df8f9fc83c.png) !important;
       }
 
       .sport-i-floorball {
-        background-image: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_5efefcfb14e24ed2489483b4f4862b7e.png') !important;
+        background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_5efefcfb14e24ed2489483b4f4862b7e.png) !important;
       }
 
       .sport-i-snooker {
-        background-image: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_854404e9b92f132aa579d5c8fbff4d2a.png') !important;
+        background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_854404e9b92f132aa579d5c8fbff4d2a.png) !important;
       }
 
       .sport-i-waterpolo {
-        background-image: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_6b3ceab9284df1ac90866e2fb6566199.png') !important;
+        background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_6b3ceab9284df1ac90866e2fb6566199.png) !important;
+      }
+
+      .sport-i-ballhockey {
+        background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_94427e4bab57409e37cd5f526f36ab03.png) !important;
+      }
+
+      .sport-i-rugbyleague,
+      .sport-i-rugbyunion {
+        background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_1d47097ac673f3fc4e4215b850147c31.png) !important;
+      }
+
+      .sport-i-beachvolleyball {
+        background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_6236841b35e64601094af38ce3b4f4d4.png) !important;
+      }
+
+      .sport-i-leagueoflegends {
+        background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_187487ab638a4535a92bc0170735acd2.png) !important;
+      }
+
+      .sport-i-cyberfootball {
+        background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_1b4828399438b0219f83f85f29708193.png) !important;
+      }
+
+      .sport-i-sumo {
+        background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_8baa4944122d5bafe30876f3ce1d5971.png) !important;
+      }
+
+      .sport-i-callofduty {
+        background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_229852a27c7e7e3e58b533899d0eefe7.png) !important;
+      }
+
+      .sport-i-dota2 {
+        background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_0e2f66d1cc66f41d87da4620b1774639.png) !important;
+      }
+
+      .sport-i-valorant {
+        background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_9426f2de3ef1fbf1ea13979d80696796.png) !important;
+      }
+
+      .sport-i-curling {
+        background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_c20514c89860540e968278b1665b8cbc.png) !important;
+      }
+
+      .sport-i-counterstrike {
+        background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_dfcad75e91677aaacf6435603c148735.png) !important;
+      }
+
+      .sport-i-alpineskiing {
+        background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_481de2b31312dac0406a88c46159c750.png) !important;
+      }
+
+      .sport-i-biathlon {
+        background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_3e258db113dbf884736b61b44515df01.png) !important;
+      }
+
+      .sport-i-bobsleigh {
+        background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_53b0fbb8750339d832007fb401f59f05.png) !important;
+      }
+
+      .sport-i-figureskating {
+        background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_785f206735cba5b4c1734d94ad1243c4.png) !important;
+      }
+
+      .sport-i-freestyleskiing {
+        background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_474241ddf3a93032453b590d18f5a624.png) !important;
+      }
+
+      .sport-i-luge {
+        background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_3d4b49bdd05ea307a74b8b995c050415.png) !important;
+      }
+
+      .sport-i-nordiccombined {
+        background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_db5b9968a271c65ad8be656d82e8471c.png) !important;
+      }
+
+      .sport-i-shorttrackspeedskating {
+        background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_e352f0955c4eeebd3d860824343a10cd.png) !important;
+      }
+
+      .sport-i-skeleton {
+        background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_f2b59b881c1ec308707d186b4eeb209c.png) !important;
+      }
+
+      .sport-i-skijumping {
+        background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_7bbca85728b9164b5cbd64b04660346d.png) !important;
+      }
+
+      .sport-i-snowboarding {
+        background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_da575d3dc1606752cc46836d5513f8b7.png) !important;
+      }
+
+      .sport-i-speedskating {
+        background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_c1a3cb4d5defc11fa94edb139dc5fe12.png) !important;
       }
 
       span {
-        border-radius: 8px;
-        background-color: #323232;
-        display: inline-flex;
-        padding: 12px 16px 12px 40px;
-        justify-content: flex-end;
         align-items: center;
-        gap: 8px;
-        margin-left: 20px;
-        color: #FFF;
-        font-family: "DM Sans", sans-serif;
-        font-size: 18px;
+        background-color: #323232;
+        border-radius: 8px;
+        color: #fff;
+        display: inline-flex;
+        font-family:
+          DM Sans,
+          sans-serif;
+        font-size: 16px;
         font-style: normal;
         font-weight: 600;
-        line-height: 24px;
+        gap: 8px;
+        justify-content: flex-end;
         letter-spacing: 0.18px;
+        line-height: 24px;
+        margin-left: 0;
+        padding: 8px 16px 8px 40px;
       }
 
       &.SportsList-withActiveSportStyles.active {
-        background-image: linear-gradient(88deg, #260b36 90%, transparent);
+        background-color: #260b36;
+        background-image: none;
+        background-position: 0, 100%;
+        background-repeat: no-repeat;
+        background-size:
+          100px 100%,
+          120px 100%;
         filter: none;
-        padding: 0 10px 0 10px;
-        background-color: transparent;
+        padding: 0;
 
         span {
+          background: #29111f;
+          border: 0.5px solid var(--linear-brand, #e55fab);
           border-radius: 24px 8px;
-          border: 0.5px solid var(--linear-brand, #E55FAB);
-          background: #29111F;
-          box-shadow: 0 0 4px 0 #D80D83;
-          color: #D80D83;
+          box-shadow: 0 0 4px 0 #d80d83;
+          color: #d80d83;
         }
       }
     }
 
     .Market-singleMarketStyles {
-      border-bottom: 1px solid #323232;
       background-color: #111;
+      border-bottom: 1px solid #323232;
     }
 
     .Market-commandNameStyles {
-      color: #FFF;
-      font-family: "DM Sans", sans-serif;
+      color: #fff;
+      font-weight: 600;
+      letter-spacing: 0.12px;
+    }
+
+    .Market-commandNameStyles,
+    .Market-gameInfoStyles {
+      font-family:
+        DM Sans,
+        sans-serif;
       font-size: 12px;
       font-style: normal;
-      font-weight: 600;
       line-height: 18px;
-      letter-spacing: 0.12px;
     }
 
     .Market-gameInfoStyles {
-      color: #EE94C6;
-      font-family: "DM Sans", sans-serif;
-      font-size: 12px;
-      font-style: normal;
+      color: #2ecc8a;
       font-weight: 400;
-      line-height: 18px;
     }
 
     .Market-scoreStyles {
-      color: #FFF;
-      font-family: "DM Sans", sans-serif;
+      color: #fff;
+      font-family:
+        DM Sans,
+        sans-serif;
       font-size: 12px;
       font-style: normal;
       font-weight: 600;
-      line-height: 18px;
       letter-spacing: 0.12px;
+      line-height: 18px;
     }
 
     .Market-scoreStyles.current:before {
@@ -1020,30 +1132,34 @@ body {
     }
 
     .SubNavigation-hubStyles>.item {
-      background: #3F3F3F;
-      color: var(--neutral-300, #B2B2B2);
-      font-family: "DM Sans", sans-serif;
+      background: #3f3f3f;
+      color: var(--neutral-300, #b2b2b2);
+      font-family:
+        DM Sans,
+        sans-serif;
       font-size: 12px;
       font-style: normal;
       font-weight: 600;
-      line-height: 18px;
       letter-spacing: 0.12px;
+      line-height: 18px;
       padding: 4px 12px;
     }
 
     .SubNavigation-hubStyles>.item.active {
-      background-color: #D80D83;
-      color: #FFF;
+      background-color: #d80d83;
+      color: #fff;
     }
 
     .Market-marketInfoStyles {
-      color: #FFF;
-      font-family: "DM Sans", sans-serif;
+      background-color: #2a2a2a;
+      color: #fff;
+      font-family:
+        DM Sans,
+        sans-serif;
       font-size: 12px;
       font-style: normal;
       font-weight: 400;
       line-height: 18px;
-      background-color: #2A2A2A;
 
       .Market-eventInfoStyles {
         opacity: 1;
@@ -1052,60 +1168,65 @@ body {
 
     .Market-sortedMarketsGroupStyles {
       .eventInfo {
-        height: 100%;
+        background: #184a3b;
         border-radius: 4px;
-        background: #31031C;
+        height: 100%;
 
         &.active {
+          background: #d80d83;
           border-radius: 4px;
-          background: #D80D83;
-          box-shadow: 0 0 4px 0 #D80D83, 0 0 8px 0 #D80D83;
+          box-shadow:
+            0 0 4px 0 #d80d83,
+            0 0 8px 0 #d80d83;
         }
 
         &:hover:not(.active) {
-          border-radius: 4px;
-          border: 1px solid #8D0955;
           background: #430326;
+          border: 1px solid #8d0955;
+          border-radius: 4px;
         }
       }
 
       .Event-oddStyles {
-        color: #FFF;
-        text-align: center;
-        font-family: "DM Sans", sans-serif;
+        color: #fff;
+        font-family:
+          DM Sans,
+          sans-serif;
         font-size: 14px;
         font-style: normal;
         font-weight: 600;
-        line-height: 20px;
         letter-spacing: 0.14px;
+        line-height: 20px;
+        text-align: center;
       }
     }
 
     .SportsList-withActiveSportStyles:not(.active).SportsList-sportListItemStyles>.sportIcon {
+      background-color: initial;
       opacity: 1;
-      background-color: transparent;
     }
 
     .Market-showMoreButtonStyles {
-      display: flex;
-      height: 32px;
-      padding: 12px;
-      justify-content: center;
       align-items: center;
-      gap: 0;
+      background-color: #1d1d1d;
+      border: 1px solid #4a3873;
       border-radius: 8px;
-      border: 1px solid #4A3873;
-      width: max-content;
-      background-color: #1D1D1D;
-      color: #FFF;
-      font-family: "DM Sans", sans-serif;
+      color: #fff;
+      display: flex;
+      font-family:
+        DM Sans,
+        sans-serif;
       font-size: 0;
-      margin: 16px auto 0 auto;
       font-style: normal;
       font-weight: 600;
-      line-height: 20px;
+      gap: 0;
+      height: 32px;
+      justify-content: center;
       letter-spacing: 0.14px;
-      margin-bottom: 16px;
+      line-height: 20px;
+      margin: 16px auto;
+      padding: 12px;
+      width: max-content;
     }
 
     .Market-showMoreButtonStyles:after {
@@ -1115,11 +1236,11 @@ body {
 
     .Select-selectInnerStyles {
       .selectArrow {
-        background-image: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_26c4d249d70bd42228fa475c17fc3c59.png');
+        background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_26c4d249d70bd42228fa475c17fc3c59.png);
+        background-position: 50%;
         background-repeat: no-repeat;
-        background-position: center;
-        width: 16px;
         height: 16px;
+        width: 16px;
 
         &:before {
           content: none;
@@ -1130,30 +1251,40 @@ body {
         margin-right: 8px;
       }
     }
-
   }
 }
 
 .Drawer-drawerContainerStyles {
-  background-color: #260C36;
+  background-color: #260c36;
+
+  .MultipleOfTheDay-multipleSingleItemStyles .marketStyles {
+    flex-direction: column;
+
+    .eventNameAndOdd {
+      max-width: 100% !important;
+    }
+  }
 }
 
 .LeftMenu-parentStyles {
-  background-color: #2A1939 !important;
-  font-family: "DM Sans", sans-serif;
+  background-color: #2a1939 !important;
+  font-family:
+    DM Sans,
+    sans-serif;
 
   .LeftMenuNavigation-leftNavItemStyles>span {
-    color: var(--neutral-50, #FFF);
-    font-family: "DM Sans", sans-serif;
+    color: var(--neutral-50, #fff);
+    font-family:
+      DM Sans,
+      sans-serif;
     font-size: 12px;
     font-style: normal;
     font-weight: 600;
-    line-height: 18px;
     letter-spacing: 0.12px;
+    line-height: 18px;
   }
 
   .LeftMenuNavigation-leftMenuNavigation {
-
     .iconBlock {
       background-size: 32px;
     }
@@ -1163,86 +1294,91 @@ body {
     }
 
     .iconBlock {
-      background-position: center;
+      background-position: 50%;
       background-repeat: no-repeat;
     }
 
     [data-testid="e_sports"] {
       .iconBlock {
-        background-image: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_1367948835cc733a225c542984c40e68.png');
+        background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_47b9ddbcab92a921977e702fd68cab9f.png);
       }
     }
 
     [data-testid="promotions"] {
       .iconBlock {
-        background-image: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_8e900ab959b771ecca35e8e62a87d6bf.png');
+        background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_8e900ab959b771ecca35e8e62a87d6bf.png);
       }
     }
 
     [data-testid="games"] {
       .iconBlock {
-        background-image: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_d926025f8c0075e58b367bc23d7cf014.png');
+        background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_d926025f8c0075e58b367bc23d7cf014.png);
       }
     }
 
     [data-testid="casino"] {
       .iconBlock {
-        background-image: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_574ce0e6c61c9e5ebe37053378cd4927.png');
+        background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_574ce0e6c61c9e5ebe37053378cd4927.png);
       }
     }
 
     [data-testid="live_casino"] {
       .iconBlock {
-        background-image: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_0ac7b81dfc81fb9dd857b179088d6493.png');
+        background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_0ac7b81dfc81fb9dd857b179088d6493.png);
       }
     }
 
     [data-testid="pre_match"] {
       .iconBlock {
-        background-image: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_d625753b0a21db637992ed289666526f.png');
+        background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_d625753b0a21db637992ed289666526f.png);
       }
     }
 
     [data-testid="live"] {
       .iconBlock {
-        background-image: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_f998a932b420246bc170765983986aa3.png');
+        background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_f998a932b420246bc170765983986aa3.png);
       }
     }
 
     [data-testid="/help/820041?popupByQuery=true"] {
       .iconBlock {
-        background-image: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_20c698f1a7e4bd086b9f074850c1fdbe.svg');
+        background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_20c698f1a7e4bd086b9f074850c1fdbe.svg);
       }
     }
 
     [data-testid="wonder_wheel"] {
       .iconBlock {
-        background-image: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_b476715122ceca87b290a6f299a72377.png');
+        background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_b476715122ceca87b290a6f299a72377.png);
       }
     }
 
     [data-testid="casino_tournaments"],
     [data-testid="sport_tournaments"] {
       .iconBlock {
-        background-image: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_8e5c4d8ea1296139a9bdccf3228b1f5a.png');
+        background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_8e5c4d8ea1296139a9bdccf3228b1f5a.png);
+      }
+    }
+
+    [data-testid="https://www.vbet.bet.br/pb/help/917871"] {
+      .iconBlock {
+        background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_d890b9187de09962f0a4fc3d1c44fc68.png);
       }
     }
   }
 }
 
 .Toolbar-moreItemsWrapper {
-  background-color: #2A1939 !important;
+  background-color: #2a1939 !important;
 }
 
-/* Menu */
 .Toolbar-parentStyles {
-  background: #2A1939 !important;
+  background: #2a1939 !important;
 
   .iconBlock {
     .sportsbook-i-ticket {
-      background-image: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_8cc2ec34fec78ae9196544302ca6adb6.svg');
-      width: 22px;
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_8cc2ec34fec78ae9196544302ca6adb6.svg);
       height: 22px;
+      width: 22px;
 
       &:before {
         content: none;
@@ -1250,9 +1386,9 @@ body {
     }
 
     .sportsbook-i-toolbarMore {
-      background-image: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_5f0cbdf4625e17d58119eb1e0a24394e.svg');
-      width: 22px;
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_5f0cbdf4625e17d58119eb1e0a24394e.svg);
       height: 22px;
+      width: 22px;
 
       &:before {
         content: none;
@@ -1261,7 +1397,6 @@ body {
   }
 }
 
-/* Woot */
 body:has(.Drawer-drawerWrapperStyles) {
   .woot--bubble-holder {
     display: none !important;
@@ -1269,31 +1404,33 @@ body:has(.Drawer-drawerWrapperStyles) {
 }
 
 .woot-widget-bubble.woot-elements--right {
-  bottom: 130px;
-  right: 0px !important;
-  width: 41px;
+  bottom: 180px;
   height: 46px;
+  right: 0 !important;
+  width: 41px;
 
   .open-icon-wrapper {
+    background-color: #29194d;
     border-radius: 4px 0 0 4px;
-    background-color: #29194D;
-    box-shadow: 0 0 4.1px 0 rgba(0, 0, 0, 0.48);
+    box-shadow: 0 0 4.1px 0 #0000007a;
     display: flex;
     flex-direction: column;
 
     &:before {
-      content: '';
-      background-image: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_2d90145a2308b1a12aa464119a7e3929.svg');
-      background-position: center;
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_2d90145a2308b1a12aa464119a7e3929.svg);
+      background-position: 50%;
       background-repeat: no-repeat;
-      width: 20px;
+      content: "";
       height: 20px;
+      width: 20px;
     }
 
     &:after {
-      content: 'Chat';
-      color: #EE94C6;
-      font-family: "DM Sans", sans-serif;
+      color: #ee94c6;
+      content: "Chat";
+      font-family:
+        DM Sans,
+        sans-serif;
       font-size: 12px;
       font-style: normal;
       font-weight: 600;
@@ -1311,10 +1448,10 @@ i.icon.sportsbook-i-tooltipDeposit {
 }
 
 .Navigation-navStyles {
+  border: 0 !important;
   display: flex !important;
   height: 0 !important;
   padding: 0 !important;
-  border: 0 !important;
 }
 
 .SliderStyles-wrapperStyles {
@@ -1326,21 +1463,20 @@ i.icon.sportsbook-i-tooltipDeposit {
 
   .pages {
     backdrop-filter: none !important;
-    background: transparent !important;
+    background: #0000 !important;
     gap: 8px;
 
     .dot {
-      width: 6px;
+      background-color: #3f3f3f !important;
       height: 6px;
-      background-color: #3F3F3F !important;
-      transition: width ease-in-out .3s;
+      transition: width 0.3s ease-in-out;
+      width: 6px;
 
       &.current {
-
-        background-color: #D80D83 !important;
-        box-shadow: 0 0 3.5px 0 #D80D83;
-        width: 32px;
+        background-color: #d80d83 !important;
         border-radius: 99px;
+        box-shadow: 0 0 3.5px 0 #d80d83;
+        width: 32px;
       }
     }
   }
@@ -1351,26 +1487,25 @@ i.icon.sportsbook-i-tooltipDeposit {
   background: none !important;
 }
 
-.TopEvents-singleEventStyles .betInsightsEventWrapper,
-.TopEvents-insightsTooltipStyles .insightsBlock .infoIcon {
-  background: transparent !important;
+.TopEvents-insightsTooltipStyles .insightsBlock .infoIcon,
+.TopEvents-singleEventStyles .betInsightsEventWrapper {
+  background: #0000 !important;
 }
 
 .sportsbook-i-hint:before {
-  content: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_248eb0f1fe0022a40a2fc8ad94b3ebce.png') !important;
-
+  content: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_248eb0f1fe0022a40a2fc8ad94b3ebce.png) !important;
 }
 
 .betInsightsEventWrapper {
-  right: 0px !important;
+  right: 0 !important;
   top: 40px !important;
   transform: scale(0.8) !important;
 }
 
 .betInsightsEventWrapper .tooltipInner,
 .insightsInfo i {
+  background: #194b3b !important;
   border: 1px solid var(--warning);
-  background: #31031C !important;
   border-radius: 1rem !important;
 }
 
@@ -1378,82 +1513,72 @@ i.icon.sportsbook-i-tooltipDeposit {
   display: none !important;
 }
 
-/* Betsplits */
 .Drawer-drawerContainerStyles {
   .Betslip-messageStyles.win {
     --icon: #1c0f02;
     --type: #e0a205;
+    align-items: center;
+    border: 0;
     color: #1c0f02;
-    font-weight: 800;
-    font-family: "DM Sans", sans-serif;
+    filter: drop-shadow(0 0 6px #e0a205);
+    font-family:
+      DM Sans,
+      sans-serif;
     font-size: 14px;
-    align-items: center;
-    filter: drop-shadow(0 0px 6px #e0a205);
-    border: 0px;
+    font-weight: 800;
   }
 }
 
-/* Aviator */
-#root:not(:has(.Stories-storyGroupStyles)),
-#root:has(.itemWrapper.active.withName) {
-  .Navigation-navStyles [href="/pb/open-game/806666"] {
-    display: none;
+.Navigation-navStyles [href="/pb/open-game/500000397"] {
+  background-image: url("https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_9fc986b468e9204f92ecbe4e3221346e.png") !important;
+  background-position: 50% !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  bottom: 80px;
+  display: flex;
+  font-size: 0;
+  height: 80px;
+  position: fixed;
+  right: 0;
+  width: 88px;
+
+  .Badge-badgeStyles.Badge-topType {
+    display: none !important;
   }
 }
 
-#root:has(.Stories-storyGroupStyles) {
-  .Navigation-navStyles [href="/pb/open-game/806666"] {
-    position: fixed;
-    bottom: 190px;
-    right: 0;
-    background-image: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_6c17027ceb2cd5ccec69458390038fb1.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 68px;
-    height: 68px;
-    background-size: cover;
-    font-size: 0;
-    display: flex;
-
-    .Badge-badgeStyles.Badge-topType {
-      display: none;
-    }
-  }
-}
-
-/* User Profile Bonus Animation */
 .AccountList-accountListBlockStyles .bonusesWrapper {
+  animation: BackgroundGradient 5s ease infinite;
+  background: linear-gradient(132deg, #000, var(--secondary));
+  background-size: 400% 400%;
+  border-radius: 1rem;
+  color: #fff !important;
+
   b {
-    color: var(--secondary);
-    font-weight: 600;
-    opacity: 1;
-    background: white !important;
-    border-radius: 100%;
-    padding: 1rem;
-    aspect-ratio: 1 / 1;
-    display: flex;
-    line-height: 1rem;
     align-items: center;
+    aspect-ratio: 1/1;
+    background: #fff !important;
+    border-radius: 100%;
+    color: var(--secondary);
+    display: flex;
+    font-weight: 600;
+    line-height: 1rem;
+    opacity: 1;
+    padding: 1rem;
   }
 
   i {
-    color: white;
     animation: gift-bounce 1s infinite;
+    color: #fff;
   }
-
-  background: linear-gradient(132deg, #000000, var(--secondary));
-  background-size: 400% 400%;
-  animation: BackgroundGradient 5s ease infinite;
-  color: white !important;
-  border-radius: 1rem;
 }
 
 @keyframes gift-bounce {
 
   0%,
-  100% {
+  to {
     top: 0;
-    transform: translateY(0px);
+    transform: translateY(0);
   }
 
   50% {
@@ -1464,31 +1589,30 @@ i.icon.sportsbook-i-tooltipDeposit {
 
 @keyframes BackgroundGradient {
   0% {
-    background-position: 0% 50%;
+    background-position: 0 50%;
   }
 
   50% {
     background-position: 100% 50%;
   }
 
-  100% {
-    background-position: 0% 50%;
+  to {
+    background-position: 0 50%;
   }
 }
 
-/* Registration Form Promo Code Toggle*/
 .promo-field {
-  position: relative;
-  overflow: hidden;
   max-height: 36px;
+  overflow: hidden;
+  position: relative;
   transition: max-height 0.4s ease;
 }
 
-.promo-field::before {
-  content: 'Código de indicação 🔻';
+.promo-field:before {
+  content: "Código de indicação 🔻";
+  cursor: pointer;
   display: block;
   padding: 8px;
-  cursor: pointer;
   transition: transform 0.3s ease;
 }
 
@@ -1497,33 +1621,32 @@ i.icon.sportsbook-i-tooltipDeposit {
   transition: opacity 0.3s ease;
 }
 
-.promo-field:hover,
 .promo-field:focus-within,
-.promo-field:has(input:not(:placeholder-shown)) {
+.promo-field:has(input:not(:placeholder-shown)),
+.promo-field:hover {
   max-height: 120px;
 }
 
-.promo-field:hover .Input-inputBlockStyles,
 .promo-field:focus-within .Input-inputBlockStyles,
-.promo-field:has(input:not(:placeholder-shown)) .Input-inputBlockStyles {
+.promo-field:has(input:not(:placeholder-shown)) .Input-inputBlockStyles,
+.promo-field:hover .Input-inputBlockStyles {
   opacity: 1;
 }
 
-.promo-field:hover::before,
-.promo-field:focus-within::before,
-.promo-field:has(input:not(:placeholder-shown))::before {
-  content: 'Código de indicação 🔺';
+.promo-field:focus-within:before,
+.promo-field:has(input:not(:placeholder-shown)):before,
+.promo-field:hover:before {
+  content: "Código de indicação 🔺";
 }
 
 .LastWinGames-parentStylesView1 {
   order: 2;
 }
 
-/* Casino Page*/
 .Casino-casinoDesktopProviders {
-  background-color: #2A1939 !important;
-  padding: 0 0 !important;
+  background-color: #2a1939 !important;
   border-radius: 12px !important;
+  padding: 0 !important;
 
   .singleCasinoCategoryItem {
     padding: 16px 24px !important;
@@ -1539,93 +1662,98 @@ i.icon.sportsbook-i-tooltipDeposit {
   }
 
   .listParent {
-    padding: 0 0 !important;
+    padding: 0 !important;
 
     &>div {
-      color: #EBEBEB !important;
-      font-family: "DM Sans", sans-serif;
+      color: #ebebeb !important;
+      font-family:
+        DM Sans,
+        sans-serif;
       font-size: 14px;
       font-style: normal;
       font-weight: 600;
-      line-height: 20px;
       letter-spacing: 0.14px;
+      line-height: 20px;
     }
 
     &>div:not(:first-child) {
       border-top: 0 !important;
       margin: 0 !important;
     }
-
   }
 
   .title {
-    background: transparent !important;
+    background: #0000 !important;
   }
 }
 
 .SubNavigation-linearStyles {
-  border-bottom: 1px solid #1D1D1D !important;
+  border-bottom: 1px solid #1d1d1d !important;
 
   &>.item {
-    color: #EBEBEB !important;
-    font-family: "DM Sans", sans-serif;
+    color: #ebebeb !important;
+    font-family:
+      DM Sans,
+      sans-serif;
     font-size: 16px !important;
     font-style: normal;
     font-weight: 600 !important;
-    line-height: 22px !important;
     letter-spacing: 0.16px;
+    line-height: 22px !important;
 
     &.active {
       span {
-        background: linear-gradient(0deg, #D80C83 0%, #FFBCE3 47.5%);
+        background: linear-gradient(0deg, #d80c83, #ffbce3 47.5%);
         background-clip: text;
         -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        -webkit-text-fill-color: #0000;
       }
 
-      &::before {
+      &:before {
+        background: #d80d83;
         border-radius: 99px;
-        background: #D80D83;
-        box-shadow: 0 0 3.5px 0 #D80D83;
+        box-shadow: 0 0 3.5px 0 #d80d83;
         height: 3px;
       }
     }
   }
 }
 
-/* Providers Games and List of Games */
-.providerGames .title,
-.listBlock .Title-titleStyles {
-  color: #FFF;
-  font-family: "DM Sans", sans-serif;
+.listBlock .Title-titleStyles,
+.providerGames .title {
+  color: #fff;
+  font-family:
+    DM Sans,
+    sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
-  line-height: 22px;
-  /* 137.5% */
   letter-spacing: 0.16px;
+  line-height: 22px;
 }
 
 .Casino-parentStyles {
-
   .Breadcrumbs-parentStyles {
     margin-top: 33px;
 
     .title {
-      color: #FFF;
-      font-family: "DM Sans", sans-serif;
+      color: #fff;
+      font-family:
+        DM Sans,
+        sans-serif;
       font-size: 16px;
       font-style: normal;
       font-weight: 600;
-      line-height: 22px;
-      /* 137.5% */
       letter-spacing: 0.16px;
+      line-height: 22px;
     }
   }
 
   .Title-titleStyles {
-    color: #FFF;
-    font-family: "DM Sans", sans-serif;
+    color: #fff;
+    font-family:
+      DM Sans,
+      sans-serif;
     font-size: 20px;
     font-style: normal;
     font-weight: 700;
@@ -1634,41 +1762,42 @@ i.icon.sportsbook-i-tooltipDeposit {
 
   .Casino-filterListStyles {
     &>.item {
-      border-radius: 99px;
-      background: #D80D83;
-      display: flex;
-      padding: 4px 12px;
       align-items: center;
-      gap: 4px;
-      color: #FFF;
-      font-family: "DM Sans", sans-serif;
+      background: #d80d83;
+      border-radius: 99px;
+      color: #fff;
+      display: flex;
+      font-family:
+        DM Sans,
+        sans-serif;
       font-size: 12px;
       font-style: normal;
       font-weight: 600;
-      line-height: 18px;
-      /* 150% */
+      gap: 4px;
       letter-spacing: 0.12px;
+      line-height: 18px;
+      padding: 4px 12px;
     }
   }
 }
 
 [dir="ltr"] .Casino-providerSearchStyles {
   .Input-inputWithLeftIconStyles>input {
-    background: #16091E;
-    border-radius: 8px;
-    border: 1px solid #4A3873;
-    padding: 11px !important;
-    background-image: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_6ddf42b8eee9f10dca55eff6b2ba4abf.png');
-    background-repeat: no-repeat;
+    background: #16091e;
+    background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_6ddf42b8eee9f10dca55eff6b2ba4abf.png);
     background-position: right 16px center;
-    font-family: "DM Sans";
+    background-repeat: no-repeat;
+    border: 1px solid #4a3873;
+    border-radius: 8px;
+    font-family: DM Sans;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
     line-height: 20px;
+    padding: 11px !important;
 
     &::placeholder {
-      color: #B2B2B2;
+      color: #b2b2b2;
       opacity: 1;
     }
 
@@ -1678,16 +1807,15 @@ i.icon.sportsbook-i-tooltipDeposit {
   }
 
   .Input-multiSelectSearchParent {
-
     &~.Tooltip-tooltipInnerStyles {
-      background-color: transparent !important;
-      border-radius: 8px !important;
-      border: 1px solid #4A3873;
-      width: 44px !important;
-      height: 44px;
-      background-image: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_1a8cf8407ad71cbc07d71ae1687eeb33.svg') !important;
-      background-position: center !important;
+      background-color: initial !important;
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_1a8cf8407ad71cbc07d71ae1687eeb33.svg) !important;
+      background-position: 50% !important;
       background-repeat: no-repeat !important;
+      border: 1px solid #4a3873;
+      border-radius: 8px !important;
+      height: 44px;
+      width: 44px !important;
 
       .icon {
         display: none;
@@ -1696,55 +1824,58 @@ i.icon.sportsbook-i-tooltipDeposit {
 
     .open {
       .Input-inputWithLeftIconStyles>input {
-        border-radius: 8px 8px 0 0;
-        border: 1px solid #4A3873;
         background: #342063;
-        background-image: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_ffc8e440ce9e65ac235425f97e2db2f8.png');
-        background-repeat: no-repeat;
+        background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_ffc8e440ce9e65ac235425f97e2db2f8.png);
         background-position: right 16px center;
-
+        background-repeat: no-repeat;
+        border: 1px solid #4a3873;
+        border-radius: 8px 8px 0 0;
       }
     }
 
     .suggestListWrapper {
-      top: 44px;
       border-radius: 0 0 8px 8px;
+      top: 44px;
 
       .list {
-        background: #29194D;
-        padding: 16px;
+        background: #29194d;
         gap: 8px;
+        padding: 16px;
 
         .item {
-          display: flex;
-          padding: 4px 12px;
           align-items: center;
-          gap: 8px;
+          background: #3f3f3f;
           border-radius: 99px;
-          background: #3F3F3F;
-          color: #B2B2B2;
-          font-family: "DM Sans", sans-serif;
+          color: #b2b2b2;
+          display: flex;
+          font-family:
+            DM Sans,
+            sans-serif;
           font-size: 12px;
           font-style: normal;
           font-weight: 600;
-          line-height: 18px;
+          gap: 8px;
           letter-spacing: 0.12px;
+          line-height: 18px;
+          padding: 4px 12px;
 
           .Badge-badgeStyles {
-            border-radius: 2px;
-            background: #D80D83;
-            display: inline-flex;
-            padding: 0 4px;
-            justify-content: center;
             align-items: center;
-            gap: 8px;
-            color: #FFF;
-            font-family: "DM Sans", sans-serif;
+            background: #d80d83;
+            border-radius: 2px;
+            color: #fff;
+            display: inline-flex;
+            font-family:
+              DM Sans,
+              sans-serif;
             font-size: 10px;
             font-style: normal;
             font-weight: 800;
-            line-height: 18px;
+            gap: 8px;
+            justify-content: center;
             letter-spacing: 0.1px;
+            line-height: 18px;
+            padding: 0 4px;
           }
         }
       }
@@ -1757,21 +1888,24 @@ i.icon.sportsbook-i-tooltipDeposit {
     margin-bottom: 20px;
 
     .Title-titleStyles {
-      color: #FFF;
-      font-family: "DM Sans", sans-serif;
+      color: #fff;
       font-size: 16px;
-      font-style: normal;
       font-weight: 600;
-      line-height: 22px;
-      /* 137.5% */
       letter-spacing: 0.16px;
+      line-height: 22px;
+    }
+
+    .Title-seeAllStyles,
+    .Title-titleStyles {
+      font-family:
+        DM Sans,
+        sans-serif;
+      font-style: normal;
     }
 
     .Title-seeAllStyles {
-      color: #D1CCDB;
-      font-family: "DM Sans", sans-serif;
+      color: #d1ccdb;
       font-size: 12px;
-      font-style: normal;
       font-weight: 400;
       line-height: 18px;
       opacity: 1;
@@ -1779,383 +1913,208 @@ i.icon.sportsbook-i-tooltipDeposit {
   }
 }
 
-/* Tournament Widget */
-.tournamentWidget,
-.Tournaments-singleTournamentPageStyles {
-
-  .Tournaments-singleItemStyles {
-    position: relative;
-    z-index: 1;
-    border-radius: 8px;
-    border: 1px solid var(--neutral-800, #323232);
-    background: var(--neutral-900, #1D1D1D);
-    padding: 8px 8px 12px 8px;
-    overflow: inherit;
-
-    .tournamentImage {
-      position: relative;
-      border-radius: 7.314px;
-      overflow: revert;
-
-      img {
-        min-height: inherit;
-        overflow: hidden;
-        height: 115px;
-      }
-
-      &:before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(180deg, rgba(41, 25, 77, 0.00) 0%, #29194D 64.88%);
-        z-index: 1;
-        border-radius: 7px;
-      }
-    }
-
-    .Tournaments-infoContentStyles {
-      margin-top: 30px;
-
-      .statusAndDate {
-        padding: 0;
-        background: transparent;
-        border-radius: 0;
-        gap: 0;
-
-        .users {
-          padding: 3px 12px;
-          gap: 8px;
-          border-radius: 99px;
-          background: #323232;
-          color: #FFF;
-          font-family: "DM Sans", sans-serif;
-          font-size: 12px;
-          font-style: normal;
-          font-weight: 600;
-          line-height: 18px;
-          letter-spacing: 0.12px;
-        }
-
-        .Tournaments-tournamentStatusStyles.ongoing {
-          background: #D80D83;
-          border-radius: 4px;
-          color: #FFF;
-          font-family: "DM Sans", sans-serif;
-          font-size: 10px;
-          font-style: normal;
-          font-weight: 800;
-          line-height: 18px;
-          letter-spacing: 0.1px;
-          padding: 2px 7.273px;
-        }
-
-        .Timer-timerStyles {
-          margin: 12px 0;
-
-          .text {
-            color: #B2B2B2;
-            text-align: center;
-            font-family: "DM Sans", sans-serif;
-            font-size: 12px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 18px;
-          }
-
-          .item {
-            color: #FFF;
-            text-align: center;
-            font-family: "DM Sans", sans-serif;
-            font-size: 28px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: 38px;
-            padding: 0;
-            width: 48px;
-
-            &+.item:before {
-              content: " ";
-              width: 1px;
-              height: 18px;
-              background-color: #3F3F3F;
-              top: 8px;
-            }
-          }
-        }
-      }
-    }
-  }
-
-  .Tournaments-singleItemStyles {
-    .Tournaments-titleInfoStyles {
-      background: transparent;
-      text-shadow: none;
-      padding-bottom: 0;
-      flex-direction: column;
-      bottom: -20px;
-      gap: 0;
-      padding: 0;
-
-      .title {
-        color: #FFF;
-        font-family: "DM Sans", sans-serif;
-        font-size: 20px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 28px;
-      }
-
-      .Tournaments-currencyStyles {
-        font-family: "DM Sans", sans-serif;
-        font-size: 28px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 38px;
-        background: linear-gradient(0deg, #FFF71D 22.22%, #FAE3F2 100%);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
-    }
-
-    .tournamentButton {
-      margin: 21px 0 0 0;
-      border-radius: 8px;
-      color: #FFF;
-      font-family: "DM Sans", sans-serif;
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 600;
-      line-height: 22px;
-      letter-spacing: 0.16px;
-      height: 38px;
-      position: relative;
-    }
-  }
-
+main .Tournaments-tournamentsListParentStyles [class*="Scrollable-columnStyles"].withScroll {
+  width: 80% !important;
 }
 
-/* List of Tournaments */
-.Tournaments-tournamentItemsListStyles,
-.Tournaments-singleTournamentStyles {
-
-  .Tournaments-singleItemStyles {
-    position: relative;
-    z-index: 1;
-    border-radius: 8px;
-    border: 1px solid #323232;
-    background: #1D1D1D;
-    padding: 14.545px 14.545px 21.818px 14.545px;
-    overflow: inherit;
-
-    .Tournaments-titleInfoStyles {
-      background: transparent;
-      text-shadow: none !important;
-      padding-bottom: 0;
-      flex-direction: column;
-      bottom: -17px;
-
-      .title {
-        color: #FFF;
-        font-family: "DM Sans", sans-serif;
-        font-size: 20px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 28px;
-      }
-
-      .Tournaments-currencyStyles {
-        font-family: "DM Sans", sans-serif;
-        font-size: 28px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 38px;
-        background: linear-gradient(0deg, #FFF71D 22.22%, #FAE3F2 100%);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-
-        small {
-          font-size: 28px;
-        }
-      }
-    }
-
-    .tournamentButton {
-      margin: 21px 0 0 0;
-      border-radius: 8px;
-      color: #FFF;
-      font-family: "DM Sans", sans-serif;
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 600;
-      line-height: 22px;
-      letter-spacing: 0.16px;
-      height: 38px;
-      position: relative;
-    }
-
-    .tournamentImage:not(img) {
-      width: auto;
-      position: relative;
-      overflow: revert;
-      height: 115px;
-      min-height: inherit;
-      opacity: 1;
-      min-height: inherit;
-
-      &:before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(180deg, rgba(41, 25, 77, 0.00) 0%, #29194D 64.88%);
-        z-index: 1;
-        border-radius: 6px;
-      }
-    }
-
-    .tournamentImage:is(img) {
-      opacity: 1;
-      border-radius: 6px;
-    }
-
-    .Tournaments-infoContentStyles {
-      gap: 0;
-      width: 100%;
-      display: flex;
-      margin-top: 20px;
-
-      .statusAndDate {
-        padding: 0;
-        background: transparent;
-        border-radius: 0;
-        gap: 0;
-
-        .sportsbook-i-stopwatch,
-        .sportsbook-i-itemRemove {
-          display: none;
-        }
-
-        .users {
-          padding: 4px 12px;
-          gap: 7px;
-          border-radius: 99px;
-          background: #323232;
-          color: #FFF;
-          font-family: "DM Sans", sans-serif;
-          font-size: 12px;
-          font-style: normal;
-          font-weight: 600;
-          line-height: 18px;
-          letter-spacing: 0.12px;
-        }
-
-        .Tournaments-tournamentStatusStyles {
-
-          &.finished {
-            color: #FFF;
-            font-family: "DM Sans", sans-serif;
-            font-size: 14px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 20px;
-            border: 0;
-            padding: 0;
-            margin-top: 5px;
-          }
-        }
-
-        .Timer-timerStyles {
-          margin: 12px 0;
-
-          .text {
-            color: #B2B2B2;
-            text-align: center;
-            font-family: "DM Sans";
-            font-size: 12px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 18px;
-          }
-
-          .item {
-            color: #FFF;
-            text-align: center;
-            font-family: "DM Sans";
-            font-size: 28px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: 38px;
-            width: 61px;
-            gap: 0;
-
-            &+.item:before {
-              content: " ";
-              width: 1px;
-              height: 18px;
-              background-color: #3F3F3F;
-              top: 10px;
-            }
-          }
-        }
-      }
-    }
-  }
+.Tournaments-singleItemStyles {
+  padding: 0 !important;
+  border-radius: 20px !important;
+  overflow: hidden !important;
+  background: linear-gradient(145deg, #1e1b2e, #14111f) !important;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.45) !important;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease !important;
+  font-family: "Inter", sans-serif !important;
 }
 
-/* Tournament Page */
+.Tournaments-singleItemStyles:hover {
+  transform: translateY(-6px) !important;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6) !important;
+}
+
+.tournamentImage {
+  position: relative !important;
+  border-radius: 0px !important;
+}
+
+.tournamentImage img {
+  width: 100% !important;
+  height: 160px !important;
+  object-fit: cover !important;
+  display: block !important;
+}
+
+.tournamentImage::after {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+}
+
+.Tournaments-titleInfoStyles {
+  align-items: start !important;
+  padding: 0 1rem 0.8rem !important;
+  text-shadow: none !important;
+}
+
+.Tournaments-titleInfoStyles .title {
+  font-size: 16px !important;
+  font-weight: 600 !important;
+}
+
+.Tournaments-currencyStyles {
+  color: #facc15 !important;
+  font-weight: 700 !important;
+}
+
+.Tournaments-currencyStyles small {
+  opacity: 0.8 !important;
+}
+
+.Tournaments-infoContentStyles {
+  padding: 1rem !important;
+  backdrop-filter: blur(12px) !important;
+}
+
+.Tournaments-infoContentStyles .statusAndDate {
+  padding: 0 !important;
+  background: none !important;
+  position: relative;
+}
+
+.statusAndDate {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 14px !important;
+}
+
+.Tournaments-tournamentStatusStyles {
+  align-self: flex-start !important;
+  padding: 4px 12px !important;
+  border-radius: 50px !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  background: rgba(236, 72, 153, 0.15) !important;
+  color: #ec4899 !important;
+}
+
+.users {
+  display: flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  font-size: 13px !important;
+  opacity: 0.75 !important;
+  background: none !important;
+  position: absolute;
+  top: 0px;
+  right: -6px;
+}
+
+.Timer-timerStyles {
+  width: 100% !important;
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 10px !important;
+}
+
+.Timer-timerStyles .item {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border-radius: 12px !important;
+  padding: 10px 0 !important;
+  text-align: center !important;
+  font-weight: 700 !important;
+  font-size: 18px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 4px !important;
+  aspect-ratio: 1/1;
+}
+
+.Timer-timerStyles .text {
+  font-size: 11px !important;
+  font-weight: 400 !important;
+  opacity: 0.6 !important;
+}
+
+.Timer-timerStyles>.item:before {
+  content: " " !important;
+}
+
+.parentButton {
+  padding: 0 1rem 1rem !important;
+}
+
+.tournamentButton {
+  border-radius: 14px !important;
+  background: linear-gradient(90deg, #ec4899, #db2777) !important;
+  transition: 0.2s ease !important;
+  box-shadow: 0 8px 20px rgba(219, 39, 119, 0.35) !important;
+  text-transform: uppercase;
+}
+
+.tournamentButton:hover {
+  transform: translateY(-2px) !important;
+  filter: brightness(1.1) !important;
+}
+
+.tournamentButton .textEllipsis {
+  font-weight: 600 !important;
+  font-size: 14px !important;
+}
+
 .Tournaments-singleTournamentStyles {
   .Tournaments-singleItemStyles {
-    border-radius: 0;
     border: 0;
+    border-radius: 0;
+    margin: 1rem;
   }
 
   .Casino-countStyles {
-    color: #B2B2B2;
-    text-align: center;
-    font-family: "DM Sans", sans-serif;
+    color: #b2b2b2;
+    font-family:
+      DM Sans,
+      sans-serif;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
     line-height: 20px;
+    text-align: center;
   }
 
   .Market-showMoreButtonStyles {
-    display: flex;
-    height: 40px;
-    padding: 8px 12px;
-    justify-content: center;
     align-items: center;
-    gap: 8px;
     align-self: stretch;
+    background: #0000;
+    border: 1px solid #4a3873;
     border-radius: 8px;
-    border: 1px solid #4A3873;
-    margin: 8px 16px 0 16px;
-    color: #FFF;
-    font-family: "DM Sans", sans-serif;
+    color: #fff;
+    display: flex;
+    font-family:
+      DM Sans,
+      sans-serif;
     font-size: 12px;
     font-style: normal;
     font-weight: 600;
-    line-height: 18px;
+    gap: 8px;
+    height: 40px;
+    justify-content: center;
     letter-spacing: 0.12px;
-    background: transparent;
+    line-height: 18px;
+    margin: 8px 16px 0;
+    padding: 8px 12px;
   }
 }
 
-/* Select */
 .leftRightPaddingMobile {
   .selectWrapper {
     .Select-selectParentStyles {
-      height: 44px;
       border-radius: 0;
+      height: 44px;
 
-      .Select-selectInnerStyles .selectValue,
-      .Select-selectInnerStyles .selectLabel {
-        color: var(--neutral-50, #FFF);
+      .Select-selectInnerStyles .selectLabel,
+      .Select-selectInnerStyles .selectValue {
+        color: var(--neutral-50, #fff);
         font-family: var(--tipography-type, "DM Sans");
         font-size: 14px;
         font-style: normal;
@@ -2166,152 +2125,156 @@ i.icon.sportsbook-i-tooltipDeposit {
     }
 
     .Select-selectInnerStyles {
+      background: #4a3873;
+      border: 1px solid #4a3873;
       padding: 12px !important;
-      border: 1px solid #4A3873;
-      background: #4A3873;
     }
 
     .Select-selectInnerStyles.opened {
-      background: #4A3873;
+      background: #4a3873;
       border-radius: 8px 8px 0 0;
     }
 
     .Select-selectDropDown {
-      top: 43px;
+      background: #29194d;
       border-radius: 0 0 8px 8px;
-      background: #29194D;
+      top: 43px;
 
       .listParent>div {
-        background-color: #29194D;
-        height: 42px;
-        padding: 0 16px;
-        color: #B2B2B2;
-        font-family: "DM Sans", sans-serif;
+        background-color: #29194d;
+        color: #b2b2b2;
+        font-family:
+          DM Sans,
+          sans-serif;
         font-size: 12px;
         font-style: normal;
         font-weight: 600;
-        line-height: 18px;
+        height: 42px;
         letter-spacing: 0.12px;
+        line-height: 18px;
+        padding: 0 16px;
       }
 
       .listParent>div.selected {
         background-color: #342063;
-        color: #FFF;
+        color: #fff;
       }
     }
   }
 }
 
-/* Last Winners */
 .lastWinBlock.casino {
-  padding: 4px 12px;
-  background: #1D1D1D;
+  background: #1d1d1d;
   border-radius: 24px 0 0 8px;
+  padding: 4px 12px;
 
   h3 {
-    color: #FFF71D;
-    text-align: center;
-    font-family: "DM Sans", sans-serif;
+    background: linear-gradient(180deg, #d80c83, #ff71c4 148%) !important;
+    box-shadow:
+      0 4px 4px 0 #00000040,
+      0 0 12px 0 #1111111a,
+      0 0 13.6px 0 #111111ab !important;
+    color: #fff71d;
+    filter: none;
+    font-family:
+      DM Sans,
+      sans-serif;
     font-size: 10px;
     font-style: normal;
     font-weight: 900;
-    line-height: 9px;
     letter-spacing: 0.1px;
-    background: linear-gradient(180deg, #D80C83 0%, #FF71C4 148%) !important;
-    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25), 0 0 12px 0 rgba(17, 17, 17, 0.10), 0 0 13.6px 0 rgba(17, 17, 17, 0.67) !important;
-    filter: none;
+    line-height: 9px;
+    text-align: center;
   }
 
   .lastWinPeriod {
-    display: flex;
-    padding: 4px 16px;
     align-items: center;
-    gap: 16px;
-    border-radius: 0 0 8px 8px;
-    background: rgba(63, 63, 63, 0.88);
     backdrop-filter: blur(2px);
+    background: #3f3f3fe0;
+    border-radius: 0 0 8px 8px;
+    display: flex;
+    gap: 16px;
+    padding: 4px 16px;
 
     .item {
       color: #909090;
-      font-family: "DM Sans";
+      font-family: DM Sans;
       font-size: 12px;
       font-style: normal;
       font-weight: 600;
-      line-height: 18px;
       letter-spacing: 0.12px;
+      line-height: 18px;
       padding: 0;
 
       &.active {
-        color: #EBEBEB;
+        color: #ebebeb;
       }
     }
   }
 
   .lastWinItems {
     .item {
-      background: transparent;
-      padding: 0;
+      background: #0000;
       height: auto;
       margin: 0 16px;
+      padding: 0;
 
       .imageBlock {
-        width: 80px;
         height: 93.187px;
+        width: 80px;
       }
 
       .amount {
-        font-family: "DM Sans", sans-serif;
-        font-size: 12px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 18px;
-        /* 150% */
-        letter-spacing: 0.12px;
-        background: linear-gradient(0deg, #FFF71D 22.22%, #FAE3F2 100%);
+        background: linear-gradient(0deg, #fff71d 22.22%, #fae3f2);
         background-clip: text;
         -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 0.12px;
+        -webkit-text-fill-color: #0000;
+      }
+
+      .amount,
+      .player {
+        font-family:
+          DM Sans,
+          sans-serif;
+        font-style: normal;
+        line-height: 18px;
       }
 
       .player {
-        color: #D1D1D1;
-        font-family: "DM Sans", sans-serif;
+        color: #d1d1d1;
         font-size: 10px;
-        font-style: normal;
         font-weight: 800;
-        line-height: 18px;
         letter-spacing: 0.1px;
         opacity: 1;
       }
     }
   }
-
 }
 
-/* Casino Categories */
 .CasinoCategoriesList-scrollStyles {
   .singleItem {
-    border-radius: 99px;
-    background: #29194D;
-    display: flex;
-    padding: 8px 16px;
     align-items: center;
-    gap: 4px;
-    color: #D1D1D1;
-    font-family: "DM Sans";
+    background: #29194d;
+    border-radius: 99px;
+    color: #d1d1d1;
+    display: flex;
+    font-family: DM Sans;
     font-size: 14px;
     font-style: normal;
     font-weight: 600;
-    line-height: 20px;
+    gap: 4px;
     letter-spacing: 0.14px;
+    line-height: 20px;
+    padding: 8px 16px;
   }
 }
 
-/* Drawer */
 .Drawer-drawerWrapperStyles {
-
   .Drawer-drawerContainerStyles {
-    background: #29194D;
+    background: #29194d;
   }
 
   & .Select-selectListStyles {
@@ -2319,24 +2282,25 @@ i.icon.sportsbook-i-tooltipDeposit {
       padding: 0;
 
       &>div {
-        padding: 12px 16px;
-        color: #FFF;
-        font-family: "DM Sans", sans-serif;
+        color: #fff;
+        font-family:
+          DM Sans,
+          sans-serif;
         font-size: 12px;
         font-style: normal;
         font-weight: 600;
-        line-height: 18px;
-        /* 150% */
         letter-spacing: 0.12px;
+        line-height: 18px;
+        padding: 12px 16px;
 
         &.selected {
           background: #342063;
         }
 
         &:not(:first-child) {
-          margin: 0;
           border-bottom: none;
-          border-top: 1px solid var(--violet-400, #4A3873);
+          border-top: 1px solid var(--violet-400, #4a3873);
+          margin: 0;
         }
       }
     }
@@ -2351,19 +2315,2792 @@ main:has(.ProviderList-providerListStyles) .Breadcrumbs-parentStyles {
   order: -1;
 }
 
-/* Hide Footer Live Chat */
 .Footer-footerLineStyles.liveChatButton {
   display: none !important;
 }
 
-/* Link see all on into title in Top Payouts */
 .HomePage-parentStyles {
   .listBlock:has(.Title-seeAllStyles):nth-of-type(3) {
     .Title-seeAllStyles {
+      font-size: 0;
+      line-height: 2rem;
       position: absolute;
       width: 90vw;
-      line-height: 2rem;
-      font-size: 0;
     }
   }
+}
+
+#root:not(:has(.HomePage-parentStyles)) {
+  main {
+    background-color: #16091e;
+  }
+
+  .Scrollable-parentStyles {
+    gap: 1.2rem;
+  }
+
+  .SportsList-sportsListStyles {
+    padding-inline: 1.2rem;
+
+    .flipBlock {
+      gap: 10px;
+    }
+  }
+
+  .SportsList-sportListItemStyles {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    min-height: 42px;
+    right: 0;
+    width: auto;
+
+    &:not(.active):hover {
+      opacity: 1 !important;
+    }
+
+    .icon {
+      all: unset;
+      background-position: 50% !important;
+      background-repeat: no-repeat !important;
+      background-size: contain !important;
+      height: 30px;
+      left: 6px;
+      position: absolute;
+      width: 32px;
+
+      &:before {
+        content: none;
+      }
+    }
+
+    .sport-i-leagueoflegends {
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_2d09f396c4e4ccaecbc846eb5135f065.png) !important;
+    }
+
+    .sport-i-cyberfootball {
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_1b4828399438b0219f83f85f29708193.png) !important;
+    }
+
+    .sport-i-sumo {
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_8baa4944122d5bafe30876f3ce1d5971.png) !important;
+    }
+
+    .sport-i-callofduty {
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_229852a27c7e7e3e58b533899d0eefe7.png) !important;
+    }
+
+    .sport-i-rainbowsix {
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_4602289dc93b219444ac3464fbcf1965.png) !important;
+    }
+
+    .sport-i-counterstrike {
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_283910a1443b861bafae54023352d32e.png) !important;
+    }
+
+    .sport-i-dota2 {
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_0e2f66d1cc66f41d87da4620b1774639.png) !important;
+    }
+
+    .sport-i-valorant {
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_9426f2de3ef1fbf1ea13979d80696796.png) !important;
+    }
+
+    .sport-i-baseball {
+      background-image: url("https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_69ecd99495a3a5801a1d2a59f12e2730.png") !important;
+    }
+
+    .sport-i-kingofglory {
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_a75f934274b033f7c34b4dd4679b2bb3.png) !important;
+    }
+
+    .sport-i-mobilelegends {
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_d4c12f12ac60c0b2e8afe57102a18885.png) !important;
+    }
+
+    .sport-i-formula1 {
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_984a0b4d00019f0c27dfa3ca7ccedf49.png) !important;
+    }
+
+    .sport-i-olympics {
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_68073988682537961f1333bb59f8e5b4.png) !important;
+    }
+
+    .sport-i-cycling {
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_a77d50ae3a46a822f6042701ee2069d2.png) !important;
+    }
+
+    .sport-i-rugbyleague,
+    .sport-i-rugbyunion {
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_1d47097ac673f3fc4e4215b850147c31.png) !important;
+    }
+
+    .sport-i-golf {
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_20b11feaa5f318248ff7cb779034df86.png) !important;
+    }
+
+    .sport-i-crosscountryskiing {
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_64fdd43faad4700d6dd0ac1074ff95f8.png) !important;
+    }
+
+    .sport-i-nascar {
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_3717b8314d7e9930b46728a2936ab0f0.png) !important;
+    }
+
+    .sport-i-curling {
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_c20514c89860540e968278b1665b8cbc.png) !important;
+    }
+
+    .sport-i-ballhockey {
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_b2ec88175709c9d0a2fe2354ea148d33.png) !important;
+    }
+
+    .sport-i-mma {
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_b7730b37d41db7854c4065c376ea569b.png) !important;
+    }
+
+    .sport-i-futsal {
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_28b2df0d69a8583be615c106a94ba9bc.png) !important;
+    }
+
+    .sport-i-soccer {
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_271123385c1c0213a0cf39d052456f6b.png) !important;
+    }
+
+    .sport-i-tennis {
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_af3edfb63186d10c2174ab27cf8ccb43.png) !important;
+    }
+
+    .sport-i-basketball {
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_ab402243a59ba04614944d4a04d26c8e.png) !important;
+    }
+
+    .sport-i-skimountaineering {
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_ef10d6ea2c59ccae1db33fa5d7c75395.png) !important;
+    }
+
+    .sport-i-volleyball {
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_e51b98b0f1f3e7e554a14264d9cadfae.png) !important;
+    }
+
+    .sport-i-tabletennis {
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_34a22277c6681323f197a4a609e0e1b7.png) !important;
+    }
+
+    .sport-i-americanfootball {
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_a02a6506389ab93fa68ece860242f202.png) !important;
+    }
+
+    .sport-i-boxing {
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_e4a6652caf4de2a3698e2e6bab1ed76b.png) !important;
+    }
+
+    .sport-i-icehockey {
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_8e0157205125cf297d506c7182408b44.png) !important;
+    }
+
+    .sport-i-handball {
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_916ea0e17cd12fa8e9e1e1b3cb91c38d.png) !important;
+    }
+
+    .sport-i-cricket {
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_48f5cf3a591f929a0431add3567121c3.png) !important;
+    }
+
+    .sport-i-badminton {
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_b4fee06d073721037e64a1df2a390d72.png) !important;
+    }
+
+    .sport-i-darts {
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_cf475ced48c938245a2f89d4e4726c3a.png) !important;
+    }
+
+    .sport-i-hockey {
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_419adc174b2434f475fb35df8f9fc83c.png) !important;
+    }
+
+    .sport-i-floorball {
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_5efefcfb14e24ed2489483b4f4862b7e.png) !important;
+    }
+
+    .sport-i-snooker {
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_854404e9b92f132aa579d5c8fbff4d2a.png) !important;
+    }
+
+    .sport-i-waterpolo {
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_6b3ceab9284df1ac90866e2fb6566199.png) !important;
+    }
+
+    .sport-i-alpineskiing {
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_481de2b31312dac0406a88c46159c750.png) !important;
+    }
+
+    .sport-i-biathlon {
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_3e258db113dbf884736b61b44515df01.png) !important;
+    }
+
+    .sport-i-bobsleigh {
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_53b0fbb8750339d832007fb401f59f05.png) !important;
+    }
+
+    .sport-i-figureskating {
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_785f206735cba5b4c1734d94ad1243c4.png) !important;
+    }
+
+    .sport-i-freestyleskiing {
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_474241ddf3a93032453b590d18f5a624.png) !important;
+    }
+
+    .sport-i-luge {
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_3d4b49bdd05ea307a74b8b995c050415.png) !important;
+    }
+
+    .sport-i-nordiccombined {
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_db5b9968a271c65ad8be656d82e8471c.png) !important;
+    }
+
+    .sport-i-shorttrackspeedskating {
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_e352f0955c4eeebd3d860824343a10cd.png) !important;
+    }
+
+    .sport-i-skeleton {
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_f2b59b881c1ec308707d186b4eeb209c.png) !important;
+    }
+
+    .sport-i-skijumping {
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_7bbca85728b9164b5cbd64b04660346d.png) !important;
+    }
+
+    .sport-i-snowboarding {
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_da575d3dc1606752cc46836d5513f8b7.png) !important;
+    }
+
+    .sport-i-speedskating {
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_c1a3cb4d5defc11fa94edb139dc5fe12.png) !important;
+    }
+
+    span {
+      align-items: center;
+      background-color: #323232;
+      border-radius: 8px;
+      color: #fff;
+      display: inline-flex;
+      font-family:
+        DM Sans,
+        sans-serif;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      gap: 8px;
+      justify-content: flex-end;
+      letter-spacing: 0.18px;
+      line-height: 24px;
+      margin-left: 0;
+      padding: 8px 16px 8px 40px;
+    }
+
+    &.SportsList-withActiveSportStyles.active {
+      background-color: initial;
+      background-image: linear-gradient(88deg, #120c19 90%, #0000);
+      filter: none;
+      padding: 0;
+
+      span {
+        background: #29111f;
+        border: 0.5px solid var(--linear-brand, #e55fab);
+        border-radius: 24px 8px;
+        box-shadow: 0 0 4px 0 #d80d83;
+        color: #d80d83;
+      }
+    }
+  }
+
+  .topEvents {
+    .Title-titleStyles {
+      color: #fff;
+      font-family: DM Sans;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      letter-spacing: 0.16px;
+      line-height: 22px;
+    }
+
+    .betInsightsEventWrapper .tooltipInner {
+      background: #184b3b !important;
+    }
+
+    .TopEvents-singleEventStyles {
+      background-color: #031111 !important;
+      border: 1px solid #1b755966;
+      border-radius: 16px 8px 16px 8px;
+      display: flex;
+      justify-content: space-between;
+      padding: 0;
+
+      .TopEvents-eventInfoStyles {
+        padding: 0;
+      }
+
+      .sportBackground {
+        display: none !important;
+      }
+
+      .TopEvents-sportNameAndCompetitionStyles {
+        border-bottom: 1px solid #041818;
+        margin-bottom: 16px;
+        padding: 8px 12px;
+
+        .sportWithIcon {
+          gap: 4px;
+          text-transform: none;
+        }
+
+        span {
+          color: #2ecc8a;
+          font-family:
+            DM Sans,
+            sans-serif;
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 18px;
+        }
+
+        i.sport-i-soccer {
+          background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_6fdc932c0a0010291544c76c77d64b81.svg);
+          height: 16px;
+          width: 16px;
+
+          &:before {
+            content: "";
+          }
+        }
+
+        .competitionAndFav {
+          gap: 0;
+
+          .competition.textEllipsis {
+            color: #d1d1d1;
+            font-family:
+              DM Sans,
+              sans-serif;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 18px;
+            margin-left: 4px;
+            margin-right: 12px;
+          }
+
+          .Favorite-favoriteGlobalStyles {
+            color: #d1d1d1;
+          }
+        }
+      }
+
+      .TopEvents-teamsStyles {
+        padding: 0 16px;
+
+        .teamName {
+          color: #fff;
+          font-family:
+            DM Sans,
+            sans-serif;
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 600;
+          letter-spacing: 0.12px;
+          line-height: 18px;
+          max-width: 80px;
+        }
+
+        .SingleGame-teamImageStyles {
+          background-color: initial;
+          border: 0;
+          height: auto;
+          margin: 0 auto 8px;
+          padding: 0;
+          width: 25px;
+
+          img {
+            border-radius: 0;
+            height: auto;
+            padding: 0;
+            width: inherit;
+          }
+        }
+
+        .draw .date {
+          margin: 0;
+
+          .day {
+            color: #2ecc8a;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 18px;
+          }
+
+          .day,
+          .time {
+            font-family:
+              DM Sans,
+              sans-serif;
+            font-style: normal;
+          }
+
+          .time {
+            color: #ebebeb;
+            font-size: 16px;
+            font-weight: 600;
+            letter-spacing: 0.16px;
+            line-height: 22px;
+            margin: 0;
+          }
+        }
+
+        .draw {
+          .evenInfoBlock {
+            display: grid;
+            gap: 5px;
+          }
+
+          .live {
+            font-size: 9px;
+            margin: 0;
+            padding: 5px;
+          }
+        }
+      }
+
+      .TopEvents-eventListStyles {
+        margin: 16px 0;
+        padding: 0 16px;
+
+        .Event-oddStyles {
+          color: #fff;
+          font-family:
+            DM Sans,
+            sans-serif;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 600;
+          letter-spacing: 0.14px;
+          line-height: 20px;
+          padding: 0;
+          text-align: center;
+        }
+
+        .Event-parentStyles {
+          align-items: center;
+          background-color: #184a3b;
+          border-radius: 4px;
+          display: flex;
+          gap: 8px;
+          height: auto;
+          justify-content: center;
+          min-height: 44px;
+
+          &.active {
+            background: #d80d83;
+            box-shadow:
+              0 0 4px 0 #d80d83,
+              0 0 8px 0 #d80d83;
+          }
+
+          &:hover:not(.active) {
+            background: #430326;
+            border: 1px solid #8d0955;
+            border-radius: 4px;
+          }
+        }
+
+        .Event-parentStyles.insights {
+          border-color: var(--warning) !important;
+        }
+      }
+
+      .TopEvents-eventListStyles {
+        gap: 8px;
+      }
+    }
+  }
+
+  .bottomMarginDesktop.Scrollable-relativeStyles.Scrollable-relativeStyles-d346~.Market-marketFilterStyles {
+    margin-top: 0 !important;
+  }
+
+  .Competitions-competitionsSelectStyles,
+  .Competitions-titleAndFilterStyles,
+  .Market-gamesGroupHeaderStyles,
+  .Market-marketFilterStyles,
+  .SubNavigation-inlineStyles.SubNavigation-liveCalendarNavStyles,
+  .marketsTitle,
+  .rightSide.liveDesktop {
+    .selectWrapper {
+      background: var(--neutral-800, #323232);
+      border-radius: 4px;
+      padding: 8px 16px;
+
+      .Select-selectParentStyles {
+        align-items: center;
+      }
+
+      .Select-selectInnerStyles,
+      .Select-selectParentStyles {
+        display: flex;
+        gap: 8px;
+        padding: 0 !important;
+      }
+
+      .selectValue {
+        color: #d1d1d1;
+        font-family:
+          DM Sans,
+          sans-serif;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 600;
+        letter-spacing: 0.12px;
+        line-height: 18px;
+      }
+
+      i.icon.sportsbook-i-arrowBottom.selectArrow {
+        background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_c0536c3562afae5e2ddf4c88f6018338.png);
+        background-size: cover;
+        height: 16px;
+        position: relative;
+        top: 0;
+        transform: none;
+        width: 22px;
+      }
+
+      .selectArrow:before {
+        content: none;
+      }
+    }
+  }
+
+  .SubNavigation-inlineStyles.SubNavigation-liveCalendarNavStyles {
+    background: #220b2f;
+    padding: 16px;
+  }
+
+  .Competitions-titleAndFilterStyles {
+    background-color: #220b2f;
+    margin: 24px 0 0 !important;
+    padding: 16px;
+
+    .Title-titleStyles {
+      color: #fff;
+      font-family: DM Sans;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      letter-spacing: 0.16px;
+      line-height: 22px;
+    }
+  }
+
+  .Market-gamesGroupHeaderStyles {
+    align-items: center;
+    margin: 24px 0;
+    padding: 0 16px;
+  }
+
+  .upcomingEvents {
+    padding: 16px 0 0;
+  }
+
+  .groupedGamesParent,
+  .upcomingEvents {
+    background-color: #260c36;
+    padding: 0;
+
+    .Title-parentStyles {
+      margin: 0;
+      padding-top: 16px;
+    }
+
+    .Competitions-competitionsSelectStyles {
+      span {
+        color: #fff;
+        font-family:
+          DM Sans,
+          sans-serif;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        letter-spacing: 0.14px;
+        line-height: 20px;
+      }
+    }
+
+    .Market-marketFilterStyles:not(.withoutBackground) {
+      background-color: #1d1d1d !important;
+      border-radius: 16px 0 0 0;
+      border-top: 1px solid #323232;
+      padding: 8px 14px;
+
+      .Market-sportNameStyles {
+        .icon {
+          background-color: initial;
+          background-position: 50% !important;
+          background-repeat: no-repeat !important;
+          background-size: contain !important;
+          height: 24px;
+          width: 24px;
+
+          &:before {
+            content: none;
+          }
+        }
+
+        .sport-i-formula1 {
+          background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_984a0b4d00019f0c27dfa3ca7ccedf49.png) !important;
+        }
+
+        .sport-i-rugbyleague,
+        .sport-i-rugbyunion {
+          background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_1d47097ac673f3fc4e4215b850147c31.png) !important;
+        }
+
+        .sport-i-leagueoflegends {
+          background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_2d09f396c4e4ccaecbc846eb5135f065.png) !important;
+        }
+
+        .sport-i-cyberfootball {
+          background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_1b4828399438b0219f83f85f29708193.png) !important;
+        }
+
+        .sport-i-sumo {
+          background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_8baa4944122d5bafe30876f3ce1d5971.png) !important;
+        }
+
+        .sport-i-callofduty {
+          background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_229852a27c7e7e3e58b533899d0eefe7.png) !important;
+        }
+
+        .sport-i-rainbowsix {
+          background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_4602289dc93b219444ac3464fbcf1965.png) !important;
+        }
+
+        .sport-i-counterstrike {
+          background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_283910a1443b861bafae54023352d32e.png) !important;
+        }
+
+        .sport-i-dota2 {
+          background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_0e2f66d1cc66f41d87da4620b1774639.png) !important;
+        }
+
+        .sport-i-valorant {
+          background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_9426f2de3ef1fbf1ea13979d80696796.png) !important;
+        }
+
+        .sport-i-baseball {
+          background-image: url("https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_69ecd99495a3a5801a1d2a59f12e2730.png") !important;
+        }
+
+        .sport-i-kingofglory {
+          background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_a75f934274b033f7c34b4dd4679b2bb3.png) !important;
+        }
+
+        .sport-i-mobilelegends {
+          background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_d4c12f12ac60c0b2e8afe57102a18885.png) !important;
+        }
+
+        .sport-i-olympics {
+          background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_68073988682537961f1333bb59f8e5b4.png) !important;
+        }
+
+        .sport-i-cycling {
+          background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_a77d50ae3a46a822f6042701ee2069d2.png) !important;
+        }
+
+        .sport-i-crosscountryskiing {
+          background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_64fdd43faad4700d6dd0ac1074ff95f8.png) !important;
+        }
+
+        .sport-i-curling {
+          background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_c20514c89860540e968278b1665b8cbc.png) !important;
+        }
+
+        .sport-i-ballhockey {
+          background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_b2ec88175709c9d0a2fe2354ea148d33.png) !important;
+        }
+
+        .sport-i-golf {
+          background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_20b11feaa5f318248ff7cb779034df86.png) !important;
+        }
+
+        .sport-i-nascar {
+          background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_3717b8314d7e9930b46728a2936ab0f0.png) !important;
+        }
+
+        .sport-i-mma {
+          background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_b7730b37d41db7854c4065c376ea569b.png) !important;
+        }
+
+        .sport-i-futsal {
+          background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_28b2df0d69a8583be615c106a94ba9bc.png) !important;
+        }
+
+        .sport-i-soccer {
+          background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_271123385c1c0213a0cf39d052456f6b.png) !important;
+        }
+
+        .sport-i-tennis {
+          background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_af3edfb63186d10c2174ab27cf8ccb43.png) !important;
+        }
+
+        .sport-i-basketball {
+          background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_ab402243a59ba04614944d4a04d26c8e.png) !important;
+        }
+
+        .sport-i-skimountaineering {
+          background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_ef10d6ea2c59ccae1db33fa5d7c75395.png) !important;
+        }
+
+        .sport-i-volleyball {
+          background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_e51b98b0f1f3e7e554a14264d9cadfae.png) !important;
+        }
+
+        .sport-i-tabletennis {
+          background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_34a22277c6681323f197a4a609e0e1b7.png) !important;
+        }
+
+        .sport-i-americanfootball {
+          background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_a02a6506389ab93fa68ece860242f202.png) !important;
+        }
+
+        .sport-i-boxing {
+          background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_e4a6652caf4de2a3698e2e6bab1ed76b.png) !important;
+        }
+
+        .sport-i-icehockey {
+          background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_8e0157205125cf297d506c7182408b44.png) !important;
+        }
+
+        .sport-i-handball {
+          background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_916ea0e17cd12fa8e9e1e1b3cb91c38d.png) !important;
+        }
+
+        .sport-i-cricket {
+          background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_48f5cf3a591f929a0431add3567121c3.png) !important;
+        }
+
+        .sport-i-badminton {
+          background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_b4fee06d073721037e64a1df2a390d72.png) !important;
+        }
+
+        .sport-i-darts {
+          background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_cf475ced48c938245a2f89d4e4726c3a.png) !important;
+        }
+
+        .sport-i-hockey {
+          background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_419adc174b2434f475fb35df8f9fc83c.png) !important;
+        }
+
+        .sport-i-floorball {
+          background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_5efefcfb14e24ed2489483b4f4862b7e.png) !important;
+        }
+
+        .sport-i-snooker {
+          background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_854404e9b92f132aa579d5c8fbff4d2a.png) !important;
+        }
+
+        .sport-i-waterpolo {
+          background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_6b3ceab9284df1ac90866e2fb6566199.png) !important;
+        }
+
+        .sport-i-alpineskiing {
+          background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_481de2b31312dac0406a88c46159c750.png) !important;
+        }
+
+        .sport-i-biathlon {
+          background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_3e258db113dbf884736b61b44515df01.png) !important;
+        }
+
+        .sport-i-bobsleigh {
+          background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_53b0fbb8750339d832007fb401f59f05.png) !important;
+        }
+
+        .sport-i-figureskating {
+          background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_785f206735cba5b4c1734d94ad1243c4.png) !important;
+        }
+
+        .sport-i-freestyleskiing {
+          background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_474241ddf3a93032453b590d18f5a624.png) !important;
+        }
+
+        .sport-i-luge {
+          background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_3d4b49bdd05ea307a74b8b995c050415.png) !important;
+        }
+
+        .sport-i-nordiccombined {
+          background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_db5b9968a271c65ad8be656d82e8471c.png) !important;
+        }
+
+        .sport-i-shorttrackspeedskating {
+          background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_e352f0955c4eeebd3d860824343a10cd.png) !important;
+        }
+
+        .sport-i-skeleton {
+          background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_f2b59b881c1ec308707d186b4eeb209c.png) !important;
+        }
+
+        .sport-i-skijumping {
+          background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_7bbca85728b9164b5cbd64b04660346d.png) !important;
+        }
+
+        .sport-i-snowboarding {
+          background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_da575d3dc1606752cc46836d5513f8b7.png) !important;
+        }
+
+        .sport-i-speedskating {
+          background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_c1a3cb4d5defc11fa94edb139dc5fe12.png) !important;
+        }
+      }
+    }
+
+    .Market-marketInfoStyles:not(.withoutTitle) {
+      padding: 4px 8px;
+    }
+
+    .Market-commandsAndInfoStyles,
+    .Market-sortedMarketsGroupStyles {
+      padding: 0;
+    }
+
+    .Title-titleStyles {
+      color: #fff;
+      font-family: DM Sans;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      letter-spacing: 0.16px;
+      line-height: 22px;
+    }
+
+    .content {
+      background-color: #1d1d1d;
+      padding-top: 0;
+    }
+
+    .Market-singleMarketStyles {
+      background-color: #111;
+      border-bottom: 1px solid #323232;
+      border-top: 1px solid #1b7559;
+      gap: 0 12px;
+      padding: 8px 16px;
+    }
+
+    .marketSelect {
+      align-items: center;
+      background: var(--neutral-800, #323232);
+      border-radius: 4px;
+      display: flex;
+      gap: 8px;
+
+      .selectValue {
+        color: var(--neutral-200, #d1d1d1);
+        font-family: DM Sans;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 600;
+        letter-spacing: 0.12px;
+        line-height: 18px;
+      }
+    }
+
+    .Market-commandNameStyles>p {
+      color: #fff;
+      letter-spacing: 0.12px;
+    }
+
+    .Market-commandNameStyles>p,
+    .Market-gameInfoStyles {
+      font-family:
+        DM Sans,
+        sans-serif;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 18px;
+    }
+
+    .Market-gameInfoStyles {
+      color: #2ecc8a;
+    }
+
+    .marketsGroup {
+      border: 1px solid #323232;
+      border-radius: 0 0 24px 8px;
+      overflow: hidden;
+    }
+
+    .Market-scoreStyles {
+      color: #fff;
+      font-family:
+        DM Sans,
+        sans-serif;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 600;
+      letter-spacing: 0.12px;
+      line-height: 18px;
+    }
+
+    .Market-scoreStyles.current:before {
+      background-color: #184b3b5e;
+      height: 46px;
+    }
+
+    .SubNavigation-hubStyles>.item {
+      background: #3f3f3f;
+      color: var(--neutral-300, #b2b2b2);
+      font-family:
+        DM Sans,
+        sans-serif;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 600;
+      letter-spacing: 0.12px;
+      line-height: 18px;
+      padding: 4px 12px;
+    }
+
+    .SubNavigation-hubStyles>.item.active {
+      background-color: #d80d83;
+      color: #fff;
+    }
+
+    .Market-marketInfoStyles {
+      background-color: #2a2a2a;
+      color: #fff;
+      font-family:
+        DM Sans,
+        sans-serif;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 18px;
+
+      .Market-eventInfoStyles {
+        opacity: 1;
+      }
+    }
+
+    .Market-sortedMarketsGroupStyles {
+      .eventInfo {
+        background: #184a3b;
+        border-radius: 4px;
+        height: 100%;
+
+        &.active {
+          background: #d80d83;
+          border-radius: 4px;
+          box-shadow:
+            0 0 4px 0 #d80d83,
+            0 0 8px 0 #d80d83;
+        }
+
+        &:hover:not(.active) {
+          background: #430326;
+          border: 1px solid #8d0955;
+          border-radius: 4px;
+        }
+      }
+
+      .Event-oddStyles {
+        color: #fff;
+        font-family:
+          DM Sans,
+          sans-serif;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        letter-spacing: 0.14px;
+        line-height: 20px;
+        text-align: center;
+      }
+    }
+
+    .SportsList-withActiveSportStyles:not(.active).SportsList-sportListItemStyles>.sportIcon {
+      background-color: initial;
+      opacity: 1;
+    }
+
+    .Market-showMoreButtonStyles {
+      align-items: center;
+      background-color: #1d1d1d;
+      border: 1px solid #4a3873;
+      border-radius: 8px;
+      color: #fff;
+      display: flex;
+      font-family:
+        DM Sans,
+        sans-serif;
+      font-size: 0;
+      font-style: normal;
+      font-weight: 600;
+      gap: 0;
+      height: 32px;
+      justify-content: center;
+      letter-spacing: 0.14px;
+      line-height: 20px;
+      margin: 16px auto;
+      padding: 12px;
+      width: max-content;
+    }
+
+    .Market-showMoreButtonStyles:after {
+      content: "Confira todas as partidas";
+      font-size: 14px;
+    }
+
+    .Select-selectInnerStyles {
+      padding: 0 !important;
+
+      .selectArrow {
+        background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_26c4d249d70bd42228fa475c17fc3c59.png);
+        background-position: 50%;
+        background-repeat: no-repeat;
+        height: 16px;
+        width: 16px;
+
+        &:before {
+          content: none;
+        }
+      }
+
+      .selectValue {
+        margin-right: 8px;
+      }
+    }
+  }
+
+  .EventMatches-parentStyles {
+    .Market-marketFilterStyles {
+      background-color: #1d1d1d;
+      border-radius: 16px 0 0 0;
+      border-top: 1px solid #323232;
+      padding: 8px 16px;
+
+      .Title-titleStyles {
+        color: #fff;
+        font-family:
+          DM Sans,
+          sans-serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        letter-spacing: 0.16px;
+        line-height: 22px;
+      }
+    }
+
+    .Market-marketFilterStyles {
+      margin-top: 0 !important;
+    }
+  }
+
+  .Competitions-competitionsSelectStyles {
+    background: #220b2f;
+    padding: 16px;
+
+    &>span {
+      color: #fff;
+      font-family:
+        DM Sans,
+        sans-serif;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      letter-spacing: 0.16px;
+      line-height: 22px;
+    }
+
+    .rightSide {
+      .selectWrapper {
+        background: #323232;
+        border-radius: 4px;
+        padding: 8px 16px;
+
+        .Select-selectParentStyles {
+          align-items: center;
+          display: flex;
+          gap: 8px;
+          padding: 0;
+        }
+
+        .Select-selectInnerStyles {
+          padding: 0 !important;
+        }
+
+        .selectValue {
+          color: #d1d1d1;
+          font-family:
+            DM Sans,
+            sans-serif;
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 600;
+          letter-spacing: 0.12px;
+          line-height: 18px;
+        }
+      }
+    }
+  }
+
+  .Results-dateFilterStyles {
+    .Calendar-selectDateParentStyles {
+      .Select-selectParentStyles {
+        align-items: center;
+        background: #323232;
+        border-radius: 4px;
+        display: flex;
+        gap: 8px;
+        height: 34px;
+        padding: 8px 16px;
+        width: 103px;
+      }
+
+      .selectValue {
+        color: var(--neutral-200, #d1d1d1);
+        font-family: DM Sans;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 600;
+        letter-spacing: 0.12px;
+        line-height: 18px;
+      }
+    }
+
+    .dateItem {
+      color: #d1d1d1;
+      font-family:
+        DM Sans,
+        sans-serif;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 600;
+      letter-spacing: 0.12px;
+      line-height: 18px;
+    }
+  }
+
+  .Competitions-allCompetitionParentStyles {
+    background-color: #220b2f;
+    padding: 8px 16px;
+
+    &:not(:first-child) {
+      padding: 8px 16px;
+    }
+
+    .Competitions-allCompetitionItemStyles {
+      margin: 0;
+    }
+  }
+
+  .Expandable-expandableParentStyles {
+    background: #220b2f;
+    padding: 8px 16px;
+
+    &~.Expandable-expandableParentStyles:last-child {
+      padding-bottom: 24px;
+    }
+
+    .Expandable-expandableTitleStyles {
+      background: #061f1f;
+      border: 1px solid #323232;
+      border-radius: 4px;
+
+      .title {
+        span {
+          color: #fff;
+          font-family:
+            DM Sans,
+            sans-serif;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 600;
+          letter-spacing: 0.16px;
+          line-height: 22px;
+        }
+      }
+    }
+  }
+
+  .Competitions-allCompetitionTitleStyles {
+    background-color: #061f1f;
+    border: 1px solid #323232;
+    border-radius: 4px;
+    gap: 8px;
+    margin: 0;
+    padding: 12px 16px;
+
+    .title {
+      color: #fff;
+      font-family:
+        DM Sans,
+        sans-serif;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      letter-spacing: 0.16px;
+      line-height: 22px;
+    }
+
+    &.expanded {
+      background-color: #4a3873;
+      border-radius: 4px 4px 0 0;
+      margin: 0;
+      padding: 12px 16px;
+    }
+  }
+
+  .Competitions-allCompetitionItemStyles {
+    margin: 0 1.6rem;
+
+    .Competitions-singleItemStyles {
+      background-color: #1d1d1d;
+      gap: 4px;
+      padding: 8px 16px;
+
+      &:not(:last-child) {
+        border-color: #323232;
+      }
+
+      &:last-child {
+        border-radius: 0 0 4px 4px;
+      }
+
+      .regionName {
+        padding: 0;
+      }
+
+      &>i {
+        padding-right: 0;
+      }
+    }
+
+    .teamName {
+      color: #fff;
+      font-family:
+        DM Sans,
+        sans-serif;
+      font-weight: 600;
+      letter-spacing: 0.12px;
+    }
+
+    .resultDate,
+    .resultScore,
+    .teamName {
+      font-size: 12px;
+      font-style: normal;
+      line-height: 18px;
+    }
+
+    .resultDate,
+    .resultScore {
+      color: #2fc888;
+      font-family: DM Sans;
+      font-weight: 400;
+    }
+  }
+
+  .Breadcrumbs-parentStyles {
+    align-items: center;
+    background: #1c1238;
+    padding: 12px 16px 8px;
+
+    .Breadcrumbs-leftSideStyles {
+      display: flex;
+      gap: 8px;
+      min-height: inherit;
+    }
+
+    .Breadcrumbs-leftSideStyles {
+      .prevPage {
+        background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_857b5ca2a36c87deaa36e1101b914267.svg);
+        background-position: 50%;
+        background-repeat: no-repeat;
+        height: inherit;
+        height: 32px;
+        padding: 0;
+        width: 32px;
+
+        .icon {
+          display: none;
+        }
+      }
+    }
+
+    .selectWithSportIcon {
+      .selectValue {
+        padding: 0 0 0 31px;
+      }
+    }
+
+    .title {
+      color: #ebebeb;
+      font-family:
+        DM Sans,
+        sans-serif;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      letter-spacing: 0.16px;
+      line-height: 22px;
+      padding: 0;
+    }
+
+    .sportIcon {
+      background-color: initial;
+      background-position: 50% !important;
+      background-repeat: no-repeat !important;
+      background-size: contain !important;
+      height: 24px;
+      width: 24px;
+
+      &:before {
+        content: none;
+      }
+    }
+
+    .sport-i-formula1 {
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_984a0b4d00019f0c27dfa3ca7ccedf49.png) !important;
+    }
+
+    .sport-i-crosscountryskiing {
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_64fdd43faad4700d6dd0ac1074ff95f8.png) !important;
+    }
+
+    .sport-i-cycling {
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_a77d50ae3a46a822f6042701ee2069d2.png) !important;
+    }
+
+    .sport-i-olympics {
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_68073988682537961f1333bb59f8e5b4.png) !important;
+    }
+
+    .sport-i-rugbyleague,
+    .sport-i-rugbyunion {
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_1d47097ac673f3fc4e4215b850147c31.png) !important;
+    }
+
+    .sport-i-leagueoflegends {
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_2d09f396c4e4ccaecbc846eb5135f065.png) !important;
+    }
+
+    .sport-i-cyberfootball {
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_1b4828399438b0219f83f85f29708193.png) !important;
+    }
+
+    .sport-i-sumo {
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_8baa4944122d5bafe30876f3ce1d5971.png) !important;
+    }
+
+    .sport-i-callofduty {
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_229852a27c7e7e3e58b533899d0eefe7.png) !important;
+    }
+
+    .sport-i-rainbowsix {
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_4602289dc93b219444ac3464fbcf1965.png) !important;
+    }
+
+    .sport-i-counterstrike {
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_283910a1443b861bafae54023352d32e.png) !important;
+    }
+
+    .sport-i-dota2 {
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_0e2f66d1cc66f41d87da4620b1774639.png) !important;
+    }
+
+    .sport-i-valorant {
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_9426f2de3ef1fbf1ea13979d80696796.png) !important;
+    }
+
+    .sport-i-baseball {
+      background-image: url("https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_69ecd99495a3a5801a1d2a59f12e2730.png") !important;
+    }
+
+    .sport-i-kingofglory {
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_a75f934274b033f7c34b4dd4679b2bb3.png) !important;
+    }
+
+    .sport-i-mobilelegends {
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_d4c12f12ac60c0b2e8afe57102a18885.png) !important;
+    }
+
+    .sport-i-curling {
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_c20514c89860540e968278b1665b8cbc.png) !important;
+    }
+
+    .sport-i-ballhockey {
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_b2ec88175709c9d0a2fe2354ea148d33.png) !important;
+    }
+
+    .sport-i-golf {
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_20b11feaa5f318248ff7cb779034df86.png) !important;
+    }
+
+    .sport-i-nascar {
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_3717b8314d7e9930b46728a2936ab0f0.png) !important;
+    }
+
+    .sport-i-mma {
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_b7730b37d41db7854c4065c376ea569b.png) !important;
+    }
+
+    .sport-i-futsal {
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_28b2df0d69a8583be615c106a94ba9bc.png) !important;
+    }
+
+    .sport-i-soccer {
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_271123385c1c0213a0cf39d052456f6b.png) !important;
+    }
+
+    .sport-i-tennis {
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_af3edfb63186d10c2174ab27cf8ccb43.png) !important;
+    }
+
+    .sport-i-basketball {
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_ab402243a59ba04614944d4a04d26c8e.png) !important;
+    }
+
+    .sport-i-skimountaineering {
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_ef10d6ea2c59ccae1db33fa5d7c75395.png) !important;
+    }
+
+    .sport-i-volleyball {
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_e51b98b0f1f3e7e554a14264d9cadfae.png) !important;
+    }
+
+    .sport-i-tabletennis {
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_34a22277c6681323f197a4a609e0e1b7.png) !important;
+    }
+
+    .sport-i-americanfootball {
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_a02a6506389ab93fa68ece860242f202.png) !important;
+    }
+
+    .sport-i-boxing {
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_e4a6652caf4de2a3698e2e6bab1ed76b.png) !important;
+    }
+
+    .sport-i-icehockey {
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_8e0157205125cf297d506c7182408b44.png) !important;
+    }
+
+    .sport-i-handball {
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_916ea0e17cd12fa8e9e1e1b3cb91c38d.png) !important;
+    }
+
+    .sport-i-cricket {
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_48f5cf3a591f929a0431add3567121c3.png) !important;
+    }
+
+    .sport-i-badminton {
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_b4fee06d073721037e64a1df2a390d72.png) !important;
+    }
+
+    .sport-i-darts {
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_cf475ced48c938245a2f89d4e4726c3a.png) !important;
+    }
+
+    .sport-i-hockey {
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_419adc174b2434f475fb35df8f9fc83c.png) !important;
+    }
+
+    .sport-i-floorball {
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_5efefcfb14e24ed2489483b4f4862b7e.png) !important;
+    }
+
+    .sport-i-snooker {
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_854404e9b92f132aa579d5c8fbff4d2a.png) !important;
+    }
+
+    .sport-i-waterpolo {
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_6b3ceab9284df1ac90866e2fb6566199.png) !important;
+    }
+
+    .sport-i-alpineskiing {
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_481de2b31312dac0406a88c46159c750.png) !important;
+    }
+
+    .sport-i-biathlon {
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_3e258db113dbf884736b61b44515df01.png) !important;
+    }
+
+    .sport-i-bobsleigh {
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_53b0fbb8750339d832007fb401f59f05.png) !important;
+    }
+
+    .sport-i-figureskating {
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_785f206735cba5b4c1734d94ad1243c4.png) !important;
+    }
+
+    .sport-i-freestyleskiing {
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_474241ddf3a93032453b590d18f5a624.png) !important;
+    }
+
+    .sport-i-luge {
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_3d4b49bdd05ea307a74b8b995c050415.png) !important;
+    }
+
+    .sport-i-nordiccombined {
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_db5b9968a271c65ad8be656d82e8471c.png) !important;
+    }
+
+    .sport-i-shorttrackspeedskating {
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_e352f0955c4eeebd3d860824343a10cd.png) !important;
+    }
+
+    .sport-i-skeleton {
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_f2b59b881c1ec308707d186b4eeb209c.png) !important;
+    }
+
+    .sport-i-skijumping {
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_7bbca85728b9164b5cbd64b04660346d.png) !important;
+    }
+
+    .sport-i-snowboarding {
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_da575d3dc1606752cc46836d5513f8b7.png) !important;
+    }
+
+    .sport-i-speedskating {
+      background-image: url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_c1a3cb4d5defc11fa94edb139dc5fe12.png) !important;
+    }
+  }
+
+  .SingleGame-infoParentStyles {
+    padding: 8px 16px;
+
+    .prematchDate {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+
+      .date {
+        color: var(--neutral-50, #fff);
+        font-weight: 400;
+      }
+
+      .date,
+      .time {
+        font-family:
+          DM Sans,
+          sans-serif;
+        font-size: 12px;
+        font-style: normal;
+        line-height: 18px;
+      }
+
+      .time {
+        align-items: center;
+        background: #2fc888;
+        border-radius: 2px;
+        color: #1d1f20;
+        display: flex;
+        font-weight: 600;
+        gap: 8px;
+        justify-content: center;
+        letter-spacing: 0.12px;
+        padding: 2px 3px;
+      }
+    }
+
+    .Favorite-favoriteGlobalStyles {
+      color: #fff;
+    }
+
+    .header {
+      align-items: center;
+      align-self: stretch;
+      backdrop-filter: blur(2px);
+      background: #1d1118eb;
+      border-bottom: 1px solid #12a4672b;
+      display: flex;
+      justify-content: space-between;
+      padding: 8px 16px;
+    }
+
+    .info {
+      backdrop-filter: blur(2px);
+      background: #14080fe0;
+      padding: 8px 16px;
+
+      .teamName {
+        color: #fff;
+        font-family:
+          DM Sans,
+          sans-serif;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 18px;
+      }
+
+      .leftColumn,
+      .rightColumn {
+        gap: 8px;
+      }
+
+      .prevResults {
+        .itemW {
+          background: #579408;
+          font-size: 0;
+        }
+
+        .itemW::before {
+          content: "V";
+          font-size: 12px;
+        }
+
+        .itemL {
+          background: #cf002b;
+          font-size: 0;
+        }
+
+        .itemL::before {
+          content: "D";
+          font-size: 12px;
+        }
+
+        .itemD {
+          background: #d49a00;
+          font-size: 0;
+        }
+
+        .itemD::before {
+          content: "E";
+          font-size: 12px;
+        }
+
+        &>span+span {
+          margin-left: 2px;
+        }
+      }
+
+      .prevResults>span {
+        color: #fff;
+        font-family:
+          DM Sans,
+          sans-serif;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        height: 18px;
+        line-height: 18px;
+        text-align: center;
+        width: 18px;
+      }
+    }
+
+    .content {
+      border: 1px solid #12a568;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .SingleGame-infoWrapperStyles {
+      background:
+        url(https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_2e239792927749771bdb05515a4c5132.png),
+        linear-gradient(272deg, #0dd685 -0.02%, #16794d);
+      background-repeat: no-repeat;
+      background-size: cover;
+      border-radius: 24px 8px;
+      padding: 16px;
+
+      &>img {
+        display: none;
+      }
+    }
+  }
+
+  .Market-marketNavigationStyles {
+    margin: 0 0 24px;
+    padding: 0 16px;
+
+    .marketItem {
+      color: #b2b2b2;
+      font-family:
+        DM Sans,
+        sans-serif;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 20px;
+      position: relative;
+
+      &:before {
+        background-color: initial;
+        border-radius: 99px;
+        bottom: 0;
+        content: "";
+        height: 3px;
+        left: 0;
+        position: absolute;
+        width: 100%;
+      }
+
+      &.active {
+        background: linear-gradient(0deg, #0cd868 -55.55%, #ecfff5 50%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        padding: 0 16px;
+        -webkit-text-fill-color: #0000;
+        font-weight: 600;
+        letter-spacing: 0.14px;
+        line-height: 20px;
+
+        &:before {
+          background-color: #2fc888;
+          box-shadow: 0 0 3.5px 0 #2fc888;
+        }
+      }
+    }
+
+    .rightSideActions {
+      position: relative;
+
+      &:after {
+        background: linear-gradient(270deg, #16091e 30%, #0000);
+        content: "";
+        height: 100%;
+        left: -30px;
+        position: absolute;
+        top: 0;
+        width: 30px;
+      }
+
+      .itemIcon {
+        background: #462437;
+        border-radius: 4px;
+        height: 24px;
+        padding: 0;
+        width: 24px;
+      }
+    }
+  }
+
+  .Market-expandableParentStyles {
+    border-color: #462437;
+    padding-bottom: 0;
+
+    .motionBlockWrapper {
+      margin-bottom: 8px;
+    }
+
+    .Expandable-expandableTitleStyles {
+      background: #15080f !important;
+
+      .title {
+        display: flex;
+
+        span {
+          color: #2ecc8a;
+          font-family:
+            DM Sans,
+            sans-serif;
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 18px;
+        }
+      }
+
+      .Favorite-favoriteGlobalStyles {
+        color: #fff;
+      }
+    }
+
+    .insightsInfo {
+      background: #0000;
+      background-color: #061f1f;
+      border: 0;
+      border-radius: 0;
+      border-top: 1px solid #1b7559;
+      display: flex;
+      gap: 9px;
+      margin: 0;
+      padding: 8px 16px;
+
+      i {
+        background: #0000;
+        border: 0;
+        border-radius: 0;
+        padding: 0;
+      }
+
+      span {
+        color: #fae3f2;
+        font-family:
+          DM Sans,
+          sans-serif;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 18px;
+      }
+    }
+
+    .events,
+    .teamsName {
+      background-color: #111;
+    }
+
+    .teamsName {
+      padding: 8px 16px;
+
+      span {
+        color: #fff;
+        font-family:
+          DM Sans,
+          sans-serif;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 18px;
+        padding: 0;
+        text-align: center;
+      }
+    }
+
+    .Market-singlePageMarketStyles {
+      background: #111;
+      padding: 0;
+
+      .events {
+        gap: 8px;
+        padding: 0 32px;
+
+        &+.events {
+          margin: 8px 0 0;
+        }
+      }
+
+      .Input-rangeInputStyles {
+        z-index: 1;
+
+        &>.rangeDots:before {
+          background: #184b3b;
+        }
+
+        &>.rangeDots>i {
+          background: #9aebd2;
+        }
+      }
+
+      .Market-showMoreButtonStyles {
+        align-items: center;
+        background-color: #1d1d1d;
+        border: 1px solid #4a3873;
+        border-radius: 8px;
+        color: #fff;
+        display: flex;
+        font-family:
+          DM Sans,
+          sans-serif;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        gap: 0;
+        height: 32px;
+        justify-content: center;
+        letter-spacing: 0.14px;
+        line-height: 20px;
+        margin: 16px auto;
+        padding: 12px;
+        width: max-content;
+      }
+    }
+
+    .events {
+      padding: 0 32px 8px;
+
+      .oddsEvent {
+        align-items: center;
+        background: #184a3b;
+        border-radius: 4px;
+        display: flex;
+        flex: 1 0 0;
+        gap: 8px;
+        justify-content: center;
+        min-height: 44px;
+        padding: 6px 16px;
+
+        &.insights {
+          border-color: #d2c680;
+        }
+
+        .Event-oddStyles {
+          color: #fff;
+          font-family:
+            DM Sans,
+            sans-serif;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 600;
+          letter-spacing: 0.14px;
+          line-height: 20px;
+          text-align: center;
+        }
+      }
+    }
+
+    .Market-baseColumnStyles {
+      .eventRow {
+        background-color: #111;
+        display: grid;
+        gap: 8px;
+        grid-template-columns: 1fr 2fr;
+        padding: 0 16px;
+
+        &+.eventRow {
+          margin: 8px 0 0;
+        }
+
+        .events {
+          padding: 0;
+        }
+
+        .odd {
+          align-items: center;
+          background: #0000;
+          border-radius: 0;
+          color: #909090;
+          display: flex;
+          flex: 1 0 0;
+          font-family:
+            DM Sans,
+            sans-serif;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 600;
+          gap: 8px;
+          justify-content: center;
+          letter-spacing: 0.14px;
+          line-height: 20px;
+          padding: 12px 16px;
+          text-align: center;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .subNavigationWrapper:not(:has(.SubNavigation-linearStyles)) {
+    .Scrollable-parentStyles {
+      gap: 8px;
+      margin-bottom: 24px !important;
+
+      &>.item {
+        align-items: center;
+        background: #3f3f3f !important;
+        border-radius: 99px;
+        display: flex;
+        gap: 4px;
+        height: inherit;
+        padding: 8px 16px;
+
+        .container {
+          color: #b2b2b2;
+          font-family: DM Sans;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 600;
+          letter-spacing: 0.14px;
+          line-height: 20px;
+        }
+
+        &.active {
+          background: var(--primary) !important;
+
+          .container {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+
+  .EventMatches-parentStyles {
+    .EventMatches-wrapperStyles {
+      gap: 16px;
+      margin: 0 0 40px;
+      padding: 0 0 0 16px;
+
+      .infoWrapper {
+        background: #18010e8f;
+        border: 1px solid #462437;
+        border-radius: 16px 8px;
+
+        &>img.imageLoaded {
+          display: none;
+        }
+
+        .content {
+          .teamFlag {
+            gap: 0;
+
+            img {
+              all: unset;
+              width: 44px;
+            }
+
+            &>p {
+              color: #fff;
+              font-family:
+                DM Sans,
+                sans-serif;
+              font-size: 12px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 18px;
+            }
+          }
+
+          .info {
+            gap: 6px;
+
+            .next {
+              color: #ee94c6;
+              font-size: 12px;
+              font-weight: 400;
+              line-height: 18px;
+            }
+
+            .countDown,
+            .next {
+              font-family:
+                DM Sans,
+                sans-serif;
+              font-style: normal;
+            }
+
+            .countDown {
+              color: #ebebeb;
+              font-size: 14px;
+              font-weight: 600;
+              letter-spacing: 0.14px;
+              line-height: 20px;
+            }
+          }
+        }
+      }
+    }
+
+    .marketsTitle {
+      background-color: #220b2f;
+      margin-bottom: 0;
+      padding: 16px;
+
+      h3 {
+        color: #fff;
+        font-family:
+          DM Sans,
+          sans-serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        letter-spacing: 0.16px;
+        line-height: 22px;
+      }
+    }
+  }
+
+  .AnnualEventTeam-parentStyles {
+    gap: 24px;
+    padding: 0;
+
+    .singleTeam {
+      &:has(img[src="https://statistics.bcapps.org/images/e/b/0/297.png"]) {
+        order: -1;
+
+        .teamFlag {
+          background-color: #d80d83;
+        }
+      }
+
+      .teamFlag {
+        background: #342063;
+      }
+
+      &>p {
+        color: #fff;
+        font-family:
+          DM Sans,
+          sans-serif;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 600;
+        letter-spacing: 0.12px;
+        line-height: 18px;
+      }
+    }
+  }
+
+  .EventStanding-parentStyles {
+    .singleGroup {
+      background: #0000;
+      padding: 0;
+
+      .title {
+        color: #fff;
+        font-family: DM Sans;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        letter-spacing: 0.18px;
+        line-height: 24px;
+        margin-bottom: 8px;
+        padding: 0;
+      }
+
+      table {
+        .tableRow {
+          padding: 8px;
+        }
+
+        thead {
+          background: #323232;
+
+          .tableRow,
+          .teamsTitle {
+            font-weight: 400;
+          }
+
+          .tableRow {
+            color: #d1ccdb;
+            font-family: DM Sans;
+            font-size: 12px;
+            font-style: normal;
+            line-height: 18px;
+          }
+        }
+
+        tbody {
+          .tableRow {
+            color: #fff;
+            font-family: DM Sans;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 18px;
+
+            &:nth-child(2n) {
+              background-color: #0d0817;
+            }
+
+            &:nth-child(odd) {
+              background-color: #1a0f2f;
+            }
+
+            .eventTeamLogo {
+              height: auto;
+              width: 16px;
+            }
+
+            .SingleGame-infoWrapperStyles {
+              .prevResults {
+                &>span+span {
+                  margin-left: 4px;
+                }
+
+                .itemW {
+                  background: #579408;
+                  font-size: 0;
+                }
+
+                .itemW::before {
+                  content: "V";
+                  font-size: 12px;
+                }
+
+                .itemL {
+                  background: #cf002b;
+                  font-size: 0;
+                }
+
+                .itemL::before {
+                  content: "D";
+                  font-size: 12px;
+                }
+
+                .itemD {
+                  background: #d49a00;
+                  font-size: 0;
+                }
+
+                .itemD::before {
+                  content: "E";
+                  font-size: 12px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .PlayOff-bracketWrapperStyles {
+    .PlayOff-roundStyles {
+      &:not(:last-child) {
+        margin-bottom: 8px;
+      }
+
+      .roundTitle {
+        border-bottom: 0;
+        color: #fff;
+        font-family:
+          DM Sans,
+          sans-serif;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        letter-spacing: 0.18px;
+        line-height: 24px;
+        margin: 0 0 8px;
+        padding-bottom: 0;
+      }
+
+      .seedBlock {
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      .PlayOff-singleEvent {
+        align-items: flex-start;
+        background: #061f1f;
+        border-radius: 4px;
+        display: flex;
+        justify-content: space-between;
+        padding: 8px 16px;
+
+        &.disabled {
+          opacity: 1;
+        }
+
+        .time {
+          color: #fff;
+          font-family:
+            DM Sans,
+            sans-serif;
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 600;
+          letter-spacing: 0.12px;
+          line-height: 18px;
+
+          &.disabled {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
+  .EventTimeline-parentStyles {
+    gap: 8px;
+    padding: 0 16px;
+
+    .EventTimeline-monthLineStyles {
+      color: #fff;
+      font-family:
+        DM Sans,
+        sans-serif;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 600;
+      letter-spacing: 0.18px;
+      line-height: 24px;
+      text-transform: capitalize;
+    }
+
+    .EventTimeline-dayLineStyles {
+      background: #1c1238;
+      border-radius: 24px 8px;
+      padding: 16px;
+
+      .lineDay {
+        gap: 0;
+        padding: 0;
+
+        b {
+          font-size: 24px;
+          font-weight: 700;
+          line-height: 32px;
+        }
+
+        b,
+        span {
+          color: #fff;
+          font-family:
+            DM Sans,
+            sans-serif;
+          font-style: normal;
+        }
+
+        span {
+          font-size: 12px;
+          font-weight: 400;
+          line-height: 18px;
+          text-transform: capitalize;
+        }
+      }
+
+      .EventTimeline-singleEvent {
+        background: #174a3b;
+        gap: 16px;
+        padding: 8px 16px;
+
+        &.disabled {
+          background: #061f1f;
+          opacity: 0.5;
+        }
+
+        .time {
+          color: #fff;
+          font-family:
+            DM Sans,
+            sans-serif;
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 18px;
+        }
+
+        .teams {
+          background: radial-gradient(2000% 50% at 96.59% 50%,
+              #2fc888 0,
+              #34206300 100%);
+          background-repeat: no-repeat;
+          background-size: 1px 100%;
+          gap: 8px;
+          padding-left: 16px;
+
+          .singleTeam {
+            color: #fff;
+            font-family:
+              DM Sans,
+              sans-serif;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 18px;
+          }
+        }
+      }
+    }
+  }
+
+  .AnnualEventOutrightStyles-parentStyles {
+    padding: 0 16px;
+
+    .title {
+      color: #fff;
+      font-family:
+        DM Sans,
+        sans-serif;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 28px;
+      margin-bottom: 12px;
+      text-align: left;
+    }
+
+    .background {
+      display: none;
+    }
+
+    .eventList {
+      gap: 8px;
+
+      .Event-parentStyles {
+        align-items: center;
+        backdrop-filter: inherit;
+        background: #061f1f;
+        border-radius: 4px;
+        display: flex;
+        flex: 1 0 0;
+        justify-content: space-between;
+        padding: 12px 16px;
+      }
+
+      .Event-nameStyles {
+        color: #d1d1d1;
+        font-size: 12px;
+        letter-spacing: 0.12px;
+        line-height: 18px;
+        text-align: left;
+      }
+
+      .Event-nameStyles,
+      .Event-oddStyles {
+        font-family:
+          DM Sans,
+          sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        padding: 0;
+      }
+
+      .Event-oddStyles {
+        color: #fff;
+        font-size: 14px;
+        letter-spacing: 0.14px;
+        line-height: 20px;
+        text-align: center;
+      }
+    }
+
+    &~.groupedGamesParent {
+      margin: 24px 0 0;
+    }
+  }
+
+  .Market-gamesGroupHeaderStyles,
+  .Market-marketFilterStyles,
+  .topMargin.Market-marketFilterStyles {
+    background-color: #220b2f;
+    margin-bottom: 0;
+    margin-top: 24px !important;
+    padding: 16px;
+
+    .Title-titleStyles {
+      color: #fff;
+      font-family: DM Sans;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      letter-spacing: 0.16px;
+      line-height: 22px;
+    }
+  }
+
+  .sportSectionNavigation~.topMargin:not(.Market-marketFilterStyles) {
+    margin-top: 0 !important;
+  }
+
+  .gamesGroup {
+    .matchesList.topBigMargin {
+      margin-top: 24px !important;
+    }
+  }
+
+  [data-testid="lazyScroll"]:has(.Competitions-allCompetitionParentStyles) {
+    background: #220b2f;
+    padding-bottom: 24px;
+  }
+}
+
+.Drawer-drawerWrapperStyles {
+  & .Select-selectListStyles {
+    .Drawer-drawerHeaderStyles {
+      background: #323232;
+      height: 60px;
+      padding: 16px;
+
+      &>h5 {
+        color: #ebebeb;
+        font-family: DM Sans;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 28px;
+        padding: 0;
+        text-transform: capitalize;
+      }
+    }
+
+    & .listParent {
+      &>div {
+        color: #b2b2b2;
+        font-family: DM Sans;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        letter-spacing: 0.16px;
+        line-height: 22px;
+        padding: 16px;
+
+        &.selected {
+          background: #342063;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+.SportsList-leftMenuSportListParent {
+
+  &:after,
+  &:before {
+    background: none;
+  }
+}
+
+.Olympics-BannerParentStyles {
+  display: none !important;
+}
+
+.ProviderList-providerListStyles {
+  margin: 0 !important;
+}
+
+.LiveGamesNavigation-parentStyles {
+  top: 61px !important;
+}
+
+.HomePage-imageWithLinkStyles {
+  gap: 0 !important;
+}
+
+/* Brasileirão */
+aside.LeftMenu-parentStyles {
+  .SportsList-leftMenuSportListParent.SportsList-listStyles .AnnualEventMenuStyles-parentStyles:nth-of-type(3) {
+    order: -1;
+    display: grid;
+  }
+
+  .SportsList-leftMenuSportListParent.SportsList-listStyles .AnnualEventMenuStyles-parentStyles:nth-of-type(2) {
+    order: 0;
+    display: flex;
+  }
+
+  .SportsList-leftMenuSportsListStyles>div {
+    width: 100%;
+  }
+
+  .SportsList-leftMenuSportListParent.SportsList-listStyles .AnnualEventMenuStyles-parentStyles:nth-of-type(3) svg path:nth-child(3) {
+    display: none;
+  }
+
+  .SportsList-leftMenuSportsListStyles {
+    height: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .SportsList-leftMenuSportsListStyles>.title {
+    order: -1;
+  }
+}
+
+.Casino-singleItemStyles>.icon {
+  top: 1.5rem !important;
+  font-size: 1rem !important;
+}
+
+.Casino-singleItemStyles {
+  background-color: transparent !important;
+  border-radius: 6px !important;
+}
+
+.desafio-iframe-fan {
+  height: 1440px !important;
+}
+
+.app-iframe-vbet {
+  height: 3858px !important;
+}
+
+.MultipleOfTheDay-multipleSingleItemsContentStyles .bottomBlock .totalOdds {
+  color: rgb(255 255 255 / 80%) !important;
+}
+
+.AccountList-accountListBlockStyles {
+  [data-testid="incomeStatement"] {
+    display: none;
+  }
+}
+
+/* Multiply */
+.MultipleOfTheDay-multipleSingleItemStyles .header .title>span {
+  max-width: 22rem !important;
+}
+
+.MultipleOfTheDay-multipleSingleItemStyles .marketStyles .eventNameAndOdd {
+  max-width: 19rem !important;
+}
+
+/* Background Main Page */
+.HomePage-parentStyles {
+  background-image: url("https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_81c34d48146f8befc5dc1a4259417a96.jpeg");
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+
+.SkillGame-imageStyles {
+  background-color: transparent !important;
+}
+
+.SkillGame-singleGameStyles .imageWithBetInfo {
+  background: transparent !important;
+  border-radius: inherit !important;
+}
+
+.CasinoGameView-parentStyles .SkillGame-singleGameStyles .content .imageAndInfo .titleAndFav {
+  top: 1.5rem;
+}
+
+/* Multiple List */
+.multipleList {
+
+  .MultipleOfTheDay-multipleHomePageStyles>div {
+    max-width: 385px !important;
+
+    .MultipleOfTheDay-multipleSingleItemStyles {
+      padding-bottom: 12px;
+    }
+  }
+
+  .MultipleOfTheDay-multipleSingleItemsContentStyles {
+    border-radius: 16px;
+    background: #1E1825;
+    padding: 12px;
+
+    .MultipleOfTheDay-ticketTitleStyles {
+      font-family: "Inter", sans-serif;
+      font-size: 14px;
+      line-height: 21px;
+      padding-bottom: 12px;
+
+      .infoStyles {
+        .totalBonus {
+          background: #292430;
+          border-radius: 50px;
+          padding: 2px 9px 2px 9px;
+          gap: 6px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-bottom-color: #352F3B;
+          font-weight: 600;
+
+          &:before {
+            content: "";
+            background-image: url('https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_ae3fb1c167ceac5f3dfb23d4efd2ca34.svg');
+            width: 13px;
+            height: 13px;
+            display: inline-flex;
+          }
+        }
+      }
+    }
+
+    .bottomBlock {
+      border-top-color: #352F3B;
+      padding-top: 30px;
+      display: grid;
+      grid-template-columns: repeat(2, calc(50% - 6px));
+      gap: 6px;
+
+      .moreEvents {
+        font-size: 0;
+
+        &:before {
+          content: "Ver todas as seleções";
+          font-family: Inter, serif;
+          font-size: 12px;
+          font-weight: 400;
+          color: #ffffff;
+        }
+      }
+
+      .totalOdds {
+        border-radius: 8px;
+        border: 1px solid #262626;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 8px 14px;
+        font-family: Inter, serif;
+        font-size: 12px;
+        font-weight: 400;
+
+        span {
+          font-style: normal;
+          font-weight: 900;
+          line-height: 21px;
+        }
+      }
+
+      .Button-smallButton {
+        font-family: Inter, serif;
+        min-height: 36px;
+        font-size: 13px;
+        line-height: 19px;
+        border-radius: 8px;
+      }
+    }
+  }
+
+  .MultipleOfTheDay-listDotesParentsStyles {
+
+    .MultipleOfTheDay-multipleSingleItemStyles {
+      span {
+        color: #FFF;
+        font-family: "Inter", serif;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 18px;
+      }
+
+      .header {
+        .title {
+          gap: 6px;
+        }
+
+        .Betslip-oddStyles.singleLine {
+          border-radius: 5px;
+          border: 1px solid #262529;
+          background: #141217;
+          color: #FFF;
+          font-family: Inter, serif;
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 18px;
+          padding: 0 5px;
+
+          .oldPrice {
+            font-size: 10px;
+            color: #FF3449;
+          }
+        }
+      }
+
+      .marketStyles {
+        flex-direction: column;
+
+        .eventNameAndOdd,
+        .dateBlockStyles {
+          color: #8E8B92;
+          font-family: Inter, serif;
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 18px;
+        }
+      }
+    }
+  }
+}
+
+.iframe-acumula-lp {
+  height: 2000px !important;
+  width: 100% !important;
+  overflow: hidden !important;
 }
