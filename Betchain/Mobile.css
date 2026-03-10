@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
+:root {
+  --online-green: #35ff7a;
+}
+
 .registrationFormContent .Input-inputBlockStyles.filled:not(.invalid),
 .registrationFormContent .Select-selectInnerStyles.filled {
   --inputBorderColor: var(--success);
@@ -24,6 +28,60 @@
 
 .Header-logoStyles>img {
   width: 160px;
+}
+
+.HomePage-parentStyles:before {
+  content: "+ de 40k jogadores online agora";
+  font-size: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 6px 10px 6px 30px;
+  background: rgba(20, 20, 30, 0.65);
+  backdrop-filter: blur(6px);
+  color: #fff;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  font-family: "DM Sans", sans-serif;
+  font-weight: 600;
+  position: absolute;
+  left: 50%;
+  top: 15px;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  max-width: 90vw;
+}
+
+.HomePage-parentStyles:after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background: var(--online-green);
+  border-radius: 50%;
+  position: absolute;
+  left: calc(50% - 85px);
+  top: 26px;
+  box-shadow: 0 0 8px var(--online-green);
+
+  animation: livePulse 1.5s infinite;
+}
+
+@keyframes livePulse {
+  0% {
+    opacity: 1;
+    box-shadow: 0 0 6px var(--online-green);
+  }
+
+  50% {
+    opacity: 0.8;
+    box-shadow: 0 0 14px var(--online-green);
+  }
+
+  100% {
+    opacity: 1;
+    box-shadow: 0 0 6px var(--online-green);
+  }
 }
 
 .HomePage-mainProductStyles .singleItem {
@@ -1914,12 +1972,17 @@ main .Tournaments-tournamentsListParentStyles [class*="Scrollable-columnStyles"]
 }
 
 /* TOURNAMENTS */
+.HomePage-parentStyles>div:has([data-testid="tournamentList"]) {
+  padding: 1.5rem 0;
+  background: radial-gradient(circle at 20% 0%, #5a145f55, transparent 40%),
+    linear-gradient(135deg, #0f0a1f, #2a1245, #3b0f4f);
+}
+
 .Tournaments-singleItemStyles {
   padding: 0 !important;
   border-radius: 20px !important;
   overflow: hidden !important;
   background: linear-gradient(145deg, #1e1b2e, #14111f) !important;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.45) !important;
 }
 
 .tournamentImage {
@@ -1997,6 +2060,10 @@ main .Tournaments-tournamentsListParentStyles [class*="Scrollable-columnStyles"]
   position: absolute;
   top: 0px;
   right: -6px;
+
+  i {
+    color: var(--online-green);
+  }
 }
 
 .Timer-timerStyles {
@@ -4930,6 +4997,9 @@ aside.LeftMenu-parentStyles {
   background-image: url("https://cmsbetconstruct.com/storage/medias/vbetlatam.com/media_692_81c34d48146f8befc5dc1a4259417a96.jpeg");
   background-repeat: no-repeat;
   background-position: top right;
+  margin-top: 0 !important;
+  padding-top: 50px;
+  position: relative;
 }
 
 .SkillGame-imageStyles {
@@ -5094,4 +5164,29 @@ aside.LeftMenu-parentStyles {
   height: 2000px !important;
   width: 100% !important;
   overflow: hidden !important;
+}
+
+.Account-columnStyles.step3 {
+  .withdrawParentStyles {
+    .balanceInfo {
+      display: none;
+    }
+  }
+}
+
+/* Casino most recently played Games filter icon */
+.singleCasinoCategoryItem:not([data-testid="filters"]) p {
+  /* padding: 0px !important; */
+}
+
+.singleCasinoCategoryItem:not([data-testid="filters"]):after {
+  font-family: SportsbookIcons !important;
+  content: '\e90f';
+  font-size: 1.6rem;
+  font-weight: 400;
+  padding: 0px 0.8rem;
+}
+
+.singleCasinoCategoryItem.selected:not([data-testid="filters"]):after {
+  content: "\e91c";
 }

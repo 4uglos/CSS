@@ -5283,3 +5283,20 @@ aside.left {
   width: 100% !important;
   overflow: hidden !important;
 }
+
+/* Casino most recently played Games filter icon */
+.singleCasinoCategoryItem:not([data-testid="filters"]) p {
+  padding: 0px !important;
+}
+
+.singleCasinoCategoryItem:not([data-testid="filters"]):after {
+  font-family: SportsbookIcons !important;
+  content: '\e90f';
+  font-size: 1.6rem;
+  font-weight: 400;
+  padding: 0px 0.8rem;
+}
+
+.singleCasinoCategoryItem.selected:not([data-testid="filters"]):after {
+  content: "\e91c";
+}
