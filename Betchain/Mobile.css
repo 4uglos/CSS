@@ -5175,10 +5175,6 @@ aside.LeftMenu-parentStyles {
 }
 
 /* Casino most recently played Games filter icon */
-.singleCasinoCategoryItem:not([data-testid="filters"]) p {
-  /* padding: 0px !important; */
-}
-
 .singleCasinoCategoryItem:not([data-testid="filters"]):after {
   font-family: SportsbookIcons !important;
   content: '\e90f';
